@@ -1,0 +1,14 @@
+{
+    "name" : "S-sampler24",
+    "display" : "Sampler24",
+    "parameters" :  [ 
+        ["pct","s24_speed","Speed",-200,200,100],
+        ["time","s24_release","Release",0,2000,500],
+        ["pct","s24_decay","Envelope",0,100,100],
+        ["pct","s24_start","Start",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["s24_speed","s24_release","s24_decay", "s24_start"]]
+    ]
+}
+

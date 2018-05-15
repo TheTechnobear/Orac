@@ -1,0 +1,87 @@
+#N canvas 25 2 986 581 10;
+#X obj 494 55 g_synthcontrol;
+#N canvas 377 58 827 710 REFERENCE 0;
+#X text 114 121 Name: g_synthcontrol;
+#X text 114 141 Summary: GUI for the synth collection in the rj library
+;
+#X text 115 169 Inlet 0: controller messages;
+#X text 115 187 Outlet 0: controller messages;
+#X text 115 207 Description: The g_synthcontrol is a special GUI set
+up to control many of the synthesizers in the rj library. It provides
+a set of 36 sliders arranges in goups of 4 on a 3x3 grid.;
+#X text 122 529 Tags: synth \, GUI \, programmer \, interface \, preset
+;
+#X text 116 503 All sliders have a range of 0 to 1;
+#X text 116 259 The upper row is intended to control three Envelope
+generators with four parameters each \, typically these will be ADSR
+values.;
+#X text 118 299 The individual envelope sliders send and react to messages
+tagged with "env" + <envelope number> + <"a" \, "d" \, "s" or "r">.
+For example the second slider in the middle envelope will be tagged
+as "env2d" for decay. Label and color of the slider can be set with
+"env2d label <MYLABEL>" rsp. "env2d color <num>" messages. The same
+naming system applies to the next two rows \, but instead of "adsr"
+here we use "abcd" like in the alphabet.;
+#X text 116 407 The second row controls Oscillators. The tags are made
+up like above but with "osc" instead of "env" at the message start
+and use alphabetical "abcd" instead of "adsr".;
+#X text 117 456 The third row controls Modifiers. The tags are made
+up like for Oscillators but use "mod" instead of "osc".;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 5 48 pd REFERENCE;
+#X text 7 14 g_synthcontrol - GUI for the synth collection in rj;
+#N canvas 187 45 956 481 control-messages 0;
+#X obj 59 227 outlet;
+#X symbolatom 59 115 10 0 0 2 set_a_label - -;
+#X obj 296 115 / 100;
+#X floatatom 296 93 5 0 100 2 set_a_value - -;
+#X msg 296 139 mod2d \$1;
+#X floatatom 174 112 5 0 0 2 set_a_color - -;
+#X text 296 166 range is 0 ... 1;
+#X msg 174 138 osc3c color \$1;
+#X msg 59 137 env1r label \$1;
+#X text 46 290 The individual envelope sliders send and react to messages
+tagged with "env" + <envelope number> + <"a" \, "d" \, "s" or "r">.
+For example the second slider in the middle envelope will be tagged
+as "env2d" for decay. Label and color of the slider can be set with
+"env2d label <MYLABEL>" rsp. "env2d color <num>" messages. The same
+naming system applies to the next two rows \, but instead of "adsr"
+here we use "abcd" like in the alphabet.;
+#X text 47 406 For Oscillators the tags are made up like above but
+with "osc" instead of "env" at the message start and "abcd" instead
+of "adsr" \, and for Modifiers use "mod".;
+#X msg 455 19 env1a color 128 \, env1a label TONE-ATTACK \, env1d color
+128 \, env1d label TONE-DECAY \, env1r color 128 \, env1r label TONE-REL
+\, env1s color 128 \, env1s label TONE-SUS \, env2a color 128 \, env2a
+label WIDTH-ATTACK \, env2d color 128 \, env2d label WIDTH-DECAY \,
+env2r color 128 \, env2r label WIDTH-REL \, env2s color 128 \, env2s
+label WIDTH-SUS \, env3a color 128 \, env3a label AMP-ATTACK \, env3d
+color 128 \, env3d label AMP-DECAY \, env3r color 128 \, env3r label
+AMP-REL \, env3s color 128 \, env3s label AMP-SUS \, mod1a color 128
+\, mod1a label FILTER-AMT \, mod1b color 128 \, mod1b label DETUNE
+\, mod1c color 128 \, mod1c label SYNC-AMT \, mod1d color 2 \, mod2a
+color 2 \, mod2b color 2 \, mod2c color 2 \, mod2d color 2 \, mod3a
+color 2 \, mod3b color 2 \, mod3c color 2 \, mod3d color 128 \, mod3d
+label VOLME \, osc1a color 128 \, osc1a label OSC1-PW \, osc1b color
+128 \, osc1b label OSC2-PW \, osc1c color 128 \, osc1c label OSC1-PWM
+osc1d color 128 \, osc1d label OSC2-PWM \, osc2a color 2 \, osc2b color
+2 \, osc2c color 2 \, osc2d color 2 \, osc3a color 2 \, osc3b color
+2 \, osc3c color 2 \, osc3d color 2 \,;
+#X text 481 261 Here's how to set a lot of labels and colors!;
+#X connect 1 0 8 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 5 0 7 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 11 0 0 0;
+#X restore 494 27 pd control-messages;
+#X obj 494 512 u_show;
+#X msg 494 532 env1a 0.259843;
+#X obj 543 512 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 1;

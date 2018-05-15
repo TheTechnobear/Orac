@@ -1,0 +1,11 @@
+{
+    "name" : "F-pitchshift",
+    "display" : "PitchShift",
+    "parameters" :  [ 
+        ["pct","ps_dw","Dry/Wet",0,100,50],
+        ["int","ps_pitch","Note",0,128,60]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["ps_dw","ps_pitch"]]
+    ]
+}

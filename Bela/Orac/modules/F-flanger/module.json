@@ -1,0 +1,14 @@
+{
+    "name" : "F-flanger",
+    "display" : "Flanger",
+    "parameters" :  [ 
+        ["freq","flan_rate","Rate",0,10,1],
+        ["pct","flan_depth","Depth",0,100,50],
+        ["pct","flan_feedback","Feedback",0,100,100],
+        ["freq","flan_shift","Shift",0,10,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["flan_rate","flan_depth","flan_feedback","flan_shift"]]
+    ]
+}
+

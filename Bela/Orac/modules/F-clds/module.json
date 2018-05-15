@@ -1,0 +1,32 @@
+{
+    "name" : "F-clds",
+    "display" : "Clouds",
+    "parameters" :  [ 
+        ["pct","clds_mix","Mix",0,100,50],
+        ["bool","clds_freeze","Freeze",0],
+        ["bool","clds_trig","Trig",0],
+        ["pct","clds_position","Position",0,100,50],
+
+        ["pct","clds_size","Size",0,100,50],
+        ["pitch","clds_pitch","Pitch",-24,24,0],
+        ["pct","clds_density","Density",0,100,50],
+        ["pct","clds_texture","Texture",0,100,50],
+
+        ["pct","clds_spread","Spread",0,100,50],
+        ["pct","clds_feedback","Feedback",0,100,0],
+        ["pct","clds_reverb","Reverb",0,100,50],
+        ["int","clds_mode","Mode",0,3,0],
+        
+        ["bool","clds_bypass","Bypass",0],
+        ["bool","clds_silence","Silence",0],
+        ["bool","clds_mono","Mono",0],
+        ["bool","clds_lofi","Lofi",0] 
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["clds_mix","clds_freeze","clds_trig","clds_position"]],
+        ["pg_texture","Texture", ["clds_size","clds_pitch","clds_density","clds_texture"]],
+        ["pg_reverb","Reverb", ["clds_spread","clds_feedback","clds_reverb","clds_mode"]],
+        ["pg_extra","Extra", ["clds_bypass","clds_silence"]]
+    ]
+}
+

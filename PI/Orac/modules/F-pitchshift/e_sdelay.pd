@@ -1,0 +1,30 @@
+#N canvas 376 128 450 300 10;
+#X obj 147 66 inlet~;
+#X obj 145 202 outlet~;
+#X obj 217 63 inlet;
+#N canvas 8 50 450 300 dw 0;
+#X obj 121 64 inlet~;
+#X obj 123 152 outlet~;
+#X obj 135 100 delwrite~ \$0-d \$1;
+#X connect 0 0 2 0;
+#X restore 146 126 pd dw;
+#N canvas 8 50 450 300 dr 0;
+#X obj 121 64 inlet~;
+#X obj 184 152 outlet~;
+#X obj 184 63 inlet;
+#X obj 184 115 delread~ \$0-d \$1;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X restore 145 155 pd dr;
+#N canvas 228 198 627 317 LICENSE-BSD 0;
+#X text 121 56 This software is copyrighted by Miller Puckette \, Reality
+Jockey Ltd. and others. The terms (the "Standard Improved BSD License")
+apply to all files associated with the software unless explicitly disclaimed
+in individual files.;
+#X text 123 148 See the file LICENSE.txt for the full license text.
+;
+#X restore 283 61 pd LICENSE-BSD;
+#X connect 0 0 3 0;
+#X connect 2 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;

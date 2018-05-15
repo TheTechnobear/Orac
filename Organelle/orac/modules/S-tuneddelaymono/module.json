@@ -1,0 +1,15 @@
+{
+    "name" : "S-tuneddelaymono",
+    "display" : "Tuned Delay M",
+    "parameters" :  [ 
+        ["int","td_sample","Sample",0,3,0],
+        ["int","td_dtime","Tune",0,2400,0],
+        ["pct","td_fb","Feedback",0,100,75],
+        ["pct","td_tone","Tone",0,100,100],
+        ["pct","td_trans","Transponse",-12,12,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["td_sample","td_dtime","td_fb","td_tone"]]
+    ]
+}
+

@@ -1,0 +1,14 @@
+{
+    "name" : "F-dclip",
+    "display" : "ClipDist",
+    "parameters" :  [ 
+        ["pct","dclip_dw","Dry/Wet",0,100,50],
+        ["pct","dclip_level","Amount",0,100,50],
+        ["float","dclip_top","Top Clip",0,1,0.9],
+        ["float","dclip_bott","Bottom Clip",-1,0,-0.9]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["dclip_dw","dclip_level","dclip_top","dclip_bott"]]
+    ]
+}
+

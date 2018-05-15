@@ -1,0 +1,44 @@
+#N canvas 0 0 909 586 10;
+#N canvas 377 58 722 672 REFERENCE 0;
+#X text 114 167 Inlet 0: audio signal to analyse;
+#X text 114 115 Name: e_forcepitch;
+#X text 114 141 Summary: - force a pitched signal to a desired pitch
+;
+#X text 114 193 Inlet 1: float: set desired pitch in midi units.;
+#X text 114 219 Outlet 0: signal pitched to desired pitch \, delayed
+by 1024 samples.;
+#X text 114 258 Description: [e_forcepitch] analyses the pitch of an
+incoming signal and then forces it to a desired pitch. The incoming
+signal's pitch is clipped to lie between 40 and 100 The outgoing signal
+is then pitched using a delayline-based pitchshifter.;
+#X text 113 578 Tags: pitchshifting \, reality pitcher;
+#X coords 0 -1 1 1 450 500 1 100 100;
+#X restore 5 48 pd REFERENCE;
+#X obj 530 303 e_forcepitch;
+#X text 7 14 e_forcepitch - force a pitched signal to a desired pitch
+;
+#X obj 530 146 soundinput;
+#X floatatom 611 271 5 0 127 1 desired_pitch - -;
+#X obj 531 372 soundoutput;
+#X obj 655 227 *~ 0;
+#X obj 654 206 osc~ 440;
+#X obj 654 183 mtof;
+#X floatatom 654 160 5 0 0 0 - - -;
+#X obj 656 338 sigmund~ pitch;
+#X floatatom 656 363 5 0 0 0 - - -;
+#X obj 694 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 530 335 *~ 0.7;
+#X connect 1 0 10 0;
+#X connect 1 0 13 0;
+#X connect 3 0 1 0;
+#X connect 3 1 1 0;
+#X connect 4 0 1 1;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 12 0 6 1;
+#X connect 13 0 5 0;
+#X connect 13 0 5 1;

@@ -1,0 +1,53 @@
+#N canvas 250 119 894 548 10;
+#X obj 509 262 soundoutput;
+#X obj 651 256 tabwrite~ \$0-scope;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-scope 441 float 2;
+#X coords 0 1 441 -1 200 140 1;
+#X restore 507 332 graph;
+#X obj 651 234 metro 100;
+#X obj 651 215 tgl 15 0 empty empty scope 17 7 1 10 -262144 -1 -1 1
+1;
+#X msg 667 170 dry \$1;
+#X floatatom 667 123 5 0 0 1 dry_wet - -;
+#X msg 653 87 depth \$1;
+#X floatatom 653 59 5 0 0 1 depth_(min=1) - -;
+#X obj 509 194 e_bitcrusher bc1000 4;
+#X obj 667 144 / 100;
+#X obj 509 148 *~ 0.5;
+#X obj 565 147 / 100;
+#X floatatom 565 126 5 0 0 0 - - -;
+#N canvas 377 111 827 710 REFERENCE 0;
+#X text 114 174 Argument 0: name for state saving (required);
+#X text 114 214 Inlet 0: audio signal to distort;
+#X text 122 529 Tags: distortion \, effect;
+#X text 114 141 Summary: distort by reducing the bitdepth of a signal
+to generate aliasing;
+#X text 114 120 Name: e_bitcrusher;
+#X text 114 194 Argument 1: depth (default:128);
+#X text 114 280 Outlet 0: distorted audio signal.;
+#X text 114 234 Inlet 1: depth <number>: biddepth \, minimum is a depth
+of 1 dry <amount>: regulate dry/wet mix \, default 0 which is fully
+wet.;
+#X text 112 301 Description: distort an audio signal by reducing the
+bitdepth of it to generate aliasing. The "depth" parameter selects
+the number of steps that a signal will be sampled at.;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 17 53 pd REFERENCE;
+#X text 19 10 e_bitcrusher - distort by reducing the bitdepth of a
+signal to generate aliasing;
+#X obj 510 97 osc~ 220;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 9 1;
+#X connect 6 0 10 0;
+#X connect 7 0 9 1;
+#X connect 8 0 7 0;
+#X connect 9 0 0 0;
+#X connect 9 0 0 1;
+#X connect 9 0 1 0;
+#X connect 10 0 5 0;
+#X connect 11 0 9 0;
+#X connect 12 0 11 1;
+#X connect 13 0 12 0;
+#X connect 16 0 11 0;

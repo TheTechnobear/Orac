@@ -1,0 +1,12 @@
+{
+    "name" : "F-tremelo",
+    "display" : "Tremelo",
+    "parameters" :  [ 
+        ["pct","trem_dw","Dry/Wet",0,100,50],
+        ["freq","trem_freq","Freq",0,128,1]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["trem_dw","trem_freq"]]
+    ]
+}
+

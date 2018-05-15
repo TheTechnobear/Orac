@@ -1,0 +1,69 @@
+#N canvas 177 78 543 548 10;
+#X obj 72 45 inlet~;
+#X obj 77 376 outlet~;
+#N canvas 108 346 564 411 guts 0;
+#X obj 72 24 inlet~;
+#X obj 70 294 outlet~;
+#X obj 130 26 inlet;
+#X obj 221 138 /;
+#X msg 221 116 1 \$1;
+#X obj 71 162 *~;
+#X obj 130 137 line~;
+#X obj 71 264 *~;
+#X obj 89 192 wrap~;
+#X obj 71 223 -~;
+#X obj 130 114 pack 0 20;
+#X obj 221 191 line~;
+#X obj 221 168 pack 0 20;
+#X obj 130 54 max 1;
+#X connect 0 0 5 0;
+#X connect 2 0 13 0;
+#X connect 3 0 12 0;
+#X connect 4 0 3 0;
+#X connect 5 0 8 0;
+#X connect 5 0 9 0;
+#X connect 6 0 5 1;
+#X connect 7 0 1 0;
+#X connect 8 0 9 1;
+#X connect 9 0 7 0;
+#X connect 10 0 6 0;
+#X connect 11 0 7 1;
+#X connect 12 0 11 0;
+#X connect 13 0 4 0;
+#X connect 13 0 10 0;
+#X restore 76 260 pd guts;
+#X obj 74 133 hip~ 4;
+#X obj 75 303 hip~ 4;
+#X obj 76 329 c_xfade;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 253 20 pd LICENSE-GPL;
+#X obj 247 153 inlet;
+#X obj 307 153 inlet;
+#X text 236 174 depth;
+#X text 302 175 dry;
+#X obj 76 282 *~ 0.125;
+#X obj 307 205 lop~ 10;
+#X connect 0 0 3 0;
+#X connect 0 0 5 1;
+#X connect 2 0 11 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 7 0 2 1;
+#X connect 8 0 12 0;
+#X connect 11 0 4 0;
+#X connect 12 0 5 2;

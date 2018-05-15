@@ -1,0 +1,16 @@
+[Unit]
+Description=Run OscProxy at boot
+DefaultDependencies=no
+Wants=network-online.target
+After=network-online.target
+Conflicts=shutdown.target
+Before=shutdown.target bela_startup.service
+
+[Service]
+EnvironmentFile=/opt/Bela/startup_env
+ExecStart=/root/projects/OscProxy/build/OscProxy 4001 organelle2 4001
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,65 @@
+#N canvas 326 55 693 430 10;
+#X obj 73 44 inlet~;
+#X obj 72 335 outlet~;
+#N canvas 263 23 762 384 banghold~ 0;
+#X obj 101 280 samphold~;
+#X obj 162 255 vline~;
+#X obj 205 100 samplerate~;
+#X obj 205 122 swap 1000;
+#X obj 205 147 /;
+#X obj 162 198 f;
+#X msg 162 230 -1 \, 0 0 \$1;
+#X obj 162 41 inlet;
+#X obj 162 177 b;
+#X obj 102 41 inlet~;
+#X obj 101 304 outlet~;
+#X msg 289 69 bang;
+#X text 234 24 samples its input whenever it receives a bang at the
+first inlet. Accurate up to one sample duration.;
+#X obj 205 69 r loadbang-\$1;
+#X connect 0 0 10 0;
+#X connect 1 0 0 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 5 1;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 0 0;
+#X connect 11 0 2 0;
+#X connect 13 0 2 0;
+#X restore 89 127 pd banghold~;
+#X obj 71 165 -~;
+#X obj 71 297 wrap~;
+#X obj 71 240 +~;
+#X obj 72 81 phasor~;
+#X obj 170 43 inlet;
+#X obj 202 206 vline~;
+#X obj 202 95 wrap;
+#N canvas 228 198 627 317 LICENSE-BSD 0;
+#X text 121 56 This software is copyrighted by Miller Puckette \, Reality
+Jockey Ltd. and others. The terms (the "Standard Improved BSD License")
+apply to all files associated with the software unless explicitly disclaimed
+in individual files.;
+#X text 123 148 See the file LICENSE.txt for the full license text.
+;
+#X restore 233 40 pd LICENSE-BSD;
+#X obj 202 177 + 2;
+#X obj 170 67 t b f;
+#X text 235 177 workaround for a bug in [wrap~] which converts 0 to
+1;
+#X connect 0 0 6 0;
+#X connect 2 0 3 1;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X connect 6 0 2 0;
+#X connect 7 0 12 0;
+#X connect 8 0 5 1;
+#X connect 9 0 11 0;
+#X connect 11 0 8 0;
+#X connect 12 0 2 1;
+#X connect 12 1 9 0;

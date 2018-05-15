@@ -1,0 +1,51 @@
+#N canvas 4 22 840 545 10;
+#X floatatom 704 204 5 0 0 1 Delay_Time - -;
+#N canvas 0 22 450 300 plock 0;
+#X obj 97 145 *~;
+#X obj 96 170 outlet~;
+#X obj 98 34 inlet;
+#X obj 98 56 b;
+#X obj 116 120 osc~ 440;
+#X obj 98 78 c_ead 3 100;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 1;
+#X connect 5 0 0 0;
+#X restore 520 178 pd plock;
+#X obj 521 334 soundoutput;
+#X obj 623 225 e_sdelay 500;
+#X msg 520 156 test signal;
+#X obj 533 278 *~ 0.5;
+#X obj 533 299 e_sdelay 250;
+#N canvas 56 215 827 710 REFERENCE 0;
+#X text 114 424 See also:;
+#X text 114 121 Name: e_sdelay;
+#X text 114 141 Summary: static delay line;
+#X text 114 181 Argument 0: <float> Current and maximum delay time.
+;
+#X text 114 224 Inlet 0: Audio input signal;
+#X text 114 304 Outlet 0: Delayed audio output signal;
+#X text 114 344 Description: static delay line.;
+#X text 114 254 Inlet 1: '<float>' Delay time (ms). This value has
+to be lower/equal to the maxmium value set as an argument.;
+#X text 114 524 Tags: Audio \, Delay;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 5 48 pd REFERENCE;
+#X obj 5 18 cnv 15 450 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 468 51 Example:;
+#X text 471 524 RjDj Library (https://github.com/rjdj/rjlib) - 2011
+;
+#X obj 8 20 e_sdelay;
+#X text 79 21 - static delay line;
+#X obj 87 372 e_dubdel;
+#X obj 157 372 e_pingpong;
+#X connect 0 0 3 1;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 1;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;

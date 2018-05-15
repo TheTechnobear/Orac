@@ -1,0 +1,43 @@
+{
+    "name" : "U-euclid",
+    "display" : "Euclidean",
+    "parameters" :  [ 
+        ["int","e_notes_1","# Notes",0,16,0],
+        ["int","e_off_1","Offset",0,16,0],
+        ["int","e_len_1","Length",0,16,16],
+        ["int","e_note_1","Note 1",0,127,60],
+        ["int","e_vel_1","Velocity 1",0,127,100],
+        ["time","e_nlen_1","Note Len 1",0,2000,100],
+
+        ["int","e_notes_2","# Notes",0,16,0],
+        ["int","e_off_2","Offset",0,16,0],
+        ["int","e_len_2","Length",0,16,16],
+        ["int","e_note_2","Note 2",0,127,61],
+        ["int","e_vel_2","Velocity 2",0,127,100],
+        ["time","e_nlen_2","Note Len 2",0,2000,100],
+
+        ["int","e_notes_3","# Notes",0,16,0],
+        ["int","e_off_3","Offset",0,16,0],
+        ["int","e_len_3","Length",0,16,16],
+        ["int","e_note_3","Note 3",0,127,62],
+        ["int","e_vel_3","Velocity 3",0,127,100],
+        ["time","e_nlen_3","Note Len 3",0,2000,100],
+
+        ["int","e_notes_4","# Notes",0,16,0],
+        ["int","e_off_4","Offset",0,16,0],
+        ["int","e_len_4","Length",0,16,16],
+        ["int","e_note_4","Note 4",0,127,63],
+        ["int","e_vel_4","Velocity 4",0,127,100],
+        ["time","e_nlen_4","Note Len 4",0,2000,100]
+    ],
+    "pages" : [ 
+        ["pg_n1","Seq 1",["e_notes_1","e_off_1", "e_len_1"]],
+        ["pg_n2","Seq 2",["e_notes_2","e_off_2", "e_len_2"]],
+        ["pg_n3","Seq 3",["e_notes_3","e_off_3", "e_len_3"]],
+        ["pg_n4","Seq 4",["e_notes_4","e_off_4", "e_len_4"]],
+        ["pg_note","Notes",["e_note_1","e_note_2", "e_note_3", "e_note_4"]],
+        ["pg_vel","Velocity",["e_vel_1","e_vel_2", "e_vel_3", "e_vel_4"]],
+        ["pg_nl","Note Len",["e_nlen_1","e_nlen_2", "e_nlen_3", "e_nlen_4"]]
+    ]
+}
+

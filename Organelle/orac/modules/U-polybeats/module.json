@@ -1,0 +1,14 @@
+{
+    "name" : "U-polybeats",
+    "display" : "Polybeats",
+    "parameters" :  [ 
+        ["int","pb_div","Division",1,32,4],
+        ["time","pb_note_len","Note Length",10,1000,250],
+        ["int","pb_note_vel","Note Velocity",1,127,100],
+        ["pct","pb_swing","Swing",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["pb_div","pb_note_len","pb_note_vel","pb_swing"]]
+    ]
+}
+

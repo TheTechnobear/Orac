@@ -1,0 +1,107 @@
+{
+	"presets":	{
+		"Default":	{
+			"m2":	{
+				"moduleType":	"U-default",
+				"params":	{
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m7":	{
+				"moduleType":	"U-default",
+				"params":	{
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m6":	{
+				"moduleType":	"U-default",
+				"params":	{
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m1":	{
+				"moduleType":	"S-basicpoly",
+				"params":	{
+					"bp_vdepth":	0,
+					"bp_vrate":	1,
+					"bp_decay":	5,
+					"bp_wave":	0,
+					"bp_trans":	0
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m9":	{
+				"moduleType":	"R-1x10",
+				"params":	{
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m4":	{
+				"moduleType":	"U-default",
+				"params":	{
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m0":	{
+				"moduleType":	"U-polybeats",
+				"params":	{
+					"pb_swing":	0,
+					"pb_note_vel":	100,
+					"pb_note_len":	250,
+					"pb_div":	4
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m3":	{
+				"moduleType":	"U-default",
+				"params":	{
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m5":	{
+				"moduleType":	"U-default",
+				"params":	{
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			},
+			"m8":	{
+				"moduleType":	"U-clock",
+				"params":	{
+					"c_midiout":	0,
+					"c_bpm":	120
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				}
+			}
+		}
+	}
+}

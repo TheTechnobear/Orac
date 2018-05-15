@@ -1,0 +1,42 @@
+#N canvas 119 50 879 550 10;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array \$0-s 100 float 0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 529 255 graph;
+#X obj 630 206 tabwrite~ \$0-s;
+#X obj 630 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 630 85 metro 150;
+#N canvas 377 58 827 710 REFERENCE 0;
+#X text 114 141 Summary: phasor~ clone with sample accurate phase setting
+;
+#X text 114 121 Name: s_vphasor;
+#X text 114 164 Inlet 0: audio signal or float to set frequency;
+#X text 114 217 Outlet 0: phasor signal between 0 and 1;
+#X text 122 529 Tags: phasor \, phase \, sample accurate \, samphold
+;
+#X text 114 184 Inlet 1: float to set phase. Range is 0 to 1 \, values
+outside are wrapped.;
+#X text 112 251 Description: s_vphasor is almost like [phasor~] in
+Pd \, but it allows setting the phase through the left inlet with sample
+accuracy and it does not support setting its frequency with an argument.
+Based on an approach by Mike Moser-Booth.;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 5 48 pd REFERENCE;
+#X text 5 13 s_vphasor - phasor~ clone with sample accurate phase setting
+;
+#X obj 526 161 s_vphasor;
+#X obj 527 90 sig~ 1234;
+#X msg 586 125 0.25;
+#X floatatom 527 62 5 0 0 0 - - -, f 5;
+#X msg 528 454 yticks 0 0.1 5;
+#X obj 528 475 s \$0-s;
+#X obj 528 432 loadbang;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
+#X connect 9 0 7 0;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;

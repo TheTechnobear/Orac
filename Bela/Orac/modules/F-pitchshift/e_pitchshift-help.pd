@@ -1,0 +1,36 @@
+#N canvas 338 22 912 538 10;
+#X obj 596 178 e_pitchshift;
+#X obj 596 149 osc~ 220;
+#X msg 677 149 pitch \$1;
+#X floatatom 677 128 5 0 0 0 - - -;
+#X obj 596 248 soundoutput;
+#N canvas 86 276 827 710 REFERENCE 0;
+#X text 114 424 See also:;
+#X text 114 121 Name: e_pitchshift;
+#X text 114 141 Summary: Shift pitch of incoming signal;
+#X text 114 204 Inlet 0: Audio input signal;
+#X text 114 224 Inlet 1: 'pitch <float>' pitch shift amount in semitones.
+;
+#X text 114 244 Outlet 0: Audio output signal;
+#X text 114 524 Tags: Audio;
+#X text 114 304 Description: Pitches incoming audio in semitones according
+to the control value set in Inlet 1 - this effect differs from e_freqshift
+in that it still retains the harmonic structure of the signal.;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 5 48 pd REFERENCE;
+#X obj 5 18 cnv 15 450 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 468 51 Example:;
+#X text 526 511 RjDj Library (https://github.com/rjdj/rjlib) - 2011
+;
+#X obj 8 20 e_pitchshift;
+#X obj 596 208 *~ 0.5;
+#X text 720 128 Pitch Shift;
+#X obj 97 372 e_freqshift;
+#X text 109 21 - shifts the pitch of an incoming signal;
+#X connect 0 0 10 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 2 0;
+#X connect 10 0 4 0;
+#X connect 10 0 4 1;

@@ -1,0 +1,145 @@
+#N canvas 103 104 946 543 10;
+#N canvas 176 454 582 570 REFERENCE 0;
+#X text 24 31 Name: u_loader;
+#X text 24 123 Argument 1: \$0 - Unique ID \, this makes sure it is
+unique to its parent patch.;
+#X text 24 91 Argument 0: "abstraction_name-\$1" - Abstraction Name
+\, this makes sure it takes the name of its parent patch.;
+#X text 24 334 See also: [u_dispatch];
+#X text 24 234 Description: [u_loader] is used in many rjlib abstractions
+to make preset handling and inlet method dispatching consistent. Only
+one should be used per abstraction \, it can also be used in conjunction
+with [u_dispatch].;
+#X text 24 52 Summary: connect local state variables to global senders
+;
+#X text 24 163 Inlet 0: "save" message;
+#X text 24 183 Outlet 0: reports settings on "save";
+#X text 24 434 Tags: Message \, Preset \, State-Saving;
+#X coords 0 -1 1 1 450 450 1 10 10;
+#X restore 15 58 pd REFERENCE;
+#X obj 15 28 cnv 15 450 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 497 490 RjDj Library (https://github.com/rjdj/rjlib) - 2011
+;
+#X obj 18 30 u_loader;
+#X text 131 30 - connect local state variables to global senders;
+#N canvas 0 0 1086 669 Detailed-Explanation 0;
+#X text 77 159 arg1: <name-of-abstraction>-\$1;
+#X text 77 179 arg2: \$0;
+#X text 26 118 Inside of each abstraction you should create *EXACTLY*
+one [u_loader] object that gets the following arguments:;
+#X text 26 212 Don't create more than one [u_loader] with the same
+second \$0-argument!;
+#X obj 708 195 r \$0-one;
+#X floatatom 708 218 5 0 0 0 - - -;
+#X obj 518 61 u_loader SOMETAG \$0;
+#X msg 520 164 one \$1;
+#X floatatom 520 146 5 0 0 0 - - -;
+#X text 661 194 ==>;
+#X obj 520 195 u_dispatch \$0 one;
+#X obj 31 417 s RJ_SCENE_LOAD;
+#X obj 37 555 s RJ_SCENE_SAVE;
+#X obj 632 423 r RJ_SCENE;
+#X text 538 399 receive messages for saving on RJ_SCENE;
+#X msg 37 529 save;
+#X msg 632 526;
+#X msg 716 453 clear;
+#X obj 632 550 s RJ_SCENE_LOAD;
+#X text 28 468 Send "save" to RJ_SCENE_SAVE to initialize global saving.
+;
+#X msg 31 391 SOMETAG one \$1;
+#X floatatom 31 370 5 0 0 0 - - -;
+#X obj 34 349 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 711 242 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 37 486 bng 32 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+-1;
+#X text 163 525 This will send all settings to;
+#X obj 386 524 r RJ_SCENE;
+#X floatatom 708 307 5 0 0 0 - - -;
+#X text 661 283 ==>;
+#X obj 711 331 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 520 284 u_dispatch \$0 two;
+#X obj 708 284 r \$0-two;
+#X floatatom 582 145 5 0 0 0 - - -;
+#X msg 582 163 two \$1;
+#X text 491 317 Arguments for [u_dispatch]:;
+#X text 508 342 1) \$0;
+#X text 508 359 2) method name.;
+#N canvas 0 22 799 406 write2textfile 0;
+#X obj 85 115 r RJ_SCENE;
+#X text 81 91 receive messages for saving on RJ_SCENE;
+#X msg 20 137 clear;
+#X obj 426 244 s RJ_SCENE_LOAD;
+#X obj 85 214 textfile;
+#X obj 85 143 list prepend add;
+#X obj 85 165 list trim;
+#X msg 22 166 print;
+#X msg 115 187 write settings.txt;
+#X obj 426 218 textfile;
+#X obj 426 185 until;
+#X text 419 81 Restore from textfile:;
+#X msg 471 190 read \$1 \, rewind;
+#X obj 426 145 t b a;
+#X msg 426 117 symbol settings.txt;
+#X connect 0 0 5 0;
+#X connect 2 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 3 0;
+#X connect 9 1 10 1;
+#X connect 10 0 9 0;
+#X connect 12 0 9 0;
+#X connect 13 0 10 0;
+#X connect 13 1 12 0;
+#X connect 14 0 13 0;
+#X restore 804 543 pd write2textfile;
+#X text 161 548 You can either store them by writing it into a message
+as illustrated on the right or into a textfile (see subpatch);
+#X text 25 57 If you write an abstraction for the rjlib \, you should
+reserve the rightmost inlet for dispatching methods using [u_dispatch]
+as shown on the right with dispatchers for "one" and "two" messages.
+;
+#X text 25 252 By doing that \, [u_loader] will connect the local state
+variables to a group of global senders called RJ_SCENE \, RJ_SCENE_LOAD
+and RJ_SCENE_SAVE.;
+#X text 27 327 Send messages to RJ_SCENE_LOAD to remote-control settings
+;
+#X text 144 387 This is global. The message is composed of the first
+[u_loader]-argument and the second [u_dispatch] argument.;
+#X text 515 113 [u_loader] itself accepts a "save" message \, too \,
+to send its settings to its outlet.;
+#X msg 518 39 save;
+#X obj 518 86 print LOADER;
+#X obj 632 453 u_cocollect;
+#X text 571 39 save to outlet;
+#X text 641 481 restoring is possible from here as well by sending
+to RJ_SCENE_LOAD;
+#X text 24 31 Example:;
+#X text 570 605 RjDj Library (https://github.com/rjdj/rjlib) - 2011
+;
+#X connect 4 0 5 0;
+#X connect 5 0 23 0;
+#X connect 6 0 45 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 10 0 30 0;
+#X connect 13 0 46 0;
+#X connect 15 0 12 0;
+#X connect 16 0 18 0;
+#X connect 17 0 46 1;
+#X connect 20 0 11 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
+#X connect 24 0 15 0;
+#X connect 27 0 29 0;
+#X connect 31 0 27 0;
+#X connect 32 0 33 0;
+#X connect 33 0 10 0;
+#X connect 44 0 6 0;
+#X connect 46 0 16 0;
+#X restore 545 224 pd Detailed-Explanation;

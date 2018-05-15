@@ -1,0 +1,16 @@
+#N canvas 1035 433 667 620 10;
+#X obj 78 154 snapshot~;
+#X obj 78 197 * 1.2;
+#X obj 78 326 outlet;
+#X obj 192 54 inlet sample;
+#X obj 78 283 change -1;
+#X obj 79 54 inlet~;
+#X obj 78 111 lop~ 30;
+#X obj 78 240 clip 0 1;
+#X connect 0 0 1 0;
+#X connect 1 0 7 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 4 0;

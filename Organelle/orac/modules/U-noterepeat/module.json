@@ -1,0 +1,13 @@
+{
+    "name" : "U-noterepeat",
+    "display" : "NoteRepeat",
+    "parameters" :  [ 
+        ["int","nr_speed","Note Div.",1,6,1],
+        ["int","nr_number","Num. Repeats",0,32,4],
+        ["time","nr_length","Length",1,1000,500]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["nr_speed","nr_number","nr_length"]]
+    ]
+}
+

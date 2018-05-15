@@ -1,0 +1,51 @@
+#N canvas 28 90 913 314 10;
+#X obj 489 193 s_blsquare;
+#X obj 489 66 mtof;
+#X floatatom 489 46 5 0 0 0 - - -;
+#X obj 490 248 soundoutput;
+#X floatatom 640 31 5 0 0 2 pwm_freq - -;
+#X floatatom 576 194 5 0 0 1 phase_(0...1) - -;
+#X obj 640 50 osc~ 0.5;
+#X obj 522 129 pack 0 10;
+#X obj 522 107 / 100;
+#X floatatom 522 89 5 0 0 0 - - -;
+#X obj 641 110 +~ 0.5;
+#X obj 641 82 *~ 0.1;
+#X obj 641 154 *~ 1;
+#X obj 686 154 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 650 128 it's best to modulate around 0.5;
+#X obj 727 49 / 100;
+#X floatatom 727 31 5 0 0 2 depth - -;
+#X obj 522 150 line~;
+#N canvas 285 142 696 470 REFERENCE 0;
+#X text 110 83 Inlet 0: signal or float for frequency;
+#X text 110 104 Inlet 1: signal or float for pulse width - 0.5 is a
+50/50 square wave;
+#X text 110 138 Inlet 2: float to set phase (0...1);
+#X text 110 62 Summary: bandlimited square wave with audio input for
+PWM.;
+#X text 110 41 Name: s_blquare;
+#X text 110 180 Description: s_blquare generates a bandlimited square
+wave with audio input for PWM.;
+#X text 110 159 Outlet 0: output signal;
+#X coords 0 -1 1 1 450 200 1 100 20;
+#X restore 19 51 pd REFERENCE;
+#X text 20 12 s_blsquare - bandlimited square wave with PWM.;
+#X connect 0 0 3 0;
+#X connect 0 0 3 1;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 0 2;
+#X connect 6 0 11 0;
+#X connect 7 0 17 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 0 1;
+#X connect 13 0 12 1;
+#X connect 15 0 11 1;
+#X connect 16 0 15 0;
+#X connect 17 0 0 1;

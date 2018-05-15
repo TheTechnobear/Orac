@@ -1,0 +1,42 @@
+#N canvas 595 369 1200 840 10;
+#X obj 240 186 r notesIn-\$1;
+#X obj 242 491 s notesOut-\$1;
+#X obj 23 9 r loaddefs-\$1;
+#X msg 23 58 loaddefinitions \$1;
+#X obj 166 9 r loadbang-\$1;
+#X obj 181 76 print loading definiton for \$1;
+#X obj 23 34 symbol;
+#X obj 25 186 inlet~ inL-\$1;
+#X obj 135 186 inlet~ inR-\$1;
+#X obj 27 491 outlet~ outL-\$1;
+#X obj 136 491 outlet~ outR-\$1;
+#X obj 181 35 print loaded:linear router into \$1, f 39;
+#X obj 23 112 KontrolModule \$1 R-1x10;
+#X text 44 577 this is a simple routing module \, we could have different
+ones! in this router we route notes etc to the active module \, and
+audio and notes from m1 to m5 note: if you add more modules \, then
+this module needs updating...;
+#X text 768 43 linear routing of audio and notes between modules;
+#X obj 336 187 r auxIn-\$1;
+#X obj 335 210 r expIn-\$1;
+#X obj 335 235 r fsIn-\$1;
+#X obj 336 272 actmodhandler \$1;
+#X obj 774 157 connectin m0 \$1;
+#X obj 774 397 connectout m9 \$1;
+#X obj 774 181 connectmod m0 m1 \$1;
+#X obj 774 373 connectmod m8 m9 \$1;
+#X obj 774 205 connectmod m1 m2 \$1;
+#X obj 774 229 connectmod m2 m3 \$1;
+#X obj 774 253 connectmod m3 m4 \$1;
+#X obj 774 277 connectmod m4 m5 \$1;
+#X obj 774 301 connectmod m5 m6 \$1;
+#X obj 774 325 connectmod m6 m7 \$1;
+#X obj 774 349 connectmod m7 m8 \$1;
+#X connect 0 0 1 0;
+#X connect 2 0 6 0;
+#X connect 2 0 5 0;
+#X connect 3 0 12 0;
+#X connect 4 0 11 0;
+#X connect 6 0 3 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;

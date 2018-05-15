@@ -1,0 +1,27 @@
+#N canvas 318 231 756 416 10;
+#X obj 96 198 u_collect;
+#X msg 96 237;
+#X obj 156 173 bng 15 250 50 0 empty empty clear 17 7 1 10 -262144
+-1 -1;
+#X floatatom 96 150 5 0 0 0 - - -;
+#X msg 322 240;
+#X obj 396 176 bng 15 250 50 0 empty empty clear 17 7 1 10 -262144
+-1 -1;
+#X floatatom 322 153 5 0 0 0 - - -;
+#X obj 322 201 u_cocollect;
+#X text 30 32 u_collect \, u_cocollect - collect messages into a message
+box;
+#X text 110 69 u_collect just collects messsages.;
+#X text 109 94 u_cocollect collects messsages and ends each with a
+comma.;
+#X obj 371 152 pack 1 2 3 4;
+#X floatatom 371 135 5 0 0 0 - - -;
+#X text 424 133 both also collect lists;
+#X connect 0 0 1 0;
+#X connect 2 0 0 1;
+#X connect 3 0 0 0;
+#X connect 5 0 7 1;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;
+#X connect 11 0 7 0;
+#X connect 12 0 11 0;

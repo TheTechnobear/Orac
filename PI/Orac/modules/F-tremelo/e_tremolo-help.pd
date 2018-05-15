@@ -1,0 +1,41 @@
+#N canvas 4 22 759 534 10;
+#X obj 513 223 e_tremolo mtrem;
+#X obj 513 132 osc~ 440;
+#X obj 513 304 soundoutput;
+#X msg 615 175 freq 10;
+#X msg 681 175 dry 0.5;
+#N canvas 72 380 582 570 REFERENCE 0;
+#X text 24 314 See also:;
+#X text 24 31 Name: e_tremolo;
+#X text 24 51 Summary: a simple tremolo effect;
+#X text 24 254 Description: a simple tremolo (amplitude modulation)
+effect.;
+#X text 24 434 Tags: Audio \, Modulation;
+#X text 24 91 Argument 0: <symbol> Unique id - make sure this is different
+to any other instances.;
+#X text 24 124 Inlet 0: Audio input signal;
+#X text 199 521 freq <float>: Modulation frequency in Hz \, default
+= 5;
+#X text 24 214 Outlet 0: Audio output signal;
+#X text 24 144 Inlet 1: Control messages: freq <float>: Modulation
+frequency in Hz \, default=5. dry <float> Dry/Wet mix as "dryness level"
+\, so default=0 means "not dry" i.e. wet!;
+#X coords 0 -1 1 1 450 450 1 10 10;
+#X restore 5 48 pd REFERENCE;
+#X obj 5 18 cnv 15 450 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 468 51 Example:;
+#X text 378 509 RjDj Library (https://github.com/rjdj/rjlib) - 2011
+;
+#X text 89 21 - tremolo effect;
+#X obj 8 20 e_tremolo;
+#X obj 615 131 loadbang;
+#X obj 92 352 e_chorus;
+#X obj 162 352 e_phaser;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 1;
+#X connect 11 0 4 0;
+#X connect 11 0 3 0;
