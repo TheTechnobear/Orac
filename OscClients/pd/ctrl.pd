@@ -1,0 +1,43 @@
+#N canvas 437 522 756 309 10;
+#X obj 1 1 cnv 25 100 25 empty \$1Desc Division 2 12 0 12 -233017 -66577
+0;
+#X obj 5 38 hsl 75 25 0 1 0 0 \$1Ctrl \$1Ctrl empty 0 0 0 10 -262144
+-1 -1 0 1;
+#X obj 0 75 cnv 25 100 25 empty \$1Value 1 2 12 0 12 -233017 -66577
+0;
+#X obj 94 127 r oscIn;
+#X obj 94 151 routeOSC /\$1Desc;
+#X obj 94 223 s \$1Desc;
+#X msg 94 199 label \$1;
+#X obj 94 175 symbol;
+#X obj 208 128 r oscIn;
+#X msg 208 200 label \$1;
+#X obj 208 176 symbol;
+#X obj 208 152 routeOSC /\$1Value;
+#X obj 208 224 s \$1Value;
+#X obj 329 125 r oscIn;
+#X obj 329 149 routeOSC /\$1Ctrl;
+#X obj 329 221 s \$1Ctrl;
+#X obj 459 120 r \$1Ctrl;
+#X obj 459 195 pack s f;
+#X obj 459 141 t b f;
+#X obj 459 244 s oscOut;
+#X obj 456 168 symbol \$1;
+#X msg 459 216 send /\$1Ctrl \$2;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 16 0 18 0;
+#X connect 17 0 21 0;
+#X connect 18 0 20 0;
+#X connect 18 1 17 1;
+#X connect 20 0 17 0;
+#X connect 21 0 19 0;
+#X coords 0 -1 85 60 100 100 2 0 0;
