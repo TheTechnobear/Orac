@@ -1,14 +1,14 @@
-#N canvas 556 516 1318 828 10;
-#N canvas 766 448 894 536 textdisplay 1;
-#X obj 1 1 cnv 25 300 25 empty text1 empty 0 12 0 14 -233017 -66577
+#N canvas 413 516 1318 828 10;
+#N canvas 1016 483 894 536 textdisplay 0;
+#X obj 1 1 cnv 25 300 25 empty text1 m0:Polybeats 0 12 0 14 -195568
+-262144 0;
+#X obj 1 27 cnv 25 300 25 empty text2 Default 0 12 0 14 -195568 -262144
 0;
-#X obj 1 27 cnv 25 300 25 empty text2 empty 0 12 0 14 -233017 -66577
+#X obj 1 53 cnv 15 300 25 empty text3 Midi 20 12 0 14 -191407 -262144
 0;
-#X obj 1 53 cnv 25 300 25 empty text3 empty 0 12 0 14 -233017 -66577
+#X obj 1 79 cnv 15 300 25 empty text4 Mod 20 12 0 14 -191407 -262144
 0;
-#X obj 1 79 cnv 25 300 25 empty text4 empty 0 12 0 14 -233017 -66577
-0;
-#X obj 1 105 cnv 25 300 25 empty text5 empty 0 12 0 14 -233017 -66577
+#X obj 1 105 cnv 25 300 25 empty text5 Save 0 12 0 14 -195568 -262144
 0;
 #X obj 28 294 r oscIn;
 #X msg 29 439 label \$1;
@@ -45,6 +45,21 @@
 #X obj 399 378 t b;
 #X obj 28 318 routeOSC /text;
 #X obj 28 350 route 1 2 3 4 5;
+#X obj 367 259 s text1;
+#X obj 439 42 r oscIn;
+#X obj 439 63 routeOSC /selectText;
+#X obj 440 93 t f b;
+#X obj 440 155 sel 1 2 3 4 5;
+#X msg 368 217 color 178 0 0;
+#X msg 692 103 color 230 0 0;
+#X msg 467 218 color 178 0 0;
+#X msg 566 220 color 178 0 0;
+#X msg 663 221 color 178 0 0;
+#X msg 769 221 color 178 0 0;
+#X obj 469 256 s text2;
+#X obj 567 255 s text3;
+#X obj 667 253 s text4;
+#X obj 773 261 s text5;
 #X connect 5 0 36 0;
 #X connect 5 0 38 0;
 #X connect 6 0 8 0;
@@ -79,9 +94,28 @@
 #X connect 39 2 13 0;
 #X connect 39 3 15 0;
 #X connect 39 4 17 0;
+#X connect 41 0 42 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 43 1 46 0;
+#X connect 44 0 45 0;
+#X connect 44 1 47 0;
+#X connect 44 2 48 0;
+#X connect 44 3 49 0;
+#X connect 44 4 50 0;
+#X connect 45 0 40 0;
+#X connect 46 0 40 0;
+#X connect 46 0 51 0;
+#X connect 46 0 52 0;
+#X connect 46 0 53 0;
+#X connect 46 0 54 0;
+#X connect 47 0 51 0;
+#X connect 48 0 52 0;
+#X connect 49 0 53 0;
+#X connect 50 0 54 0;
 #X coords 0 0 305 135 305 135 2 0 0;
-#X restore 54 291 pd textdisplay;
-#X obj 53 63 ctrl P1;
+#X restore 54 331 pd textdisplay;
+#X obj 53 103 ctrl P1;
 #N canvas 1428 660 576 469 nav 0;
 #X obj 10 3 bng 30 250 50 0 NavUp empty empty 17 7 0 10 -262144 -1
 -1;
@@ -105,9 +139,9 @@
 #X connect 10 0 11 0;
 #X connect 11 0 9 0;
 #X coords 0 9 85 135 85 135 2 0 0;
-#X restore 364 291 pd nav;
-#N canvas 1154 512 1107 682 init 1;
-#X obj 22 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 380 332 pd nav;
+#N canvas 1154 512 1107 682 init 0;
+#X obj 22 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 345 207 unpackOSC;
 #X obj 24 137 packOSC;
@@ -125,10 +159,7 @@
 #X msg 95 135 connect localhost 8001;
 #X obj 195 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 486 171 print;
-#X obj 413 270 print;
 #X connect 1 0 6 0;
-#X connect 1 0 17 0;
 #X connect 2 0 9 0;
 #X connect 3 0 2 0;
 #X connect 4 0 14 0;
@@ -139,14 +170,69 @@
 #X connect 11 0 0 0;
 #X connect 12 0 1 0;
 #X connect 13 0 12 0;
-#X connect 13 0 16 0;
 #X connect 14 0 11 0;
 #X connect 15 0 4 0;
-#X restore 56 447 pd init;
-#X obj 52 180 ctrl P5;
-#X obj 163 63 ctrl P2;
-#X obj 270 62 ctrl P3;
-#X obj 378 62 ctrl P4;
-#X obj 160 180 ctrl P6;
-#X obj 272 181 ctrl P7;
-#X obj 379 181 ctrl P8;
+#X restore 56 487 pd init;
+#X obj 52 220 ctrl P5;
+#X obj 162 102 ctrl P2;
+#X obj 270 102 ctrl P3;
+#X obj 378 102 ctrl P4;
+#X obj 160 220 ctrl P6;
+#X obj 272 221 ctrl P7;
+#X obj 379 221 ctrl P8;
+#N canvas 1127 601 677 632 moduletitle 0;
+#X obj 39 6 cnv 15 350 25 empty moduletitle Polybeats 2 12 0 14 -233017
+-66577 0;
+#X obj 32 343 r oscIn;
+#X obj 34 402 symbol;
+#X obj 5 6 bng 25 250 50 0 ModPrev empty Prev 0 30 0 10 -262144 -1
+-1;
+#X obj 167 443 s oscOut;
+#X obj 291 455 s oscOut;
+#X obj 396 5 bng 25 250 50 0 ModNext empty Next 0 30 0 10 -262144 -1
+-1;
+#X obj 33 373 routeOSC /module;
+#X obj 35 452 s moduletitle;
+#X msg 167 412 send /ModulePrev 1;
+#X msg 291 412 send /ModuleNext 1;
+#X obj 291 377 r ModNext;
+#X obj 166 375 r ModPrev;
+#X msg 35 428 label \$1;
+#X connect 1 0 7 0;
+#X connect 2 0 13 0;
+#X connect 7 0 2 0;
+#X connect 9 0 4 0;
+#X connect 10 0 5 0;
+#X connect 11 0 10 0;
+#X connect 12 0 9 0;
+#X connect 13 0 8 0;
+#X coords 0 0 1 1 425 40 2 0 0;
+#X restore 53 4 pd moduletitle;
+#N canvas 1127 601 677 632 pagetitle 0;
+#X obj 39 6 cnv 15 350 25 empty pagetitle Main 2 12 0 14 -233017 -66577
+0;
+#X obj 32 343 r oscIn;
+#X obj 33 373 routeOSC /page;
+#X obj 34 402 symbol;
+#X obj 5 6 bng 25 250 50 0 PagePrev empty Prev 0 30 0 10 -262144 -1
+-1;
+#X obj 167 443 s oscOut;
+#X obj 291 455 s oscOut;
+#X obj 291 377 r PageNext;
+#X obj 166 375 r PagePrev;
+#X msg 167 412 send /PagePrev 1;
+#X msg 291 412 send /PageNext 1;
+#X obj 396 5 bng 25 250 50 0 PageNext empty Next 0 30 0 10 -262144
+-1 -1;
+#X obj 35 452 s pagetitle;
+#X msg 35 428 label \$1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 13 0;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X connect 9 0 5 0;
+#X connect 10 0 6 0;
+#X connect 13 0 12 0;
+#X coords 0 0 1 1 425 40 2 0 0;
+#X restore 53 55 pd pagetitle;

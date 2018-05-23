@@ -1,30 +1,74 @@
 {
 	"presets":	{
 		"Default":	{
-			"m2":	{
+			"m8":	{
+				"moduleType":	"U-clock",
+				"params":	{
+					"c_midiout":	0,
+					"c_bpm":	120
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				},
+				"mod-mapping":	{
+					"bus":	{
+					}
+				}
+			},
+			"m3":	{
 				"moduleType":	"U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
 					"cc":	{
 					}
+				},
+				"mod-mapping":	{
+					"bus":	{
+					}
 				}
 			},
-			"m7":	{
+			"m5":	{
 				"moduleType":	"U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
 					"cc":	{
 					}
+				},
+				"mod-mapping":	{
+					"bus":	{
+					}
 				}
 			},
-			"m6":	{
+			"m0":	{
+				"moduleType":	"U-polybeats",
+				"params":	{
+					"pb_swing":	0,
+					"pb_note_vel":	100,
+					"pb_note_len":	250,
+					"pb_div":	4
+				},
+				"midi-mapping":	{
+					"cc":	{
+					}
+				},
+				"mod-mapping":	{
+					"bus":	{
+					}
+				}
+			},
+			"m4":	{
 				"moduleType":	"U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
 					"cc":	{
+					}
+				},
+				"mod-mapping":	{
+					"bus":	{
 					}
 				}
 			},
@@ -40,6 +84,10 @@
 				"midi-mapping":	{
 					"cc":	{
 					}
+				},
+				"mod-mapping":	{
+					"bus":	{
+					}
 				}
 			},
 			"m9":	{
@@ -49,56 +97,48 @@
 				"midi-mapping":	{
 					"cc":	{
 					}
+				},
+				"mod-mapping":	{
+					"bus":	{
+					}
 				}
 			},
-			"m4":	{
+			"m6":	{
 				"moduleType":	"U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
 					"cc":	{
 					}
-				}
-			},
-			"m0":	{
-				"moduleType":	"U-polybeats",
-				"params":	{
-					"pb_swing":	0,
-					"pb_note_vel":	100,
-					"pb_note_len":	250,
-					"pb_div":	4
 				},
-				"midi-mapping":	{
-					"cc":	{
+				"mod-mapping":	{
+					"bus":	{
 					}
 				}
 			},
-			"m3":	{
+			"m7":	{
 				"moduleType":	"U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
 					"cc":	{
 					}
+				},
+				"mod-mapping":	{
+					"bus":	{
+					}
 				}
 			},
-			"m5":	{
+			"m2":	{
 				"moduleType":	"U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
 					"cc":	{
 					}
-				}
-			},
-			"m8":	{
-				"moduleType":	"U-clock",
-				"params":	{
-					"c_midiout":	0,
-					"c_bpm":	120
 				},
-				"midi-mapping":	{
-					"cc":	{
+				"mod-mapping":	{
+					"bus":	{
 					}
 				}
 			}
