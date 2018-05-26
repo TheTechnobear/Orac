@@ -1,13 +1,7 @@
-#N canvas 413 516 1318 828 10;
+#N canvas 162 410 1318 828 10;
 #N canvas 1016 483 894 536 textdisplay 0;
-#X obj 1 1 cnv 25 300 25 empty text1 m0:Polybeats 0 12 0 14 -195568
--262144 0;
-#X obj 1 27 cnv 25 300 25 empty text2 Default 0 12 0 14 -195568 -262144
-0;
-#X obj 1 53 cnv 15 300 25 empty text3 Midi 20 12 0 14 -191407 -262144
-0;
-#X obj 1 79 cnv 15 300 25 empty text4 Mod 20 12 0 14 -191407 -262144
-0;
+#X obj 1 1 cnv 25 300 25 empty text1 empty 0 12 0 14 -355 -262144 0
+;
 #X obj 1 105 cnv 25 300 25 empty text5 Save 0 12 0 14 -195568 -262144
 0;
 #X obj 28 294 r oscIn;
@@ -60,84 +54,90 @@
 #X obj 567 255 s text3;
 #X obj 667 253 s text4;
 #X obj 773 261 s text5;
-#X connect 5 0 36 0;
-#X connect 5 0 38 0;
+#X obj 1 79 cnv 25 300 25 empty text4 Save 0 12 0 14 -195568 -262144
+0;
+#X obj 1 27 cnv 25 300 25 empty text2 Save 0 12 0 14 -195568 -262144
+0;
+#X obj 1 53 cnv 25 300 25 empty text3 Save 0 12 0 14 -195568 -262144
+0;
+#X connect 2 0 33 0;
+#X connect 2 0 35 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
 #X connect 6 0 8 0;
 #X connect 7 0 6 0;
-#X connect 9 0 11 0;
+#X connect 9 0 15 0;
 #X connect 10 0 9 0;
-#X connect 12 0 18 0;
-#X connect 13 0 12 0;
-#X connect 14 0 19 0;
-#X connect 15 0 14 0;
-#X connect 16 0 20 0;
-#X connect 17 0 16 0;
+#X connect 11 0 16 0;
+#X connect 12 0 11 0;
+#X connect 13 0 17 0;
+#X connect 14 0 13 0;
+#X connect 18 0 20 0;
+#X connect 19 0 18 0;
 #X connect 21 0 23 0;
 #X connect 22 0 21 0;
-#X connect 24 0 26 0;
+#X connect 24 0 30 0;
 #X connect 25 0 24 0;
-#X connect 27 0 33 0;
-#X connect 28 0 27 0;
-#X connect 29 0 34 0;
-#X connect 30 0 29 0;
-#X connect 31 0 35 0;
-#X connect 32 0 31 0;
-#X connect 36 0 37 0;
-#X connect 37 0 22 0;
-#X connect 37 0 25 0;
-#X connect 37 0 28 0;
-#X connect 37 0 30 0;
-#X connect 37 0 32 0;
+#X connect 26 0 31 0;
+#X connect 27 0 26 0;
+#X connect 28 0 32 0;
+#X connect 29 0 28 0;
+#X connect 33 0 34 0;
+#X connect 34 0 19 0;
+#X connect 34 0 22 0;
+#X connect 34 0 25 0;
+#X connect 34 0 27 0;
+#X connect 34 0 29 0;
+#X connect 35 0 36 0;
+#X connect 36 0 4 0;
+#X connect 36 1 7 0;
+#X connect 36 2 10 0;
+#X connect 36 3 12 0;
+#X connect 36 4 14 0;
 #X connect 38 0 39 0;
-#X connect 39 0 7 0;
-#X connect 39 1 10 0;
-#X connect 39 2 13 0;
-#X connect 39 3 15 0;
-#X connect 39 4 17 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 40 1 43 0;
 #X connect 41 0 42 0;
-#X connect 42 0 43 0;
-#X connect 43 0 44 0;
-#X connect 43 1 46 0;
-#X connect 44 0 45 0;
-#X connect 44 1 47 0;
-#X connect 44 2 48 0;
-#X connect 44 3 49 0;
-#X connect 44 4 50 0;
-#X connect 45 0 40 0;
-#X connect 46 0 40 0;
-#X connect 46 0 51 0;
-#X connect 46 0 52 0;
-#X connect 46 0 53 0;
-#X connect 46 0 54 0;
+#X connect 41 1 44 0;
+#X connect 41 2 45 0;
+#X connect 41 3 46 0;
+#X connect 41 4 47 0;
+#X connect 42 0 37 0;
+#X connect 43 0 37 0;
+#X connect 43 0 48 0;
+#X connect 43 0 49 0;
+#X connect 43 0 50 0;
+#X connect 43 0 51 0;
+#X connect 44 0 48 0;
+#X connect 45 0 49 0;
+#X connect 46 0 50 0;
 #X connect 47 0 51 0;
-#X connect 48 0 52 0;
-#X connect 49 0 53 0;
-#X connect 50 0 54 0;
 #X coords 0 0 305 135 305 135 2 0 0;
 #X restore 54 331 pd textdisplay;
-#X obj 53 103 ctrl P1;
+#X obj 55 102 ctrl P1;
 #N canvas 1428 660 576 469 nav 0;
-#X obj 10 3 bng 30 250 50 0 NavUp empty empty 17 7 0 10 -262144 -1
+#X obj 10 3 bng 30 250 50 0 NavPrev empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 10 103 bng 30 250 50 0 NavDown empty empty 17 7 0 10 -262144
+#X obj 10 103 bng 30 250 50 0 NavNext empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 40 50 bng 30 250 50 0 NavActivate empty empty 17 7 0 10 -204786
 -4034 -4034;
 #X obj 23 275 s oscOut;
-#X obj 23 151 r NavUp;
-#X msg 23 232 send /NavUp 1;
-#X obj 118 275 s oscOut;
-#X obj 118 151 r NavDown;
-#X msg 118 232 send /NavDown 1;
+#X obj 124 275 s oscOut;
 #X obj 226 276 s oscOut;
 #X obj 226 152 r NavActivate;
 #X msg 226 233 send /NavActivate 1;
-#X connect 4 0 5 0;
-#X connect 5 0 3 0;
-#X connect 7 0 8 0;
-#X connect 8 0 6 0;
-#X connect 10 0 11 0;
-#X connect 11 0 9 0;
+#X obj 23 151 r NavPrev;
+#X obj 124 151 r NavNext;
+#X msg 23 232 send /NavPrev 1;
+#X msg 124 232 send /NavNext 1;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 8 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 3 0;
+#X connect 11 0 4 0;
 #X coords 0 9 85 135 85 135 2 0 0;
 #X restore 380 332 pd nav;
 #N canvas 1154 512 1107 682 init 0;
@@ -155,23 +155,23 @@
 #X obj 22 213 list trim;
 #X obj 22 254 netsend -u -b;
 #X obj 345 183 netreceive -u -b;
-#X msg 348 137 listen 8000;
-#X msg 95 135 connect localhost 8001;
 #X obj 195 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X msg 95 135 connect localhost 7001;
+#X msg 348 137 listen 7000;
 #X connect 1 0 6 0;
 #X connect 2 0 9 0;
 #X connect 3 0 2 0;
 #X connect 4 0 14 0;
-#X connect 4 1 13 0;
+#X connect 4 1 15 0;
 #X connect 5 0 4 0;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;
 #X connect 11 0 0 0;
 #X connect 12 0 1 0;
-#X connect 13 0 12 0;
+#X connect 13 0 4 0;
 #X connect 14 0 11 0;
-#X connect 15 0 4 0;
+#X connect 15 0 12 0;
 #X restore 56 487 pd init;
 #X obj 52 220 ctrl P5;
 #X obj 162 102 ctrl P2;
@@ -181,7 +181,7 @@
 #X obj 272 221 ctrl P7;
 #X obj 379 221 ctrl P8;
 #N canvas 1127 601 677 632 moduletitle 0;
-#X obj 39 6 cnv 15 350 25 empty moduletitle Polybeats 2 12 0 14 -233017
+#X obj 39 6 cnv 15 350 25 empty moduletitle Punchy 2 12 0 14 -233017
 -66577 0;
 #X obj 32 343 r oscIn;
 #X obj 34 402 symbol;

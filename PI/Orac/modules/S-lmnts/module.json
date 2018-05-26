@@ -1,5 +1,5 @@
 {
-    "name" : "lmnts",
+    "name" : "S-lmnts",
     "display" : "Lmnts",
     "parameters" :  [ 
         ["pitch","l_pitch","Pitch",-24,24,0],

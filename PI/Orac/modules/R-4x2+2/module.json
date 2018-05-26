@@ -4,7 +4,8 @@
     "parameters" :  [ 
 
         ["int","r-in-midich-m0","In Midi Ch.",0,16,0],
-        ["pct","r-in-gain-m0","In Gain",0,200,100],
+        ["pct","r-in-gain-m0","In Gain",0,200,0],
+
         ["pct", "r-gain-m0","Gain",0,200,100],
         ["bool","r-notethru-m0","Note Thru",1],
         ["bool","r-out-notethru-m1","Note Thru",1],
@@ -12,7 +13,8 @@
         ["pct","r-out-gain-m1","Out Gain",0,200,100],
 
         ["int","r-in-midich-m2","In Midi Ch.",0,16,0],
-        ["pct","r-in-gain-m2","In Gain",0,200,100],
+        ["pct","r-in-gain-m2","In Gain",0,200,0],
+
         ["pct", "r-gain-m2","Gain",0,200,100],
         ["bool","r-notethru-m2","Note Thru",1],
         ["bool","r-out-notethru-m3","Note Thru",1],
@@ -21,7 +23,8 @@
 
 
         ["int","r-in-midich-m4","In Midi Ch.",0,16,0],
-        ["pct","r-in-gain-m4","In Gain",0,200,100],
+        ["pct","r-in-gain-m4","In Gain",0,200,0],
+
         ["pct", "r-gain-m4","Gain",0,200,100],
         ["bool","r-notethru-m4","Note Thru",1],
         ["bool","r-out-notethru-m5","Note Thru",1],
@@ -30,7 +33,8 @@
 
 
         ["int","r-in-midich-m6","In Midi Ch.",0,16,0],
-        ["pct","r-in-gain-m6","In Gain",0,200,100],
+        ["pct","r-in-gain-m6","In Gain",0,200,0],
+
         ["pct", "r-gain-m6","Gain",0,200,100],
         ["bool","r-notethru-m6","Note Thru",1],
         ["bool","r-out-notethru-m7","Note Thru",1],

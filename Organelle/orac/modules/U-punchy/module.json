@@ -1,5 +1,5 @@
 {
-    "name" : "U-punch",
+    "name" : "U-punchy",
     "display" : "Punchy",
     "parameters" :  [ 
         ["int","punchy_beat","Beat Div.",1,9,2],

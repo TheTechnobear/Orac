@@ -95,7 +95,7 @@
 #X connect 6 0 1 0;
 #X coords 0 -1 1 1 150 150 1 100 100;
 #X restore 400 252 pd o3;
-#N canvas 0 50 658 559 m1 0;
+#N canvas 0 50 658 559 czzm1 0;
 #X obj 100 100 cnv 15 150 150 empty m1_rcv Modifier-1 20 12 0 14 -66577
 -262144 0;
 #X obj 107 262 outlet;
@@ -110,8 +110,8 @@
 #X connect 5 0 6 0;
 #X connect 6 0 1 0;
 #X coords 0 -1 1 1 150 150 1 100 100;
-#X restore 101 400 pd m1;
-#N canvas 0 50 658 559 m2 0;
+#X restore 101 400 pd czzm1;
+#N canvas 0 50 658 559 czzm2 0;
 #X obj 100 100 cnv 15 150 150 empty m2_rcv Modifier-2 20 12 0 14 -66577
 -262144 0;
 #X obj 107 262 outlet;
@@ -126,8 +126,8 @@
 #X connect 5 0 6 0;
 #X connect 6 0 1 0;
 #X coords 0 -1 1 1 150 150 1 100 100;
-#X restore 249 400 pd m2;
-#N canvas 4 50 658 559 m3 0;
+#X restore 249 400 pd czzm2;
+#N canvas 4 50 658 559 czzm3 0;
 #X obj 100 100 cnv 15 150 150 empty m3_rcv Modifier-3 20 12 0 14 -66577
 -262144 0;
 #X obj 107 262 outlet;
@@ -142,7 +142,7 @@
 #X connect 5 0 6 0;
 #X connect 6 0 1 0;
 #X coords 0 -1 1 1 150 150 1 100 100;
-#X restore 399 400 pd m3;
+#X restore 399 400 pd czzm3;
 #X obj 399 578 outlet;
 #X obj 100 74 inlet;
 #X connect 0 0 3 0;

@@ -1,5 +1,5 @@
 {
-    "name" : "wrps",
+    "name" : "F-wrps",
     "display" : "Wrps",
     "parameters" :  [ 
         ["pct","w_shape","Shape",0,100,0],

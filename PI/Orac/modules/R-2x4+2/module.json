@@ -3,7 +3,7 @@
     "display" : "2x4+2",
     "parameters" :  [ 
         ["int","r-in-midich-m0","In Midi Ch.",0,16,0],
-        ["pct","r-in-gain-m0","In Gain",0,200,100],
+        ["pct","r-in-gain-m0","In Gain",0,200,0],
 
         ["pct", "r-gain-m0","Gain",0,200,100],
         ["bool","r-notethru-m0","Note Thru",1],
@@ -16,7 +16,8 @@
         ["pct","r-out-gain-m3","Out Gain",0,200,100],
 
         ["int","r-in-midich-m4","In Midi Ch.",0,16,0],
-        ["pct","r-in-gain-m4","In Gain",0,200,100],
+        ["pct","r-in-gain-m4","In Gain",0,200,0],
+        
         ["pct", "r-gain-m4","Gain",0,200,100],
         ["bool","r-notethru-m4","Note Thru",1],
         ["pct", "r-gain-m5","Gain",0,200,100],

@@ -76,7 +76,7 @@
 #X obj 174 9 r loadbang-\$1;
 #X obj 174 76 print loading definiton for \$1;
 #X obj 16 34 symbol;
-#X obj 101 127 inlet~ inR;
+#X obj 103 125 inlet~ inR;
 #X obj 16 126 inlet~ inL;
 #X obj 9 432 outlet~ outL;
 #X obj 93 432 outlet~ outR;
@@ -153,6 +153,7 @@
 #X connect 71 0 67 0;
 #X connect 72 0 43 0;
 #X connect 74 0 71 0;
+#X connect 75 0 42 1;
 #X connect 76 0 42 0;
 #X connect 80 0 35 0;
 #X connect 83 0 77 0;

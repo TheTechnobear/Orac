@@ -2,7 +2,7 @@
     "name" : "S-basicmono",
     "display" : "Basic Mono",
     "parameters" :  [ 
-        ["pitch","bp_trans","Transpose",-12,12,0],
+        ["pitch","bp_trans","Transpose",-24,24,0],
         ["int","bp_wave","Wave",0,3,0],
         ["time","bp_decay","Decay Time",5,2000,5],
         ["freq","bp_vrate","Vibr Rate",0,50,1],

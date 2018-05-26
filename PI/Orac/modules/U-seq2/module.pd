@@ -369,6 +369,9 @@ a sequence. Only two inputs needed: (r seq2-\$1-aux) and (r seq2-\$1-notes-in)
 #X obj 582 247 r seq2-\$1-aux-label;
 #X obj 582 280 s aux-label-\$1;
 #X obj 749 276 s aux-led-\$1;
+#X obj 1125 493 s aux-label-\$1;
+#X obj 1125 431 r loadbang-\$1;
+#X msg 1125 461 Aux:Play/Hold Record;
 #X connect 0 0 14 1;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
@@ -381,3 +384,5 @@ a sequence. Only two inputs needed: (r seq2-\$1-aux) and (r seq2-\$1-notes-in)
 #X connect 14 0 1 0;
 #X connect 17 0 22 0;
 #X connect 20 0 21 0;
+#X connect 24 0 25 0;
+#X connect 25 0 23 0;

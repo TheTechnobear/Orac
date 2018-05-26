@@ -3,7 +3,7 @@
     "display" : "1x10",
     "parameters" :  [ 
         ["int","r-in-midich-m0","In Midi Ch.",0,16,0],
-        ["pct","r-in-gain-m0","In Gain",0,200,100],
+        ["pct","r-in-gain-m0","In Gain",0,200,0],
 
         ["pct", "r-gain-m0","Gain",0,200,100],
         ["bool","r-notethru-m0","Note Thru",1],
