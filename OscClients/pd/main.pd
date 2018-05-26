@@ -1,7 +1,7 @@
-#N canvas 162 410 1318 828 10;
+#N canvas 68 611 1318 828 10;
 #N canvas 1016 483 894 536 textdisplay 0;
-#X obj 1 1 cnv 25 300 25 empty text1 empty 0 12 0 14 -355 -262144 0
-;
+#X obj 1 1 cnv 25 300 25 empty text1 m0:Punchy 0 12 0 14 -195568 -262144
+0;
 #X obj 1 105 cnv 25 300 25 empty text5 Save 0 12 0 14 -195568 -262144
 0;
 #X obj 28 294 r oscIn;
@@ -54,12 +54,12 @@
 #X obj 567 255 s text3;
 #X obj 667 253 s text4;
 #X obj 773 261 s text5;
-#X obj 1 79 cnv 25 300 25 empty text4 Save 0 12 0 14 -195568 -262144
+#X obj 1 79 cnv 25 300 25 empty text4 Mod Learn         [ ] 0 12 0
+14 -195568 -262144 0;
+#X obj 1 27 cnv 25 300 25 empty text2 New 1 0 12 0 14 -355 -262144
 0;
-#X obj 1 27 cnv 25 300 25 empty text2 Save 0 12 0 14 -195568 -262144
-0;
-#X obj 1 53 cnv 25 300 25 empty text3 Save 0 12 0 14 -195568 -262144
-0;
+#X obj 1 53 cnv 25 300 25 empty text3 Midi Learn        [ ] 0 12 0
+14 -195568 -262144 0;
 #X connect 2 0 33 0;
 #X connect 2 0 35 0;
 #X connect 3 0 5 0;
@@ -140,39 +140,6 @@
 #X connect 11 0 4 0;
 #X coords 0 9 85 135 85 135 2 0 0;
 #X restore 380 332 pd nav;
-#N canvas 1154 512 1107 682 init 0;
-#X obj 22 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 345 207 unpackOSC;
-#X obj 24 137 packOSC;
-#X obj 24 109 r oscOut;
-#X obj 230 52 t b b;
-#X obj 230 24 loadbang;
-#X obj 345 231 s oscIn;
-#X text 135 291 stuff going out (from patch)...;
-#X text 47 278 connected to mother background program;
-#X obj 22 192 list prepend send;
-#X obj 22 213 list trim;
-#X obj 22 254 netsend -u -b;
-#X obj 345 183 netreceive -u -b;
-#X obj 195 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X msg 95 135 connect localhost 7001;
-#X msg 348 137 listen 7000;
-#X connect 1 0 6 0;
-#X connect 2 0 9 0;
-#X connect 3 0 2 0;
-#X connect 4 0 14 0;
-#X connect 4 1 15 0;
-#X connect 5 0 4 0;
-#X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 11 0 0 0;
-#X connect 12 0 1 0;
-#X connect 13 0 4 0;
-#X connect 14 0 11 0;
-#X connect 15 0 12 0;
-#X restore 56 487 pd init;
 #X obj 52 220 ctrl P5;
 #X obj 162 102 ctrl P2;
 #X obj 270 102 ctrl P3;
@@ -236,3 +203,69 @@
 #X connect 13 0 12 0;
 #X coords 0 0 1 1 425 40 2 0 0;
 #X restore 53 55 pd pagetitle;
+#N canvas 973 377 1107 682 connect 1;
+#X obj 48 426 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 518 359 unpackOSC;
+#X obj 50 286 packOSC;
+#X obj 50 258 r oscOut;
+#X obj 518 383 s oscIn;
+#X text 161 440 stuff going out (from patch)...;
+#X text 73 427 connected to mother background program;
+#X obj 126 343 list prepend send;
+#X obj 48 362 list trim;
+#X obj 48 403 netsend -u -b;
+#X obj 518 335 netreceive -u -b;
+#X obj 195 4 inlet host;
+#X obj 386 13 inlet localport;
+#X msg 521 289 listen \$1;
+#X msg 397 295 send /Connect \$1;
+#X obj 192 218 symbol;
+#X obj 252 368 print SEND:;
+#X obj 390 329 s oscOut;
+#X obj 652 341 print LISTEN:;
+#X obj 462 219 int;
+#X obj 392 222 int;
+#X msg 225 292 disconnect;
+#X obj 198 31 t b b b b b s;
+#X msg 607 290 listen 0;
+#X msg 199 267 connect \$1 7000;
+#X connect 1 0 4 0;
+#X connect 2 0 7 0;
+#X connect 3 0 2 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 0 0;
+#X connect 10 0 1 0;
+#X connect 11 0 22 0;
+#X connect 12 0 19 1;
+#X connect 12 0 20 1;
+#X connect 13 0 10 0;
+#X connect 13 0 18 0;
+#X connect 14 0 17 0;
+#X connect 15 0 24 0;
+#X connect 19 0 13 0;
+#X connect 20 0 14 0;
+#X connect 21 0 9 0;
+#X connect 22 0 20 0;
+#X connect 22 1 15 0;
+#X connect 22 2 21 0;
+#X connect 22 3 19 0;
+#X connect 22 4 23 0;
+#X connect 22 5 15 1;
+#X connect 23 0 10 0;
+#X connect 24 0 9 0;
+#X connect 24 0 16 0;
+#X restore 59 570 pd connect;
+#X obj 63 485 loadbang;
+#X obj 63 506 t b b;
+#X obj 28 484 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 60 538 symbol localhost;
+#X obj 180 538 int 7001;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 14 1 17 0;
+#X connect 15 0 14 0;
+#X connect 16 0 12 0;
+#X connect 17 0 12 1;
