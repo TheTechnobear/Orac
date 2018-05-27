@@ -1,4 +1,4 @@
-#N canvas 68 611 1318 828 10;
+#N canvas 68 517 1318 828 10;
 #N canvas 1016 483 894 536 textdisplay 0;
 #X obj 1 1 cnv 25 300 25 empty text1 m0:Punchy 0 12 0 14 -195568 -262144
 0;
@@ -54,12 +54,12 @@
 #X obj 567 255 s text3;
 #X obj 667 253 s text4;
 #X obj 773 261 s text5;
-#X obj 1 79 cnv 25 300 25 empty text4 Mod Learn         [ ] 0 12 0
-14 -195568 -262144 0;
-#X obj 1 27 cnv 25 300 25 empty text2 New 1 0 12 0 14 -355 -262144
+#X obj 1 79 cnv 15 300 25 empty text4 Mod 20 12 0 14 -233017 -66577
 0;
-#X obj 1 53 cnv 25 300 25 empty text3 Midi Learn        [ ] 0 12 0
-14 -195568 -262144 0;
+#X obj 1 27 cnv 15 300 25 empty text2 New 20 12 0 14 -233017 -66577
+0;
+#X obj 1 53 cnv 15 300 25 empty text3 Midi 20 12 0 14 -233017 -66577
+0;
 #X connect 2 0 33 0;
 #X connect 2 0 35 0;
 #X connect 3 0 5 0;
@@ -114,8 +114,8 @@
 #X connect 46 0 50 0;
 #X connect 47 0 51 0;
 #X coords 0 0 305 135 305 135 2 0 0;
-#X restore 54 331 pd textdisplay;
-#X obj 55 102 ctrl P1;
+#X restore 54 341 pd textdisplay;
+#X obj 55 52 ctrl P1;
 #N canvas 1428 660 576 469 nav 0;
 #X obj 10 3 bng 30 250 50 0 NavPrev empty empty 17 7 0 10 -262144 -1
 -1;
@@ -139,14 +139,14 @@
 #X connect 10 0 3 0;
 #X connect 11 0 4 0;
 #X coords 0 9 85 135 85 135 2 0 0;
-#X restore 380 332 pd nav;
-#X obj 52 220 ctrl P5;
-#X obj 162 102 ctrl P2;
-#X obj 270 102 ctrl P3;
-#X obj 378 102 ctrl P4;
-#X obj 160 220 ctrl P6;
-#X obj 272 221 ctrl P7;
-#X obj 379 221 ctrl P8;
+#X restore 380 342 pd nav;
+#X obj 52 170 ctrl P5;
+#X obj 162 52 ctrl P2;
+#X obj 270 52 ctrl P3;
+#X obj 378 52 ctrl P4;
+#X obj 160 170 ctrl P6;
+#X obj 272 171 ctrl P7;
+#X obj 379 171 ctrl P8;
 #N canvas 1127 601 677 632 moduletitle 0;
 #X obj 39 6 cnv 15 350 25 empty moduletitle Punchy 2 12 0 14 -233017
 -66577 0;
@@ -202,9 +202,9 @@
 #X connect 10 0 6 0;
 #X connect 13 0 12 0;
 #X coords 0 0 1 1 425 40 2 0 0;
-#X restore 53 55 pd pagetitle;
-#N canvas 973 377 1107 682 connect 1;
-#X obj 48 426 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 53 285 pd pagetitle;
+#N canvas 1279 248 1107 682 connect 0;
+#X obj 48 426 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 518 359 unpackOSC;
 #X obj 50 286 packOSC;
@@ -256,13 +256,13 @@
 #X connect 23 0 10 0;
 #X connect 24 0 9 0;
 #X connect 24 0 16 0;
-#X restore 59 570 pd connect;
-#X obj 63 485 loadbang;
-#X obj 63 506 t b b;
-#X obj 28 484 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X restore 82 599 pd connect;
+#X obj 86 514 loadbang;
+#X obj 86 535 t b b;
+#X obj 51 513 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 60 538 symbol localhost;
-#X obj 180 538 int 7001;
+#X obj 83 567 symbol localhost;
+#X obj 203 567 int 7001;
 #X connect 13 0 14 0;
 #X connect 14 0 16 0;
 #X connect 14 1 17 0;
