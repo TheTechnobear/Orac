@@ -3,5 +3,6 @@
 *.lock
 profile
 manifest.txt
+**/build
 
 pkg/*
