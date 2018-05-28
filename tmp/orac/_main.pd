@@ -1,4 +1,0 @@
-#N canvas 675 709 450 300 10;
-#X obj 126 85 mother/mother;
-#X obj 126 107 main;
-#X obj 126 154 bela;
