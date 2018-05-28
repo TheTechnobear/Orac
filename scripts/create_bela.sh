@@ -1,6 +1,6 @@
 #/bin/sh
-mkdir -p pkg
-cd pkg
-cp -R ../Core/orac orac
-cp -R ../Bela/orac/* orac
+mkdir -p pkg/bela
+cd pkg/bela
+cp -R ../../Core/orac orac
+cp -R ../../Bela/orac/* orac
 

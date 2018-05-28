@@ -2,5 +2,6 @@
 *.swp
 *.lock
 profile
+manifest.txt
 
 pkg/*

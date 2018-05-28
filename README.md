@@ -42,17 +42,13 @@ Id like to extend  thanks to open source developers who make these kinds of proj
 and special thanks to Critter and Guitari for open sourcing their wonderful patches which I have 'modularised', similarly Id extend the same thanks to Mutable Instruments whos code I have used to create PD externals for use in Modules in Orac.
 
 ### Project Structure
-This is still in flux, until I release on all platforms
+Core - files which do not differ from platform to platform
+Organelle - Organelle specific files, including build libs/externals
+Bela - Bela specific files, including build libs/externals
+PI - PI specific files, including build libs/externals
+OscClients - various clients for use with MEC oscdisplay
 
-Currently, Ive placed different platforms in different directories, this is so I can have differnt external (binary) builds stored, and also some modules are not applicable to all platforms
-Organelle, is usually the latest verions of modules etc, so consider this 'the base'
-
-This is all very likely to change, once Ive release for rPI/Bela, when these will be combined, and I suspect I'll create build/installer scripts to gather relevant things together for each platform.
-
-Its also possible that the modules will be moved into a seperate directory (again, once an installer script is written)
-
-so If you want to change something, probably the Organelle diectory is the right place, but again easier to discuss with me ;) 
-
+scripts/create_* - script which creates a package in the pkg directory, from combining above folders
 
 
 Happy Patching 
