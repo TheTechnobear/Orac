@@ -1,0 +1,16 @@
+[Unit]
+Description=Run MEC at boot
+DefaultDependencies=no
+Wants=network-online.target
+After=network-online.target
+Conflicts=shutdown.target
+Before=shutdown.target bela_startup.service
+
+[Service]
+EnvironmentFile=/opt/Bela/startup_env
+ExecStart=/root/projects/MEC/build/release/bin/mec-app
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=default.target
