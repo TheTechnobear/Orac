@@ -1,0 +1,28 @@
+{
+    "mec"  :  {
+        "push2"  :  {
+            "input device" : "Ableton Push 2:Ableton Push 2 MIDI 1 28:0",
+            "output device" : "Ableton Push 2:Ableton Push 2 MIDI 1 28:0",
+            "pitchbend range" : 2.0
+        },
+
+        "kontrol"  :  {
+            "listen port" : 6000
+        }
+    },
+
+    "mec-app"  :  {
+        "outputs" : {
+            "midi" : {
+                "virtual" : 0,
+                "voices" : 15,
+                "mpe":false,
+                "pitchbend range" : 48.0,
+                "device" : "Pure Data:Pure Data Midi-In 1 128:0"
+            },
+            "_console" : {
+                "throttle" : 0
+            }
+        }
+    }
+}

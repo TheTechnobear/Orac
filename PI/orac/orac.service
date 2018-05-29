@@ -1,0 +1,17 @@
+[Unit]
+Description=Run Orac at boot
+DefaultDependencies=no
+Wants=network-online.target
+After=network-online.target
+Conflicts=shutdown.target
+Before=shutdown.target 
+
+[Service]
+ExecStart=/usr/bin/pd -rt -nogui -audiobuf 4 mother/mother.pd main.pd 
+Type=simple
+Restart=always
+WorkingDirectory=/usr/local/orac
+Environment=HOME=/root
+
+[Install]
+WantedBy=default.target

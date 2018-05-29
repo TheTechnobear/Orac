@@ -1,0 +1,17 @@
+[Unit]
+Description=Run MEC at boot
+DefaultDependencies=no
+Wants=network-online.target
+After=network-online.target
+Conflicts=shutdown.target
+Before=shutdown.target 
+
+[Service]
+ExecStart=/usr/local/MEC/mec-app osckontrol.json 
+Type=simple
+Restart=always
+WorkingDirectory=/usr/local/MEC
+Environment=HOME=/root
+
+[Install]
+WantedBy=default.target
