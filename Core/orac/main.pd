@@ -17,7 +17,7 @@
 #X obj 775 137 ctlin;
 #X obj 775 177 pack f f;
 #X msg 775 217 midiCC \$2 \$1;
-#X obj 168 327 KontrolRack 8000 9000;
+#X obj 168 327 KontrolRack 6000 6001;
 #X obj 44 29 loadbang;
 #X msg 44 109 loadpreset Default;
 #X obj 897 177 routeOSC /key;

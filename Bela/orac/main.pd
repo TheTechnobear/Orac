@@ -26,7 +26,7 @@
 #X obj 44 69 t b b b;
 #X obj 332 87 s rackloaded;
 #X obj 11 183 r rackMsgs;
-#X obj 168 327 KontrolRack bela;
+#X obj 168 327 KontrolRack bela 6000 6001;
 #X connect 0 0 1 0;
 #X connect 1 0 24 0;
 #X connect 2 0 7 0;
