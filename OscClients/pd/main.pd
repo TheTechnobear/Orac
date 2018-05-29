@@ -229,7 +229,7 @@
 #X msg 225 292 disconnect;
 #X obj 198 31 t b b b b b s;
 #X msg 607 290 listen 0;
-#X msg 199 267 connect \$1 7000;
+#X msg 199 267 connect \$1 6100;
 #X connect 1 0 4 0;
 #X connect 2 0 7 0;
 #X connect 3 0 2 0;
@@ -261,8 +261,8 @@
 #X obj 86 535 t b b;
 #X obj 51 513 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 83 567 symbol localhost;
-#X obj 203 567 int 7001;
+#X obj 83 567 symbol bela;
+#X obj 203 567 int 6101;
 #X connect 13 0 14 0;
 #X connect 14 0 16 0;
 #X connect 14 1 17 0;
