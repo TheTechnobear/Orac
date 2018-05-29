@@ -1,4 +1,5 @@
 #N canvas 68 517 1318 828 10;
+#X declare -path externals;
 #N canvas 1016 483 894 536 textdisplay 0;
 #X obj 1 1 cnv 25 300 25 empty text1 m0:Punchy 0 12 0 14 -195568 -262144
 0;
@@ -261,11 +262,12 @@
 #X obj 86 535 t b b;
 #X obj 51 513 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 83 567 symbol bela;
 #X obj 203 567 int 6101;
+#X obj 83 567 symbol localhost;
+#X obj 288 515 declare -path externals;
 #X connect 13 0 14 0;
-#X connect 14 0 16 0;
-#X connect 14 1 17 0;
+#X connect 14 0 17 0;
+#X connect 14 1 16 0;
 #X connect 15 0 14 0;
-#X connect 16 0 12 0;
-#X connect 17 0 12 1;
+#X connect 16 0 12 1;
+#X connect 17 0 12 0;
