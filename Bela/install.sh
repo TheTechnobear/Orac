@@ -12,6 +12,9 @@ ln -s $DIR/MEC ~/
 ln -s $DIR/orac ~/Bela/projects
 
 cp MEC/mec.service /lib/systemd/system/
-systemctl enable mec.service
-systemctl restart mec.service
-systemctl status mec.service  
+echo stopping mec, will restart in 7 seconds
+systemctl enable mec
+systemctl stop mec
+sleep 7
+systemctl start mec
+systemctl status mec

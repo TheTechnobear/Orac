@@ -15,11 +15,11 @@ ln -s $DIR/orac /usr/local
 chmod a+w /usr/local/orac/*
 
 cp MEC/mec.service /lib/systemd/system/
-systemctl enable mec.service
-systemctl restart mec.service
-systemctl status mec.service  
+systemctl enable 
+systemctl restart 
+systemctl status 
 
 cp orac/orac.service /lib/systemd/system/
-systemctl enable orac.service
-systemctl restart orac.service
-systemctl status orac.service  
+systemctl enable 
+systemctl restart 
+systemctl status 
