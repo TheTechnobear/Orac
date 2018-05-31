@@ -7,7 +7,7 @@ Conflicts=shutdown.target
 Before=shutdown.target 
 
 [Service]
-ExecStart=/usr/bin/pd -rt -nogui -audiobuf 4 mother/mother.pd main.pd 
+ExecStart=/usr/bin/pd -rt -alsamidi -nogui -audiobuf 4 mother/mother.pd main.pd 
 Type=simple
 Restart=always
 WorkingDirectory=/usr/local/orac
