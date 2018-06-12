@@ -4,7 +4,7 @@ INCOMPLETE/INACCURATE PLACEHOLDER
 
 Orac is installed in
 ```` 
-~/Orac
+/usrlocal/orac
 
 ````
 

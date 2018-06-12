@@ -7,11 +7,15 @@ Conflicts=shutdown.target
 Before=shutdown.target 
 
 [Service]
-ExecStart=/usr/local/MEC/mec-app osckontrol.json 
 Type=simple
+User=pi
+Group=pi
+KillMode=process
 Restart=always
 WorkingDirectory=/usr/local/MEC
-Environment=HOME=/root
+Environment=HOME=/home/pi
+ExecStart=/usr/local/MEC/mec-app osckontrol.json 
+#ExecStart=/usr/local/MEC/mec-app pushkontrol.json 
 
 [Install]
 WantedBy=default.target

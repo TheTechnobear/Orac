@@ -7,11 +7,14 @@ Conflicts=shutdown.target
 Before=shutdown.target 
 
 [Service]
-ExecStart=/usr/bin/pd -rt -alsamidi -nogui -audiobuf 4 mother/mother.pd main.pd 
 Type=simple
+User=pi
+Group=pi
+KillMode=process
 Restart=always
 WorkingDirectory=/usr/local/orac
-Environment=HOME=/root
+Environment=HOME=/home/pi
+ExecStart=/usr/bin/pd -rt -alsamidi -nogui -audiobuf 4 mother/mother.pd main.pd 
 
 [Install]
 WantedBy=default.target
