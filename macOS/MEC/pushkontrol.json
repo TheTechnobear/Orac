@@ -17,8 +17,9 @@
                 "virtual" : 0,
                 "voices" : 15,
                 "mpe":false,
-                "pitchbend range" : 48.0,
-                "device" : "Pure Data:Pure Data Midi-In 1 128:0"
+                "pitchbend range" : 2.0,
+                "device" : "IAC Driver IAC Bus 1",
+                "_device" : "Pure Data:Pure Data Midi-In 1 128:0"
             },
             "_console" : {
                 "throttle" : 0
