@@ -17,7 +17,7 @@
 #X obj 658 313 *~ 0.5;
 #X obj 966 558 delwrite~ \$0-delay1 5000;
 #X obj 658 609 vd~ \$0-delay1, f 16;
-#N canvas 10 50 450 300 rep 1;
+#N canvas 10 50 450 300 rep 0;
 #X obj 119 16 inlet~;
 #X obj 164 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -67,7 +67,6 @@
 #X obj 843 135 / 100;
 #X obj 181 35 print loaded:flanger into \$1, f 35;
 #X obj 23 110 KontrolModule \$1 F-flanger;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 50 0;

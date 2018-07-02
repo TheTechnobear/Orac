@@ -17,7 +17,7 @@
 #X obj 181 45 print loaded:default into \$1, f 35;
 #X obj 516 45 int 0;
 #X obj 516 76 s aux-led-\$1;
-#N canvas 804 23 1731 872 freezer 1;
+#N canvas 804 23 1731 872 freezer 0;
 #N canvas 6 125 217 182 hanning 0;
 #X text 50 85 0;
 #X text 50 62 1;
@@ -68,7 +68,7 @@
 #X text 19 19 dont mess with this;
 #X restore 1215 213 pd hanning;
 #X msg 99 168 72 100;
-#N canvas 593 305 841 798 allocate-all-on 1;
+#N canvas 593 305 841 798 allocate-all-on 0;
 #X obj 265 83 latch-notes;
 #X obj 200 260 list append;
 #X obj 264 111 unpack;
@@ -362,7 +362,6 @@ each play on one voice...;
 #X obj 648 40 r loadbang-\$1;
 #X msg 648 63 Aux / FS: Freeze, f 36;
 #X obj 648 84 s aux-label-\$1;
-#X connect 0 0 2 0;
 #X connect 3 0 7 0;
 #X connect 3 0 6 0;
 #X connect 4 0 1 0;

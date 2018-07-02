@@ -378,8 +378,6 @@ a sequence. Only two inputs needed: (r seq2-\$1-aux) and (r seq2-\$1-notes-in)
 #X connect 3 0 18 0;
 #X connect 4 0 19 0;
 #X connect 6 0 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
 #X connect 11 0 14 0;
 #X connect 14 0 1 0;
 #X connect 17 0 22 0;

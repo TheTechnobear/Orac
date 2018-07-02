@@ -15,7 +15,7 @@
 #X obj 486 356 r fsIn-\$1;
 #X obj 181 45 print loaded:arper into \$1, f 35;
 #X obj 23 112 KontrolModule \$1 U-arper;
-#N canvas 448 99 2112 1218 sequencer 1;
+#N canvas 448 99 2112 1218 sequencer 0;
 #X obj 162 293 unpack 0 0;
 #X obj 162 353 pack 0 0 0;
 #X obj 162 414 unpack, f 54;
@@ -1028,7 +1028,5 @@ in various patterns. This is the Module conversion of Arpeggio Synth.
 #X connect 4 0 14 0;
 #X connect 4 0 20 0;
 #X connect 6 0 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
 #X connect 11 0 19 0;
 #X connect 18 0 1 0;

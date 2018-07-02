@@ -55,7 +55,7 @@
         ["float", "r-chout-r-pan-1","Out R Pan",0,1,1]
     ],
     "pages" : [ 
-        ["pg_ch1mid" , "Chain 1 Midi",["r-chin-midich-1", "r-chout-midich-1"]],
+        ["pg_ch1midi" , "Chain 1 Midi",["r-chin-midich-1", "r-chout-midich-1"]],
         ["pg_ch1gain", "Chain 1 Gain",["r-chin-l-gain-1", "r-chin-r-gain-1", "r-chout-gain-1"]],
         ["pg_ch1pan" , "Chain 1 Pan" ,["r-chin-l-pan-1", "r-chin-r-pan-1", "r-chout-l-pan-1", "r-chout-r-pan-1"]],
 

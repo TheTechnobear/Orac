@@ -1,4 +1,4 @@
-#N canvas -3 34 1548 1271 10;
+#N canvas 0 34 1548 1271 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 971 s notesOut-\$1;
 #X obj 23 9 r loaddefs-\$1;
@@ -32,7 +32,6 @@
 #X obj 956 105 / 100;
 #X obj 181 35 print loaded:panner into \$1, f 35;
 #X obj 23 112 KontrolModule \$1 F-panner;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 32 0;

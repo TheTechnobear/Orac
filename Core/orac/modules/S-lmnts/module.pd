@@ -90,7 +90,6 @@
 #X obj 717 578 r l_resonator-\$1;
 #X obj 17 88 KontrolModule \$1 S-lmnts;
 #X obj 193 34 print loaded:lmnts into \$1, f 12;
-#X connect 0 0 1 0;
 #X connect 0 0 28 0;
 #X connect 2 0 89 0;
 #X connect 3 0 5 0;

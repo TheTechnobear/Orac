@@ -39,7 +39,6 @@
 #X obj 181 35 print loaded:reverb into \$1, f 35;
 #X obj 23 110 KontrolModule \$1 F-reverb;
 #X obj 574 336 / 100;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 38 0;

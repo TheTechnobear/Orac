@@ -52,7 +52,6 @@
 #X obj 1050 36 r w_drive1-\$1;
 #X obj 1167 36 r w_drive2-\$1;
 #X obj 634 36 r w_gate-\$1;
-#X connect 0 0 1 0;
 #X connect 0 0 35 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;

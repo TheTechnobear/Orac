@@ -13,7 +13,7 @@
 #X obj 424 185 r auxIn-\$1;
 #X obj 423 208 r expIn-\$1;
 #X obj 423 233 r fsIn-\$1;
-#N canvas 1285 315 671 689 sequencer 1;
+#N canvas 1285 315 671 689 sequencer 0;
 #X obj 120 48 r nr-\$1-notes-in;
 #X obj 120 288 s nr-\$1-notes-out;
 #X obj 120 236 spigot;
@@ -145,7 +145,7 @@
 #X connect 3 0 1 0;
 #X connect 4 0 3 1;
 #X restore 400 363 pd sixteenths;
-#N canvas 240 382 450 300 quarters 1;
+#N canvas 240 382 450 300 quarters 0;
 #X obj 73 115 sel 0;
 #X obj 73 151 outlet;
 #X obj 73 61 r master-ticks;
@@ -268,8 +268,6 @@
 #X connect 4 0 30 0;
 #X connect 4 0 31 0;
 #X connect 6 0 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
 #X connect 21 0 1 0;
 #X connect 25 0 16 0;
 #X connect 27 0 23 0;

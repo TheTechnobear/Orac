@@ -1,4 +1,4 @@
-#N canvas 743 190 1071 479 10;
+#N canvas 938 227 1071 479 10;
 #X declare -path externals;
 #X declare -path subpatches;
 #N canvas 302 457 1338 833 rack 0;
@@ -59,12 +59,12 @@
 #N canvas 449 193 946 579 m0 0;
 #X obj 10 10 r~ inL-m0;
 #X obj 110 10 r~ inR-m0;
-#X obj 10 60 modules/U-default/module m0;
+#X obj 10 60 modules/U-polybeats/module m0;
 #X obj 10 110 s~ outL-m0;
 #X obj 110 110 s~ outR-m0;
 #X obj 400 1 r rackloaded;
 #X obj 400 30 t b b;
-#X msg 400 60 modules/U-default/module.json;
+#X msg 400 60 modules/U-polybeats/module.json;
 #X obj 400 110 send loaddefs-m0;
 #X obj 600 110 send loadbang-m0;
 #X connect 0 0 2 0;
@@ -79,12 +79,12 @@
 #N canvas 504 887 794 264 m1 0;
 #X obj 10 10 r~ inL-m1;
 #X obj 110 10 r~ inR-m1;
-#X obj 10 60 modules/U-default/module m1;
+#X obj 10 60 modules/S-basicpoly/module m1;
 #X obj 10 110 s~ outL-m1;
 #X obj 110 110 s~ outR-m1;
 #X obj 400 1 r rackloaded;
 #X obj 400 30 t b b;
-#X msg 400 60 modules/U-default/module.json;
+#X msg 400 60 modules/S-basicpoly/module.json;
 #X obj 400 110 send loaddefs-m1;
 #X obj 600 110 send loadbang-m1;
 #X connect 0 0 2 0;

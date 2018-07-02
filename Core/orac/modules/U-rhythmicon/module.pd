@@ -212,6 +212,4 @@ a phasor \, frequency \, rollover.;
 #X connect 5 0 15 0;
 #X connect 5 0 16 0;
 #X connect 7 0 4 0;
-#X connect 8 0 10 0;
-#X connect 9 0 11 0;
 #X connect 16 0 17 0;

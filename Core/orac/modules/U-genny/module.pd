@@ -358,7 +358,7 @@ following elements over 1 place);
 #X obj 244 858 pack 0 0, f 19;
 #X obj 32 14 r genny-\$1-enable;
 #X msg 32 36 1;
-#X obj 166 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 166 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 30 59 r genny-\$1-disable;
 #X msg 30 81 0;
@@ -565,8 +565,6 @@ directly to output if disabled;
 #X connect 4 0 15 0;
 #X connect 4 0 16 0;
 #X connect 6 0 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
 #X connect 11 0 20 0;
 #X connect 19 0 1 0;
 #X connect 21 0 23 0;

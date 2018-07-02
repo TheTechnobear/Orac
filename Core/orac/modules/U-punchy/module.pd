@@ -18,7 +18,7 @@
 1;
 #N canvas 382 50 1126 994 seqplayer 0;
 #X obj 115 701 delay;
-#X obj 180 442 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 180 442 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 179 393 1;
 #X obj 283 584 ==;
@@ -26,7 +26,7 @@
 #X obj 116 672 spigot 0;
 #X obj 137 -9 stripnote;
 #X obj 130 191 spigot;
-#X obj 39 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 39 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 283 562 == 15;
 #X obj 413 801 + 60;
@@ -180,7 +180,7 @@
 #X connect 55 0 0 1;
 #X connect 56 0 4 0;
 #X restore 117 427 pd seqplayer;
-#X obj 25 318 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 25 318 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 1112 552 1208 658 states 0;
 #X obj 209 279 f;
@@ -552,8 +552,6 @@ directly to output if disabled;
 #X connect 4 0 17 0;
 #X connect 4 0 18 0;
 #X connect 6 0 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
 #X connect 11 0 20 0;
 #X connect 19 0 1 0;
 #X connect 21 0 24 0;

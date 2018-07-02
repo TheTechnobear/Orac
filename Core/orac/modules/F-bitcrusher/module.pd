@@ -30,7 +30,6 @@
 #X obj 23 112 KontrolModule \$1 F-bitcrusher;
 #X obj 744 51 r bc_depth-\$1;
 #X obj 919 87 r bc_dw-\$1;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 28 0;

@@ -64,7 +64,7 @@
 #X connect 11 0 3 0;
 #X restore 526 639 pd equal_power_crossfade;
 #X obj 719 585 hsl 128 25 0 1 0 0 empty crossfade-\$1 Dry_---_Wet_(crossfade)
--2 -8 0 10 -4034 -1 -1 12042 1;
+-2 -8 0 10 -4034 -1 -1 0 1;
 #X obj 631 586 *~ 10;
 #X obj 1311 184 *;
 #X obj 1311 158 t f f;
@@ -94,7 +94,6 @@
 #X obj 181 35 print loaded:spectral delay into \$1;
 #X obj 23 112 KontrolModule \$1 F-specdelay;
 #X obj 1713 316 s crossfade-\$1;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 41 0;

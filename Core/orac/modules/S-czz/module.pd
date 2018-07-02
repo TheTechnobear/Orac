@@ -250,9 +250,6 @@ mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
 #X obj 901 614 / 4000;
 #X obj 901 569 r czz_release-\$1;
 #X obj 654 604 r czz_preset-\$1;
-#X obj 27 403 +~;
-#X obj 136 403 +~;
-#X connect 0 0 1 0;
 #X connect 0 0 24 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
@@ -260,16 +257,14 @@ mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
 #X connect 4 0 29 0;
 #X connect 4 0 30 0;
 #X connect 6 0 3 0;
-#X connect 7 0 52 0;
-#X connect 8 0 53 0;
 #X connect 15 0 18 0;
 #X connect 18 0 16 0;
 #X connect 19 0 28 0;
 #X connect 19 1 21 0;
 #X connect 19 2 22 0;
 #X connect 19 3 23 0;
-#X connect 24 0 52 1;
-#X connect 24 0 53 1;
+#X connect 24 0 9 0;
+#X connect 24 0 10 0;
 #X connect 26 1 25 0;
 #X connect 27 0 26 0;
 #X connect 29 0 26 0;
@@ -289,5 +284,3 @@ mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
 #X connect 49 0 42 0;
 #X connect 50 0 49 0;
 #X connect 51 0 26 0;
-#X connect 52 0 9 0;
-#X connect 53 0 10 0;

@@ -26,7 +26,7 @@
 #X obj 638 95 vsl 15 128 0 100 0 0 empty empty snare 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 549 94 vsl 15 128 0 100 0 0 empty empty bass 0 -9 0 10 -262144
--1 -1 6133 1;
+-1 -1 0 1;
 #X obj 549 242 * 1.27;
 #X obj 638 242 * 1.27;
 #X obj 718 242 * 1.27;
@@ -95,14 +95,11 @@
 #X msg 760 531 63 0;
 #X msg 829 532 64 0;
 #X msg 897 533 65 0;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 15 0;
 #X connect 4 0 14 0;
 #X connect 6 0 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
 #X connect 16 0 35 6;
 #X connect 17 0 35 5;
 #X connect 18 0 35 4;

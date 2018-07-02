@@ -69,7 +69,6 @@
 #X obj 762 467 / 100;
 #X obj 181 35 print loaded:phaser into \$1, f 35;
 #X obj 23 112 KontrolModule \$1 F-phaser;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 24 0;

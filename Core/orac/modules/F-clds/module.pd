@@ -84,7 +84,6 @@
 #X obj 203 131 r auxIn-\$1;
 #X obj 202 154 r expIn-\$1;
 #X obj 202 179 r fsIn-\$1;
-#X obj 66 363 +~;
 #X connect 0 0 66 0;
 #X connect 1 0 66 0;
 #X connect 2 0 66 0;
@@ -127,9 +126,8 @@
 #X connect 38 0 33 0;
 #X connect 38 1 33 1;
 #X connect 41 1 24 0;
-#X connect 42 0 83 0;
-#X connect 42 1 83 1;
-#X connect 44 0 69 0;
+#X connect 42 0 77 0;
+#X connect 42 1 78 0;
 #X connect 44 0 41 0;
 #X connect 45 0 37 0;
 #X connect 46 0 38 0;
@@ -156,5 +154,3 @@
 #X connect 75 0 42 1;
 #X connect 76 0 42 0;
 #X connect 80 0 35 0;
-#X connect 83 0 77 0;
-#X connect 83 0 78 0;

@@ -40,7 +40,6 @@
 #X obj 680 152 / 100;
 #X obj 919 52 r dclip_bott-\$1;
 #X obj 1019 52 r dclip_top-\$1;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 36 0;

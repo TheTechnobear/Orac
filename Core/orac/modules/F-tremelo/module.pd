@@ -22,7 +22,6 @@
 #X obj 181 35 print loaded:tremelo into \$1, f 35;
 #X obj 722 300 r trem_freq-\$1;
 #X obj 768 369 r trem_dw-\$1;
-#X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 19 0;
