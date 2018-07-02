@@ -138,7 +138,7 @@
 #X obj 631 52 r pb_note_len-\$1;
 #X obj 631 193 / 100;
 #X obj 911 34 r auxIn-\$1;
-#X msg 50 911 [ 0 ] Notes Latched;
+#X msg 50 911 [ 2 ] Notes Latched;
 #X obj 632 151 r pb_swing-\$1;
 #X obj 781 50 r loadbang-\$1;
 #X obj 784 101 s pb-\$1-enable;
@@ -272,6 +272,4 @@
 #X connect 3 0 14 0;
 #X connect 4 0 15 0;
 #X connect 6 0 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
 #X connect 18 0 1 0;
