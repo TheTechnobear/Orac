@@ -1,4 +1,6 @@
 #/bin/sh
+rm -rf pkg/organelle.old
+mv pkg/organelle pkg/organelle.old
 mkdir -p pkg/organelle
 cd pkg/organelle
 cp -R ../../Core/* .

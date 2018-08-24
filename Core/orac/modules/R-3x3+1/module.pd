@@ -1,4 +1,4 @@
-#N canvas 307 855 1994 1103 10;
+#N canvas 831 241 1994 1103 10;
 #X obj 240 186 r notesIn-\$1;
 #X obj 242 491 s notesOut-\$1;
 #X obj 23 9 r loaddefs-\$1;
@@ -61,6 +61,7 @@ this module needs updating...;
 #X connect 20 0 31 1;
 #X connect 23 0 25 0;
 #X connect 23 1 25 1;
+#X connect 23 2 25 2;
 #X connect 24 0 21 0;
 #X connect 24 1 22 0;
 #X connect 25 0 26 0;
