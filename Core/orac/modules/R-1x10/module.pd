@@ -46,6 +46,7 @@ this module needs updating...;
 #X connect 20 0 23 1;
 #X connect 23 0 25 0;
 #X connect 23 1 25 1;
+#X connect 23 2 25 2;
 #X connect 24 0 34 0;
 #X connect 24 1 34 1;
 #X connect 24 2 34 2;

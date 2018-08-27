@@ -12,7 +12,7 @@ ${PD} ${PD_OPTS} mother/mother.pd main.pd >/tmp/orac.log 2>&1 &
 cd ${DIR}/MEC
 killall mec-app
 echo ./mec-app ${MEC_OPTS}
-./mec-app osckontrol.json >/tmp/mec.log 2>&1 &
+./mec-app ${MEC_OPTS}  >/tmp/mec.log 2>&1 &
 ps auxwwww | grep mother/mother.pd
 ps auxwwww | grep ${MEC_OPTS}
 
