@@ -11,7 +11,7 @@
 #X obj 27 491 outlet~ outL-\$1;
 #X obj 136 491 outlet~ outR-\$1;
 #X obj 181 35 print loaded:linear router into \$1, f 39;
-#X obj 23 112 KontrolModule \$1 R-1x10-BELA;
+#X obj 23 112 KontrolModule \$1 R-1x10-SALT;
 #X text 44 577 this is a simple routing module \, we could have different
 ones! in this router we route notes etc to the active module \, and
 audio and notes from m1 to m5 note: if you add more modules \, then

@@ -1,6 +1,6 @@
 {
-    "name" : "R-1x10-BELA",
-    "display" : "1x10-BELA",
+    "name" : "R-1x10-SALT",
+    "display" : "1x10-SALT",
     "parameters" :  [ 
         ["pct", "r-thru-gain-m0","Thru Gain",0,200,100],
         ["pct", "r-gain-m0","Gain",0,200,100],

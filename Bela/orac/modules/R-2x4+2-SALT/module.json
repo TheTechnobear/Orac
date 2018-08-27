@@ -1,6 +1,6 @@
 {
-    "name" : "R-2x4+2-BELA",
-    "display" : "2x4+2-BELA",
+    "name" : "R-2x4+2-SALT",
+    "display" : "2x4+2-SALT",
     "parameters" :  [ 
         ["pct", "r-thru-gain-m0","Thru Gain",0,200,100],
         ["pct", "r-gain-m0","Gain",0,200,100],
