@@ -1,0 +1,14 @@
+{
+    "display" : "MoogLFO",
+    "parameters" :  [ 
+        ["freq","moog_cut","Cutoff",0,15000,15000],
+        ["freq","moog_rate","Rate",0,10,0],
+        ["pct","moog_depth","Depth",0,100,50],
+        ["pct","moog_res","Resonance",0,100,0],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["moog_cut","moog_res","moog_rate","moog_depth"]]
+    ]
+}
+

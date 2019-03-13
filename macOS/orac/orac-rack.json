@@ -2,7 +2,7 @@
 	"presets":	{
 		"Default":	{
 			"m7":	{
-				"moduleType":	"U-default",
+				"moduleType":	"ut/U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
@@ -15,7 +15,7 @@
 				}
 			},
 			"m2":	{
-				"moduleType":	"U-default",
+				"moduleType":	"ut/U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
@@ -28,7 +28,7 @@
 				}
 			},
 			"m6":	{
-				"moduleType":	"U-default",
+				"moduleType":	"ut/U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
@@ -41,7 +41,7 @@
 				}
 			},
 			"m9":	{
-				"moduleType":	"R-1x10",
+				"moduleType":	"r/R-1x10",
 				"params":	{
 				},
 				"midi-mapping":	{
@@ -54,7 +54,7 @@
 				}
 			},
 			"m1":	{
-				"moduleType":	"S-basicpoly",
+				"moduleType":	"sy/S-basicpoly",
 				"params":	{
 					"bp_vdepth":	0,
 					"bp_vrate":	1,
@@ -72,7 +72,7 @@
 				}
 			},
 			"m0":	{
-				"moduleType":	"U-polybeats",
+				"moduleType":	"ut/U-polybeats",
 				"params":	{
 					"pb_swing":	0,
 					"pb_note_vel":	100,
@@ -89,7 +89,7 @@
 				}
 			},
 			"m4":	{
-				"moduleType":	"U-default",
+				"moduleType":	"ut/U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
@@ -102,7 +102,7 @@
 				}
 			},
 			"m5":	{
-				"moduleType":	"U-default",
+				"moduleType":	"ut/U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
@@ -115,7 +115,7 @@
 				}
 			},
 			"m3":	{
-				"moduleType":	"U-default",
+				"moduleType":	"ut/U-default",
 				"params":	{
 				},
 				"midi-mapping":	{
@@ -128,7 +128,7 @@
 				}
 			},
 			"m8":	{
-				"moduleType":	"U-clock",
+				"moduleType":	"ut/U-clock",
 				"params":	{
 					"c_midiout":	0,
 					"c_bpm":	120

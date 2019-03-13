@@ -1,0 +1,13 @@
+{
+    "display" : "Analog Mono",
+    "parameters" :  [ 
+        ["pitch","as_trans","Transpose",-24,24,0],
+        ["pct","as_oscratio","Osc Ratio",0,100,0],
+        ["freq","as_cutoff","Cutoff",100,2100,2100],
+        ["pct","as_reso","Resonance",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["as_trans","as_oscratio","as_cutoff","as_reso"]]
+    ]
+}
+

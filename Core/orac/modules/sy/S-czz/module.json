@@ -1,0 +1,14 @@
+{
+    "display" : "CZZ",
+    "parameters" :  [ 
+        ["time","czz_attack","Attack",1,2000,1],
+        ["time","czz_decay","Decay",1,4000,500],
+        ["pct","czz_sustain","Sustain",0,100,50],
+        ["time","czz_release","Release",1,4000,500],
+        ["int","czz_preset","Preset",0,8,4]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["czz_attack","czz_decay","czz_sustain","czz_release"]]
+    ]
+}
+

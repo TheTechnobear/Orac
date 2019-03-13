@@ -1,0 +1,24 @@
+{
+    "display" : "Wrps",
+    "parameters" :  [ 
+        ["pct","w_shape","Shape",0,100,0],
+        ["pct","w_algo","Algo",0,100,50],
+        ["pct","w_timbre","Timbre",0,100,20],
+
+        ["pct","e_sustain","Sustain",0,100,50],
+        ["time","e_release","Release",0,2000,50],
+        ["time","e_attack","Attack",0,2000,0],
+        ["time","e_decay","Decay",0,2000,500],
+
+        ["pct","w_drive1","Carrier Lvl",0,100,0],
+        ["pct","w_drive2","Mod Lvl",0,100,0],
+        ["bool","w_gate","Gate",0],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_wrps","Warps",["w_shape","w_algo","w_timbre"]],
+        ["pg_vca","Vca", ["e_attack","e_decay","e_sustain","e_release"]],
+        ["pg_extra","Extra", ["w_drive1","w_drive2","w_gate"]]
+    ]
+}
+

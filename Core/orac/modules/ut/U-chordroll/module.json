@@ -1,0 +1,12 @@
+{
+    "display" : "ChordRoll",
+    "parameters" :  [ 
+        ["time","croll_speed","Roll Speed",0,200,50],
+        ["int","croll_chord","Chord",0,12,0],
+        ["time","croll_length","Note Length",10,1000,200]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["croll_speed","croll_chord","croll_length"]]
+    ]
+}
+

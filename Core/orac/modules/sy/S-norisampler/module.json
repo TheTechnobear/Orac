@@ -1,0 +1,13 @@
+{
+    "display" : "Nori Sampler",
+    "parameters" :  [ 
+        ["pct","n_speed","Speed",-100,100,0],
+        ["pct","n_mod","Modulation",0,100,0],
+        ["pct","n_start","Start Point",0,100,0],
+        ["pct","n_dur","Duration",0,100,100]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["n_speed","n_mod","n_start","n_dur"]]
+    ]
+}
+

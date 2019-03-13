@@ -2,7 +2,7 @@
 	"presets":	{
 		"Default":	{
 			"m0":	{
-				"moduleType":	"S-basicmono",
+				"moduleType":	"sy/S-basicmono",
 				"mod-mapping" : {
 					"bus" : {
 						"3" : ["bp_trans"],
@@ -14,28 +14,28 @@
 				}
 			},
 			"m1":	{
-				"moduleType":	"U-default"
+				"moduleType":	"ut/U-default"
 			},
 			"m2":	{
-				"moduleType":	"U-default"
+				"moduleType":	"ut/U-default"
 			},
 			"m3":	{
-				"moduleType":	"U-default"
+				"moduleType":	"ut/U-default"
 			},
 			"m4":	{
-				"moduleType":	"S-basicmono"
+				"moduleType":	"ut/S-basicmono"
 			},
 			"m5":	{
-				"moduleType":	"U-default"
+				"moduleType":	"ut/U-default"
 			},
 			"m6":	{
-				"moduleType":	"U-default"
+				"moduleType":	"ut/U-default"
 			},
 			"m8":	{
-				"moduleType":	"U-default"
+				"moduleType":	"ut/U-default"
 			},
 			"m8":	{
-				"moduleType":	"U-clock",
+				"moduleType":	"ut/U-clock",
 				"params":	{
 					"c_midiout":	0,
 					"c_bpm":	120
@@ -46,7 +46,7 @@
 				}
 			},
 			"m9":	{
-				"moduleType":	"R-2x4+2-SALT",
+				"moduleType":	"r/R-2x4+2-SALT",
 				"params":	{
 				},
 				"midi-mapping":	{

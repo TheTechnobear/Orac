@@ -1,0 +1,14 @@
+{
+    "display" : "Freezer",
+    "parameters" :  [ 
+        ["time","f_grainsize","Grain Size",1,500,50],
+        ["time","f_grainspread","Spread",0,4000,1000],
+        ["pct","f_density","Density",1,100,10],
+        ["pct","f_mix","Wet/Dry",0,100,50],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["f_grainsize","f_grainspread","f_density","f_mix"]]
+    ]
+}
+

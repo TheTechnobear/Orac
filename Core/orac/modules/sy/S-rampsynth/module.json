@@ -1,0 +1,16 @@
+{
+    "display" : "Ramp Synth",
+    "parameters" :  [ 
+        ["int","rs_waveform","Wave",0,3,3],
+        ["pitch","rs_trans","Transpose",-12,12,0],
+        ["time","rs_decay","Decay",5,2000,500],
+        ["time","rs_ramp_attack","Attack",0,500,1],
+        ["float","rs_ramp_amt","Ramp Depth",0,4,1],
+        ["time","rs_ramp_decay","Ramp Decay",0,1000,100]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["rs_waveform","rs_trans","rs_decay"]],
+        ["pg_ramp","Ramp",["rs_ramp_amt","rs_ramp_attack","rs_ramp_decay"]]
+    ]
+}
+

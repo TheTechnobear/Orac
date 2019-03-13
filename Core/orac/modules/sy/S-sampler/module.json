@@ -1,0 +1,13 @@
+{
+    "display" : "Sampler",
+    "parameters" :  [ 
+        ["pitch","s_trans","Transpose",-12,12,0],
+        ["pct","s_speed","Speed",-20,20,0],
+        ["pct","s_duration","Duration",0,100,100],
+        ["pct","s_envelope","Envelope",0,100,30]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["s_trans","s_speed","s_duration", "s_envelope"]]
+    ]
+}
+

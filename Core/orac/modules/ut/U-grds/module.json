@@ -1,0 +1,21 @@
+{
+    "display" : "Grds",
+    "parameters" :  [ 
+        ["pct","g_kick","Kick Density",0,100,25],
+        ["pct","g_snare","Snare Density",0,100,25],
+        ["pct","g_hihat","HiHat Density",0,100,25],
+        ["time","g_note_len","Note Length",10,150,10],
+        ["float","g_mapx","Map X",0,127,0],
+        ["float","g_mapy","Map Y",0,127,0],
+        ["float","g_chaos","Chaos",0,127,0],
+        ["int","g_e_kick","Kick PLen",1,32,5],
+        ["int","g_e_snare","Snare PLen",1,32,7],
+        ["int","g_e_hihat","Hihat PLen",1,32,11]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["g_note_len","g_kick","g_snare","g_hihat"]],
+        ["pg_pattern","Pattern",["g_mapx","g_mapy","g_chaos"]],
+        ["pg_euclid","Euclid",["g_e_kick","g_e_snare","g_e_hihat"]]
+    ]
+}
+

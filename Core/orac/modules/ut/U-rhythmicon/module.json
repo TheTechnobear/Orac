@@ -1,0 +1,12 @@
+{
+    "display" : "Rhythmicon",
+    "parameters" :  [ 
+        ["pitch","r_trans","Base Transpose",-24,24,0],
+        ["int","r_velo","Velocity",1,127,100],
+        ["time","r_dur","Duration",5,2000,50]
+     ],
+    "pages" : [ 
+        ["pg_main","Main",["r_trans","r_velo","r_dur"]]
+    ]
+}
+

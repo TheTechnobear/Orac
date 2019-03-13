@@ -1,0 +1,13 @@
+{
+    "display" : "Reverb",
+    "parameters" :  [ 
+        ["pct","rev_dw","Dry/Wet",0,100,50],
+        ["int","rev_size","Size",0,100,50],
+        ["pct","rev_damp","Damping",0,100,50],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["rev_dw","rev_size","rev_damp"]]
+    ]
+}
+

@@ -1,0 +1,12 @@
+{
+    "display" : "R.Ensemble",
+    "parameters" :  [ 
+        ["pct","rc_amount","Amount",0,100,50],
+        ["pct","rc_depth","Depth",0,100,50],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["rc_amount","rc_depth"]]
+    ]
+}
+

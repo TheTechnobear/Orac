@@ -1,0 +1,14 @@
+{
+    "display" : "Delay 3s",
+    "parameters" :  [ 
+        ["pct","dly_dw","Dry/Wet",0,100,50],
+        ["time","dly_time","Time",0,3000,3000],
+        ["pct","dly_fb","Feedback",0,100,10],
+        ["freq","dly_hip","Freq",0,15000,0],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["dly_dw","dly_time","dly_fb","dly_hip"]]
+    ]
+}
+

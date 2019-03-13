@@ -1,0 +1,11 @@
+{
+    "display" : "Arper",
+    "parameters" :  [ 
+        ["int","arper_pattern","Pattern",0,7,0],
+        ["time","arper_length","Length",20,2000,500]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["arper_pattern","arper_length"]]
+    ]
+}
+

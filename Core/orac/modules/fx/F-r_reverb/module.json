@@ -1,0 +1,14 @@
+{
+    "display" : "R.Reverb",
+    "parameters" :  [ 
+        ["pct","r_amount","Amount",0,100,50],
+        ["pct","r_time","Time",0,100,50],
+        ["pct","r_diff","Diffusion",0,100,50],
+        ["pct","r_cutoff","Cutoff",0,100,50],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["r_amount","r_time","r_diff","r_cutoff"]]
+    ]
+}
+

@@ -1,0 +1,13 @@
+{
+    "display" : "Chorus",
+    "parameters" :  [ 
+        ["pct","chor_dw","Dry/Wet",0,100,50],
+        ["freq","chor_freq","Freq",0,5,1],
+        ["pct","chor_mod","Mod",0,100,50],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["chor_dw","chor_freq","chor_mod"]]
+    ]
+}
+

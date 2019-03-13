@@ -1,0 +1,15 @@
+{
+    "display" : "Basic Poly",
+    "parameters" :  [ 
+        ["pitch","bp_trans","Transpose",-24,24,0],
+        ["int","bp_wave","Wave",0,3,0],
+        ["time","bp_decay","Decay Time",5,2000,5],
+        ["freq","bp_vrate","Vibr Rate",0,50,1],
+        ["pct","bp_vdepth","Vibr Depth",0,100,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["bp_trans","bp_wave","bp_decay"]],
+        ["pg_vibr", "Vibrato",["bp_vrate","bp_vdepth"]]
+    ]
+}
+
