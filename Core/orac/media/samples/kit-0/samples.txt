@@ -1,3 +1,0 @@
-0 - norisampler
-1 - wavescanner
-2 - sampler

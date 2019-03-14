@@ -5,8 +5,8 @@
         ["pct","n_mod","Modulation",0,100,0],
         ["pct","n_start","Start Point",0,100,0],
         ["pct","n_dur","Duration",0,100,100],
-        ["int","s_kit","Kit",0,12,0],
-        ["int","s_slot1","Slot",0,24,0]
+        ["int","s_kit","Kit",1,12,1],
+        ["int","s_slot1","Slot",1,24,1]
     ],
     "pages" : [ 
         ["pg_main","Main",["n_speed","n_mod","n_start","n_dur"]],

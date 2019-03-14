@@ -4,10 +4,27 @@
         ["pct","s24_speed","Speed",-200,200,100],
         ["time","s24_release","Release",0,2000,500],
         ["pct","s24_decay","Envelope",0,100,100],
-        ["pct","s24_start","Start",0,100,0]
+        ["pct","s24_start","Start",0,100,0],
+        ["int","s_kit","Kit",1,12,2],
+        ["int","s_slot1","Slot 1",1,24,1],
+        ["int","s_slot2","Slot 2",1,24,2],
+        ["int","s_slot3","Slot 3 ",1,24,3],
+        ["int","s_slot4","Slot 4",1,24,4],
+        ["int","s_slot5","Slot 5",1,24,5],
+        ["int","s_slot6","Slot 6",1,24,6],
+        ["int","s_slot7","Slot 7",1,24,7],
+        ["int","s_slot8","Slot 8",1,24,8],
+        ["int","s_slot9","Slot 9",1,24,9],
+        ["int","s_slot10","Slot 10",1,24,10],
+        ["int","s_slot11","Slot 11",1,24,11],
+        ["int","s_slot12","Slot 12",1,24,12]
     ],
     "pages" : [ 
-        ["pg_main","Main",["s24_speed","s24_release","s24_decay", "s24_start"]]
+        ["pg_main","Main",["s24_speed","s24_release","s24_decay", "s24_start"]],
+        ["pg_sample1","Sample 1",["s_kit","s_slot1","s_slot2","s_slot3"]],
+        ["pg_sample2","Sample 2",["s_slot4","s_slot5","s_slot6","s_slot7"]],
+        ["pg_sample3","Sample 3",["s_slot8","s_slot9","s_slot10","s_slot11"]],
+        ["pg_sample4","Sample 4",["s_slot12"]]
     ]
 }
 
