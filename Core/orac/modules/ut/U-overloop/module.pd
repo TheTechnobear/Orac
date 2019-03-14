@@ -1,12 +1,7 @@
 #N canvas 432 515 1692 690 10;
 #X obj 304 186 r notesIn-\$1;
-#X obj 23 112 KontrolModule \$1 U-overloop;
 #X obj 304 491 s notesOut-\$1;
-#X obj 23 9 r loaddefs-\$1;
-#X msg 23 76 loaddefinitions \$1;
-#X obj 181 9 r loadbang-\$1;
-#X obj 181 76 print loading definiton for \$1;
-#X obj 23 41 symbol;
+#X obj 421 9 r loadbang-\$1;
 #X obj 25 186 inlet~ inL-\$1;
 #X obj 135 186 inlet~ inR-\$1;
 #X obj 27 491 outlet~ outL-\$1;
@@ -14,7 +9,6 @@
 #X obj 424 185 r auxIn-\$1;
 #X obj 423 208 r expIn-\$1;
 #X obj 423 233 r fsIn-\$1;
-#X obj 181 45 print loaded:overloop into \$1, f 35;
 #X obj 421 76 s aux-label-\$1;
 #X obj 516 45 int 0;
 #X obj 516 76 s aux-led-\$1;
@@ -26,8 +20,8 @@
 #X obj 74 540 *~;
 #X obj 538 343 tgl 50 0 empty empty empty 17 7 0 100 -262144 -1 -1
 0 1;
-#X floatatom 618 406 5 0 0 0 - - -, f 5;
-#X floatatom 837 425 5 0 0 0 - - -, f 5;
+#X floatatom 618 406 5 0 0 0 - - -;
+#X floatatom 837 425 5 0 0 0 - - -;
 #X obj 724 343 tgl 50 0 empty empty empty 17 7 0 100 -262144 -1 -1
 0 1;
 #X obj 230 70 sig~;
@@ -44,7 +38,7 @@
 #X obj 578 227 t b b b b;
 #X obj 506 89 sel 1;
 #X obj 807 156 - 59;
-#X floatatom 805 254 5 0 0 0 - - -, f 5;
+#X floatatom 805 254 5 0 0 0 - - -;
 #X obj 801 277 t b b f;
 #X obj 899 503 - 24;
 #X obj 893 534 moses 0;
@@ -61,7 +55,7 @@
 #X obj 627 319 i 1;
 #X obj 807 200 abs;
 #X obj 807 178 - 25;
-#X floatatom 415 352 5 0 0 0 - - -, f 5;
+#X floatatom 415 352 5 0 0 0 - - -;
 #X obj 642 292 t b f;
 #X obj 655 405 ==;
 #X obj 675 501 spigot 1;
@@ -236,16 +230,11 @@
 #X connect 83 0 26 0;
 #X connect 84 0 65 0;
 #X restore 70 335 pd overloop;
-#X connect 3 0 7 0;
-#X connect 3 0 6 0;
-#X connect 4 0 1 0;
-#X connect 5 0 15 0;
-#X connect 5 0 17 0;
-#X connect 5 0 19 0;
-#X connect 7 0 4 0;
-#X connect 8 0 20 0;
-#X connect 9 0 20 1;
-#X connect 17 0 18 0;
-#X connect 19 0 16 0;
-#X connect 20 0 10 0;
-#X connect 20 1 11 0;
+#X connect 2 0 11 0;
+#X connect 2 0 13 0;
+#X connect 3 0 14 0;
+#X connect 4 0 14 1;
+#X connect 11 0 12 0;
+#X connect 13 0 10 0;
+#X connect 14 0 5 0;
+#X connect 14 1 6 0;

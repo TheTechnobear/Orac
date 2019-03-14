@@ -1,11 +1,6 @@
 #N canvas 91 299 1531 750 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 491 s notesOut-\$1;
-#X obj 23 9 r loaddefs-\$1;
-#X msg 23 76 loaddefinitions \$1;
-#X obj 181 9 r loadbang-\$1;
-#X obj 181 76 print loading definiton for \$1;
-#X obj 23 41 symbol;
 #X obj 25 186 inlet~ inL-\$1;
 #X obj 135 186 inlet~ inR-\$1;
 #X obj 27 491 outlet~ outL-\$1;
@@ -38,7 +33,7 @@
 #X obj 1363 333 + 1;
 #X obj 1222 302 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 1265 373 5 0 0 0 - - -, f 5;
+#X floatatom 1265 373 5 0 0 0 - - -;
 #X obj 1283 264 sel 1;
 #X msg 1283 289 0;
 #X obj 1265 408 sel 0;
@@ -46,7 +41,7 @@
 #X obj 1047 223 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 1047 248 0 0;
-#X floatatom 123 387 5 0 0 0 - - -, f 5;
+#X floatatom 123 387 5 0 0 0 - - -;
 #X obj 123 418 sel 1;
 #X obj 123 444 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -364,23 +359,16 @@ sequencer., f 69;
 a sequence. Only two inputs needed: (r seq2-\$1-aux) and (r seq2-\$1-notes-in)
 , f 43;
 #X obj 748 244 r seq2-\$1-led;
-#X obj 23 112 KontrolModule \$1 U-seq2;
-#X obj 181 35 print loaded:seq2 into \$1, f 35;
 #X obj 582 247 r seq2-\$1-aux-label;
 #X obj 582 280 s aux-label-\$1;
 #X obj 749 276 s aux-led-\$1;
-#X obj 1125 493 s aux-label-\$1;
-#X obj 1125 431 r loadbang-\$1;
-#X msg 1125 461 Aux:Play/Hold Record;
-#X connect 0 0 14 1;
-#X connect 2 0 6 0;
-#X connect 2 0 5 0;
-#X connect 3 0 18 0;
-#X connect 4 0 19 0;
-#X connect 6 0 3 0;
-#X connect 11 0 14 0;
-#X connect 14 0 1 0;
-#X connect 17 0 22 0;
-#X connect 20 0 21 0;
-#X connect 24 0 25 0;
-#X connect 25 0 23 0;
+#X obj 405 105 s aux-label-\$1;
+#X obj 405 43 r loadbang-\$1;
+#X msg 405 73 Aux:Play/Hold Record;
+#X connect 0 0 9 1;
+#X connect 6 0 9 0;
+#X connect 9 0 1 0;
+#X connect 12 0 15 0;
+#X connect 13 0 14 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
