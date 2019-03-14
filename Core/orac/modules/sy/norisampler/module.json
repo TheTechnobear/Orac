@@ -4,10 +4,13 @@
         ["pct","n_speed","Speed",-100,100,0],
         ["pct","n_mod","Modulation",0,100,0],
         ["pct","n_start","Start Point",0,100,0],
-        ["pct","n_dur","Duration",0,100,100]
+        ["pct","n_dur","Duration",0,100,100],
+        ["int","s_kit","Kit",0,12,0],
+        ["int","s_slot1","Slot",0,24,0]
     ],
     "pages" : [ 
-        ["pg_main","Main",["n_speed","n_mod","n_start","n_dur"]]
+        ["pg_main","Main",["n_speed","n_mod","n_start","n_dur"]],
+        ["pg_sample","Sample",["s_kit","s_slot1"]]
     ]
 }
 
