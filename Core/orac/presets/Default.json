@@ -52,7 +52,7 @@
 		}
 	},
 	"m1":	{
-		"moduleType":	"sy/S-basicpoly",
+		"moduleType":	"sy/basicpoly",
 		"params":	{
 			"bp_vdepth":	0,
 			"bp_vrate":	1,
