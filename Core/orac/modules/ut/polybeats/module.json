@@ -1,4 +1,5 @@
 {
+    "display" : "PolyBeats",
     "parameters" :  [ 
         ["int","pb_div","Division",1,32,4],
         ["time","pb_note_len","Note Length",10,1000,250],

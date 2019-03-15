@@ -1,11 +1,11 @@
-#N canvas 614 409 1691 881 10;
-#X msg 333 317 start;
+#N canvas 617 296 1691 881 10;
+#X msg 351 373 start;
 #X obj 304 24 tgl 50 0 empty empty empty 17 7 0 100 -262144 -1 -1 0
 1;
 #X obj 330 237 delay 100;
 #X text 552 582 offset cause we waited a little;
-#X msg 369 385 start;
-#X obj 369 353 t b b;
+#X msg 424 676 start;
+#X obj 424 644 t b b;
 #X obj 327 168 delay 5;
 #X obj 304 -10 inlet;
 #X obj 290 702 readsf~;
@@ -29,8 +29,8 @@
 #X text 790 132 mute;
 #X obj 353 732 s looped-\$2;
 #X obj 285 829 throw~ sampout-\$2;
-#X obj 538 387 list;
-#N canvas 1507 353 803 448 sampleDir 1;
+#X obj 538 404 list;
+#N canvas 1507 353 803 448 sampleDir 0;
 #X obj 442 163 s rackMsgs;
 #X obj 74 387 outlet;
 #X obj 245 387 outlet;
@@ -66,6 +66,7 @@
 #X msg 538 459 open \$1/samples/kit-\$2/\$3.wav 4410;
 #X obj 538 323 r s_kit-\$2;
 #X obj 581 533 print open player;
+#X obj 576 422 print list;
 #X connect 0 0 8 0;
 #X connect 1 0 23 0;
 #X connect 2 0 18 0;
@@ -75,10 +76,9 @@
 #X connect 6 0 2 0;
 #X connect 7 0 1 0;
 #X connect 8 0 14 0;
-#X connect 8 1 5 0;
 #X connect 8 1 26 0;
+#X connect 8 1 5 0;
 #X connect 9 0 29 1;
-#X connect 9 0 28 1;
 #X connect 10 0 9 1;
 #X connect 11 0 8 0;
 #X connect 12 0 13 0;
@@ -103,5 +103,4 @@
 #X connect 29 0 28 0;
 #X connect 29 1 28 1;
 #X connect 30 0 8 0;
-#X connect 30 0 32 0;
 #X connect 31 0 29 0;
