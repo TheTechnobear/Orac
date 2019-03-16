@@ -22,7 +22,7 @@
 #X obj 897 177 routeOSC /key;
 #X obj 897 137 r oscIn;
 #X msg 897 217 key \$1 \$2;
-#X msg 116 145 loadsettings orac;
+#X msg 116 145 loadsettings rack;
 #X obj 332 87 s rackloaded;
 #X obj 11 183 r rackMsgs;
 #X obj 44 69 t b b;

@@ -1,5 +1,5 @@
 {
 	"dataDir":	"/tmp/data/orac",
 	"mediaDir":	"/tmp/media",
-	"currentPreset":	"Default"
+	"userModuleDir":	"/tmp/media/orac/usermodules"
 }

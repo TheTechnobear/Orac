@@ -8,8 +8,11 @@ export USER_DIR=${USER_DIR:="/usbdrive"}
 # should be run from motherhost package installer
 
 oscsend localhost 4001 /oled/aux/line/2 s "install orac"
+oscsend localhost 4001 /oled/aux/line/3 s "installing..."
 
+mkdir -p ${USER_DIR}/media/orac/usermodules
 cp -nr media $USER_DIR
 cp -nr data $USER_DIR
+oscsend localhost 4001 /oled/aux/line/3 s "done"
 
 exit 0
