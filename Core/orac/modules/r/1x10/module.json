@@ -41,6 +41,7 @@
         ["pct", "r-gain-m9","Gain",0,200,100],
         ["bool","r-notethru-m9","Note Thru",1],
 
+        ["bool", "r-chin-midigate-1","In Midi",0],
         ["int", "r-chin-midich-1","In Midi Ch.",0,16,0],
         ["int", "r-chout-midich-1","Out Midi Ch.",0,16,0],
 
@@ -54,7 +55,7 @@
         ["float", "r-chout-r-pan-1","Out R Pan",0,1,1]
     ],
     "pages" : [ 
-        ["pg_ch1midi" , "Chain 1 Midi",["r-chin-midich-1", "r-chout-midich-1"]],
+        ["pg_ch1midi" , "Chain 1 Midi",["r-chin-midigate-1", "r-chin-midich-1", "r-chout-midich-1"]],
         ["pg_ch1gain", "Chain 1 Gain",["r-chin-l-gain-1", "r-chin-r-gain-1", "r-chout-gain-1"]],
         ["pg_ch1pan" , "Chain 1 Pan" ,["r-chin-l-pan-1", "r-chin-r-pan-1", "r-chout-l-pan-1", "r-chout-r-pan-1"]],
 

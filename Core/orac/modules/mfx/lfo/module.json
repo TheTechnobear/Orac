@@ -1,0 +1,15 @@
+{
+    "display" : "LFO",
+    "parameters" :  [ 
+        ["int","l_wave","Wave",0,3,0],
+        ["freq","l_rate","Rate",0,50,1],
+        ["pct","l_amt","Amount",0,100,50],
+        ["pct","l_offset","Offset",0,100,50],
+        ["int","l_bus","Mod Bus",0,20,10]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["l_wave","l_rate","l_amt","l_offset"]],
+        ["pg_target","Target",["l_bus"]]
+    ]
+}
+

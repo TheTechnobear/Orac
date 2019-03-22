@@ -1,13 +1,13 @@
-#N canvas 527 521 1506 707 10;
+#N canvas 587 504 1506 707 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 491 s notesOut-\$1;
 #X obj 25 186 inlet~ inL-\$1;
 #X obj 135 186 inlet~ inR-\$1;
 #X obj 27 491 outlet~ outL-\$1;
 #X obj 136 491 outlet~ outR-\$1;
-#X obj 424 185 r auxIn-\$1;
-#X obj 423 208 r expIn-\$1;
-#X obj 423 233 r fsIn-\$1;
+#X obj 603 186 r auxIn-\$1;
+#X obj 602 209 r expIn-\$1;
+#X obj 602 234 r fsIn-\$1;
 #N canvas 641 36 1917 1017 sequencer 0;
 #N canvas 670 69 450 300 press-n-hold 0;
 #X obj 135 147 f;
@@ -62,7 +62,7 @@
 #X obj 781 566 t b b b, f 13;
 #X msg 869 589 0;
 #X obj 478 191 s pb-\$1-vel-local;
-#X obj 911 389 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 911 389 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 911 273 sel 1;
 #N canvas 12 50 604 357 swing-sixteenths 0;
@@ -131,11 +131,11 @@
 #X obj 631 52 r pb_note_len-\$1;
 #X obj 631 193 / 100;
 #X obj 911 34 r auxIn-\$1;
-#X msg 50 911 [ 2 ] Notes Latched;
+#X msg 50 911 [ 11 ] Notes Latched;
 #X obj 632 151 r pb_swing-\$1;
 #X obj 781 50 r loadbang-\$1;
 #X obj 784 101 s pb-\$1-enable;
-#X obj 784 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 784 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 345 323 r page-ready-\$1;
 #X obj 906 585 counter-up 4 \$1;
@@ -259,5 +259,9 @@
 #X restore 306 326 pd sequencer;
 #X obj 305 288 s pb-\$1-notes-in;
 #X obj 305 358 r pb-\$1-notes-out;
+#X obj 498 185 r ctrlIn-\$1;
+#X obj 498 490 s ctrlOut-\$1;
+#X obj 305 393 list append 0;
 #X connect 0 0 10 0;
-#X connect 11 0 1 0;
+#X connect 11 0 14 0;
+#X connect 14 0 1 0;

@@ -1,4 +1,4 @@
-#N canvas 991 640 690 265 10;
+#N canvas 903 559 690 265 10;
 #X obj 76 75 loadbang;
 #N canvas 140 53 922 604 audioIO 0;
 #X obj 513 336 dac~;
@@ -23,7 +23,7 @@
 #X connect 9 0 0 0;
 #X connect 10 0 0 1;
 #X restore 155 77 pd audioIO;
-#N canvas 716 329 1779 821 MIDI 0;
+#N canvas 716 329 1779 821 MIDI 1;
 #X obj 372 169 spigot 1;
 #X obj 431 583 spigot 1;
 #X obj 431 615 unpack;
@@ -113,7 +113,7 @@
 #X text 1258 51 speed limit these;
 #X obj 1141 244 t f b b;
 #X obj 1141 277 i;
-#N canvas 1101 410 681 530 chsel 0;
+#N canvas 1101 410 681 530 chsel 1;
 #X obj 159 28 r midiCh;
 #X obj 67 61 swap;
 #X obj 67 86 pack;

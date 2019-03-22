@@ -4,11 +4,11 @@
 #X obj 609 55 / 100;
 #X obj 265 369 +~;
 #X obj 344 366 +~;
-#X obj 769 33 inlet notes;
+#X obj 769 30 inlet notes;
 #X obj 772 475 outlet notes;
 #X obj 14 22 r r-thru-gain-\$1-\$2;
 #X obj 609 28 r r-gain-\$1-\$2;
-#X obj 869 32 r r-notethru-\$1-\$2;
+#X obj 1086 28 r r-notethru-\$1-\$2;
 #X obj 888 116 s notesIn-\$1, f 13;
 #X obj 886 143 r notesOut-\$1;
 #X obj 416 190 r~ outL-\$1;
@@ -41,6 +41,11 @@
 #X obj 35 611 symbol \$1;
 #X obj 126 577 r loadbang-\$1;
 #X text 31 555 if module or router is loaded check thru gain;
+#X obj 984 123 spigot 1;
+#X obj 984 30 inlet ctrl;
+#X obj 1103 116 s ctrlIn-\$1, f 13;
+#X obj 1101 143 r ctrlOut-\$1;
+#X obj 987 475 outlet ctrl;
 #X connect 0 0 16 0;
 #X connect 1 0 6 0;
 #X connect 2 0 20 0;
@@ -51,6 +56,7 @@
 #X connect 7 0 0 0;
 #X connect 8 0 2 0;
 #X connect 9 0 1 1;
+#X connect 9 0 42 1;
 #X connect 11 0 6 0;
 #X connect 12 0 23 0;
 #X connect 13 0 3 0;
@@ -83,3 +89,7 @@
 #X connect 38 0 36 0;
 #X connect 39 0 38 0;
 #X connect 40 0 39 0;
+#X connect 42 0 46 0;
+#X connect 43 0 42 0;
+#X connect 43 0 44 0;
+#X connect 45 0 46 0;

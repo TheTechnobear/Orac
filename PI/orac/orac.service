@@ -14,7 +14,7 @@ KillMode=process
 Restart=always
 WorkingDirectory=/usr/local/orac
 Environment=HOME=/home/pi
-ExecStart=/usr/bin/pd -rt -alsamidi -nogui -audiobuf 4 mother/mother.pd main.pd 
+ExecStart=/usr/bin/pd -rt -alsamidi -nogui -audiobuf 4 mother.pd main.pd 
 
 [Install]
 WantedBy=default.target
