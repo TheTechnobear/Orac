@@ -57,10 +57,10 @@
         ["pct", "r-chin-r-gain-1","In R Gain",0,200,0],
         ["pct", "r-chout-gain-1","Out Gain",0,200,100],
 
-        ["float", "r-chin-l-pan-1","In L Pan",0,1,0],
-        ["float", "r-chin-r-pan-1","In R Pan",0,1,1],
-        ["float", "r-chout-l-pan-1","Out L Pan",0,1,0],
-        ["float", "r-chout-r-pan-1","Out R Pan",0,1,1],
+        ["pan", "r-chin-l-pan-1","In L Pan",0,1,0],
+        ["pan", "r-chin-r-pan-1","In R Pan",0,1,1],
+        ["pan", "r-chout-l-pan-1","Out L Pan",0,1,0],
+        ["pan", "r-chout-r-pan-1","Out R Pan",0,1,1],
 
         ["bool", "r-chin-midigate-2","In Midi",0],
         ["int", "r-chin-midich-2","In Midi Ch.",0,16,0],
@@ -70,10 +70,10 @@
         ["pct", "r-chin-r-gain-2","In R Gain",0,200,0],
         ["pct", "r-chout-gain-2","Out Gain",0,200,100],
 
-        ["float", "r-chin-l-pan-2","In L Pan",0,1,0],
-        ["float", "r-chin-r-pan-2","In R Pan",0,1,1],
-        ["float", "r-chout-l-pan-2","Out L Pan",0,1,0],
-        ["float", "r-chout-r-pan-2","Out R Pan",0,1,1],
+        ["pan", "r-chin-l-pan-2","In L Pan",0,1,0],
+        ["pan", "r-chin-r-pan-2","In R Pan",0,1,1],
+        ["pan", "r-chout-l-pan-2","Out L Pan",0,1,0],
+        ["pan", "r-chout-r-pan-2","Out R Pan",0,1,1],
 
         ["bool", "r-chin-midigate-3","In Midi",0],
         ["int", "r-chin-midich-3","In Midi Ch.",0,16,0],
@@ -83,10 +83,10 @@
         ["pct", "r-chin-r-gain-3","In R Gain",0,200,0],
         ["pct", "r-chout-gain-3","Out Gain",0,200,100],
 
-        ["float", "r-chin-l-pan-3","In L Pan",0,1,0],
-        ["float", "r-chin-r-pan-3","In R Pan",0,1,1],
-        ["float", "r-chout-l-pan-3","Out L Pan",0,1,0],
-        ["float", "r-chout-r-pan-3","Out R Pan",0,1,1]
+        ["pan", "r-chin-l-pan-3","In L Pan",0,1,0],
+        ["pan", "r-chin-r-pan-3","In R Pan",0,1,1],
+        ["pan", "r-chout-l-pan-3","Out L Pan",0,1,0],
+        ["pan", "r-chout-r-pan-3","Out R Pan",0,1,1]
 
     ],
     "pages" : [ 
