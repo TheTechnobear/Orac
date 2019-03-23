@@ -1,0 +1,88 @@
+{
+    "display" : "Serial",
+    "parameters" :  [ 
+        ["pct", "r-thru-gain-a1","Thru Gain",0,200,100],
+        ["pct", "r-gain-a1","Gain",0,200,100],
+        ["bool","r-notethru-a1","Note Thru",1],
+
+        ["pct", "r-thru-gain-a2","Thru Gain",0,200,100],
+        ["pct", "r-gain-a2","Gain",0,200,100],
+        ["bool","r-notethru-a2","Note Thru",1],
+
+        ["pct", "r-thru-gain-a3","Thru Gain",0,200,100],
+        ["pct", "r-gain-a3","Gain",0,200,100],
+        ["bool","r-notethru-a3","Note Thru",1],
+
+        ["pct", "r-thru-gain-b1","Thru Gain",0,200,100],
+        ["pct", "r-gain-b1","Gain",0,200,100],
+        ["bool","r-notethru-b1","Note Thru",1],
+
+        ["pct", "r-thru-gain-b2","Thru Gain",0,200,100],
+        ["pct", "r-gain-b2","Gain",0,200,100],
+        ["bool","r-notethru-b2","Note Thru",1],
+
+        ["pct", "r-thru-gain-b3","Thru Gain",0,200,100],
+        ["pct", "r-gain-b3","Gain",0,200,100],
+        ["bool","r-notethru-b3","Note Thru",1],
+
+        ["pct", "r-thru-gain-b4","Thru Gain",0,200,100],
+        ["pct", "r-gain-b4","Gain",0,200,100],
+        ["bool","r-notethru-b4","Note Thru",1],
+
+        ["pct", "r-thru-gain-c1","Thru Gain",0,200,100],
+        ["pct", "r-gain-c1","Gain",0,200,100],
+        ["bool","r-notethru-c2","Note Thru",1],
+
+        ["pct", "r-thru-gain-c2","Thru Gain",0,200,100],
+        ["pct", "r-gain-c2","Gain",0,200,100],
+        ["bool","r-notethru-c2","Note Thru",1],
+
+        ["pct", "r-thru-gain-c3","Thru Gain",0,200,100],
+        ["pct", "r-gain-c3","Gain",0,200,100],
+        ["bool","r-notethru-c3","Note Thru",1],
+
+        ["pct", "r-thru-gain-p1","Thru Gain",0,200,100],
+        ["pct", "r-gain-p1","Gain",0,200,100],
+
+        ["pct", "r-thru-gain-p2","Thru Gain",0,200,100],
+        ["pct", "r-gain-p2","Gain",0,200,100],
+
+
+        ["bool", "r-chin-midigate-1","In Midi",0],
+        ["int", "r-chin-midich-1","In Midi Ch.",0,16,0],
+        ["int", "r-chout-midich-1","Out Midi Ch.",0,16,0],
+
+        ["pct", "r-chin-l-gain-1","In L Gain",0,200,0],
+        ["pct", "r-chin-r-gain-1","In R Gain",0,200,0],
+        ["pct", "r-chout-gain-1","Out Gain",0,200,100],
+
+        ["float", "r-chin-l-pan-1","In L Pan",0,1,0],
+        ["float", "r-chin-r-pan-1","In R Pan",0,1,1],
+        ["float", "r-chout-l-pan-1","Out L Pan",0,1,0],
+        ["float", "r-chout-r-pan-1","Out R Pan",0,1,1]
+    ],
+    "pages" : [ 
+        ["pg_a1","Module A1", ["r-gain-a1", "r-thru-gain-a1", "r-notethru-a1"]],
+        ["pg_s1","Module S1", []],
+        ["pg_a2","Module A2", ["r-gain-a2", "r-thru-gain-a2", "r-notethru-a2"]],
+        ["pg_s2","Module S2", []],
+        ["pg_a3","Module A3", ["r-gain-a3", "r-thru-gain-a3", "r-notethru-a3"]],
+        ["pg_b1","Module B1", ["r-gain-b1", "r-thru-gain-b1", "r-notethru-b1"]],
+        ["pg_m1","Module M1", []],
+        ["pg_b2","Module B2", ["r-gain-b2", "r-thru-gain-b2", "r-notethru-b2"]],
+        ["pg_m2","Module M2", []],
+        ["pg_b3","Module B3", ["r-gain-b3", "r-thru-gain-b3", "r-notethru-b3"]],
+        ["pg_m3","Module M3", []],
+        ["pg_b4","Module B4", ["r-gain-b4", "r-thru-gain-b4", "r-notethru-b4"]],
+        ["pg_c1","Module C1", ["r-gain-c1", "r-thru-gain-c1", "r-notethru-c1"]],
+        ["pg_p1","Module P1", ["r-gain-p1", "r-thru-gain-p1"]],
+        ["pg_c2","Module C2", ["r-gain-c2", "r-thru-gain-c2", "r-notethru-c2"]],
+        ["pg_p2","Module P2", ["r-gain-p2", "r-thru-gain-p2"]],
+        ["pg_c3","Module C3", ["r-gain-c3", "r-thru-gain-c3", "r-notethru-c3"]],
+
+        ["pg_ch1midi" , "Chain 1 Midi",["r-chin-midigate-1", "r-chin-midich-1", "r-chout-midich-1"]],
+        ["pg_ch1gain", "Chain 1 Gain",["r-chin-l-gain-1", "r-chin-r-gain-1", "r-chout-gain-1"]],
+        ["pg_ch1pan" , "Chain 1 Pan" ,["r-chin-l-pan-1", "r-chin-r-pan-1", "r-chout-l-pan-1", "r-chout-r-pan-1"]]
+    ]
+}
+

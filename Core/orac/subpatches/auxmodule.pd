@@ -1,0 +1,19 @@
+#N canvas 459 574 1216 774 10;
+#X obj 102 53 inlet notes;
+#X obj 102 102 s notesIn-\$1, f 13;
+#X obj 245 178 r notesOut-\$1;
+#X obj 65 177 r~ outL-\$1;
+#X obj 155 177 r~ outR-\$1;
+#X obj 511 104 r loadbang-\$2;
+#X obj 511 81 r loadbang-\$1;
+#X obj 205 52 inlet ctrl;
+#X obj 205 104 s ctrlIn-\$1, f 13;
+#X obj 339 177 r ctrlOut-\$1;
+#X text 623 104 router reloaded;
+#X text 622 83 moduled reloaded;
+#X text 293 49 ? likely not needed since only controllable as active
+module, f 29;
+#X obj 66 148 s~ inL-\$1;
+#X obj 156 148 s~ inR-\$1;
+#X connect 0 0 1 0;
+#X connect 7 0 8 0;
