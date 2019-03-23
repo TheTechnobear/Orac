@@ -1,0 +1,26 @@
+{
+    "display" : "MidiOut",
+    "parameters" :  [ 
+        ["pct","m_p1","Param 1",0,100,0],
+        ["pct","m_p2","Param 2",0,100,0],
+        ["pct","m_p3","Param 3",0,100,0],
+        ["pct","m_p4","Param 4",0,100,0],
+
+        ["int","m_cc_p1","CC 1",0,127,1],
+        ["int","m_cc_p2","CC 2",0,127,2],
+        ["int","m_cc_p3","CC 3",0,127,3],
+        ["int","m_cc_p4","CC 4",0,127,4],
+
+        ["int","m_midi_ch","Midi Ch.",1,16,1],
+        ["bool","m_note_out","Note Out",0,1,1],
+        ["bool","m_cc_out","CC Out",0,1,1],
+        ["bool","m_aux_note","Aux Note",0,127,0]
+
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["m_p1","m_p2","m_p3","m_p4"]],
+        ["pg_cc","CC",["m_cc_p1", "m_cc_p2", "m_cc_p3", "m_cc_p4"]],
+        ["pg_midi","Midi",["m_midi_ch", "m_note_out", "m_cc_out", "m_aux_note"]]
+    ]
+}
+

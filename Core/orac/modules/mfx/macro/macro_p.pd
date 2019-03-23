@@ -18,6 +18,7 @@
 #X obj 496 69 r m_amt_\$1-\$2;
 #X obj 497 207 r m_bus_\$1-\$2;
 #X obj 229 67 r m_\$1-\$2;
+#X obj 229 88 / 100;
 #X connect 0 0 1 1;
 #X connect 1 0 10 0;
 #X connect 2 0 13 0;
@@ -38,4 +39,5 @@
 #X connect 16 0 0 0;
 #X connect 17 0 3 0;
 #X connect 17 0 4 0;
-#X connect 18 0 1 0;
+#X connect 18 0 19 0;
+#X connect 19 0 1 0;

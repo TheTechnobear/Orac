@@ -1,0 +1,14 @@
+#N canvas 331 364 2052 956 10;
+#X obj 84 35 r m_\$1-\$2;
+#X obj 220 124 r m_cc_\$1-\$2;
+#X obj 84 222 ctlout;
+#X obj 290 35 r m_midi_ch-\$2;
+#X obj 84 131 spigot 1;
+#X obj 197 35 r m_cc_out-\$2;
+#X obj 84 190 * 1.27;
+#X connect 0 0 4 0;
+#X connect 1 0 2 1;
+#X connect 3 0 2 2;
+#X connect 4 0 6 0;
+#X connect 5 0 4 1;
+#X connect 6 0 2 0;
