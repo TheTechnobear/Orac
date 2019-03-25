@@ -3,6 +3,7 @@
     "parameters" :  [ 
     ],
     "pages" : [ 
+        ["pg_main",[]]
     ]
 }
 
