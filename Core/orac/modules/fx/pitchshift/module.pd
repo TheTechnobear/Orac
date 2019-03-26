@@ -15,6 +15,8 @@
 #X obj 703 182 r ps_dw-\$1;
 #X obj 589 187 r ps_pitch-\$1;
 #X obj 518 343 e_forcepitch \$1;
+#X obj 420 265 r ctrlIn-\$1;
+#X obj 420 291 s ctrlOut-\$1;
 #X connect 2 0 10 0;
 #X connect 2 0 15 0;
 #X connect 9 0 10 1;

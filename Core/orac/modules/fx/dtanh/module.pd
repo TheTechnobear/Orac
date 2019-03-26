@@ -23,6 +23,8 @@
 #X text 761 15 C&G Simple Distort Module using tanh~;
 #X obj 694 70 / 100;
 #X obj 899 65 / 100;
+#X obj 426 263 r ctrlIn-\$1;
+#X obj 426 289 s ctrlOut-\$1;
 #X connect 2 0 10 0;
 #X connect 9 0 16 0;
 #X connect 10 0 9 0;

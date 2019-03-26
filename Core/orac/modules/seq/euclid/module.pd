@@ -49,6 +49,8 @@
 #X obj 812 317 eseq 2 \$1;
 #X obj 892 317 eseq 3 \$1;
 #X obj 971 317 eseq 4 \$1;
+#X obj 416 299 r ctrlIn-\$1;
+#X obj 416 325 s ctrlOut-\$1;
 #X connect 2 0 10 0;
 #X connect 2 0 13 0;
 #X connect 10 0 11 0;

@@ -8,7 +8,7 @@
 #X obj 510 180 r auxIn-\$1;
 #X obj 869 181 r expIn-\$1;
 #X obj 869 206 r fsIn-\$1;
-#X obj 868 228 r ctrlIn-\$1;
+#X obj 509 441 r ctrlIn-\$1;
 #X obj 504 600 s ctrlOut-\$1;
 #X obj 785 387 midiout_p p1 \$1;
 #X obj 785 411 midiout_p p2 \$1;

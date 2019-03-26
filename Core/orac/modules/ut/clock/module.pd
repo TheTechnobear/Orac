@@ -1,6 +1,6 @@
 #N canvas 807 266 1753 953 10;
-#X obj 304 186 r notesIn-\$1;
-#X obj 304 491 s notesOut-\$1;
+#X obj 235 186 r notesIn-\$1;
+#X obj 244 491 s notesOut-\$1;
 #X obj 576 82 r loadbang-\$1;
 #X obj 25 186 inlet~ inL-\$1;
 #X obj 135 186 inlet~ inR-\$1;
@@ -13,7 +13,7 @@
 #X text 535 62 always running. mute incoming BPM to turn off in other
 Modules;
 #N canvas 644 340 1279 996 metro 0;
-#X obj 217 164 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 217 164 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 375 164 5 0 0 0 - - -;
 #N canvas 285 555 292 294 mstobpm 0;
@@ -53,7 +53,7 @@ Modules;
 #X obj 423 300 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 333 323 ==;
-#X obj 333 349 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 333 349 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 461 350 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -188,7 +188,7 @@ purposes;
 #X floatatom 267 304 5 0 0 1 phase - -;
 #X floatatom 180 285 5 0 0 1 step - -;
 #X floatatom 378 246 5 0 0 1 tempo - -;
-#X obj 59 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 59 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 180 199 abl_link~ 1 0 4 134;
 #X floatatom 355 107 5 0 0 2 tempo - -;
@@ -322,7 +322,7 @@ beats in a measure to use in other modules;
 #X obj 803 465 i;
 #X text 1156 413 update row 5 only if active module;
 #X obj 679 121 r c_bpm-\$1;
-#X msg 636 627 Tempo 71 BPM;
+#X msg 636 627 Tempo 120 BPM;
 #X msg 490 541 set Tempo \$1 BPM MIDI \;;
 #X msg 672 541 set Tempo \$1 BPM \;;
 #X msg 803 541 set Tempo \$1 BPM LINK \;;
@@ -332,6 +332,8 @@ beats in a measure to use in other modules;
 #X obj 636 680 s aux-label-\$1;
 #X obj 602 389 f;
 #X obj 673 350 r loadbang-global;
+#X obj 416 299 r ctrlIn-\$1;
+#X obj 416 325 s ctrlOut-\$1;
 #X connect 2 0 10 0;
 #X connect 10 0 12 0;
 #X connect 12 0 15 0;

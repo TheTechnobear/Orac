@@ -25,6 +25,8 @@
 #X obj 1071 60 r pan_dw-\$1;
 #X obj 1071 105 / 100;
 #X obj 956 105 / 100;
+#X obj 416 299 r ctrlIn-\$1;
+#X obj 416 325 s ctrlOut-\$1;
 #X connect 2 0 9 0;
 #X connect 2 0 20 0;
 #X connect 2 0 18 0;

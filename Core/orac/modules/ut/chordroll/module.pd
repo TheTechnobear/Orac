@@ -207,6 +207,12 @@
 #X obj 307 262 s croll-\$1-notes-in;
 #X obj 293 433 r croll-\$1-notes-out;
 #X obj 423 37 s croll-\$1-enable;
-#X connect 0 0 11 0;
+#X obj 416 299 r ctrlIn-\$1;
+#X obj 416 325 s ctrlOut-\$1;
+#X obj 304 207 list split 2;
+#X obj 293 454 list append 0;
+#X connect 0 0 16 0;
 #X connect 2 0 13 0;
-#X connect 12 0 1 0;
+#X connect 12 0 17 0;
+#X connect 16 0 11 0;
+#X connect 17 0 1 0;

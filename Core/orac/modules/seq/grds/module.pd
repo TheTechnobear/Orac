@@ -88,6 +88,8 @@
 #X msg 760 531 63 0 0;
 #X msg 829 532 64 0 0;
 #X msg 897 533 65 0 0;
+#X obj 425 273 r ctrlIn-\$1;
+#X obj 425 299 s ctrlOut-\$1;
 #X connect 9 0 28 6;
 #X connect 10 0 28 5;
 #X connect 11 0 28 4;

@@ -9,7 +9,7 @@
 #X obj 474 185 r auxIn-\$1;
 #X obj 573 185 r expIn-\$1;
 #X obj 573 210 r fsIn-\$1;
-#N canvas 926 130 1151 908 sequencer 1;
+#N canvas 926 130 1151 908 sequencer 0;
 #X text 35 210 then play them!;
 #N canvas 1011 50 533 527 countnotes 0;
 #X obj 103 259 > 0;
@@ -552,6 +552,8 @@ directly to output if disabled;
 #X obj 799 395 r genny-\$1-led;
 #X obj 643 414 s aux-label-\$1;
 #X obj 799 415 s aux-led-\$1;
+#X obj 691 185 r ctrlIn-\$1;
+#X obj 691 211 s ctrlOut-\$1;
 #X connect 0 0 12 0;
 #X connect 2 0 11 0;
 #X connect 7 0 14 0;

@@ -62,6 +62,8 @@
 #X obj 826 187 r phaser_freq-\$1;
 #X obj 774 161 / 100;
 #X obj 762 467 / 100;
+#X obj 421 267 r ctrlIn-\$1;
+#X obj 421 293 s ctrlOut-\$1;
 #X connect 2 0 11 0;
 #X connect 2 0 10 0;
 #X connect 9 0 5 0;

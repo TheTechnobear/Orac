@@ -13,6 +13,8 @@
 #X obj 670 350 / 100;
 #X obj 578 314 r rc_amount-\$1;
 #X obj 670 314 r rc_depth-\$1;
+#X obj 421 262 r ctrlIn-\$1;
+#X obj 421 288 s ctrlOut-\$1;
 #X connect 2 0 9 0;
 #X connect 3 0 9 1;
 #X connect 9 0 4 0;

@@ -21,6 +21,8 @@
 #X obj 1085 144 / 100;
 #X obj 950 118 / 100;
 #X obj 661 72 r dly_hip-\$1;
+#X obj 416 299 r ctrlIn-\$1;
+#X obj 416 325 s ctrlOut-\$1;
 #X connect 2 0 12 0;
 #X connect 2 0 9 0;
 #X connect 9 0 11 0;

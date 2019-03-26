@@ -13,6 +13,8 @@
 #X obj 578 314 r rc_amount-\$1;
 #X obj 670 314 r rc_depth-\$1;
 #X obj 532 390 rngs_ensemble~;
+#X obj 421 265 r ctrlIn-\$1;
+#X obj 421 291 s ctrlOut-\$1;
 #X connect 2 0 13 0;
 #X connect 3 0 13 1;
 #X connect 9 0 13 2;

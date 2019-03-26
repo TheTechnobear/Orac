@@ -23,6 +23,8 @@
 #X obj 912 155 / 100;
 #X obj 744 51 r bc_depth-\$1;
 #X obj 919 87 r bc_dw-\$1;
+#X obj 416 299 r ctrlIn-\$1;
+#X obj 416 325 s ctrlOut-\$1;
 #X connect 2 0 18 0;
 #X connect 9 0 10 0;
 #X connect 10 0 18 2;

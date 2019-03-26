@@ -60,7 +60,7 @@
 #X connect 11 0 3 0;
 #X restore 526 639 pd equal_power_crossfade;
 #X obj 719 585 hsl 128 25 0 1 0 0 empty crossfade-\$1 Dry_---_Wet_(crossfade)
--2 -8 0 10 -4034 -1 -1 0 1;
+-2 -8 0 10 -4034 -1 -1 6350 1;
 #X obj 631 586 *~ 10;
 #X obj 1311 184 *;
 #X obj 1311 158 t f f;
@@ -88,6 +88,8 @@
 #X obj 1557 116 / 100;
 #X obj 1713 116 / 100;
 #X obj 1713 316 s crossfade-\$1;
+#X obj 416 299 r ctrlIn-\$1;
+#X obj 416 325 s ctrlOut-\$1;
 #X connect 2 0 27 0;
 #X connect 3 0 22 0;
 #X connect 3 0 10 0;

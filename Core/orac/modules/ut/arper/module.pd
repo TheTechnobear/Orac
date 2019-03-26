@@ -1015,7 +1015,13 @@ in various patterns. This is the Module conversion of Arpeggio Synth.
 #X obj 304 442 r arper-\$1-notes-out;
 #X obj 487 288 s arper-\$1-aux-in;
 #X obj 411 45 s arper-\$1-enable;
-#X connect 0 0 11 0;
+#X obj 651 222 r ctrlIn-\$1;
+#X obj 651 248 s ctrlOut-\$1;
+#X obj 304 207 list split 2;
+#X obj 304 463 list append 0;
+#X connect 0 0 17 0;
 #X connect 2 0 14 0;
 #X connect 7 0 13 0;
-#X connect 12 0 1 0;
+#X connect 12 0 18 0;
+#X connect 17 0 11 0;
+#X connect 18 0 1 0;

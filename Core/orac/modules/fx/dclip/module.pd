@@ -33,6 +33,8 @@
 #X obj 680 152 / 100;
 #X obj 919 52 r dclip_bott-\$1;
 #X obj 1019 52 r dclip_top-\$1;
+#X obj 501 189 r ctrlIn-\$1;
+#X obj 501 215 s ctrlOut-\$1;
 #X connect 2 0 25 0;
 #X connect 2 0 9 0;
 #X connect 9 0 16 0;

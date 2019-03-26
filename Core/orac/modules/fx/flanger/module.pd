@@ -60,6 +60,8 @@
 #X obj 1183 78 r flan_feedback-\$1;
 #X obj 1230 135 / 100;
 #X obj 843 135 / 100;
+#X obj 416 299 r ctrlIn-\$1;
+#X obj 416 325 s ctrlOut-\$1;
 #X connect 2 0 11 0;
 #X connect 2 0 26 0;
 #X connect 9 0 10 0;

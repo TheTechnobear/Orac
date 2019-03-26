@@ -11,7 +11,7 @@
 #X obj 423 233 r fsIn-\$1;
 #X obj 516 45 int 0;
 #X obj 516 76 s aux-led-\$1;
-#N canvas 901 185 1578 955 sequencer 1;
+#N canvas 901 185 1578 955 sequencer 0;
 #N canvas 7 50 703 371 24-pulses-to-phasor 0;
 #X floatatom 160 65 5 0 0 0 - - -;
 #X obj 127 173 timer;
@@ -200,5 +200,7 @@ a phasor \, frequency \, rollover.;
 #X connect 79 0 5 0;
 #X connect 79 1 6 1;
 #X restore 310 318 pd sequencer;
+#X obj 423 258 r ctrlIn-\$1;
+#X obj 423 284 s ctrlOut-\$1;
 #X connect 2 0 10 0;
 #X connect 10 0 11 0;
