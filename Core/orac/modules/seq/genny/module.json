@@ -1,12 +1,12 @@
 {
     "display" : "Genny",
     "parameters" :  [ 
-        ["int","genny_rate_1","Rate 1",0,50,10],
-        ["int","genny_rate_2","Rate 2",0,50,10],
+        ["int","genny_rate1","Rate 1",0,50,10],
+        ["int","genny_rate2","Rate 2",0,50,10],
         ["time","genny_length","Length",20,2000,500]
     ],
     "pages" : [ 
-        ["pg_main","Main",["genny_rate_1","genny_rate_2","genny_length"]]
+        ["pg_main","Main",["genny_rate1","genny_rate2","genny_length"]]
     ]
 }
 
