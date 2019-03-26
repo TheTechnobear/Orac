@@ -12,10 +12,10 @@
 #X obj 516 45 int 0;
 #X obj 516 76 s aux-led-\$1;
 #X obj 628 169 s aux-label-\$1;
-#X msg 628 137 Audio/Notes passthru;
 #X obj 398 186 r ctrlIn-\$1;
 #X obj 398 491 s ctrlOut-\$1;
+#X msg 628 137 Empty Slot;
 #X connect 2 0 10 0;
-#X connect 2 0 13 0;
+#X connect 2 0 15 0;
 #X connect 10 0 11 0;
-#X connect 13 0 12 0;
+#X connect 15 0 12 0;
