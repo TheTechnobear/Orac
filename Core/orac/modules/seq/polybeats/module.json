@@ -7,7 +7,8 @@
         ["pct","pb_swing","Swing",0,100,0]
     ],
     "pages" : [ 
-        ["pg_main","Main",["pb_div","pb_note_len","pb_note_vel","pb_swing"]]
+        ["pg_main","Main",["pb_div","pb_note_len","pb_note_vel","pb_swing"]],
+        ["pg_graphics","Keyboard",[]]
     ]
 }
 
