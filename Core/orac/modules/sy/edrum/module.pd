@@ -1,5 +1,5 @@
-#N canvas 136 335 1572 758 10;
-#X obj 334 130 r notesIn-\$1;
+#N canvas 295 292 1572 758 10;
+#X obj 476 48 r notesIn-\$1;
 #X obj 334 615 s notesOut-\$1;
 #X obj 18 130 inlet~ inL;
 #X obj 103 130 inlet~ inR;
@@ -38,6 +38,8 @@
 #X obj 405 361 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 779 382 efficient-fmhh \$1;
+#X obj 671 118 r ctrlIn-\$1;
+#X obj 224 615 s ctrlOut-\$1;
 #X connect 0 0 29 0;
 #X connect 9 0 10 0;
 #X connect 10 0 31 0;

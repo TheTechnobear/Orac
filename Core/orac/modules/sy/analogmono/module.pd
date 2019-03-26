@@ -1,4 +1,4 @@
-#N canvas 496 503 1405 714 10;
+#N canvas 197 634 1405 714 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 491 s notesOut-\$1;
 #X obj 27 186 inlet~ inL-\$1;
@@ -8,14 +8,16 @@
 #X obj 424 185 r auxIn-\$1;
 #X obj 423 208 r expIn-\$1;
 #X obj 768 125 r fsIn-\$1;
-#N canvas 33 220 989 781 synth 0;
+#N canvas 1113 406 989 781 synth 0;
 #X obj 193 262 *~ 2;
 #X obj 193 284 outlet~;
-#X obj 187 100 inlet;
 #X obj 192 212 as-simple \$1;
+#X obj 269 99 inlet ctrl;
+#X obj 155 99 inlet notes;
 #X connect 0 0 1 0;
-#X connect 2 0 3 0;
-#X connect 3 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
 #X restore 58 337 pd synth;
 #X obj 628 152 sig~;
 #X obj 627 183 lop~ 5;
@@ -42,6 +44,8 @@
 #X obj 625 363 r as_reso-\$1;
 #X obj 938 52 / 100;
 #X obj 625 391 / 100;
+#X obj 421 252 r ctrlIn-\$1;
+#X obj 421 278 s ctrlOut-\$1;
 #X connect 0 0 9 0;
 #X connect 8 0 20 0;
 #X connect 9 0 5 0;
@@ -67,3 +71,4 @@
 #X connect 32 0 34 0;
 #X connect 33 0 14 0;
 #X connect 34 0 17 0;
+#X connect 35 0 9 1;

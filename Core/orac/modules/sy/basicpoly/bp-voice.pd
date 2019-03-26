@@ -161,7 +161,7 @@ updated;
 #X obj 304 193 + 1;
 #X obj 518 138 t b f;
 #X obj 524 105 * 96;
-#X text 589 93 PB = 0..1 \, but its biploar -1 to 1 \, so (x-0.5 *
+#X text 639 93 PB = 0..1 \, but its biploar -1 to 1 \, so (x-0.5 *
 2 * 48);
 #X connect 0 0 15 0;
 #X connect 1 0 9 0;

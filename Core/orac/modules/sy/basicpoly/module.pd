@@ -1,4 +1,4 @@
-#N canvas 313 560 1847 726 10;
+#N canvas 70 774 837 573 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 491 s notesOut-\$1;
 #X obj 25 186 inlet~ inL-\$1;
@@ -8,7 +8,7 @@
 #X obj 583 185 r auxIn-\$1;
 #X obj 582 208 r expIn-\$1;
 #X obj 582 233 r fsIn-\$1;
-#N canvas 875 453 962 575 synth 1;
+#N canvas 158 533 962 575 synth 1;
 #X obj 16 231 pack 0 0 0, f 11;
 #X obj 16 257 route 1 2 3 4 5 6 7 8, f 81;
 #X text 365 235 aircraft carrier;
@@ -82,7 +82,7 @@
 #X connect 7 0 1 0;
 #X connect 10 0 6 0;
 #X restore 148 48 pd route;
-#X msg 39 150 stop;
+#X msg 47 150 stop;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 1 1 6 0;
@@ -118,8 +118,8 @@
 #X connect 18 0 20 0;
 #X connect 19 0 4 0;
 #X connect 19 1 1 0;
-#X connect 20 0 6 1;
 #X connect 20 0 9 1;
+#X connect 20 0 6 1;
 #X connect 20 0 10 1;
 #X connect 20 0 12 1;
 #X connect 20 0 14 1;
