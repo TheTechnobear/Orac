@@ -1,7 +1,8 @@
 {
     "display" : "Lmnts",
     "parameters" :  [ 
-        ["pitch","l_pitch","Pitch",-24,24,0],
+        ["pitch","l_tune","Tune",-24,24,0],
+        ["float","l_finetune","Fine Tune",-100,100,0],
         ["int","l_contour","Contour",0,100,0],
 
         ["pct","l_bow_level","Level",0,100,50],
@@ -31,7 +32,7 @@
         ["int","l_seed","Seed",0,32768,1]
     ],
     "pages" : [ 
-        ["pg_main","Main",["l_pitch","l_contour"]],
+        ["pg_main","Main",["l_tune","l_finetune", "l_contour"]],
         ["pg_bow","Bow", ["l_bow_level","l_bow_timbre"]],
         ["pg_blow","Blow", ["l_blow_level","l_blow_timbre","l_blow_flow"]],
         ["pg_strike","Strike", ["l_strike_level","l_strike_timbre","l_strike_mallet"]],

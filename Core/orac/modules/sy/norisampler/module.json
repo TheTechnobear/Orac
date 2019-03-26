@@ -1,7 +1,7 @@
 {
     "display" : "Nori Sampler",
     "parameters" :  [ 
-        ["pct","n_speed","Speed",-100,100,0],
+        ["pct","n_speed","Speed",-100,100,50],
         ["pct","n_mod","Modulation",0,100,0],
         ["pct","n_start","Start Point",0,100,0],
         ["pct","n_dur","Duration",0,100,100],

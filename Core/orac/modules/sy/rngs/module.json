@@ -1,14 +1,16 @@
 {
     "display" : "Rngs",
     "parameters" :  [ 
-        ["pitch","rngs_trans","Transpose",-48,48,0],
+        ["pitch","rngs_tune","Tune",-48,48,0],
+        ["float","rngs_finetune","Fine Tune",-100,100,0],
         ["pct","rngs_struct","Structure",0,100,50],
-        ["int","rngs_model","Model",0,5,0],
-        ["int","rngs_poly","Poly Mode",0,3,0],
 
         ["pct","rngs_bright","Brightness",0,100,50],
         ["pct","rngs_damp","Damping",0,100,50],
         ["pct","rngs_pos","Position",0,100,50],
+
+        ["int","rngs_model","Model",0,5,0],
+        ["int","rngs_poly","Poly Mode",0,3,0],
         ["int","rngs_chord","Num Chords",0,10,0],
 
         ["int","rngs_fm","FM",-48,48,0],
@@ -20,10 +22,11 @@
         ["bool","rngs_bypass","Bypass",0]
     ],
     "pages" : [ 
-        ["pg_rngs_1","Rings",["rngs_trans","rngs_struct","rngs_model","rngs_poly"]],
-        ["pg_rngs_2","R.Timbre",["rngs_bright","rngs_damp","rngs_pos","rngs_chord"]],
-        ["pg_rngs_3","R.Internal",["rngs_fm", "rngs_i_strum","rngs_i_exciter", "rngs_i_note"]],
-        ["pg_rngs_4","R.Extra",["rngs_bypass","rngs_easter"]]
+        ["pg_rngs_1","Rings", ["rngs_tune","rngs_finetune", "rngs_struct"]],
+        ["pg_rngs_2","Timbre",["rngs_bright","rngs_damp","rngs_pos"]],
+        ["pg_rngs_3","Model", ["rngs_model","rngs_chord","rngs_poly"]],
+        ["pg_rngs_4","Internal",["rngs_fm", "rngs_i_strum","rngs_i_exciter", "rngs_i_note"]],
+        ["pg_rngs_5","Extra", ["rngs_bypass","rngs_easter"]]
     ]
 }
 
