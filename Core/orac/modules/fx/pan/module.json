@@ -1,0 +1,14 @@
+{
+    "display" : "Pan",
+    "parameters" :  [ 
+        ["pct","pan_lgain","Left Gain",0,200,100],
+        ["pct","pan_rgain","Right Gain",0,200,100],
+        ["pan","pan_lpan","Left Pan",0,1,0],
+        ["pan","pan_rpan","Righ Pan",0,1,1],
+        ["pct","thru_gain","Audio Thru Gain",0,100,0]
+     ],
+    "pages" : [ 
+        ["pg_main","Main",["pan_lgain","pan_rgain","pan_lpan","pan_rpan"]]
+    ]
+}
+
