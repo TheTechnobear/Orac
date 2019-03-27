@@ -29,6 +29,7 @@
         ["pct", "r-thru-gain-b3","Thru Gain",0,200,100],
         ["pct", "r-gain-b3","Gain",0,200,100],
         ["bool","r-notethru-b3","Note Thru",1],
+        ["bool","r-bypass-b3","Bypass",0],
 
         ["pct", "r-thru-gain-b4","Thru Gain",0,200,100],
         ["pct", "r-gain-b4","Gain",0,200,100],

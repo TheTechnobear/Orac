@@ -8,7 +8,7 @@
 #X obj 424 185 r auxIn-\$1;
 #X obj 423 208 r expIn-\$1;
 #X obj 423 233 r fsIn-\$1;
-#N canvas 437 142 1844 1157 seq2 0;
+#N canvas 437 142 1844 1157 seq2 1;
 #X obj 990 408 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 990 508 qlist;
@@ -460,5 +460,5 @@ a sequence. Only two inputs needed: (r seq2-\$1-aux) and (r seq2-\$1-notes-in)
 #X connect 13 0 14 0;
 #X connect 17 0 18 0;
 #X connect 18 0 16 0;
-#X connect 19 0 9 0;
+#X connect 19 0 9 1;
 #X connect 20 0 1 0;

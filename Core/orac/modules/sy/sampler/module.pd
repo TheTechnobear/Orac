@@ -1,4 +1,4 @@
-#N canvas 1097 305 1660 710 10;
+#N canvas 896 305 1660 710 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 491 s notesOut-\$1;
 #X obj 28 186 inlet~ inL-\$1;
@@ -9,11 +9,11 @@
 #X obj 493 208 r expIn-\$1;
 #X obj 493 233 r fsIn-\$1;
 #X text 589 77 sample is transposed by keys;
-#N canvas 157 436 1542 727 array 0;
+#N canvas 157 436 1542 727 array 1;
 #X obj 788 405 soundfiler;
 #N canvas 0 50 450 300 (subpatch) 0;
-#X array bsamp-\$1-newsample 451456 float 0;
-#X coords 0 1.02 451455 -1.02 200 130 1 0 0;
+#X array bsamp-\$1-newsample 1 float 0;
+#X coords 0 1.02 1 -1.02 200 130 1 0 0;
 #X restore 382 297 graph;
 #X text 111 45 load .wav into the table below;
 #X obj 816 471 s bsamp-\$1-dur;
@@ -21,7 +21,7 @@
 #X obj 784 444 t b f;
 #X obj 735 512 symbol \$1;
 #X obj 771 209 list;
-#N canvas 733 549 803 448 sampleDir 0;
+#N canvas 733 549 803 448 sampleDir 1;
 #X obj 442 163 s rackMsgs;
 #X obj 442 84 symbol \$1;
 #X obj 370 14 r loadbang-\$1;
@@ -42,6 +42,7 @@
 #X obj 266 131 i;
 #X obj 244 328 t b l;
 #X obj 274 86 symbol bsamp-\$1-newsample;
+#X obj 274 109 t b s;
 #X connect 1 0 8 0;
 #X connect 2 0 14 0;
 #X connect 3 0 16 0;
@@ -61,7 +62,9 @@
 #X connect 17 0 16 4;
 #X connect 18 0 4 0;
 #X connect 18 1 5 0;
-#X connect 19 0 16 3;
+#X connect 19 0 20 0;
+#X connect 20 0 16 0;
+#X connect 20 1 16 3;
 #X restore 767 156 pd sampleDir;
 #X obj 763 99 r s_kit-\$1;
 #X obj 849 98 r s_slot1-\$1;
@@ -81,7 +84,7 @@
 #X connect 13 0 12 0;
 #X connect 13 0 0 0;
 #X restore 577 154 pd array;
-#N canvas 633 128 711 641 synth 1;
+#N canvas 633 128 711 641 synth 0;
 #X obj 42 172 pack 0 0 0;
 #X obj 44 515 *~ 1;
 #X obj 43 332 route 1 2 3 4 5 6, f 47;
