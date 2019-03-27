@@ -12,6 +12,14 @@ ln -s $DIR/MEC ~/
 ln -s $DIR/orac ~/Bela/projects
 
 cp MEC/mec.service /lib/systemd/system/
+
+cd orac
+mkdir -p $HOME/media/orac/usermodules
+cp -nr media $HOME
+cp -nr data $HOME
+
+
+
 echo stopping mec, will restart in 7 seconds
 systemctl enable mec
 systemctl stop mec

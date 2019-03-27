@@ -2,6 +2,7 @@
 echo run this as 
 echo sudo ./install.sh
 
+
 cd `dirname $0`
 DIR=`pwd`
 
@@ -18,12 +19,13 @@ else
 fi
 
 
-#currently need to be able to write to local rack file
-chmod a+w /usr/local/orac/*
-
-
 cp --remove-destination MEC/mec.service /etc/systemd/system/
 cp --remove-destination orac/orac.service /etc/systemd/system/
+
+cd orac
+mkdir -p $HOME/media/orac/usermodules
+cp -nr media $HOME
+cp -nr data $HOME
 
 systemctl daemon-reload
 
