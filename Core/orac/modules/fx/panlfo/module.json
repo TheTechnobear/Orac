@@ -1,5 +1,5 @@
 {
-    "display" : "Panner",
+    "display" : "PanLfo",
     "parameters" :  [ 
         ["pct","pan_dw","Dry/Wet",0,100,50],
         ["pct","pan_depth","Depth",0,100,50],
