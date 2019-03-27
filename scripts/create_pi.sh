@@ -7,3 +7,4 @@ cd pkg/pi
 cp -R ../../Core/* .
 cp -R ../../PI/* .
 
+tar cvzf orac.tgz * 

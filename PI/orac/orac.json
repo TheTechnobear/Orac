@@ -3,5 +3,5 @@
 	"mediaDir":	"/home/patch/media",
 	"_dataDir":	"/home/pi/data/orac",
 	"_mediaDir":	"/home/pi/media",
-	"_set data/media as appropriate_"
+	"_set data/media as appropriate_": "use _ to comment/uncomment"
 }
