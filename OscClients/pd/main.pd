@@ -32,7 +32,7 @@
 #X obj 160 170 ctrl P6;
 #X obj 272 171 ctrl P7;
 #X obj 379 171 ctrl P8;
-#N canvas 1163 350 677 632 moduletitle 0;
+#N canvas 1048 530 677 632 moduletitle 0;
 #X obj 39 6 cnv 15 350 25 empty moduletitle Serial 2 12 0 14 -233017
 -66577 0;
 #X obj 32 343 r oscIn;
@@ -61,7 +61,7 @@
 #X coords 0 0 1 1 425 40 2 0 0;
 #X restore 56 7 pd moduletitle;
 #N canvas 1127 601 677 632 pagetitle 0;
-#X obj 39 6 cnv 15 350 25 empty pagetitle Module B1 2 12 0 14 -233017
+#X obj 39 6 cnv 15 350 25 empty pagetitle Module 2 12 0 14 -233017
 -66577 0;
 #X obj 32 343 r oscIn;
 #X obj 33 373 routeOSC /page;
@@ -86,10 +86,10 @@
 #X connect 9 0 5 0;
 #X connect 10 0 6 0;
 #X connect 13 0 12 0;
-#X coords 0 0 1 1 425 40 2 0 0;
+#X coords 0 -1 1 1 425 40 2 0 0;
 #X restore 53 285 pd pagetitle;
 #N canvas 1279 248 1107 682 connect 0;
-#X obj 48 426 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 48 426 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 518 359 unpackOSC;
 #X obj 50 286 packOSC;
@@ -141,50 +141,58 @@
 #X connect 23 0 10 0;
 #X connect 24 0 9 0;
 #X connect 24 0 16 0;
-#X restore 82 599 pd connect;
-#X obj 86 514 loadbang;
-#X obj 86 535 t b b;
-#X obj 51 513 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 203 567 int 6101;
-#X obj 288 515 declare -path externals;
+#X restore 61 596 pd connect;
+#X obj 61 489 loadbang;
+#X obj 62 511 t b b;
+#X obj 123 489 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 118 575 int 6101;
+#X obj 268 661 declare -path externals;
 #X obj 54 343 menudisp;
-#X obj 597 192 keyname;
-#X obj 672 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#N canvas 807 530 1014 666 keyboard 0;
+#X obj 50 287 keyname;
+#X obj 114 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 596 247 spigot 1;
-#X obj 597 221 pack 0 s;
-#X obj 596 268 route 1;
-#X obj 594 345 s PageNext;
-#X obj 667 346 s PagePrev;
-#X obj 647 385 s NavActivate;
-#X obj 745 449 s ModNext;
-#X obj 823 449 s ModPrev;
-#X obj 739 385 s NavPrev;
-#X obj 811 385 s NavNext;
-#X obj 596 299 route Next Prior Return Up Down Right Left;
-#X text 723 196 enable/disable keyboard;
-#X msg 622 171 1;
-#X obj 622 139 loadbang;
-#X obj 83 567 symbol organelle;
+#X obj 49 342 spigot 1;
+#X obj 50 316 pack 0 s;
+#X obj 49 363 route 1;
+#X obj 47 440 s PageNext;
+#X obj 120 441 s PagePrev;
+#X obj 100 480 s NavActivate;
+#X obj 198 544 s ModNext;
+#X obj 276 544 s ModPrev;
+#X obj 192 480 s NavPrev;
+#X obj 264 480 s NavNext;
+#X obj 49 394 route Next Prior Return Up Down Right Left;
+#X msg 75 266 1;
+#X obj 75 234 loadbang;
+#X text 107 102 enable/disable keyboard;
+#X connect 0 0 3 0;
+#X connect 0 1 3 1;
+#X connect 1 0 2 1;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 12 0;
+#X connect 12 0 5 0;
+#X connect 12 1 6 0;
+#X connect 12 2 7 0;
+#X connect 12 3 10 0;
+#X connect 12 4 11 0;
+#X connect 12 5 8 0;
+#X connect 12 6 9 0;
+#X connect 13 0 1 0;
+#X connect 14 0 13 0;
+#X coords 0 0 1 1 200 60 2 100 100;
+#X restore 51 617 pd keyboard;
+#X obj 56 531 cnv 15 425 40 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X text 62 544 edit hostname here->;
+#X obj 61 575 symbol;
+#X msg 194 544 organelle;
 #X connect 12 0 13 0;
-#X connect 13 0 34 0;
+#X connect 13 0 22 0;
 #X connect 13 1 15 0;
 #X connect 14 0 13 0;
 #X connect 15 0 11 1;
-#X connect 18 0 21 0;
-#X connect 18 1 21 1;
-#X connect 19 0 20 1;
-#X connect 20 0 22 0;
-#X connect 21 0 20 0;
-#X connect 22 0 30 0;
-#X connect 30 0 23 0;
-#X connect 30 1 24 0;
-#X connect 30 2 25 0;
-#X connect 30 3 28 0;
-#X connect 30 4 29 0;
-#X connect 30 5 26 0;
-#X connect 30 6 27 0;
-#X connect 32 0 19 0;
-#X connect 33 0 32 0;
-#X connect 34 0 11 0;
+#X connect 21 0 11 0;
+#X connect 22 0 21 0;
