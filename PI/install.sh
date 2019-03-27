@@ -6,6 +6,18 @@ echo sudo ./install.sh
 cd `dirname $0`
 DIR=`pwd`
 
+systemctl stop mec
+systemctl stop orac
+
+systemctl stop amidiauto
+systemctl disable amidiauto
+systemctl stop touchosc2midi
+systemctl disable touchosc2midi
+#systemctl stop pisound-btn
+#systemctl disable pisound-btn
+systemctl stop pisound-ctl
+systemctl disable pisound-ctl
+
 #copy for release, link for development
 if [ -z "$DEV" ] ; 
 then
@@ -29,14 +41,16 @@ cp -nr data $HOME
 
 systemctl daemon-reload
 
+
 systemctl enable mec
 systemctl enable orac
 
-systemctl restart mec
 systemctl restart orac
+sleep 7
+systemctl restart mec
 
-systemctl status mec 
 systemctl status orac
+systemctl status mec 
 
 
 

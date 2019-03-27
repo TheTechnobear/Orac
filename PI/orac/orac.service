@@ -14,6 +14,9 @@ Type=simple
 User=patch
 Group=patch
 Environment=HOME=/home/patch
+EnvironmentFile=/etc/environment
+LimitRTPRIO=infinity
+LimitMEMLOCK=infinity
 KillMode=process
 Restart=always
 WorkingDirectory=/usr/local/orac
