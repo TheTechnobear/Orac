@@ -1,0 +1,24 @@
+#N canvas 395 475 721 366 10;
+#X obj 202 80 r r-midi-notegate-\$1;
+#X obj 61 81 r r-midi-ch-\$1;
+#X obj 352 80 r r-midi-ctrlgate-\$1;
+#X obj 59 148 r r-midi-auxcc-\$1;
+#X obj 204 149 r r-midi-fscc-\$1;
+#X obj 354 151 r r-midi-expcc-\$1;
+#X obj 510 80 r r-midi-pgmgate-\$1;
+#X obj 61 102 s midiCh;
+#X obj 202 101 s midiNoteGate;
+#X obj 352 101 s midiCtrlGate;
+#X obj 510 101 s midiPgmGate;
+#X obj 59 169 s midiAuxCC;
+#X obj 204 170 s midiFsCC;
+#X obj 354 172 s midiExpCC;
+#X text 140 35 send router parameters to mother.pd to turn gates on/off
+and select cc's;
+#X connect 0 0 8 0;
+#X connect 1 0 7 0;
+#X connect 2 0 9 0;
+#X connect 3 0 11 0;
+#X connect 4 0 12 0;
+#X connect 5 0 13 0;
+#X connect 6 0 10 0;

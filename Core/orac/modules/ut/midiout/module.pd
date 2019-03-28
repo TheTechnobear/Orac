@@ -19,7 +19,7 @@
 #X obj 366 258 r m_note_out-\$1;
 #X obj 415 372 r m_midi_ch-\$1;
 #X obj 321 451 unpack 0 0 0;
-#X obj 585 236 r m_aux_note-\$1;
+#X obj 585 236 r m_aux_cc-\$1;
 #X obj 549 264 f;
 #X obj 484 296 pack 0 0;
 #X obj 510 201 t b f;
