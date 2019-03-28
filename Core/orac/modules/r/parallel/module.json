@@ -98,7 +98,7 @@
         ["pan", "r-chout-l-pan-3","Out L Pan",0,1,0],
         ["pan", "r-chout-r-pan-3","Out R Pan",0,1,1],
 
-        ["int",  "r-main-dest","Dest",0,10,1],
+        ["int",  "r-main-dest","Dest",0,10,0],
         ["int",  "r-midi-ch","Main Midi Ch.",0,16,1],
         ["bool", "r-midi-notegate","Note",1],
         ["bool", "r-midi-ctrlgate","Ctrl",1],
