@@ -16,9 +16,7 @@
                 "voices" : 15,
                 "mpe":false,
                 "pitchbend range" : 48.0,
-                "device" : "Pure Data:Pure Data Midi-In 1 129:0",
-                "_device" : "Pure Data:Pure Data Midi-In 1 128:0",
-		"_select one of other": "use _ to comment"
+                "device" : "Pure Data:0"
             },
             "_console" : {
                 "throttle" : 0
