@@ -1,0 +1,6 @@
+#N canvas 675 709 450 300 10;
+#X declare -path Orac;
+#X obj 189 30 declare -path Orac;
+#X obj 126 85 mother;
+#X obj 126 107 main;
+#X obj 126 154 nebulae;
