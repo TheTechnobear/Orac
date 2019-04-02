@@ -1,0 +1,15 @@
+{
+    "display" : "D. CV IN",
+    "parameters" :  [ 
+        ["int","m_bus_p1","Record Bus",0,20,0],
+        ["int","m_bus_p2","File Bus"  ,0,20,0],
+        ["int","m_bus_p3","Source Bus",0,20,0],
+        ["int","m_bus_p4","Reset Bus",0,20,0],
+        ["int","m_bus_p5","Freeze Bus",0,20,0]
+    ],
+    "pages" : [ 
+        ["pg_bus1","Bus 1",["m_bus_p1", "m_bus_p2", "m_bus_p3", "m_bus_p4"]],
+        ["pg_bus2","Bus 2",["m_bus_p5"]]
+    ]
+}
+

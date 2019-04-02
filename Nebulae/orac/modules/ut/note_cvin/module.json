@@ -1,0 +1,14 @@
+{
+    "display" : "NoteCV IN",
+    "parameters" :  [ 
+        ["int","m_note_cv","Note CV",0,8,0],
+        ["int","m_gate_cv","Gate CV",0,8,0],
+
+        ["float","m_amt_note","Amount",0,60,60],
+        ["float","m_offset_note","Offset",0,60,60]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["m_note_cv","m_gate_cv","m_amt_note","m_offset_note"]]
+    ]
+}
+

@@ -1,2 +1,1 @@
 #N canvas 441 341 432 257 10;
-#X obj 87 64 bela_enableLeds;

@@ -1,0 +1,48 @@
+{
+    "display" : "A. CV IN",
+    "parameters" :  [ 
+        ["pct","m_amt_p1","Amount",0,100,0],
+        ["pct","m_offset_p1","Offset",0,100,0],
+        ["int","m_bus_p1","Mod Bus",0,20,10],
+
+        ["pct","m_amt_p2","Amount",0,100,0],
+        ["pct","m_offset_p2","Offset",0,100,0],
+        ["int","m_bus_p2","Mod Bus",0,20,11],
+
+        ["pct","m_amt_p3","Amount",0,100,0],
+        ["pct","m_offset_p3","Offset",0,100,0],
+        ["int","m_bus_p3","Mod Bus",0,20,12],
+
+        ["pct","m_amt_p4","Amount",0,100,0],
+        ["pct","m_offset_p4","Offset",0,100,0],
+        ["int","m_bus_p4","Mod Bus",0,20,13],
+
+        ["pct","m_amt_p5","Amount",0,100,0],
+        ["pct","m_offset_p5","Offset",0,100,0],
+        ["int","m_bus_p5","Mod Bus",0,20,14],
+
+        ["pct","m_amt_p6","Amount",0,100,0],
+        ["pct","m_offset_p6","Offset",0,100,0],
+        ["int","m_bus_p6","Mod Bus",0,20,15],
+
+        ["pct","m_amt_p7","Amount",0,100,0],
+        ["pct","m_offset_p7","Offset",0,100,0],
+        ["int","m_bus_p7","Mod Bus",0,20,16],
+
+        ["pct","m_amt_p8","Amount",0,100,0],
+        ["pct","m_offset_p8","Offset",0,100,0],
+        ["int","m_bus_p8","Mod Bus",0,20,17]
+
+    ],
+    "pages" : [ 
+        ["pg_p1","Start",  ["m_amt_p1", "m_offset_p1", "m_bus_p1"]],
+        ["pg_p2","Speed",  ["m_amt_p2", "m_offset_p2", "m_bus_p2"]],
+        ["pg_p3","Size",   ["m_amt_p3", "m_offset_p3", "m_bus_p3"]],
+        ["pg_p4","Density",["m_amt_p4", "m_offset_p4", "m_bus_p4"]],
+        ["pg_p5","Pitch",  ["m_amt_p5", "m_offset_p5", "m_bus_p5"]],
+        ["pg_p6","Overlap",["m_amt_p6", "m_offset_p6", "m_bus_p6"]],
+        ["pg_p7","Blend",  ["m_amt_p7", "m_offset_p7", "m_bus_p7"]],
+        ["pg_p8","Window", ["m_amt_p8", "m_offset_p8", "m_bus_p8"]]
+    ]
+}
+

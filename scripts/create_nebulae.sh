@@ -6,9 +6,9 @@ mkdir -p pkg/nebulae/instr
 
 cd pkg/nebulae
 cp ../../Nebulae/instr/* instr 
-cp -R ../../Core/Orac instr
-cp -R ../../PI/Orac instr
-cp -R ../../Nebulae/Orac instr
+cp -R ../../Core/orac instr
+cp -R ../../PI/orac instr
+cp -R ../../Nebulae/orac instr
 
 #cp -R ../../Core/MEC/* .
 cp -R ../../PI/MEC .

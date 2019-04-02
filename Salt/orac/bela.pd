@@ -1,0 +1,4 @@
+#N canvas 441 341 432 257 10;
+#X declare -path subpatches;
+#X obj 108 25 declare -path subpatches;
+#X obj 87 64 bela_enableLeds;

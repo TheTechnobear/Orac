@@ -1,8 +1,8 @@
-#N canvas 414 391 2052 956 10;
+#N canvas 1111 389 2052 956 10;
 #X obj 401 470 outlet msg;
 #X obj 237 470 outlet ctrl;
-#X obj 232 187 r m_bus_\$1-\$2;
-#X obj 399 71 r m_\$1-\$2;
+#X obj 225 66 r m_bus_\$1-\$2;
+#X obj 399 66 r m_\$1-\$2;
 #X obj 237 354 pack 0 0;
 #X obj 318 354 < 10;
 #X obj 237 414 spigot 0;
@@ -15,9 +15,11 @@
 #X obj 399 230 change -1;
 #X obj 399 126 select 0;
 #X obj 400 185 bela_trigIn;
+#X obj 293 104 > 0;
 #X connect 2 0 4 0;
 #X connect 2 0 5 0;
 #X connect 2 0 9 1;
+#X connect 2 0 16 0;
 #X connect 3 0 14 0;
 #X connect 4 0 6 0;
 #X connect 5 0 6 1;
@@ -35,3 +37,4 @@
 #X connect 13 0 11 0;
 #X connect 14 1 15 0;
 #X connect 15 0 13 0;
+#X connect 16 0 15 1;
