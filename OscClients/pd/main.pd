@@ -1,4 +1,4 @@
-#N canvas 316 448 1318 828 10;
+#N canvas 316 448 557 718 10;
 #X declare -path externals;
 #X obj 55 52 ctrl P1;
 #N canvas 1428 660 576 469 nav 0;

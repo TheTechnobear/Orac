@@ -2,15 +2,16 @@
 rm -rf pkg/nebulae.old
 mv pkg/nebulae pkg/nebulae.old
 mkdir -p pkg/nebulae
-mkdir -p pkg/nebulae/instr
+mkdir -p pkg/nebulae/pd
 
 cd pkg/nebulae
-cp ../../Nebulae/instr/* instr 
-cp -R ../../Core/orac instr
-cp -R ../../PI/orac instr
-cp -R ../../Nebulae/orac instr
+cp ../../Nebulae/deploy.sh .
+cp ../../Nebulae/pd/* pd 
+cp -R ../../Core/orac pd
+cp -R ../../PI/orac pd
+cp -R ../../Nebulae/orac pd
 
 #cp -R ../../Core/MEC/* .
 cp -R ../../PI/MEC .
-#cp -R ../../Nebulae/MEC/* MEC
+cp -R ../../Nebulae/MEC/* MEC
 

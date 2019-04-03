@@ -1,15 +1,16 @@
-pseudo code ! 
+export HOME=/home/alarm
+cp -R pd $HOME
 
-mount rw
-cp -R instr/* ~/instr
-
-
+cp pd/orac.json /
 mkdir -p $HOME/media/orac/usermodules
-cp -nr orac/media $HOME
-cp -nr orac/data $HOME*
+cp -nr pd/orac/media $HOME
+cp -nr pd/orac/data $HOME
 
+cp -R MEC $HOME
+cp MEC/mec.service /etc/systemd/system/
+cp MEC/mec.instr $HOME/instr
 
-cp -R MEC ~/
+systemctl daemon-reload
+systemctl status mec 
 
-mount ro
 

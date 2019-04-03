@@ -1,0 +1,22 @@
+[Unit]
+Description=Run MEC at boot
+DefaultDependencies=no
+Wants=network-online.target
+After=network-online.target
+Conflicts=shutdown.target
+Before=shutdown.target 
+
+[Service]
+Type=simple
+User=alarm
+Group=alarm
+Environment=HOME=/home/alarm
+KillMode=process
+Restart=always
+WorkingDirectory=/home/alarm/MEC
+ExecStart=/home/alarm/MEC/mec-app osckontrol.json 
+
+[Install]
+#WantedBy=default.target
+
+

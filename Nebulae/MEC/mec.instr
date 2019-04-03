@@ -1,0 +1,21 @@
+nebconfigbegin
+sr,48000
+ksmps,64
+-B,512
+-b,64
+nebconfigend
+
+
+instr 1
+
+ainl, ainr inch 1, 2
+if gksource == 1 then
+  ires system_i 1,{{
+          if echo alarm | sudo -S systemctl status mec | grep -q inactive; then echo activating mec; sudo systemctl start mec; else  echo deactivating mec; sudo systemctl stop mec;fi
+      }}
+  print ires
+  turnoff
+endif
+outs ainl, ainr
+
+endin
