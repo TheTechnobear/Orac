@@ -14,7 +14,7 @@
         ["int","m_midi_ch","Midi Ch.",1,16,1],
         ["bool","m_note_out","Note Out",1],
         ["bool","m_cc_out","CC Out",1],
-        ["int","m_aux_note","Aux CC",0,127,0]
+        ["int","m_aux_cc","Aux CC",0,127,0]
 
     ],
     "pages" : [ 
