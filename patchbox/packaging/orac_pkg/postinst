@@ -8,6 +8,6 @@ udevadm control --reload-rules >/dev/null
 systemctl enable orac
 systemctl start orac
 
-su - pi -c "mkdir -p $HOME/media/orac/usermodules"
-su - pi -c "cp -nr /usr/local/orac/media $HOME"
-su - pi -c "cp -nr /usr/local/orac/data $HOME"
+su - patch -c "mkdir -p $HOME/media/orac/usermodules"
+su - patch -c "cp -nr /usr/local/orac/media $HOME"
+su - patch -c "cp -nr /usr/local/orac/data $HOME"
