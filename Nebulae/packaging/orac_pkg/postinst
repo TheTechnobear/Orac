@@ -1,0 +1,17 @@
+#if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+#fi
+
+
+USERDIR=/home/alarm
+cp /usr/local/orac/pd/orac.pd   $USERDIR/pd
+cp /usr/local/orac/orac.json $USERDIR/pd
+cp -R /usr/local/orac/ $USERDIR/pd
+
+#hack for now
+cp /usr/local/orac/orac.json /
+
+su - alarm -c "mkdir -p $USERDIR/media/orac/usermodules"
+su - alarm -c "cp -nr /usr/local/orac/media $USERDIR"
+su - alarm -c "chmod -R a+rw $USERDIR/media"
+su - alarm -c "cp -nr /usr/local/orac/data $USERDIR"
+su - alarm -c "chmod -R a+rw $USERDIR/data"

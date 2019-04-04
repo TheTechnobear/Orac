@@ -1,0 +1,4 @@
+USERDIR=/home/alarm
+rm $USERDIR/pd/orac.*
+rm -rf $USERDIR/pd/orac
+rm /orac.json

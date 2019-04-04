@@ -2,7 +2,6 @@
 #fi
 
 systemctl --system daemon-reload >/dev/null 
-udevadm control --reload-rules >/dev/null 
 
 
 systemctl enable orac

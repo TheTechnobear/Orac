@@ -3,5 +3,8 @@
 udevadm control --reload-rules >/dev/null || true
 
 
+USERDIR=/home/alarm
+cp /usr/local/MEC/mec.instr $HOME/instr
+
 systemctl enable mec
-systemctl start mec
+#systemctl start mec

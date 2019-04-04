@@ -1,7 +1,7 @@
 #if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
 #fi
-udevadm control --reload-rules >/dev/null || true
-
-
 systemctl enable mec
 systemctl start mec
+
+rm /root/MEC
+ln -s /usr/local/MEC /root/

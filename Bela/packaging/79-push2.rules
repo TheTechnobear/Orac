@@ -1,0 +1,5 @@
+# This file contains udev rules for the Push2
+# needs double checking!
+
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2982", ATTRS{idProduct}=="1967", MODE="0666"
+
