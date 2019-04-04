@@ -1,19 +1,6 @@
 {
-	"p2":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
 	"c1":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -26,7 +13,7 @@
 		}
 	},
 	"c3":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -39,7 +26,33 @@
 		}
 	},
 	"m1":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"p2":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"b3":	{
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -52,7 +65,7 @@
 		}
 	},
 	"s1":	{
-		"moduleType":	"r/serial",
+		"moduleType":	"router/serial",
 		"params":	{
 			"r-midi-expcc":	4,
 			"r-midi-fscc":	64,
@@ -128,34 +141,8 @@
 			}
 		}
 	},
-	"b3":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"m7":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
 	"c2":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -168,33 +155,7 @@
 		}
 	},
 	"b2":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"m6":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"m9":	{
-		"moduleType":	"r/1x10",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -207,20 +168,7 @@
 		}
 	},
 	"m2":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"m4":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -233,7 +181,7 @@
 		}
 	},
 	"a3":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -246,7 +194,7 @@
 		}
 	},
 	"s2":	{
-		"moduleType":	"ut/clock",
+		"moduleType":	"utility/clock",
 		"params":	{
 			"c_midiout":	0,
 			"c_bpm":	120
@@ -260,21 +208,8 @@
 			}
 		}
 	},
-	"m5":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
 	"b4":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -287,52 +222,7 @@
 		}
 	},
 	"m3":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"m0":	{
-		"moduleType":	"ut/polybeats",
-		"params":	{
-			"pb_swing":	0,
-			"pb_note_vel":	100,
-			"pb_note_len":	250,
-			"pb_div":	4
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"m8":	{
-		"moduleType":	"ut/clock",
-		"params":	{
-			"c_midiout":	0,
-			"c_bpm":	120
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"a1":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -345,20 +235,7 @@
 		}
 	},
 	"b1":	{
-		"moduleType":	"ut/default",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"a2":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
@@ -371,7 +248,33 @@
 		}
 	},
 	"p1":	{
-		"moduleType":	"ut/default",
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"a2":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"a1":	{
+		"moduleType":	"utility/empty",
 		"params":	{
 		},
 		"midi-mapping":	{
