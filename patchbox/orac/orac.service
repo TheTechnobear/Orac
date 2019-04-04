@@ -8,9 +8,6 @@ Before=shutdown.target
 
 [Service]
 Type=simple
-#User=pi
-#Group=pi
-#Environment=HOME=/home/pi
 User=patch
 Group=patch
 Environment=HOME=/home/patch
