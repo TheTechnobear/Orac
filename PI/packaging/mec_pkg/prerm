@@ -1,0 +1,2 @@
+systemctl stop mec
+systemctl disable mec

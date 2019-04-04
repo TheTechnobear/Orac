@@ -1,0 +1,4 @@
+#if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+#fi
+systemctl enable mec
+systemctl start mec

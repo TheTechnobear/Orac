@@ -1,0 +1,13 @@
+#if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+#fi
+
+systemctl --system daemon-reload >/dev/null 
+udevadm control --reload-rules >/dev/null 
+
+
+systemctl enable orac
+systemctl start orac
+
+su - patchbox -c "mkdir -p $HOME/media/orac/usermodules"
+su - patchbox -c "cp -nr /usr/local/orac/media $HOME"
+su - patchbox -c "cp -nr /usr/local/orac/data $HOME"

@@ -1,0 +1,9 @@
+Package: mec
+Version: 0.1.1-1
+Section: sound
+Priority: optional
+Architecture: armhf
+Depends: libc6 (>= 2.19), libgcc1 (>= 1:4.9.2-10), amidiauto (>= 1.01-1), libusb-1.0-0 (>= 2:1.0.19-1), libcairo2 (>= 1.14.0-2.1)
+Maintainer: Mark Harris <...>
+Description: MEC server
+ See https://github.com/TheTechnobear/MEC/ for more information.
