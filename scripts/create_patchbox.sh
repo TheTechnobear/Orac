@@ -1,11 +1,12 @@
 #/bin/sh
-mkdir -p pkg/pi
-rm -rf pkg/pi.old
-mv pkg/pi pkg/pi.old
-mkdir -p pkg/pi
-cd pkg/pi
+mkdir -p pkg/patchbox
+rm -rf pkg/patchbox.old
+mv pkg/patchbox pkg/patchbox.old
+mkdir -p pkg/patchbox
+cd pkg/patchbox
 cp -R ../../Core/* .
 cp -R ../../PI/* .
+cp -R ../../patchbox/* .
 
 #now create debian packages
 mkdir mec_deb 
@@ -18,6 +19,8 @@ mkdir -p etc/udev/rules.d/
 cp ../packaging/*.rules etc/udev/rules.d/
 mkdir -p usr/local/
 cp -R ../MEC usr/local/
+
+cp ../packaging/amidiauto.conf etc
 cd ..
 fakeroot dpkg --build mec_deb
 mv mec_deb.deb mec.deb
