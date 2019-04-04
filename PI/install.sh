@@ -6,17 +6,13 @@ echo sudo ./install.sh
 cd `dirname $0`
 DIR=`pwd`
 
+cp amidiauto.conf /etc
+cp *.rules /etc/udev/rules.d/
+udevadm control --reload-rules
+
 systemctl stop mec
 systemctl stop orac
 
-systemctl stop amidiauto
-systemctl disable amidiauto
-systemctl stop touchosc2midi
-systemctl disable touchosc2midi
-#systemctl stop pisound-btn
-#systemctl disable pisound-btn
-systemctl stop pisound-ctl
-systemctl disable pisound-ctl
 
 #copy for release, link for development
 if [ -z "$DEV" ] ; 
