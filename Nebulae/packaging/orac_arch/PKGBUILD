@@ -1,0 +1,15 @@
+pkgname=orac
+pkgver=0.1.1-1
+pkgrel=1
+pkgdesc="See https://github.com/TheTechnobear/Orac/ for more information."
+arch=('arm')
+url="https://github.com/TheTechnobear/Orac/"
+license=('GPL')
+groups=('sound')
+depends=('mec >= 0.1.1-1')
+install=orac.install
+md5sums=('SKIP')
+
+package() {
+    cd orac_arch
+}

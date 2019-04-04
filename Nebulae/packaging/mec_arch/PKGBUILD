@@ -1,0 +1,15 @@
+pkgname=mec
+pkgver=0.1.1-1
+pkgrel=1
+pkgdesc="See https://github.com/TheTechnobear/MEC/ for more information."
+arch=('arm')
+url="https://github.com/TheTechnobear/MEC/"
+license=('GPL')
+groups=('sound')
+depends=('libc6 >= 2.19' 'libgcc1 >= 1:4.9.2-10' 'libusb-1.0-0 >= 2:1.0.19-1' 'libcairo2 >= 1.14.0-2.1')
+install=mec.install
+md5sums=('SKIP')
+
+package() {
+    cd mec_arch
+}

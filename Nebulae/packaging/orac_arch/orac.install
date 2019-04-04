@@ -1,0 +1,46 @@
+## arg 1:  the new package version
+#pre_install() {
+    # do something here
+#}
+
+## arg 1:  the new package version
+post_install() {
+    USERDIR=/home/alarm
+    cp /usr/local/orac/pd/orac.pd   $USERDIR/pd
+    cp /usr/local/orac/orac.json $USERDIR/pd
+    cp -R /usr/local/orac/ $USERDIR/pd
+
+    #hack for now
+    cp /usr/local/orac/orac.json /
+
+    su - alarm -c "mkdir -p $USERDIR/media/orac/usermodules"
+    su - alarm -c "cp -nr /usr/local/orac/media $USERDIR"
+    su - alarm -c "chmod -R a+rw $USERDIR/media"
+    su - alarm -c "cp -nr /usr/local/orac/data $USERDIR"
+    su - alarm -c "chmod -R a+rw $USERDIR/data"
+}
+
+## arg 1:  the new package version
+## arg 2:  the old package version
+#pre_upgrade() {
+    # do something here
+#}
+
+## arg 1:  the new package version
+## arg 2:  the old package version
+#post_upgrade() {
+    # do something here
+#}
+
+## arg 1:  the old package version
+#pre_remove() {
+    # do something here
+#}
+
+## arg 1:  the old package version
+post_remove() {
+    USERDIR=/home/alarm
+    rm $USERDIR/pd/orac.*
+    rm -rf $USERDIR/pd/orac
+    rm /orac.json
+}
