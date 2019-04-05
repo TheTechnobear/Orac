@@ -7,7 +7,7 @@ url="https://github.com/TheTechnobear/Orac/"
 license=('GPL')
 groups=('sound')
 source=('orac.zip')
-depends=('mec')
+optdepends=('mec: adds remote control for orac')
 install=orac.install
 
 package() {

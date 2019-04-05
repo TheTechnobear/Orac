@@ -13,10 +13,10 @@ Group=alarm
 Environment=HOME=/home/alarm
 KillMode=process
 Restart=always
-WorkingDirectory=/home/alarm/MEC
-ExecStart=/home/alarm/MEC/mec-app osckontrol.json 
+WorkingDirectory=/usr/local/MEC
+ExecStart=/usr/local/MEC/mec-app osckontrol.json 
 
 [Install]
-#WantedBy=default.target
+WantedBy=default.target
 
 

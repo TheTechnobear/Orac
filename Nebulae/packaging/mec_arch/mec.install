@@ -5,10 +5,10 @@ pre_install() {
 post_install() {
     USERDIR=/home/alarm
     udevadm control --reload-rules >/dev/null || true
-    cp /usr/local/MEC/mec.instr $HOME/instr
     if [ -d /run/systemd/system ] ; then
-        systemctl enable mec
+        systemctl --system daemon-reload >/dev/null || true
     fi
+    cp /usr/local/MEC/mec.instr $USERDIR/instr
 }
 
 pre_upgrade() {
@@ -23,7 +23,6 @@ pre_remove() {
     USERDIR=/home/alarm
     if [ -d /run/systemd/system ] ; then
         systemctl stop mec
-        systemctl disable mec
     fi
     rm $USERDIR/instr/mec.instr
 }

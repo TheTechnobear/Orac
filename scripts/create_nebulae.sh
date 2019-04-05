@@ -11,7 +11,7 @@ mkdir -p pkg/nebulae/pd
 
 cd pkg/nebulae
 cp -R ../../Core/* .
-cp -R ../../Bela/* .
+cp -R ../../PI/* .
 cp -R ../../Nebulae/* .
 
 mkdir mec_arch 
@@ -43,8 +43,7 @@ cp ../packaging/orac_arch/PKGBUILD .
 cp ../packaging/orac_arch/orac.install .
 
 mkdir orac 
-mkdir -p etc/systemd/system
-cp ../../orac/orac.service etc/systemd/system
+cd orac
 mkdir -p usr/local/
 cp -R ../../orac usr/local/
 cd ..
