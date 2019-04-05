@@ -20,11 +20,14 @@ cp ../packaging/*.rules etc/udev/rules.d/
 mkdir -p usr/local/
 cp -R ../MEC usr/local/
 
+#hack for now as cannot override /etc/pisound.conf
+cp ../packaging/pisound.conf usr/local/MEC
+
 mkdir -p usr/local/pisound/scripts/pisound-btn
-cp ../packaging/toggle_mec.sh
+cp ../packaging/toggle_mec.sh usr/local/pisound/scripts/pisound-btn
+cp ../packaging/restart_orac.sh usr/local/pisound/scripts/pisound-btn
 
 cp ../packaging/amidiauto.conf etc
-cp ../packaging/pisound.conf etc
 cd ..
 fakeroot dpkg --build mec_deb
 mv mec_deb.deb mec.deb
