@@ -1,47 +1,36 @@
-## arg 1:  the new package version
-#pre_install() {
-    # do something here
-#}
-
-## arg 1:  the new package version
-post_install() {
-    udevadm control --reload-rules >/dev/null || true
-
-
-    USERDIR=/home/alarm
-    cp /usr/local/MEC/mec.instr $HOME/instr
-
-    systemctl enable mec
-    #systemctl start mec
+pre_install() {
+    echo pre install
 }
 
-## arg 1:  the new package version
-## arg 2:  the old package version
-#pre_upgrade() {
-    # do something here
-#}
-
-## arg 1:  the new package version
-## arg 2:  the old package version
-#post_upgrade() {
-    # do something here
-#}
-
-## arg 1:  the old package version
-pre_remove() {
-    systemctl stop mec
-    systemctl disable mec
-
+post_install() {
     USERDIR=/home/alarm
+    udevadm control --reload-rules >/dev/null || true
+    cp /usr/local/MEC/mec.instr $HOME/instr
+    if [ -d /run/systemd/system ] ; then
+        systemctl enable mec
+    fi
+}
+
+pre_upgrade() {
+    echo pre upgrade
+}
+
+post_upgrade() {
+    echo post upgrade
+}
+
+pre_remove() {
+    USERDIR=/home/alarm
+    if [ -d /run/systemd/system ] ; then
+        systemctl stop mec
+        systemctl disable mec
+    fi
     rm $USERDIR/instr/mec.instr
 }
 
-## arg 1:  the old package version
 post_remove() {
     if [ -d /run/systemd/system ] ; then
         systemctl --system daemon-reload >/dev/null || true
     fi
-
-    #reload device rules
     udevadm control --reload-rules >/dev/null || true
 }

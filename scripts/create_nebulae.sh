@@ -18,23 +18,30 @@ cd mec_arch
 cp ../packaging/mec_arch/PKGBUILD .
 cp ../packaging/mec_arch/mec.install .
 
+mkdir mec
+cd mec
 mkdir -p etc/systemd/system
-cp ../MEC/mec.service etc/systemd/system
+cp ../../MEC/mec.service etc/systemd/system
 mkdir -p etc/udev/rules.d/
-cp ../packaging/*.rules etc/udev/rules.d/
+cp ../../packaging/*.rules etc/udev/rules.d/
 mkdir -p usr/local/
-cp -R ../MEC usr/local/
-makepkg
+cp -R ../../MEC usr/local/
 cd ..
+zip -r mec.zip mec
+makepkg -g >> PKGBUILD
+makepkg 
+cp *.xz ..
+cd ..
+rm -rf mec_arch
 
 
-mkdir orac_arch 
-cd orac_arch 
-cp ../packaging/orac_arch/PKGBUILD .
-cp ../packaging/orac_arch/orac.install .
+#mkdir orac_arch 
+#cd orac_arch 
+#cp ../packaging/orac_arch/PKGBUILD .
+#cp ../packaging/orac_arch/orac.install .
 #mkdir -p etc/systemd/system
 #cp ../orac/orac.service etc/systemd/system
-mkdir -p usr/local/
-cp -R ../orac usr/local/
-makepkg
-cd ..
+#mkdir -p usr/local/
+#cp -R ../orac usr/local/
+#makepkg
+#cd ..

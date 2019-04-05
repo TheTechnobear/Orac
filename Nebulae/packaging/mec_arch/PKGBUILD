@@ -6,10 +6,12 @@ arch=('armv7h')
 url="https://github.com/TheTechnobear/MEC/"
 license=('GPL')
 groups=('sound')
+source=('mec.zip')
 depends=('gcc-libs' 'glibc' 'libusb' 'cairo')
 install=mec.install
-md5sums=('SKIP')
 
 package() {
-    cd mec_arch
+    cd "${srcdir}/${pkgname}"
+    cp -r . ${pkgdir}/
 }
+md5sums=('09528100ab5bf4c20399284b64f09226')
