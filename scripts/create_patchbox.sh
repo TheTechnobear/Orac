@@ -20,7 +20,11 @@ cp ../packaging/*.rules etc/udev/rules.d/
 mkdir -p usr/local/
 cp -R ../MEC usr/local/
 
+mkdir -p usr/local/pisound/scripts/pisound-btn
+cp ../packaging/toggle_mec.sh
+
 cp ../packaging/amidiauto.conf etc
+cp ../packaging/pisound.conf etc
 cd ..
 fakeroot dpkg --build mec_deb
 mv mec_deb.deb mec.deb

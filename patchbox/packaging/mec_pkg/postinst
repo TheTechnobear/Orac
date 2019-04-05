@@ -1,0 +1,7 @@
+#if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+#fi
+udevadm control --reload-rules >/dev/null || true
+
+#start with pisound btn
+#systemctl enable mec
+#systemctl start mec
