@@ -1,5 +1,0 @@
-systemctl stop mec
-systemctl disable mec
-
-USERDIR=/home/alarm
-rm $USERDIR/instr/mec.instr

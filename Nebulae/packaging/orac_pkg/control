@@ -1,9 +1,0 @@
-Package: orac
-Version: 0.1.1-1
-Section: sound
-Priority: optional
-Architecture: armhf
-Depends: mec (>= 0.1.1-1)
-Maintainer: Mark Harris <...>
-Description: ORAC
- See https://github.com/TheTechnobear/Orac/ for more information.
