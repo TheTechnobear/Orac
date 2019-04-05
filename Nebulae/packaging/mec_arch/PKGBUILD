@@ -14,4 +14,3 @@ package() {
     cd "${srcdir}/${pkgname}"
     cp -r . ${pkgdir}/
 }
-md5sums=('09528100ab5bf4c20399284b64f09226')

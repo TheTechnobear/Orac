@@ -20,13 +20,20 @@ https://youtu.be/Z1fYYE622Iw
 ### Platforms
 The code is cross-platform, and I run it on the Organelle, Raspeberry PI and Bela.
 (also for development purposes I run it on macOS)
-Currently, Ive released only on Organelle, but this is just because I want to add a 'web interface' before releasing on rPI and Bela... 
-(its on its way ;) )
+
 
 ### Building
 This projects contains the Pure Data aspects of Orac, as mentioned above it utilises MEC
 MEC can be found/built here : https://github.com/TheTechnobear/MEC
 MI externals (used in some modules) can be found here: https://github.com/TheTechnobear/Mi4Pd
+
+for each platform there is a 'create' package script, in scripts
+so to create for Organelle, you would youse
+./scripts/create_organelle.sh
+this will create a 'package' in ./pkg, e.g. ./pkg/organelle
+depending on platform the result of this will vary e.g. might be a zop, a debian package ,or pacman
+note: I only support building on the target platform
+
 
 ### Release
 I release 'builds' of Orac on PatchStorage.com
@@ -46,6 +53,9 @@ Core - files which do not differ from platform to platform
 Organelle - Organelle specific files, including build libs/externals
 Bela - Bela specific files, including build libs/externals
 PI - PI specific files, including build libs/externals
+Nebulae
+Salt
+patchbox
 OscClients - various clients for use with MEC oscdisplay
 
 scripts/create_* - script which creates a package in the pkg directory, from combining above folders

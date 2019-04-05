@@ -1,3 +1,6 @@
+# this is an example fot he steps required 
+# it advised you use the pacman package
+
 export HOME=/home/alarm
 cp -R pd $HOME
 

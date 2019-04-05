@@ -3,6 +3,7 @@
 # e.g 
 # mkdir pkg;chmod 777 pkg
 # su alarm -c ./scripts/create_nebulae.sh 
+
 rm -rf pkg/nebulae.old
 mv pkg/nebulae pkg/nebulae.old
 mkdir -p pkg/nebulae
@@ -35,13 +36,22 @@ cd ..
 rm -rf mec_arch
 
 
-#mkdir orac_arch 
-#cd orac_arch 
-#cp ../packaging/orac_arch/PKGBUILD .
-#cp ../packaging/orac_arch/orac.install .
-#mkdir -p etc/systemd/system
-#cp ../orac/orac.service etc/systemd/system
-#mkdir -p usr/local/
-#cp -R ../orac usr/local/
-#makepkg
-#cd ..
+mkdir orac_arch 
+cd orac_arch
+
+cp ../packaging/orac_arch/PKGBUILD .
+cp ../packaging/orac_arch/orac.install .
+
+mkdir orac 
+mkdir -p etc/systemd/system
+cp ../../orac/orac.service etc/systemd/system
+mkdir -p usr/local/
+cp -R ../../orac usr/local/
+cd ..
+
+zip -r orac.zip orac
+makepkg -g >> PKGBUILD
+makepkg
+cp *.xz ..
+cd ..
+rm -rf orac_arch

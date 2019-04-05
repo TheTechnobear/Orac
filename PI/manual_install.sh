@@ -1,4 +1,7 @@
 #/bin/bash
+# this is an example fot he steps required 
+# it advised you use the debian package
+
 echo run this as 
 echo sudo ./install.sh
 

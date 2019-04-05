@@ -6,10 +6,11 @@ arch=('armv7h')
 url="https://github.com/TheTechnobear/Orac/"
 license=('GPL')
 groups=('sound')
+source=('orac.zip')
 depends=('mec')
 install=orac.install
-md5sums=('SKIP')
 
 package() {
-    cd orac_arch
+    cd "${srcdir}/${pkgname}"
+    cp -r . ${pkgdir}/
 }
