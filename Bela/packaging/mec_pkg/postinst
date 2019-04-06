@@ -3,5 +3,4 @@
 systemctl enable mec
 systemctl start mec
 
-rm /root/MEC
 ln -s /usr/local/MEC /root/

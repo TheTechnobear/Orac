@@ -1,8 +1,6 @@
 #if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
 #fi
 
-rm /root/Bela/projects
-
 ln -s /usr/local/orac /root/Bela/projects
 
 mkdir -p /root/media/orac/usermodules
