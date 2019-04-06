@@ -1,0 +1,19 @@
+{
+    "display" : "D. CV IN",
+    "parameters" :  [ 
+        ["int","m_p1","CV 1",0,8,0],
+        ["int","m_p2","CV 2",0,8,0],
+        ["int","m_p3","CV 3",0,8,0],
+        ["int","m_p4","CV 4",0,8,0],
+
+        ["int","m_bus_p1","Bus 1",0,20,10],
+        ["int","m_bus_p2","Bus 2",0,20,11],
+        ["int","m_bus_p3","Bus 3",0,20,12],
+        ["int","m_bus_p4","Bus 4",0,20,13]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["m_p1","m_p2","m_p3","m_p4"]],
+        ["pg_bus","Bus",["m_bus_p1", "m_bus_p2", "m_bus_p3", "m_bus_p4"]]
+    ]
+}
+
