@@ -15,12 +15,10 @@
 #X obj 583 447 macro_p p2 \$1;
 #X obj 674 447 macro_p p3 \$1;
 #X obj 768 447 macro_p p4 \$1;
-#X obj 860 447 macro_p p5 \$1;
 #X obj 485 291 r d_cvIn1;
 #X obj 565 291 r d_cvIn2;
 #X obj 640 291 r d_cvIn3;
 #X obj 710 291 r d_cvIn4;
-#X obj 782 291 r d_cvIn5;
 #X connect 12 0 10 0;
 #X connect 12 1 11 0;
 #X connect 13 0 10 0;
@@ -29,10 +27,7 @@
 #X connect 14 1 11 0;
 #X connect 15 0 10 0;
 #X connect 15 1 11 0;
-#X connect 16 0 10 0;
-#X connect 16 1 11 0;
-#X connect 17 0 12 0;
-#X connect 18 0 13 0;
-#X connect 19 0 14 0;
-#X connect 20 0 15 0;
-#X connect 21 0 16 0;
+#X connect 16 0 12 0;
+#X connect 17 0 13 0;
+#X connect 18 0 14 0;
+#X connect 19 0 15 0;
