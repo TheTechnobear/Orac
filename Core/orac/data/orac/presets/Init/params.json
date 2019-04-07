@@ -1,5 +1,109 @@
 {
+	"a1":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"a2":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"a3":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"b1":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"b2":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"b3":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"b4":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
 	"c1":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"c2":	{
 		"moduleType":	"utility/empty",
 		"params":	{
 		},
@@ -38,7 +142,7 @@
 			}
 		}
 	},
-	"p2":	{
+	"m2":	{
 		"moduleType":	"utility/empty",
 		"params":	{
 		},
@@ -51,7 +155,33 @@
 			}
 		}
 	},
-	"b3":	{
+	"m3":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"p1":	{
+		"moduleType":	"utility/empty",
+		"params":	{
+		},
+		"midi-mapping":	{
+			"cc":	{
+			}
+		},
+		"mod-mapping":	{
+			"bus":	{
+			}
+		}
+	},
+	"p2":	{
 		"moduleType":	"utility/empty",
 		"params":	{
 		},
@@ -141,141 +271,11 @@
 			}
 		}
 	},
-	"c2":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"b2":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"m2":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"a3":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
 	"s2":	{
 		"moduleType":	"utility/clock",
 		"params":	{
 			"c_midiout":	0,
 			"c_bpm":	120
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"b4":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"m3":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"b1":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"p1":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"a2":	{
-		"moduleType":	"utility/empty",
-		"params":	{
-		},
-		"midi-mapping":	{
-			"cc":	{
-			}
-		},
-		"mod-mapping":	{
-			"bus":	{
-			}
-		}
-	},
-	"a1":	{
-		"moduleType":	"utility/empty",
-		"params":	{
 		},
 		"midi-mapping":	{
 			"cc":	{
