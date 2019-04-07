@@ -2,7 +2,5 @@
 #fi
 udevadm control --reload-rules >/dev/null || true
 
-#start with pisound btn
-cp /usr/local/MEC/pisound.conf /etc
 #systemctl enable mec
 #systemctl start mec
