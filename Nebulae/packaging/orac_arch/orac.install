@@ -10,11 +10,13 @@ post_install() {
 
     cp /usr/local/orac/orac.json /
 
+    chown -R alarm $USERDIR/data
+    chown -R alarm $USERDIR/media
     su alarm -c "mkdir -p $USERDIR/media/orac/usermodules"
     su alarm -c "cp -nr /usr/local/orac/media $USERDIR"
-    su alarm -c "chmod -R a+rw $USERDIR/media"
     su alarm -c "cp -nr /usr/local/orac/data $USERDIR"
-    su alarm -c "chmod -R a+rw $USERDIR/data"
+    chmod -R a+rw $USERDIR/data
+    chmod -R a+rw $USERDIR/media
 }
 
 pre_upgrade() {
