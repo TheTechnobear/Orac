@@ -12,7 +12,6 @@ ainl, ainr inch 1, 2
 if gksource == 1 then
   ires system_i 1,{{
           if echo alarm | sudo -S mount /dev/sda1 /mnt/memory; then echo installing packages from usbdrive; sudo pacman -U --noconfirm  /mnt/memory/pkgs/*.xz; sudo umount /dev/sda1; echo installing packages from usbdrive - done; fi
-          echo wifi done
       }}
   print ires
   turnoff

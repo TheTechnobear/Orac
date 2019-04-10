@@ -8,7 +8,7 @@ post_install() {
     cp -R /usr/local/orac/ $USERDIR/pd
 
     cp /usr/local/orac/orac.json /
-    cp /user/local/orac/pdsettings /.pdsettings
+    cp /usr/local/orac/pdsettings /.pdsettings
 
     chown -R alarm $USERDIR/data
     chown -R alarm $USERDIR/media

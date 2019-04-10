@@ -15,15 +15,19 @@ cp -R ../../PI/* .
 cp -R ../../Nebulae/* .
 
 cp orac/pd/orac.pd .
-cp MEC/mec.instr
+cp MEC/mec.instr .
 cp resources/* .
 
+#irrelevant, and misleading 
+rm manual_install.sh
+
+mkdir pkgs
 mkdir mec_arch 
+
 cd mec_arch 
 cp ../packaging/mec_arch/PKGBUILD .
 cp ../packaging/mec_arch/mec.install .
 
-mkdir pkgs
 mkdir mec
 cd mec
 mkdir -p etc/systemd/system
@@ -62,6 +66,6 @@ cd ..
 rm -rf mec_arch
 rm -rf orac_arch
 rm -rf packaging
-rm -rf MEC orac
+rm -rf MEC orac resources pd
 
 
