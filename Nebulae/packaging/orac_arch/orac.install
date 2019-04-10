@@ -4,11 +4,11 @@ pre_install() {
 
 post_install() {
     USERDIR=/home/alarm
-    cp /usr/local/orac/pd/orac.pd   $USERDIR/pd
     cp /usr/local/orac/orac.json $USERDIR/pd
     cp -R /usr/local/orac/ $USERDIR/pd
 
     cp /usr/local/orac/orac.json /
+    cp /user/local/orac/pdsettings /.pdsettings
 
     chown -R alarm $USERDIR/data
     chown -R alarm $USERDIR/media
@@ -33,7 +33,8 @@ pre_remove() {
 
 post_remove() {
     USERDIR=/home/alarm
-    rm $USERDIR/pd/orac.*
+    rm $USERDIR/pd/orac.json
     rm -rf $USERDIR/pd/orac
     rm /orac.json
+    rm /.pdsettings
 }

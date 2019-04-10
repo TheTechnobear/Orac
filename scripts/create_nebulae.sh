@@ -14,11 +14,16 @@ cp -R ../../Core/* .
 cp -R ../../PI/* .
 cp -R ../../Nebulae/* .
 
+cp orac/pd/orac.pd .
+cp MEC/mec.instr
+cp resources/* .
+
 mkdir mec_arch 
 cd mec_arch 
 cp ../packaging/mec_arch/PKGBUILD .
 cp ../packaging/mec_arch/mec.install .
 
+mkdir pkgs
 mkdir mec
 cd mec
 mkdir -p etc/systemd/system
@@ -31,9 +36,8 @@ cd ..
 zip -r mec.zip mec
 makepkg -g >> PKGBUILD
 makepkg 
-cp *.xz ..
+cp *.xz ../pkgs
 cd ..
-rm -rf mec_arch
 
 
 mkdir orac_arch 
@@ -51,6 +55,13 @@ cd ..
 zip -r orac.zip orac
 makepkg -g >> PKGBUILD
 makepkg
-cp *.xz ..
+cp *.xz ../pkgs
 cd ..
+
+#cleanup
+rm -rf mec_arch
 rm -rf orac_arch
+rm -rf packaging
+rm -rf MEC orac
+
+

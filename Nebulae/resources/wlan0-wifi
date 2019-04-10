@@ -1,0 +1,7 @@
+Description='wifi for netctl'
+Interface=wlan0
+Connection=wireless
+Security=wpa
+ESSID=YourWifiNetworkName
+IP=dhcp
+Key=YourWifiPassword

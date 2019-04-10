@@ -1,0 +1,5 @@
+midiindev1: 1,2
+midiindevname1: ?
+nomidiout: False
+midioutdev1: 1,2
+midioutdevname1: ?

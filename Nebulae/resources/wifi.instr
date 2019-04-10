@@ -13,7 +13,7 @@ if gksource == 1 then
   ires system_i 1,{{
           if echo alarm | sudo -S mount /dev/sda1 /mnt/memory; then echo copy wificonfig; sudo cp /mnt/memory/wlan0-wifi /etc/netctl; sudo umount /dev/sda1; fi
           echo alarm | sudo -S netctl start wlan0-wifi
-          if echo alarm | sudo -S systemctl status mec | grep -q inactive; then echo activating mec; sudo systemctl start mec; else  echo deactivating mec; sudo systemctl stop mec;fi
+          echo wifi done
       }}
   print ires
   turnoff
