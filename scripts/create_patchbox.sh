@@ -8,6 +8,13 @@ cp -R ../../Core/* .
 cp -R ../../PI/* .
 cp -R ../../patchbox/* .
 
+if [ "$NOPACK" ] ; 
+then
+    echo dev mode - do not package
+    exit 0
+fi
+
+
 #now create debian packages
 mkdir mec_deb 
 cd mec_deb 

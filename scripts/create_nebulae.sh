@@ -21,6 +21,13 @@ cp resources/* .
 #irrelevant, and misleading 
 rm manual_install.sh
 
+if [ "$NOPACK" ] ; 
+then
+    echo dev mode - do not package
+    exit 0
+fi
+
+
 mkdir pkgs
 mkdir mec_arch 
 

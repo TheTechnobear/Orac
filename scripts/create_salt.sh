@@ -7,6 +7,14 @@ cp -R ../../Core/* .
 cp -R ../../Bela/* .
 cp -R ../../Salt/* .
 
+
+if [ "$NOPACK" ] ; 
+then
+    echo dev mode - do not package
+    exit 0
+fi
+
+
 #now create debian packages
 mkdir mec_deb 
 cd mec_deb 
@@ -19,6 +27,7 @@ cp ../packaging/*.rules etc/udev/rules.d/
 mkdir -p usr/local/
 cp -R ../MEC usr/local/
 cd ..
+
 fakeroot dpkg --build mec_deb
 mv mec_deb.deb mec.deb
 rm -rf mec_deb
@@ -34,6 +43,7 @@ cp -R ../packaging/orac_pkg/* DEBIAN
 mkdir -p usr/local/
 cp -R ../orac usr/local/
 cd ..
+
 fakeroot dpkg --build orac_deb
 mv orac_deb.deb orac.deb
 rm -rf orac_deb
