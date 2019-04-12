@@ -60,7 +60,7 @@
         ["bool","r-bypass-p2","Bypass",0],
 
         ["bool", "r-chin-midigate-1","In Midi",0],
-        ["int", "r-chin-midich-1","In Midi Ch.",0,16,0],
+        ["int", "r-chin-midich-1","In Midi Ch.",0,16,1],
         ["int", "r-chout-midich-1","Out Midi Ch.",0,16,0],
 
         ["pct", "r-chin-l-gain-1","In L Gain",0,200,0],

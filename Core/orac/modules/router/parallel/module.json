@@ -60,7 +60,7 @@
         ["bool","r-bypass-p2","Bypass",0],
 
         ["bool", "r-chin-midigate-1","In Midi",0],
-        ["int", "r-chin-midich-1","In Midi Ch.",0,16,0],
+        ["int", "r-chin-midich-1","In Midi Ch.",0,16,1],
         ["int", "r-chout-midich-1","Out Midi Ch.",0,16,0],
 
         ["pct", "r-chin-l-gain-1","In L Gain",0,200,0],
@@ -73,7 +73,7 @@
         ["pan", "r-chout-r-pan-1","Out R Pan",0,1,1],
 
         ["bool", "r-chin-midigate-2","In Midi",0],
-        ["int", "r-chin-midich-2","In Midi Ch.",0,16,0],
+        ["int", "r-chin-midich-2","In Midi Ch.",0,16,2],
         ["int", "r-chout-midich-2","Out Midi Ch.",0,16,0],
 
         ["pct", "r-chin-l-gain-2","In L Gain",0,200,0],
@@ -86,7 +86,7 @@
         ["pan", "r-chout-r-pan-2","Out R Pan",0,1,1],
 
         ["bool", "r-chin-midigate-3","In Midi",0],
-        ["int", "r-chin-midich-3","In Midi Ch.",0,16,0],
+        ["int", "r-chin-midich-3","In Midi Ch.",0,16,3],
         ["int", "r-chout-midich-3","Out Midi Ch.",0,16,0],
 
         ["pct", "r-chin-l-gain-3","In L Gain",0,200,0],
