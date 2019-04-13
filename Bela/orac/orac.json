@@ -1,4 +1,5 @@
 {
 	"dataDir":	"/root/data/orac",
-	"mediaDir":	"/media"
+	"mediaDir":	"/root/media",
+	"userModuleDir":"/root/media/orac/submodules"
 }
