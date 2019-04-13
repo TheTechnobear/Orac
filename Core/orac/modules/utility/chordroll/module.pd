@@ -9,7 +9,7 @@
 #X obj 424 185 r auxIn-\$1;
 #X obj 423 208 r expIn-\$1;
 #X obj 423 233 r fsIn-\$1;
-#N canvas 767 201 1793 1004 sequencer 0;
+#N canvas 646 374 1793 1004 sequencer 1;
 #X obj 360 644 i;
 #X obj 466 148 stripnote;
 #X obj 146 455 + 60;
@@ -131,10 +131,10 @@
 #X obj 321 153 int;
 #X obj 635 128 r croll_chord-\$1;
 #X obj 361 570 r croll_length-\$1;
-#X obj 568 358 r croll_root-\$1;
 #X obj 171 385 r croll-\$1-root;
 #X obj 434 370 r croll-\$1-root;
 #X obj 691 361 r croll-\$1-root;
+#X obj 568 358 r croll-\$1-root;
 #X connect 0 0 31 2;
 #X connect 1 0 5 0;
 #X connect 1 1 33 0;
@@ -199,10 +199,10 @@
 #X connect 57 0 25 0;
 #X connect 58 0 6 0;
 #X connect 59 0 0 0;
-#X connect 60 0 4 1;
-#X connect 61 0 2 1;
-#X connect 62 0 3 1;
-#X connect 63 0 8 1;
+#X connect 60 0 2 1;
+#X connect 61 0 3 1;
+#X connect 62 0 8 1;
+#X connect 63 0 4 1;
 #X restore 303 337 pd sequencer;
 #X obj 307 262 s croll-\$1-notes-in;
 #X obj 293 433 r croll-\$1-notes-out;
