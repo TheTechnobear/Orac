@@ -59,7 +59,7 @@
         ["pct", "r-gain-p2","Gain",0,200,100],
         ["bool","r-bypass-p2","Bypass",0],
 
-        ["bool", "r-chin-midigate-1","In Midi",0],
+        ["bool", "r-chin-midigate-1","In Midi",1],
         ["int", "r-chin-midich-1","In Midi Ch.",0,16,1],
         ["int", "r-chout-midich-1","Out Midi Ch.",0,16,0],
 
@@ -72,7 +72,7 @@
         ["pan", "r-chout-l-pan-1","Out L Pan",0,1,0],
         ["pan", "r-chout-r-pan-1","Out R Pan",0,1,1],
 
-        ["bool", "r-chin-midigate-2","In Midi",0],
+        ["bool", "r-chin-midigate-2","In Midi",1],
         ["int", "r-chin-midich-2","In Midi Ch.",0,16,2],
         ["int", "r-chout-midich-2","Out Midi Ch.",0,16,0],
 
@@ -85,7 +85,7 @@
         ["pan", "r-chout-l-pan-2","Out L Pan",0,1,0],
         ["pan", "r-chout-r-pan-2","Out R Pan",0,1,1],
 
-        ["bool", "r-chin-midigate-3","In Midi",0],
+        ["bool", "r-chin-midigate-3","In Midi",1],
         ["int", "r-chin-midich-3","In Midi Ch.",0,16,3],
         ["int", "r-chout-midich-3","Out Midi Ch.",0,16,0],
 
@@ -99,7 +99,7 @@
         ["pan", "r-chout-r-pan-3","Out R Pan",0,1,1],
 
         ["int",  "r-main-dest","Dest",0,10,0],
-        ["int",  "r-midi-ch","Main Midi Ch.",0,16,1],
+        ["int",  "r-midi-ch","Main Midi Ch.",0,16,16],
         ["bool", "r-midi-notegate","Note",1],
         ["bool", "r-midi-ctrlgate","Ctrl",1],
         ["bool", "r-midi-pgmgate","Prog",1],

@@ -1,10 +1,16 @@
 {
 	"a1":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"synth/basicpoly",
 		"params":	{
+			"bp_vdepth":	0,
+			"bp_vrate":	6.468750,
+			"bp_decay":	238.789062,
+			"bp_wave":	2,
+			"bp_trans":	24
 		},
 		"midi-mapping":	{
 			"cc":	{
+				"128":	["bp_vdepth"]
 			}
 		},
 		"mod-mapping":	{
@@ -39,11 +45,27 @@
 		}
 	},
 	"b1":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"synth/brdsmono",
 		"params":	{
+			"f_attack":	0,
+			"f_release":	50,
+			"f_sustain":	50,
+			"o_timbre":	39.843750,
+			"f_env_amt":	0,
+			"f_reson":	0,
+			"f_cutoff":	3867.187500,
+			"e_decay":	218.750000,
+			"f_decay":	500,
+			"e_attack":	0,
+			"e_release":	440.625000,
+			"o_colour":	0,
+			"e_sustain":	50,
+			"o_transpose":	0,
+			"o_shape":	39
 		},
 		"midi-mapping":	{
 			"cc":	{
+				"255":	["o_colour"]
 			}
 		},
 		"mod-mapping":	{
@@ -91,8 +113,14 @@
 		}
 	},
 	"c1":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"synth/sampler",
 		"params":	{
+			"s_slot1":	3,
+			"s_kit":	1,
+			"s_envelope":	30,
+			"s_duration":	100,
+			"s_speed":	0,
+			"s_trans":	0
 		},
 		"midi-mapping":	{
 			"cc":	{
@@ -182,8 +210,12 @@
 		}
 	},
 	"p2":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"fx/reverb",
 		"params":	{
+			"rev_size":	24,
+			"thru_gain":	0,
+			"rev_damp":	27.343750,
+			"rev_dw":	28.906250
 		},
 		"midi-mapping":	{
 			"cc":	{

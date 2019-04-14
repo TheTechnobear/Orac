@@ -22,7 +22,7 @@
 #X connect 7 0 2 0;
 #X connect 8 0 3 0;
 #X restore 155 77 pd audioIO;
-#N canvas 256 327 1779 821 MIDI 1;
+#N canvas 256 327 1779 821 MIDI 0;
 #X obj 44 166 spigot 1;
 #X obj 940 44 pgmin;
 #X obj 940 153 spigot 1;

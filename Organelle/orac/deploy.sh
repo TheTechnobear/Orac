@@ -12,7 +12,7 @@ oscsend localhost 4001 /oled/aux/line/3 s "installing..."
 
 mkdir -p ${USER_DIR}/media/orac/usermodules
 cp -nr media $USER_DIR
-cp -nr data $USER_DIR
+cp data $USER_DIR
 oscsend localhost 4001 /oled/aux/line/3 s "done"
 
 exit 0

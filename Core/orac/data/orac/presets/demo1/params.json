@@ -1,10 +1,26 @@
 {
 	"a1":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"synth/brdsmono",
 		"params":	{
+			"f_attack":	0,
+			"f_release":	50,
+			"f_sustain":	50,
+			"o_timbre":	60.937500,
+			"f_env_amt":	0,
+			"f_reson":	0,
+			"f_cutoff":	15000,
+			"e_decay":	500,
+			"f_decay":	500,
+			"e_attack":	0,
+			"e_release":	50,
+			"o_colour":	77.165352,
+			"e_sustain":	50,
+			"o_transpose":	1,
+			"o_shape":	21
 		},
 		"midi-mapping":	{
 			"cc":	{
+				"128":	["o_colour"]
 			}
 		},
 		"mod-mapping":	{
@@ -39,8 +55,32 @@
 		}
 	},
 	"b1":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"sequence/euclid",
 		"params":	{
+			"e_nlen_4":	100,
+			"e_off_2":	1,
+			"e_off_4":	0,
+			"e_vel_4":	100,
+			"e_vel_3":	100,
+			"e_notes_2":	6,
+			"e_note_3":	62,
+			"e_vel_2":	100,
+			"e_off_3":	4,
+			"e_notes_4":	0,
+			"e_notes_3":	1,
+			"e_nlen_2":	100,
+			"e_notes_1":	4,
+			"e_off_1":	0,
+			"e_note_4":	63,
+			"e_len_3":	9,
+			"e_len_2":	11,
+			"e_note_2":	61,
+			"e_vel_1":	100,
+			"e_nlen_3":	100,
+			"e_nlen_1":	100,
+			"e_len_4":	16,
+			"e_len_1":	16,
+			"e_note_1":	60
 		},
 		"midi-mapping":	{
 			"cc":	{
@@ -52,7 +92,7 @@
 		}
 	},
 	"b2":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"synth/edrum",
 		"params":	{
 		},
 		"midi-mapping":	{
