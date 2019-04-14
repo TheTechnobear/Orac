@@ -1,0 +1,57 @@
+{
+    "mec"  :  {
+        "eigenharp" : {
+            "steal voices" : true,
+            "voices" : 4,
+            "velocity count" : 5,
+            "pitchbend range" : 2.0,
+            "firmware dir" : "./resources/",
+            "throttle" : 1,
+            "mapping" : { 
+                "pico" : {
+                    "_notes" : [ 2 , 5, 12],
+                    "calculated" : {
+                        "keys in col"    : 9,
+                        "row multiplier" : 1,  
+                        "col multipler"  : 5,
+                        "note offset"    : 48
+                    }
+                },
+                "tau" : {
+                    "calculated-wrong" : {
+                        "keys in col"    : 16,
+                        "row multiplier" : 1,  
+                        "col multipler"  : 4,
+                        "note offset"    : 20
+                    }
+                },
+                "alpha" : {
+                    "calculated" : {
+                        "keys in col"    : 24,
+                        "row multiplier" : 4,  
+                        "col multipler"  : -1,
+                        "note offset"    : 20
+                    },
+                    "calculated-factory" : {
+                        "keys in col"    : 24,
+                        "row multiplier" : 1,  
+                        "col multipler"  : 4,
+                        "note offset"    : 20
+                    }
+               }
+            }
+        }
+    },
+
+    "mec-app"  :  {
+        "outputs" : {
+            "osc" : {
+                "host" : "127.0.0.1",
+                "port" : 9002
+            },
+            "_console" : {
+                "throttle" : 0
+            }
+        }
+    }
+}

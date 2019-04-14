@@ -1,0 +1,14 @@
+# This file contains udev rules for the Eigenharps
+# needs double checking!
+
+#without firmware
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2139", ATTRS{idProduct}=="0001", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2139", ATTRS{idProduct}=="0002", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2139", ATTRS{idProduct}=="0003", MODE="0666"
+
+#with firmware
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2139", ATTRS{idProduct}=="0101", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2139", ATTRS{idProduct}=="0102", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2139", ATTRS{idProduct}=="0103", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2139", ATTRS{idProduct}=="0104", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2139", ATTRS{idProduct}=="0105", MODE="0666"
