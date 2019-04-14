@@ -3,7 +3,9 @@ rm -rf pkg/organelle.old
 mv pkg/organelle pkg/organelle.old
 mkdir -p pkg/organelle
 cd pkg/organelle
-cp -R ../../Core/* .
+mkdir -p MEC
+cp -R ../../Core/MEC MEC
+cp -R ../../Core/orac .
 cp -R ../../Organelle/* .
 
 if [ "$NOPACK" ] ; 
