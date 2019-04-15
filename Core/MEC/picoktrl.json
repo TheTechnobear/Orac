@@ -13,8 +13,8 @@
                     "calculated" : {
                         "keys in col"    : 9,
                         "row multiplier" : 1,  
-                        "col multipler"  : 9,
-                        "note offset"    : 60
+                        "col multipler"  : 5,
+                        "note offset"    : 48
                     }
                 },
                 "tau" : {
@@ -45,15 +45,17 @@
 
     "mec-app"  :  {
         "outputs" : {
-            "midi" : {
-                "virtual" : 1,
-                "voices" : 4,
-                "pitchbend range" : 48.0,
-                "device" : "MEC"
+            "osc" : {
+                "host" : "127.0.0.1",
+                "port" : 9002,
+                "touch offset" : 0,
+                "x offset" : 0.0,
+                "y offset" : 0.0
             },
             "_console" : {
                 "throttle" : 0
             }
         }
-    }
+    },
+
 }
