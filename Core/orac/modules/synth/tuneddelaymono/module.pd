@@ -126,3 +126,4 @@ plucked string effect;
 #X connect 41 0 42 0;
 #X connect 42 0 24 0;
 #X connect 43 0 20 0;
+#X connect 44 0 10 1;

@@ -24,7 +24,8 @@
         ["pg_sample1","Sample 1",["s_kit","s_slot1","s_slot2","s_slot3"]],
         ["pg_sample2","Sample 2",["s_slot4","s_slot5","s_slot6","s_slot7"]],
         ["pg_sample3","Sample 3",["s_slot8","s_slot9","s_slot10","s_slot11"]],
-        ["pg_sample4","Sample 4",["s_slot12"]]
+        ["pg_sample4","Sample 4",["s_slot12"]],
+        ["pg_other","Other",["pb_range"]]
     ]
 }
 

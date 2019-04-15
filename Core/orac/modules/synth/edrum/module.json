@@ -1,8 +1,14 @@
 {
     "display" : "E.Drum",
     "parameters" :  [ 
-    ],
+       ["pct","k-gain","Gain",0,200,100],
+       ["pct","s-gain","Gain",0,200,100],
+       ["pct","h-gain","Gain",0,200,100]
+     ],
     "pages" : [ 
+        ["pg_k","Kick",["k-gain"]],
+        ["pg_s","Snare",["s-gain"]],
+        ["pg_j","Hat",["h-gain"]]
     ]
 }
 

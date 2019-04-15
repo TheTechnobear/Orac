@@ -6,11 +6,13 @@
         ["time","rs_decay","Decay",5,2000,500],
         ["time","rs_ramp_attack","Attack",0,500,1],
         ["float","rs_ramp_amt","Ramp Depth",0,4,1],
-        ["time","rs_ramp_decay","Ramp Decay",0,1000,100]
+        ["time","rs_ramp_decay","Ramp Decay",0,1000,100],
+        ["pitch","pb_range","Pb Range",0,48,2]
     ],
     "pages" : [ 
         ["pg_main","Main",["rs_waveform","rs_trans","rs_decay"]],
-        ["pg_ramp","Ramp",["rs_ramp_amt","rs_ramp_attack","rs_ramp_decay"]]
+        ["pg_ramp","Ramp",["rs_ramp_amt","rs_ramp_attack","rs_ramp_decay"]],
+        ["pg_other","Other",["pb_range"]]
     ]
 }
 

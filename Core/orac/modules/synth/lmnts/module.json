@@ -29,7 +29,8 @@
 
         ["bool","l_bypass","Bypass",0],
         ["bool","l_easter_egg","Easter Egg",0],
-        ["int","l_seed","Seed",0,32768,1]
+        ["int","l_seed","Seed",0,32768,1],
+        ["pitch","pb_range","Pb Range",0,48,2]
     ],
     "pages" : [ 
         ["pg_main","Main",["l_tune","l_finetune", "l_contour"]],
@@ -38,7 +39,7 @@
         ["pg_strike","Strike", ["l_strike_level","l_strike_timbre","l_strike_mallet"]],
         ["pg_reson","Resonator",["l_space","l_geometry","l_brightness","l_damping"]],
         ["pg_extra","Extra",["l_position","l_modpitch","l_moddepth"]],
-        ["pg_extra2","Extra2",["l_bypass","l_easter_egg","l_seed"]]
+        ["pg_extra2","Extra2",["l_bypass","l_easter_egg","l_seed","pb_range"]]
     ]
 }
 

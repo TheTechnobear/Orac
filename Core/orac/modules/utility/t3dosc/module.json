@@ -1,0 +1,10 @@
+{
+    "display" : "T3D OSC",
+    "parameters" :  [ 
+        ["int","udpport","Osc Port",3123,3130,3123]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["udpport"]]
+    ]
+}
+

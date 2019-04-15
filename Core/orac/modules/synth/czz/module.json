@@ -5,10 +5,12 @@
         ["time","czz_decay","Decay",1,4000,500],
         ["pct","czz_sustain","Sustain",0,100,50],
         ["time","czz_release","Release",1,4000,500],
-        ["int","czz_preset","Preset",0,8,4]
+        ["int","czz_preset","Preset",0,8,4],
+        ["pitch","pb_range","Pb Range",0,48,2]
     ],
     "pages" : [ 
-        ["pg_main","Main",["czz_attack","czz_decay","czz_sustain","czz_release"]]
+        ["pg_main","Main",["czz_attack","czz_decay","czz_sustain","czz_release"]],
+        ["pg_other","Other",["pb_range"]]
     ]
 }
 

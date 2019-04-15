@@ -4,10 +4,12 @@
         ["pitch","as_trans","Transpose",-24,24,0],
         ["pct","as_oscratio","Osc Ratio",0,100,0],
         ["freq","as_cutoff","Cutoff",100,2100,2100],
-        ["pct","as_reso","Resonance",0,100,0]
+        ["pct","as_reso","Resonance",0,100,0],
+        ["pitch","pb_range","Pb Range",0,48,2]
     ],
     "pages" : [ 
-        ["pg_main","Main",["as_trans","as_oscratio","as_cutoff","as_reso"]]
+        ["pg_main","Main",["as_trans","as_oscratio","as_cutoff","as_reso"]],
+        ["pg_other","Other",["pb_range"]]
     ]
 }
 

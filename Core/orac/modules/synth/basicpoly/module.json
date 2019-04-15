@@ -5,11 +5,12 @@
         ["int","bp_wave","Wave",0,3,0],
         ["time","bp_decay","Decay Time",5,2000,5],
         ["freq","bp_vrate","Vibr Rate",0,50,1],
-        ["pct","bp_vdepth","Vibr Depth",0,100,0]
+        ["pct","bp_vdepth","Vibr Depth",0,100,0],
+        ["pitch","pb_range","Pb Range",0,48,2]
     ],
     "pages" : [ 
         ["pg_main","Main",["bp_trans","bp_wave","bp_decay"]],
-        ["pg_vibr", "Vibrato",["bp_vrate","bp_vdepth"]]
+        ["pg_other", "Other",["bp_vrate","bp_vdepth","pb_range"]]
     ]
 }
 

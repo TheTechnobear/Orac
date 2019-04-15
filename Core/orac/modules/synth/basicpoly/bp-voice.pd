@@ -1,4 +1,4 @@
-#N canvas 882 299 1082 924 10;
+#N canvas 570 346 1082 924 10;
 #X obj 304 545 +~;
 #X obj 359 444 osc~;
 #X obj 726 638 f;
@@ -159,10 +159,12 @@ updated;
 #X obj 566 39 route 0 2;
 #X obj 524 84 - 0.5;
 #X obj 304 193 + 1;
-#X obj 518 138 t b f;
-#X obj 524 105 * 96;
-#X text 639 93 PB = 0..1 \, but its biploar -1 to 1 \, so (x-0.5 *
+#X obj 518 160 t b f;
+#X text 589 93 PB = 0..1 \, but its biploar -1 to 1 \, so (x-0.5 *
 2 * 48);
+#X obj 707 41 r pb_range-\$1;
+#X obj 707 62 * 2;
+#X obj 524 127 * 1;
 #X connect 0 0 15 0;
 #X connect 1 0 9 0;
 #X connect 2 0 3 0;
@@ -226,8 +228,10 @@ updated;
 #X connect 52 0 50 0;
 #X connect 53 0 54 0;
 #X connect 53 1 52 0;
-#X connect 54 0 57 0;
+#X connect 54 0 60 0;
 #X connect 55 0 40 0;
 #X connect 56 0 55 0;
 #X connect 56 1 55 1;
-#X connect 57 0 56 0;
+#X connect 58 0 59 0;
+#X connect 59 0 60 1;
+#X connect 60 0 56 0;
