@@ -176,7 +176,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 381 221 t b f;
 #X obj 230 145 + 0;
 #X obj 318 517 +;
-#X obj 450 164 / 100;
 #X obj 450 185 t b f;
 #X obj 362 123 * 2;
 #X obj 362 102 r pb_range-\$2;
@@ -243,14 +242,13 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 70 0 71 0;
 #X connect 71 0 72 0;
 #X connect 71 1 76 0;
-#X connect 72 0 80 0;
+#X connect 72 0 79 0;
 #X connect 73 0 74 0;
 #X connect 73 1 74 1;
 #X connect 74 0 64 0;
 #X connect 75 0 37 2;
-#X connect 76 0 77 0;
-#X connect 77 0 75 0;
-#X connect 77 1 75 1;
-#X connect 78 0 80 1;
-#X connect 79 0 78 0;
-#X connect 80 0 73 0;
+#X connect 76 0 75 0;
+#X connect 76 1 75 1;
+#X connect 77 0 79 1;
+#X connect 78 0 77 0;
+#X connect 79 0 73 0;

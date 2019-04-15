@@ -21,7 +21,7 @@
 #X obj 802 420 / 100;
 #X obj 802 444 * 3.7;
 #X obj 1156 105 / 100;
-#X obj 138 290 / 100;
+#X obj 138 236 / 100;
 #X obj 150 112 / 100;
 #X obj 235 106 / 47;
 #X obj 1112 283 adsr 1 10 100 50 500;
@@ -50,8 +50,8 @@
 #X obj 713 151 - 0.5;
 #X obj 713 195 t b f;
 #X obj 452 171 + 0;
-#X obj 138 259 + 0, f 5;
-#X obj 162 234 t b f;
+#X obj 138 282 + 0, f 5;
+#X obj 192 252 t b f;
 #X obj 452 202 + 0;
 #X obj 820 98 r pb_range-\$1;
 #X obj 820 119 * 2;
@@ -79,7 +79,7 @@
 #X connect 19 0 20 0;
 #X connect 20 0 3 0;
 #X connect 21 0 28 1;
-#X connect 22 0 12 0;
+#X connect 22 0 51 0;
 #X connect 23 0 11 0;
 #X connect 24 0 10 0;
 #X connect 25 0 28 0;
@@ -102,7 +102,7 @@
 #X connect 41 0 25 5;
 #X connect 42 0 19 0;
 #X connect 43 0 7 0;
-#X connect 44 0 51 0;
+#X connect 44 0 22 0;
 #X connect 45 0 2 0;
 #X connect 45 0 26 0;
 #X connect 46 0 47 0;
@@ -112,7 +112,7 @@
 #X connect 49 0 50 0;
 #X connect 49 1 50 1;
 #X connect 50 0 53 0;
-#X connect 51 0 22 0;
+#X connect 51 0 12 0;
 #X connect 52 0 51 0;
 #X connect 52 1 51 1;
 #X connect 53 0 17 0;

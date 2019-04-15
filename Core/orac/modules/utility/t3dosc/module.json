@@ -1,10 +1,12 @@
 {
     "display" : "T3D OSC",
     "parameters" :  [ 
-        ["int","udpport","Osc Port",3123,3130,3123]
+        ["int","udpport","Osc Port",3123,3130,3123],
+        ["pitch","pb_range","Pitchbend",0,48,48],
+        ["int","vel_scale","Vel Scale.",0,10,1]
     ],
     "pages" : [ 
-        ["pg_main","Main",["udpport"]]
+        ["pg_main","Main",["udpport","pb_range","vel_scale"]]
     ]
 }
 
