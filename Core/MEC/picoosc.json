@@ -47,7 +47,8 @@
         "outputs" : {
             "osc" : {
                 "host" : "127.0.0.1",
-                "port" : 9002
+                "port" : 3123,
+                "touch offset" : 1
             },
             "_console" : {
                 "throttle" : 0
