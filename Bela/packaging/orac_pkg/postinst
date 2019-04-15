@@ -5,4 +5,4 @@ ln -s /usr/local/orac /root/Bela/projects
 
 mkdir -p /root/media/orac/usermodules
 cp -nr /usr/local/orac/media /root
-cp /usr/local/orac/data /root
+cp -r /usr/local/orac/data /root

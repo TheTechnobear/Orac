@@ -1,6 +1,6 @@
 pkgname=mec
 pkgver=0.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="See https://github.com/TheTechnobear/MEC/ for more information."
 arch=('armv7h')
 url="https://github.com/TheTechnobear/MEC/"

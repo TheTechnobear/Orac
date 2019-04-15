@@ -14,7 +14,7 @@ post_install() {
     chown -R alarm $USERDIR/media
     su alarm -c "mkdir -p $USERDIR/media/orac/usermodules"
     su alarm -c "cp -nr /usr/local/orac/media $USERDIR"
-    su alarm -c "cp /usr/local/orac/data $USERDIR"
+    su alarm -c "cp -r /usr/local/orac/data $USERDIR"
     chmod -R a+rw $USERDIR/data
     chmod -R a+rw $USERDIR/media
 }
