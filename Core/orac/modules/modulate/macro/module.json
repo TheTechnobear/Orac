@@ -1,10 +1,10 @@
 {
     "display" : "Macro",
     "parameters" :  [ 
-        ["pct","m_p1","Param 1",0,100,0],
-        ["pct","m_p2","Param 2",0,100,0],
-        ["pct","m_p3","Param 3",0,100,0],
-        ["pct","m_p4","Param 4",0,100,0],
+        ["pct","m_p1","Param 1",0,100,50],
+        ["pct","m_p2","Param 2",0,100,50],
+        ["pct","m_p3","Param 3",0,100,50],
+        ["pct","m_p4","Param 4",0,100,50],
 
         ["pct","m_amt_p1","Amount",0,100,100],
         ["pct","m_offset_p1","Offset",0,100,0],
