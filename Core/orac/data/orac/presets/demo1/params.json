@@ -2,6 +2,7 @@
 	"a1":	{
 		"moduleType":	"synth/brdsmono",
 		"params":	{
+			"pb_range":	2,
 			"f_attack":	0,
 			"f_release":	50,
 			"f_sustain":	50,
@@ -94,6 +95,9 @@
 	"b2":	{
 		"moduleType":	"synth/edrum",
 		"params":	{
+			"s-gain":	100,
+			"h-gain":	100,
+			"k-gain":	100
 		},
 		"midi-mapping":	{
 			"cc":	{
@@ -237,12 +241,14 @@
 	"s1":	{
 		"moduleType":	"router/parallel",
 		"params":	{
+			"r-midi-ctrlgate":	0,
+			"r-midi-npreset-cc":	101,
+			"r-midi-ppreset-cc":	100,
+			"r-midi-notegate":	0,
+			"r-midi-pgmgate":	1,
 			"r-midi-expcc":	4,
 			"r-midi-fscc":	64,
 			"r-midi-auxcc":	69,
-			"r-midi-ctrlgate":	1,
-			"r-midi-pgmgate":	1,
-			"r-midi-notegate":	1,
 			"r-main-dest":	0,
 			"r-chout-r-pan-3":	1,
 			"r-chout-l-pan-3":	0,
@@ -252,12 +258,14 @@
 			"r-chout-l-pan-2":	0,
 			"r-chin-r-pan-2":	1,
 			"r-chin-l-pan-2":	0,
+			"r-midi-module-cc":	0,
 			"r-chout-gain-2":	100,
 			"r-chin-r-gain-2":	0,
 			"r-chin-l-gain-2":	0,
 			"r-chin-midich-2":	2,
 			"r-chin-midigate-2":	1,
 			"r-chout-l-pan-1":	0,
+			"r-midi-save-preset-cc":	102,
 			"r-chout-gain-1":	100,
 			"r-chout-midich-1":	0,
 			"r-gain-a3":	100,

@@ -72,14 +72,22 @@
         ["pan", "r-chout-l-pan-1","Out L Pan",0,1,0],
         ["pan", "r-chout-r-pan-1","Out R Pan",0,1,1],
 
-        ["int",  "r-main-dest","Dest",0,10,0],
-        ["int",  "r-midi-ch","Main Midi Ch.",0,16,16],
-        ["bool", "r-midi-notegate","Note",1],
-        ["bool", "r-midi-ctrlgate","Ctrl",1],
+        ["int",  "r-main-dest", "A. Dest",0,10,0],
+        ["int",  "r-midi-ch",   "A. Midi Ch",0,16,16],
+        ["int",  "r-midi-module-cc", "A. Mod CC",0,120,0],
+
+        ["int", "r-midi-auxcc","Aux CC",0,120,69],
+        ["int", "r-midi-fscc","FS Ped CC",0,120,64],
+        ["int", "r-midi-expcc","Exp Ped CC",0,120,4],
+
         ["bool", "r-midi-pgmgate","Prog",1],
-        ["int", "r-midi-auxcc","Aux CC",0,127,69],
-        ["int", "r-midi-fscc","FS Ped CC",0,127,64],
-        ["int", "r-midi-expcc","Exp Ped CC",0,127,4]
+        ["int",  "r-midi-ppreset-cc","Preset-",0,120,100],
+        ["int",  "r-midi-npreset-cc","Preset+",0,120,101],
+        ["int",  "r-midi-save-preset-cc","Save Preset",0,120,102],
+ 
+        ["bool", "r-midi-notegate","A. Note",0],
+        ["bool", "r-midi-ctrlgate","A. Ctrl",0]
+
 
     ],
     "pages" : [ 
@@ -105,8 +113,10 @@
         ["pg_ch1gain", "Chain 1 Gain",["r-chin-l-gain-1", "r-chin-r-gain-1", "r-chout-gain-1"]],
         ["pg_ch1pan", "Chain 1 Pan" ,["r-chin-l-pan-1", "r-chin-r-pan-1", "r-chout-l-pan-1", "r-chout-r-pan-1"]],
 
-        ["pg_ctrl1", "Main Ctrl 1",["r-main-dest", "r-midi-ch", "r-midi-notegate", "r-midi-ctrlgate"]],
-        ["pg_ctrl2", "Main Ctrl 2",["r-midi-pgmgate", "r-midi-auxcc","r-midi-fscc", "r-midi-expcc"]]
+        ["pg_ctrl1", "Active",    ["r-main-dest", "r-midi-ch", "r-midi-module-cc"]], 
+        ["pg_ctrl2", "A. Ctrl 1", ["r-midi-auxcc", "r-midi-fscc", "r-midi-expcc"]],
+        ["pg_ctrl3", "A. Ctrl 2", ["r-midi-notegate", "r-midi-ctrlgate"]],
+        ["pg_ctrl4", "A. Presets",["r-midi-pgmgate", "r-midi-ppreset-cc", "r-midi-npreset-cc", "r-midi-save-preset-cc"]]
     ]
 }
 
