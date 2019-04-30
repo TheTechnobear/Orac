@@ -2,7 +2,7 @@
     "display" : "Tremelo",
     "parameters" :  [ 
         ["pct","trem_dw","Dry/Wet",0,100,50],
-        ["freq","trem_freq","Freq",0,128,1],
+        ["freq","trem_freq","Freq",0,16,1],
         ["pct","thru_gain","Audio Thru Gain",0,100,0]
     ],
     "pages" : [ 

@@ -96,6 +96,9 @@
 #X connect 10 0 6 0;
 #X restore 443 81 pd route;
 #X obj 443 251 route 1 2 3 4;
+#X obj 611 122 unpack 0 0 0;
+#X obj 611 143 sel 123;
+#X msg 611 164 stop;
 #X connect 0 0 12 0;
 #X connect 1 0 14 1;
 #X connect 1 1 0 1;
@@ -121,6 +124,7 @@
 #X connect 17 1 10 0;
 #X connect 18 0 20 0;
 #X connect 19 0 21 0;
+#X connect 19 0 23 0;
 #X connect 20 0 4 0;
 #X connect 20 1 6 0;
 #X connect 21 0 14 2;
@@ -132,6 +136,9 @@
 #X connect 22 1 15 2;
 #X connect 22 2 16 2;
 #X connect 22 3 17 2;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 4 0;
 #X restore 93 330 pd synth;
 #X obj 749 766 s \$0-GUI;
 #N canvas 19 50 1164 887 czz_presets 0;

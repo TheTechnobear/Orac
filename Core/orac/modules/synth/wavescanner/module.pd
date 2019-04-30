@@ -1,4 +1,4 @@
-#N canvas 872 332 1976 1011 10;
+#N canvas 74 318 1976 1011 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 631 s notesOut-\$1;
 #X obj 25 186 inlet~ inL-\$1;
@@ -20,7 +20,7 @@
 through it to create a 'waveform'. position sets the point and width
 sets how wide the loop is. The wider the loop the more 'partials' and
 noise. A lowpass filter is added at the end.;
-#N canvas 1103 296 732 486 synth 0;
+#N canvas 558 296 1359 486 synth 1;
 #X obj 9 127 poly 8 1, f 10;
 #X obj 9 179 pack 0 0 0;
 #X obj 9 231 route 1 2 3 4 5 6 7 8, f 60;
@@ -90,6 +90,9 @@ noise. A lowpass filter is added at the end.;
 #X connect 7 0 1 0;
 #X connect 10 0 6 0;
 #X restore 148 48 pd route;
+#X obj 430 42 unpack 0 0 0;
+#X obj 430 63 sel 123;
+#X msg 430 84 stop;
 #X connect 0 0 1 0;
 #X connect 0 1 4 0;
 #X connect 0 2 1 2;
@@ -105,6 +108,7 @@ noise. A lowpass filter is added at the end.;
 #X connect 3 0 15 0;
 #X connect 4 0 1 1;
 #X connect 13 0 16 0;
+#X connect 13 0 17 0;
 #X connect 14 0 10 1;
 #X connect 14 1 11 1;
 #X connect 14 2 6 1;
@@ -124,6 +128,9 @@ noise. A lowpass filter is added at the end.;
 #X connect 16 0 6 1;
 #X connect 16 0 5 1;
 #X connect 16 1 14 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 0 0;
 #X restore 359 391 pd synth;
 #N canvas 364 351 1761 596 array 0;
 #X obj 784 342 soundfiler;

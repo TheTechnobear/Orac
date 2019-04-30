@@ -105,12 +105,16 @@
 #X restore 552 145 pd route;
 #X obj 76 58 unpack 0 0 0;
 #X obj 83 301 pack 0 0 0;
+#X obj 820 125 unpack 0 0 0;
+#X obj 820 146 sel 123;
+#X msg 820 167 stop;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 4 0 27 0;
 #X connect 5 0 26 0;
 #X connect 6 0 4 0;
 #X connect 7 0 25 0;
+#X connect 7 0 28 0;
 #X connect 8 0 10 0;
 #X connect 8 1 12 0;
 #X connect 8 2 18 0;
@@ -158,6 +162,9 @@
 #X connect 26 1 27 1;
 #X connect 26 2 27 2;
 #X connect 27 0 24 0;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 9 0;
 #X restore 334 334 pd synth;
 #X text 401 334 the synth;
 #X text 766 124 ***samples halfed for multisynth module(12);

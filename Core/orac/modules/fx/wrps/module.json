@@ -1,7 +1,7 @@
 {
     "display" : "Wrps",
     "parameters" :  [ 
-        ["pct","w_shape","Shape",0,100,0],
+        ["int","w_shape","Shape",0,3,0],
         ["pct","w_algo","Algo",0,100,50],
         ["pct","w_timbre","Timbre",0,100,20],
 

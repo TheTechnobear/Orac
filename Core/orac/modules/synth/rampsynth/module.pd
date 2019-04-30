@@ -8,7 +8,7 @@
 #X obj 547 184 r auxIn-\$1;
 #X obj 546 207 r expIn-\$1;
 #X obj 546 232 r fsIn-\$1;
-#N canvas 655 346 1905 999 synth 0;
+#N canvas 521 293 1905 999 synth 1;
 #X obj 66 274 pack 0 0 0, f 11;
 #X obj 65 375 route 1 2 3 4, f 55;
 #X obj 66 247 poly 4 1, f 11;
@@ -76,6 +76,9 @@
 #X restore 209 106 pd route;
 #X obj 148 21 inlet ctrl;
 #X obj 297 279 route 1 2 3 4, f 55;
+#X obj 541 117 unpack 0 0 0;
+#X obj 541 138 sel 123;
+#X msg 541 159 stop;
 #X connect 0 0 1 0;
 #X connect 1 0 5 0;
 #X connect 1 1 7 0;
@@ -99,10 +102,14 @@
 #X connect 12 0 7 1;
 #X connect 12 1 14 0;
 #X connect 13 0 12 0;
+#X connect 13 0 15 0;
 #X connect 14 0 5 1;
 #X connect 14 1 7 1;
 #X connect 14 2 8 1;
 #X connect 14 3 9 1;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 2 0;
 #X restore 71 322 pd synth;
 #X text 415 13 C&G ramp synth;
 #X obj 419 186 r ctrlIn-\$1;
