@@ -2,10 +2,11 @@
     "display" : "Clock",
     "parameters" :  [ 
         ["int","c_bpm","BPM",10,480,120],
+        ["bool","c_midiin","Midi In",1],
         ["bool","c_midiout","Midi Out",0]
     ],
     "pages" : [ 
-        ["pg_main","Main",["c_bpm","c_midiout"]]
+        ["pg_main","Main",["c_bpm","c_midiin","c_midiout"]]
     ]
 }
 
