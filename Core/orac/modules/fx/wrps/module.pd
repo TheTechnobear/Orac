@@ -13,8 +13,8 @@
 #X msg 712 118 shape \$1;
 #X msg 828 118 algo \$1;
 #X msg 921 118 timbre \$1;
-#X msg 548 289 note \$1;
-#X obj 548 248 + 1;
+#X msg 393 308 note \$1;
+#X obj 393 267 + 1;
 #X obj 828 76 / 100;
 #X obj 921 76 / 100;
 #X obj 634 76 > 0.5;
@@ -26,11 +26,11 @@
 #X obj 713 34 r w_shape-\$1;
 #X obj 828 36 r w_algo-\$1;
 #X obj 921 36 r w_timbre-\$1;
-#X obj 476 218 > 0;
-#X obj 476 304 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 340 264 > 0;
+#X obj 340 350 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 476 246 +;
-#X obj 476 275 > 0;
+#X obj 340 292 +;
+#X obj 340 321 > 0;
 #X obj 474 453 adsr 1 10 100 50 500;
 #X obj 474 506 *~;
 #X obj 520 417 r e_attack-\$1;
@@ -44,8 +44,11 @@
 #X obj 1167 36 r w_drive2-\$1;
 #X obj 634 36 r w_gate-\$1;
 #X obj 434 127 r ctrlIn-\$1;
-#X obj 434 153 s ctrlOut-\$1;
-#X obj 404 178 poly 1 1;
+#X obj 417 609 s ctrlOut-\$1;
+#X obj 295 207 poly 1 1;
+#X obj 432 156 unpack 0 0 0;
+#X obj 432 177 sel 123;
+#X msg 432 198 stop;
 #X connect 0 0 45 0;
 #X connect 2 0 9 1;
 #X connect 3 0 9 0;
@@ -86,5 +89,9 @@
 #X connect 40 0 21 0;
 #X connect 41 0 22 0;
 #X connect 42 0 18 0;
+#X connect 43 0 46 0;
 #X connect 45 1 15 0;
 #X connect 45 2 27 0;
+#X connect 46 0 47 0;
+#X connect 47 0 48 0;
+#X connect 48 0 45 0;

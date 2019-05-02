@@ -1,4 +1,4 @@
-#N canvas 428 440 2132 820 10;
+#N canvas 997 680 2132 820 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 491 s notesOut-\$1;
 #X obj 25 186 inlet~ inL-\$1;
@@ -40,7 +40,7 @@
 #X connect 9 0 6 0;
 #X connect 9 0 5 0;
 #X restore 568 113 pd arrays;
-#N canvas 694 164 538 466 synth 0;
+#N canvas 947 410 538 466 synth 1;
 #X obj 349 123 r tunedel-\$1-drums-local;
 #X obj 36 301 outlet~;
 #X obj 37 27 inlet;
@@ -49,13 +49,25 @@
 #X obj 225 57 inlet ctrl;
 #X obj 225 78 list split 2;
 #X obj 37 48 list split 2;
+#X obj 44 149 pack 0 0;
+#X obj 33 81 poly 1 1;
+#X obj 284 173 unpack 0 0 0;
+#X obj 284 194 sel 123;
+#X msg 284 215 stop;
 #X connect 0 0 3 1;
 #X connect 2 0 7 0;
 #X connect 3 0 4 0;
 #X connect 4 0 1 0;
 #X connect 5 0 6 0;
+#X connect 5 0 10 0;
 #X connect 6 0 3 2;
-#X connect 7 0 3 0;
+#X connect 7 0 9 0;
+#X connect 8 0 3 0;
+#X connect 9 1 8 0;
+#X connect 9 2 8 1;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
 #X restore 65 311 pd synth;
 #X text 497 19 C&G Plays drum samples into a tuned delay line for pseudo
 plucked string effect;
