@@ -1,4 +1,4 @@
-#N canvas 374 460 1506 707 10;
+#N canvas 531 545 1506 707 10;
 #X obj 304 186 r notesIn-\$1;
 #X obj 304 491 s notesOut-\$1;
 #X obj 25 186 inlet~ inL-\$1;
@@ -135,7 +135,7 @@
 #X obj 632 151 r pb_swing-\$1;
 #X obj 781 50 r loadbang-\$1;
 #X obj 784 101 s pb-\$1-enable;
-#X obj 784 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 784 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 345 323 r page-ready-\$1;
 #X obj 906 585 counter-up 4 \$1;
@@ -286,8 +286,9 @@
 #X obj 304 207 list split 2;
 #X obj 987 53 t b a;
 #X obj 998 128 list;
-#X obj 999 289 t f f f;
 #X obj 987 76 del 500;
+#X obj 1119 336 s oscOutGate;
+#X obj 999 289 t f f f f;
 #X connect 0 0 35 0;
 #X connect 11 0 14 0;
 #X connect 14 0 1 0;
@@ -296,7 +297,7 @@
 #X connect 16 0 15 0;
 #X connect 16 1 33 0;
 #X connect 17 0 36 0;
-#X connect 18 0 38 0;
+#X connect 18 0 40 0;
 #X connect 19 0 18 1;
 #X connect 20 0 18 1;
 #X connect 21 0 18 0;
@@ -314,10 +315,11 @@
 #X connect 33 0 19 0;
 #X connect 33 1 20 0;
 #X connect 35 0 10 0;
-#X connect 36 0 39 0;
+#X connect 36 0 38 0;
 #X connect 36 1 37 1;
 #X connect 37 0 16 0;
-#X connect 38 0 31 0;
-#X connect 38 1 34 2;
-#X connect 38 2 32 1;
-#X connect 39 0 37 0;
+#X connect 38 0 37 0;
+#X connect 40 0 31 0;
+#X connect 40 1 34 2;
+#X connect 40 2 32 1;
+#X connect 40 3 39 0;

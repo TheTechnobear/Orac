@@ -104,7 +104,7 @@ loud. Also sends values to the Organelle's OLED VU meter.;
 #X connect 37 0 15 0;
 #X connect 38 0 15 1;
 #X restore 76 202 pd audioIO;
-#N canvas 85 315 1265 661 messageIO 0;
+#N canvas 85 315 1265 661 messageIO 1;
 #X msg 568 179 port 4000;
 #X obj 244 251 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -113,7 +113,7 @@ loud. Also sends values to the Organelle's OLED VU meter.;
 #X obj 568 231 unpackOSC;
 #X obj 244 179 packOSC;
 #X obj 244 215 udpsend;
-#X obj 244 151 r oscOut;
+#X obj 244 96 r oscOut;
 #X obj 450 94 t b b;
 #X obj 450 66 loadbang;
 #X obj 568 255 s oscIn;
@@ -366,16 +366,20 @@ somewhere else (knobs.txt preset file or MIDI CC);
 #X text 293 8 Receives and sends signals to the Organelle hardware.
 A program running in the background interacts with the hardware and
 exchanges messages with this patch using OSC over UDP.;
+#X obj 244 132 spigot 0;
+#X obj 336 86 r oscOutGate;
 #X connect 0 0 3 0;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
 #X connect 4 0 10 0;
 #X connect 5 0 6 0;
 #X connect 6 0 1 0;
-#X connect 7 0 5 0;
+#X connect 7 0 21 0;
 #X connect 8 0 2 0;
 #X connect 8 1 0 0;
 #X connect 9 0 8 0;
+#X connect 21 0 5 0;
+#X connect 22 0 21 1;
 #X restore 76 229 pd messageIO;
 #X text 237 19 Mother Patch. This patch is the bridge between the hardware
 and Pd. Without it open the Organelle does not work. It should not
