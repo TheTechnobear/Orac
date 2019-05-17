@@ -287,7 +287,6 @@
 #X obj 987 53 t b a;
 #X obj 998 128 list;
 #X obj 987 76 del 500;
-#X obj 1119 336 s oscOutGate;
 #X obj 999 289 t f f f f;
 #X connect 0 0 35 0;
 #X connect 11 0 14 0;
@@ -297,7 +296,7 @@
 #X connect 16 0 15 0;
 #X connect 16 1 33 0;
 #X connect 17 0 36 0;
-#X connect 18 0 40 0;
+#X connect 18 0 39 0;
 #X connect 19 0 18 1;
 #X connect 20 0 18 1;
 #X connect 21 0 18 0;
@@ -319,7 +318,6 @@
 #X connect 36 1 37 1;
 #X connect 37 0 16 0;
 #X connect 38 0 37 0;
-#X connect 40 0 31 0;
-#X connect 40 1 34 2;
-#X connect 40 2 32 1;
-#X connect 40 3 39 0;
+#X connect 39 0 31 0;
+#X connect 39 1 34 2;
+#X connect 39 2 32 1;
