@@ -3,6 +3,7 @@ pre_install() {
 }
 
 post_install() {
+    echo post install
     USERDIR=/home/alarm
     cp /usr/local/orac/orac.json $USERDIR/pd
     cp -R /usr/local/orac/ $USERDIR/pd
@@ -25,6 +26,20 @@ pre_upgrade() {
 
 post_upgrade() {
     echo post upgrade
+    USERDIR=/home/alarm
+    cp /usr/local/orac/orac.json $USERDIR/pd
+    cp -R /usr/local/orac/ $USERDIR/pd
+
+    cp /usr/local/orac/orac.json /
+    cp /usr/local/orac/pdsettings /.pdsettings
+
+    chown -R alarm $USERDIR/data
+    chown -R alarm $USERDIR/media
+    su alarm -c "mkdir -p $USERDIR/media/orac/usermodules"
+    su alarm -c "cp -nr /usr/local/orac/media $USERDIR"
+    su alarm -c "cp -r /usr/local/orac/data $USERDIR"
+    chmod -R a+rw $USERDIR/data
+    chmod -R a+rw $USERDIR/media
 }
 
 pre_remove() {
