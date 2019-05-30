@@ -1,4 +1,5 @@
 {
 	"dataDir":	"/home/patch/data/orac",
-	"mediaDir":	"/home/patch/media"
+	"mediaDir":	"/home/patch/media",
+    "userModuleDir": "/home/patch/media/orac/usermodules"
 }
