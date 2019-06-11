@@ -1,19 +1,26 @@
-## Technobear's Orac virtual modular 
+<img src='https://raw.githubusercontent.com/TheTechnobear/Orac/master/artwork/rendered/orac.jpg' width="600"/>
+
+
+
+## Orac virtual modular by TheTechnobear
 
 
 Orac is a virtual modular based on Pure Data , utilising externals (KontrolRack/KontrolModule) from my MEC projects.
 
 Its is designed to be easy to use on lightweight computing platforms, and provides features such as Presets and Midi Learn.
 
-As well as being flexible for users, its is designed to be is for 'Module Patchers' to create new modules, and thus extend the ecosystem.
+As well as being flexible for users, its designed to be easy for 'Module Patchers' to create new modules, and thus extend the ecosystem.
 
 
 ### Videos
 A couple of views have been made, which help show Orac , and how to use it.
 
 https://youtu.be/-m8p9E-WGWE
+
 https://youtu.be/raTvethmcqc
+
 https://youtu.be/ilHzy4mNu3w
+
 https://youtu.be/Z1fYYE622Iw
 
 
@@ -45,8 +52,15 @@ Generally Id recommend contacting me first, so we can co-ordinate efforts, but I
 
 
 ### Credits:
-Id like to extend  thanks to open source developers who make these kinds of projects possible, 
-and special thanks to Critter and Guitari for open sourcing their wonderful patches which I have 'modularised', similarly Id extend the same thanks to Mutable Instruments whos code I have used to create PD externals for use in Modules in Orac.
+I'd like to extend thank all open source developers who make these kinds of projects possible.
+
+and a special thank you to:
+- Critter and Guitari for open sourcing their wonderful patches which I have 'modularised', 
+- Mutable Instruments who's code I have used to create some of PD externals for use in Modules in Orac.
+- Ben Norland for contributing artwork for logos, splash screens.
+
+thank you also to all Orac users who have provide valuable feedback and suggestions, which has helped me push Orac forward.
+
 
 ### Project Structure
 Core - files which do not differ from platform to platform
