@@ -4,11 +4,13 @@
         ["int","m_volt_range","Volt Range",0,10,10],
         ["int","m_offset_note","Note Offset",0,127,60],
         ["int","m_in_ch_note","Note Ch.",0,16,0],
-        ["int","m_in_ch_vel","Vel Ch.",0,16,0]
+        ["int","m_in_ch_vel","Vel Ch.",0,16,0],
+        ["float","m_fine_scale","Fine Scale",-200,200,0],
+        ["float","m_fine_offset","Fine Offset",-200,200,0]
     ],
     "pages" : [ 
-        ["pg_main","Main",
-		["m_volt_range","m_offset_note","m_in_ch_note", "m_in_ch_vel" ]]
+        ["pg_main","Main", ["m_volt_range","m_offset_note","m_in_ch_note", "m_in_ch_vel" ]],
+	["pg_calib","Calibrate", ["m_fine_scale","m_fine_offset"]]
     ]
 }
 
