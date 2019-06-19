@@ -5,11 +5,12 @@
         ["pct","r_tone","Tone",0,100,50],
         ["pct","r_mod","Wave",0,100,100],
         ["time","r_decay","Decay Time",5,2000,1000],
-        ["pitch","pb_range","Pb Range",0,48,2]
+        ["pitch","pb_range","Pb Range",0,48,2],
+        ["pct","y_depth","Y Depth",0,100,25]
     ],
     "pages" : [ 
         ["pg_main","Main",["r_trans","r_tone","r_mod","r_decay"]],
-        ["pg_other","Other",["pb_range"]]
+        ["pg_other","Other",["pb_range","y_depth"]]
     ]
 }
 

@@ -1,4 +1,4 @@
-#N canvas 1079 288 1443 1038 10;
+#N canvas 992 218 1443 1038 10;
 #X obj 187 60 inlet;
 #X obj 193 567 *~;
 #X obj 225 765 outlet~;
@@ -33,15 +33,18 @@
 2 * 48);
 #X obj 186 132 + 0;
 #X obj 432 520 r~ as-\$1-cutoff-local;
-#X obj 541 256 sig~;
-#X obj 541 281 lop~ 5;
+#X obj 566 332 sig~;
+#X obj 566 357 lop~ 5;
 #X obj 272 582 +~;
 #X obj 647 95 r pb_range-\$1;
 #X obj 647 116 * 2;
 #X obj 433 185 * 2;
-#X obj 527 197 * 1000;
+#X obj 552 273 * 1000;
 #X obj 475 119 route 0 2 123;
 #X obj 467 257 t b;
+#X obj 591 187 r y_depth-\$1;
+#X obj 591 208 / 100;
+#X obj 538 233 * 0.25;
 #X connect 0 0 26 0;
 #X connect 1 0 17 0;
 #X connect 3 0 9 0;
@@ -85,6 +88,9 @@
 #X connect 38 0 29 0;
 #X connect 39 0 33 0;
 #X connect 40 0 28 0;
-#X connect 40 1 39 0;
+#X connect 40 1 44 0;
 #X connect 40 2 41 0;
 #X connect 41 0 9 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 1;
+#X connect 44 0 39 0;

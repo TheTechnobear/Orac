@@ -73,6 +73,9 @@
 #X obj 247 161 max 1;
 #X obj 764 156 route 0 2 123;
 #X obj 916 236 t b;
+#X obj 1086 121 r y_depth-\$1;
+#X obj 1086 142 / 100;
+#X obj 790 213 * 0.25;
 #X connect 0 0 34 0;
 #X connect 1 0 53 0;
 #X connect 2 0 10 0;
@@ -152,6 +155,9 @@
 #X connect 70 0 65 0;
 #X connect 71 0 40 0;
 #X connect 72 0 64 0;
-#X connect 72 1 67 0;
+#X connect 72 1 76 0;
 #X connect 72 2 73 0;
 #X connect 73 0 18 0;
+#X connect 74 0 75 0;
+#X connect 75 0 76 1;
+#X connect 76 0 67 0;

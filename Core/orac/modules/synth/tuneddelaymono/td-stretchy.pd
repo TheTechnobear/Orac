@@ -48,6 +48,9 @@
 #X obj 685 75 r pb_range-\$1;
 #X obj 685 96 * 2;
 #X obj 483 140 * 2;
+#X obj 720 187 r y_depth-\$1;
+#X obj 720 208 / 100;
+#X obj 415 119 * 0.25;
 #X connect 0 0 14 0;
 #X connect 1 0 20 0;
 #X connect 2 0 1 0;
@@ -96,7 +99,7 @@
 #X connect 39 0 41 0;
 #X connect 40 0 36 0;
 #X connect 41 0 42 0;
-#X connect 41 1 45 0;
+#X connect 41 1 51 0;
 #X connect 42 0 48 0;
 #X connect 43 0 40 0;
 #X connect 43 1 40 1;
@@ -107,3 +110,6 @@
 #X connect 46 0 47 0;
 #X connect 47 0 48 1;
 #X connect 48 0 43 0;
+#X connect 49 0 50 0;
+#X connect 50 0 51 1;
+#X connect 51 0 45 0;

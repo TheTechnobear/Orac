@@ -1,4 +1,4 @@
-#N canvas 0 44 1370 729 10;
+#N canvas 339 402 1571 729 10;
 #X obj 504 62 r notesIn-\$1;
 #X obj 334 495 s notesOut-\$1;
 #X obj 18 130 inlet~ inL;
@@ -101,6 +101,9 @@
 #X obj 504 103 poly 1 1;
 #X obj 372 137 t b;
 #X msg 372 158 stop;
+#X obj 231 68 / 100;
+#X obj 320 155 * 0.25;
+#X obj 203 47 r y_depth-\$1;
 #X connect 0 0 98 0;
 #X connect 2 0 12 0;
 #X connect 3 0 12 1;
@@ -191,7 +194,7 @@
 #X connect 94 0 95 1;
 #X connect 95 0 80 0;
 #X connect 96 0 79 0;
-#X connect 96 1 85 0;
+#X connect 96 1 102 0;
 #X connect 96 2 97 0;
 #X connect 96 2 99 0;
 #X connect 97 0 27 0;
@@ -200,3 +203,6 @@
 #X connect 98 2 21 1;
 #X connect 99 0 100 0;
 #X connect 100 0 98 0;
+#X connect 101 0 102 1;
+#X connect 102 0 85 0;
+#X connect 103 0 101 0;

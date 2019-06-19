@@ -20,14 +20,15 @@
 
         ["bool","rngs_easter","Easter Egg",0],
         ["bool","rngs_bypass","Bypass",0],
-        ["pitch","pb_range","Pb Range",0,48,2]
+        ["pitch","pb_range","Pb Range",0,48,2],
+        ["pct","y_depth","Y Depth",0,100,25]
     ],
     "pages" : [ 
         ["pg_rngs_1","Rings", ["rngs_tune","rngs_finetune", "rngs_struct"]],
         ["pg_rngs_2","Timbre",["rngs_bright","rngs_damp","rngs_pos"]],
         ["pg_rngs_3","Model", ["rngs_model","rngs_chord","rngs_poly"]],
         ["pg_rngs_4","Internal",["rngs_fm", "rngs_i_strum","rngs_i_exciter", "rngs_i_note"]],
-        ["pg_rngs_5","Extra", ["rngs_bypass","rngs_easter","pb_range"]]
+        ["pg_rngs_5","Extra", ["rngs_bypass","rngs_easter","pb_range","y_depth"]]
     ]
 }
 

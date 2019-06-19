@@ -59,7 +59,7 @@
 #X msg 805 160 0;
 #X obj 318 190 / 100;
 #X obj 318 223 * 0.25;
-#X obj 318 169 r y_range-\$1;
+#X obj 318 169 r y_depth-\$1;
 #X connect 0 0 8 0;
 #X connect 1 0 0 0;
 #X connect 2 1 4 0;
