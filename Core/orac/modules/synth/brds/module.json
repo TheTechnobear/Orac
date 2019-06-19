@@ -16,14 +16,15 @@
         ["time","f_release","Release",0,2000,50],
         ["time","f_attack","Attack",0,2000,0],
         ["time","f_decay","Decay",0,2000,500],
-        ["pitch","pb_range","Pb Range",0,48,2]
+        ["pitch","pb_range","Pb Range",0,48,2],
+        ["pct","y_range","Y Range",0,100,25]
     ],
     "pages" : [ 
         ["pg_osc","Oscillator",["o_shape","o_colour","o_timbre","o_transpose"]],
         ["pg_vca","Vca", ["e_attack","e_decay","e_sustain","e_release"]],
         ["pg_vcf","Vcf", ["f_cutoff","f_reson","f_env_amt"]],
         ["pg_fenv","F.Env", ["f_attack","f_decay","f_sustain","f_release"]],
-        ["pg_other","Other",["pb_range"]]
+        ["pg_other","Other",["pb_range","y_range"]]
     ]
 }
 

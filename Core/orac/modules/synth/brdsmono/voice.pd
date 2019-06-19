@@ -1,4 +1,4 @@
-#N canvas 697 384 1481 712 10;
+#N canvas 486 447 1481 712 10;
 #X obj 443 528 bob~;
 #X obj 441 432 *~;
 #X obj 542 122 unpack 0 0;
@@ -57,6 +57,9 @@
 #X obj 713 172 * 2;
 #X obj 714 108 route 0 2 123;
 #X msg 805 160 0;
+#X obj 318 190 / 100;
+#X obj 318 223 * 0.25;
+#X obj 318 169 r y_range-\$1;
 #X connect 0 0 8 0;
 #X connect 1 0 0 0;
 #X connect 2 1 4 0;
@@ -119,6 +122,9 @@
 #X connect 54 0 55 1;
 #X connect 55 0 48 0;
 #X connect 56 0 47 0;
-#X connect 56 1 51 0;
+#X connect 56 1 59 0;
 #X connect 56 2 57 0;
 #X connect 57 0 4 0;
+#X connect 58 0 59 1;
+#X connect 59 0 51 0;
+#X connect 60 0 58 0;
