@@ -7,6 +7,17 @@ export USER_DIR=${USER_DIR:="/usbdrive"}
 
 # should be run from motherhost package installer
 
+
+grep -q 'ID=archarm' /etc/os-release;
+if [ ! $? -eq 0 ]
+then
+	# organelle-m add udev rules, not needed for o-1 since its root!
+	sudo cp $INSTALL_DIR/*.rules /etc/udev/rules.d
+	sudo udevadm control --reload-rules
+fi
+
+
+
 oscsend localhost 4001 /oled/aux/line/2 s "install MEC "
 oscsend localhost 4001 /oled/aux/line/2 3 "into Extras"
 INSTALL_DIR=$USER_DIR/System/MEC
