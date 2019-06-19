@@ -1,0 +1,13 @@
+{
+    "display" : "cvin Audio",
+    "parameters" :  [ 
+        ["pct","m_gain_l","L Gain",0,200,100],
+        ["pct","m_gain_r","R Gain",0,200,100],
+        ["int","m_ch_l","Ch. L",0,16,0],
+        ["int","m_ch_r","Ch. R",0,16,0]
+    ],
+    "pages" : [ 
+	["pg_main","Main", ["m_gain_l", "m_gain_r", "m_ch_l", "m_ch_r" ]]
+    ]
+}
+

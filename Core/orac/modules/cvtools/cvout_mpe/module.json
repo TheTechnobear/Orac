@@ -1,0 +1,17 @@
+{
+    "display" : "cvout MPE",
+    "parameters" :  [ 
+        ["int","m_volt_range","Volt Range",0,10,10],
+        ["pitch","m_pb_range","Pb Range",0,96,48],
+        ["int","m_offset_note","Note Offset",0,127,60],
+        ["int","m_ch_note","Note",0,16,0],
+        ["int","m_ch_gate","Gate",0,16,0],
+        ["int","m_ch_timbre","Timbre",0,16,0],
+        ["int","m_ch_pressure","Pressure",0,16,0]
+    ],
+    "pages" : [ 
+	["pg_main","Channels", ["m_ch_note", "m_ch_gate", "m_ch_timbre","m_ch_pressure" ]],
+        ["pg_scale","Scale", ["m_volt_range","m_pb_range","m_offset_note"]]
+    ]
+}
+

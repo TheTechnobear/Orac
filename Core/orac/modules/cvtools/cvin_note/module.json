@@ -1,0 +1,14 @@
+{
+    "display" : "cvin Note",
+    "parameters" :  [ 
+        ["int","m_volt_range","Volt Range",0,10,10],
+        ["int","m_offset_note","Note Offset",0,127,60],
+        ["int","m_in_ch_note","Note Ch.",0,16,0],
+        ["int","m_in_ch_vel","Vel Ch.",0,16,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",
+		["m_volt_range","m_offset_note","m_in_ch_note", "m_in_ch_vel" ]]
+    ]
+}
+

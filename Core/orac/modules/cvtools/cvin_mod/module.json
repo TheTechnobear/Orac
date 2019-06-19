@@ -1,0 +1,35 @@
+{
+    "display" : "cvin Mod",
+    "parameters" :  [ 
+        ["pct","m_amt_p1","Amount",0,100,0],
+        ["pct","m_offset_p1","Offset",0,100,0],
+        ["int","m_bus_p1","Mod Bus",0,20,10],
+
+        ["pct","m_amt_p2","Amount",0,100,0],
+        ["pct","m_offset_p2","Offset",0,100,0],
+        ["int","m_bus_p2","Mod Bus",0,20,11],
+
+        ["pct","m_amt_p3","Amount",0,100,0],
+        ["pct","m_offset_p3","Offset",0,100,0],
+        ["int","m_bus_p3","Mod Bus",0,20,12],
+
+        ["pct","m_amt_p4","Amount",0,100,0],
+        ["pct","m_offset_p4","Offset",0,100,0],
+        ["int","m_bus_p4","Mod Bus",0,20,13],
+
+        ["int","m_in_ch_p1","CV1 Channel",0,12,0],
+        ["int","m_in_ch_p2","CV2 Channel",0,12,0],
+        ["int","m_in_ch_p3","CV3 Channel",0,12,0],
+        ["int","m_in_ch_p4","CV4 Channel",0,12,0]
+
+    ],
+    "pages" : [ 
+        ["pg_p1","CV1",  ["m_amt_p1", "m_offset_p1", "m_bus_p1"]],
+        ["pg_p2","CV2",  ["m_amt_p2", "m_offset_p2", "m_bus_p2"]],
+        ["pg_p3","CV3",  ["m_amt_p3", "m_offset_p3", "m_bus_p3"]],
+        ["pg_p4","CV4",	 ["m_amt_p4", "m_offset_p4", "m_bus_p4"]],
+        ["pg_p5","Channel",
+		["m_in_ch_p1", "m_in_ch_p2", "m_in_ch_p3", "m_in_ch_p4"]]
+    ]
+}
+

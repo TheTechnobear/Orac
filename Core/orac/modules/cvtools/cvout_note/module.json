@@ -1,0 +1,15 @@
+{
+    "display" : "cvout Note",
+    "parameters" :  [ 
+        ["int","m_volt_range","Volt Range",0,10,10],
+        ["int","m_offset_note","Note Offset",0,127,60],
+        ["int","m_ch_note","Note",0,16,0],
+        ["int","m_ch_gate","Gate",0,16,0],
+        ["int","m_ch_vel","Vel",0,16,0]
+    ],
+    "pages" : [ 
+	["pg_main","Channels", ["m_ch_note", "m_ch_gate", "m_ch_vel" ]],
+        ["pg_scale","Scale", ["m_volt_range","m_offset_note"]]
+    ]
+}
+

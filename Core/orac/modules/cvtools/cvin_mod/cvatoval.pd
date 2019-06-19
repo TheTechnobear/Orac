@@ -1,0 +1,17 @@
+#N canvas 1619 486 483 404 10;
+#X msg 59 121 set \$1;
+#X obj 59 225 adc~;
+#X obj 59 256 snapshot~;
+#X obj 59 72 t f f;
+#X obj 112 153 metro 100;
+#X obj 112 121 > 0;
+#X obj 59 51 r m_in_ch_\$1-\$2;
+#X obj 59 277 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 3 0 0 0;
+#X connect 3 1 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;

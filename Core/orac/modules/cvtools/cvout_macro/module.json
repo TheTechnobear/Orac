@@ -1,0 +1,33 @@
+{
+    "display" : "cvout Macro",
+    "parameters" :  [ 
+        ["pct","m_p1","Param 1",0,100,50],
+        ["pct","m_p2","Param 2",0,100,50],
+        ["pct","m_p3","Param 3",0,100,50],
+        ["pct","m_p4","Param 4",0,100,50],
+
+        ["pct","m_amt_p1","Amount",-100,100,100],
+        ["float","m_offset_p1","Offset",-1,1,0],
+        ["int","m_ch_p1","CV Ch.",0,16,0],
+
+        ["pct","m_amt_p2","Amount",-100,100,100],
+        ["float","m_offset_p2","Offset",-1,1,0],
+        ["int","m_ch_p2","CV Ch.",0,16,0],
+
+        ["pct","m_amt_p3","Amount",-100,100,100],
+        ["float","m_offset_p3","Offset",-1,1,0],
+        ["int","m_ch_p3","CV Ch.",0,16,0],
+
+        ["pct","m_amt_p4","Amount",-100,100,100],
+        ["float","m_offset_p4","Offset",-1,1,0],
+        ["int","m_ch_p4","CV Ch.",0,16,0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["m_p1","m_p2","m_p3","m_p4"]],
+        ["pg_p1","Param 1",["m_amt_p1", "m_offset_p1", "m_ch_p1"]],
+        ["pg_p2","Param 2",["m_amt_p2", "m_offset_p2", "m_ch_p2"]],
+        ["pg_p3","Param 3",["m_amt_p3", "m_offset_p3", "m_ch_p3"]],
+        ["pg_p4","Param 4",["m_amt_p4", "m_offset_p4", "m_ch_p4"]]
+    ]
+}
+
