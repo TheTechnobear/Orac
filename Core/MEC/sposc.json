@@ -1,0 +1,22 @@
+{
+    "mec"  :  {
+        "soundplane"  :  {
+            "app state dir" : ".",
+            "steal voices" : true,
+            "voices" : 4
+        }
+    },
+
+    "mec-app"  :  {
+        "outputs" : {
+            "osc" : {
+                "host" : "127.0.0.1",
+                "port" : 3123
+            },
+
+            "_console" : {
+                "throttle" : 0
+            }
+        }
+    }
+}
