@@ -223,4 +223,48 @@ setattribute(Text2,'content','');
 setattribute(Text3,'content','');
 setattribute(Text4,'content','');
 setattribute(Text5,'content','');" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/clearText" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="onpage(OSC_ARGS)" script="setattribute(P1Desc,'content','');
+setattribute(P1Value,'content','');
+
+setattribute(P2Desc,'content','');
+setattribute(P2Value,'content','');
+
+setattribute(P3Desc,'content','');
+setattribute(P3Value,'content','');
+
+setattribute(P4Desc,'content','');
+setattribute(P4Value,'content','');
+
+setattribute(P5Desc,'content','');
+setattribute(P5Value,'content','');
+
+
+setattribute(P6Desc,'content','');
+setattribute(P6Value,'content','');
+
+setattribute(P7Desc,'content','');
+setattribute(P7Value,'content','');
+
+setattribute(P8Desc,'content','');
+setattribute(P8Value,'content','');
+
+show(P1Ctrl,0);
+show(P2Ctrl,0);
+show(P3Ctrl,0);
+show(P4Ctrl,0);
+show(P5Ctrl,0);
+show(P6Ctrl,0);
+show(P7Ctrl,0);
+show(P8Ctrl,0);
+" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/page" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP1Ctrl(OSC_ARGS)" script="show(P1Ctrl,1);
+" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P1Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP2Ctrl(OSC_ARGS)" script="show(P2Ctrl,1);
+" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P2Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP3Ctrl(OSC_ARGS)" script="show(P3Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P3Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP4Ctrl(OSC_ARGS)" script="show(P4Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P4Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP5Ctrl(OSC_ARGS)" script="show(P5Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P5Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP6Ctrl(OSC_ARGS)" script="show(P6Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P6Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP7Ctrl(OSC_ARGS)" script="show(P7Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P7Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP8Ctrl(OSC_ARGS)" script="show(P8Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P8Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
 </JZML>

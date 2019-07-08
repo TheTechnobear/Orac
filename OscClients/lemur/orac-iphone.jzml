@@ -31,7 +31,7 @@
 </WINDOW>
 <WINDOW class="JAZZINTERFACE" text="Parameters" x="0" y="0" width="667" height="331" id="1" state="1" group="0" font="tahoma,11,0" >
 <WINDOW class="Knob" text="P1Ctrl" x="33" y="76" width="64" height="64" id="4" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,1596013" cursor="0" grid="0" grid_steps="1" label="0" mode="1" physic="1" precision="2" type="0" unit="st" value="0">
-<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/P1Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="x=" value="1.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/P1Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/P1Ctrl/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/P1Ctrl/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/P1Ctrl/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
@@ -49,7 +49,7 @@
 " trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P1Desc" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
 </WINDOW>
 <WINDOW class="Knob" text="P2Ctrl" x="211" y="76" width="64" height="64" id="46" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,1596013" cursor="0" grid="0" grid_steps="1" label="0" mode="1" physic="1" precision="2" type="0" unit="st" value="0">
-<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/P2Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="x=" value="0.609054" send="25" osc_target="0" osc_trigger="1" osc_message="/P2Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/P2Ctrl/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/P2Ctrl/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/P2Ctrl/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
@@ -67,7 +67,7 @@
 " trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P2Desc" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
 </WINDOW>
 <WINDOW class="Knob" text="P3Ctrl" x="389" y="76" width="64" height="64" id="49" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,1596013" cursor="0" grid="0" grid_steps="1" label="0" mode="1" physic="1" precision="2" type="0" unit="st" value="0">
-<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/P3Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="x=" value="0.323228" send="25" osc_target="0" osc_trigger="1" osc_message="/P3Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/P3Ctrl/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/P3Ctrl/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/P3Ctrl/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
@@ -93,7 +93,7 @@
 	" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P4Value" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
 </WINDOW>
 <WINDOW class="Knob" text="P4Ctrl" x="567" y="76" width="64" height="64" id="54" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,1596013" cursor="0" grid="0" grid_steps="1" label="0" mode="1" physic="1" precision="2" type="0" unit="st" value="0">
-<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/P4Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="x=" value="0.500000" send="25" osc_target="0" osc_trigger="1" osc_message="/P4Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/P4Ctrl/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/P4Ctrl/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/P4Ctrl/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
@@ -110,7 +110,7 @@
 	" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P5Value" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
 </WINDOW>
 <WINDOW class="Knob" text="P5Ctrl" x="33" y="178" width="64" height="64" id="57" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,1596013" cursor="0" grid="0" grid_steps="1" label="0" mode="1" physic="1" precision="2" type="0" unit="st" value="0">
-<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/P5Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="x=" value="0.065407" send="25" osc_target="0" osc_trigger="1" osc_message="/P5Ctrl" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/P5Ctrl/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/P5Ctrl/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
 <VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/P5Ctrl/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
@@ -225,4 +225,48 @@ else if(line==4) setattribute(Text4,'content',t);
 else if(line==5) setattribute(Text5,'content',t);
 
 " trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/text" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="onpage(OSC_ARGS)" script="setattribute(P1Desc,'content','');
+setattribute(P1Value,'content','');
+
+setattribute(P2Desc,'content','');
+setattribute(P2Value,'content','');
+
+setattribute(P3Desc,'content','');
+setattribute(P3Value,'content','');
+
+setattribute(P4Desc,'content','');
+setattribute(P4Value,'content','');
+
+setattribute(P5Desc,'content','');
+setattribute(P5Value,'content','');
+
+
+setattribute(P6Desc,'content','');
+setattribute(P6Value,'content','');
+
+setattribute(P7Desc,'content','');
+setattribute(P7Value,'content','');
+
+setattribute(P8Desc,'content','');
+setattribute(P8Value,'content','');
+
+show(P1Ctrl,0);
+show(P2Ctrl,0);
+show(P3Ctrl,0);
+show(P4Ctrl,0);
+show(P5Ctrl,0);
+show(P6Ctrl,0);
+show(P7Ctrl,0);
+show(P8Ctrl,0);
+" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/page" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP1Ctrl(OSC_ARGS)" script="show(P1Ctrl,1);
+" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P1Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP2Ctrl(OSC_ARGS)" script="show(P2Ctrl,1);
+" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P2Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP3Ctrl(OSC_ARGS)" script="show(P3Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P3Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP4Ctrl(OSC_ARGS)" script="show(P4Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P4Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP5Ctrl(OSC_ARGS)" script="show(P5Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P5Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP6Ctrl(OSC_ARGS)" script="show(P6Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P6Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP7Ctrl(OSC_ARGS)" script="show(P7Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P7Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="onP8Ctrl(OSC_ARGS)" script="show(P8Ctrl,1);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/P8Ctrl" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
 </JZML>
