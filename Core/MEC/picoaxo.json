@@ -67,7 +67,7 @@
                 "virtual" : 0,
                 "voices" : 4,
                 "pitchbend range" : 48.0,
-                "device" : "Pure Data:0"
+                "device" : "Axoloti Core:0"
             },
             "_console" : {
                 "throttle" : 0

@@ -5,40 +5,58 @@
             "voices" : 4,
             "velocity count" : 5,
             "pitchbend range" : 2.0,
-            "firmware dir" : "./resources/",
+            "firmware dir" : "../resources/",
             "throttle" : 1,
-            "mapping" : { 
-                "pico" : {
-                    "_notes" : [ 2 , 5, 12],
-                    "calculated" : {
-                        "keys in col"    : 9,
-                        "row multiplier" : 1,  
-                        "col multipler"  : 5,
-                        "note offset"    : 60
+            "pico" : {
+                "mapping": {
+                    "_notes": [
+                        2,
+                        5,
+                        12
+                    ],
+                    "calculated": {
+                        "keys in col": 9,
+                        "row multiplier": 1,
+                        "col multipler": 5,
+                        "note offset": 48
                     }
                 },
-                "tau" : {
-                    "calculated-wrong" : {
-                        "keys in col"    : 16,
-                        "row multiplier" : 1,  
-                        "col multipler"  : 4,
-                        "note offset"    : 20
+                "leds" : {
+                    "green" : [1],
+                    "_orange" : [ 1 ],
+                    "_red" : [ 1 ]
+                }
+            },
+            "tau" : {
+                "mapping" : {
+                    "calculated-wrong": {
+                        "keys in col": 16,
+                        "row multiplier": 1,
+                        "col multipler": 4,
+                        "note offset": 20
                     }
-                },
-                "alpha" : {
-                    "calculated" : {
-                        "keys in col"    : 24,
-                        "row multiplier" : 4,  
-                        "col multipler"  : -1,
-                        "note offset"    : 20
+                }
+            },
+            "alpha" : {
+                "mapping" : {
+                    "calculated": {
+                        "keys in col": 24,
+                        "row multiplier": 3,
+                        "col multipler": -1,
+                        "note offset": 26
                     },
                     "calculated-factory" : {
                         "keys in col"    : 24,
-                        "row multiplier" : 1,  
+                        "row multiplier" : 1,
                         "col multipler"  : 4,
                         "note offset"    : 20
                     }
-               }
+                },
+                "leds" : {
+                    "green" : [ 48, 52, 56,60, 64, 68 , 26, 74, 34, 82, 42, 90],
+                    "_orange" : [ 1 ],
+                    "red" : [ 30, 78, 38, 86, 46, 94 ]
+                }
             }
         }
     },

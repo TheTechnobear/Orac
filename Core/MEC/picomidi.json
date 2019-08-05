@@ -64,10 +64,10 @@
     "mec-app"  :  {
         "outputs" : {
             "midi" : {
-                "virtual" : 0,
+                "virtual" : 1,
                 "voices" : 4,
                 "pitchbend range" : 48.0,
-                "device" : "Pure Data:0"
+                "device" : "MEC"
             },
             "_console" : {
                 "throttle" : 0
