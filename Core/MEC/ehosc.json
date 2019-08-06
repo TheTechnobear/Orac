@@ -6,7 +6,7 @@
             "velocity count" : 5,
             "pitchbend range" : 2.0,
             "firmware dir" : "./resources/",
-            "throttle" : 1,
+            "throttle" : 0,
             "pico" : {
                 "mapping": {
                     "_notes": [
