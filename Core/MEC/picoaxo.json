@@ -5,7 +5,7 @@
             "voices" : 4,
             "velocity count" : 5,
             "pitchbend range" : 2.0,
-            "firmware dir" : "../resources/",
+            "firmware dir" : "./resources/",
             "throttle" : 1,
             "pico" : {
                 "mapping": {
