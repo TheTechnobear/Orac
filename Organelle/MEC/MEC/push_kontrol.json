@@ -1,7 +1,9 @@
 {
     "mec"  :  {
-        "oscdisplay"  :  {
-            "listen port" : 6100
+        "push2"  :  {
+            "input device" : "Ableton Push 2:0",
+            "output device" : "Ableton Push 2:0",
+            "pitchbend range" : 2.0
         },
 
         "kontrol"  :  {

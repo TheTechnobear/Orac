@@ -1,8 +1,6 @@
 {
     "mec"  :  {
         "soundplane"  :  {
-            "app state dir" : ".",
-            "steal voices" : true,
             "voices" : 4
         }
     },

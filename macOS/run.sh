@@ -3,7 +3,7 @@ cd `dirname $0`
 DIR=`pwd -P`
 export PD_OPTS=${PD_OPTS:="-nogui"}
 
-export MEC_OPTS=${MEC_OPTS:="osckontrol.json"}
+export MEC_OPTS=${MEC_OPTS:="osc_kontrol.json"}
 #PD-OPTS='-nogui -rt - audiobuf 4'
 killall pd
 cd ${DIR}/orac

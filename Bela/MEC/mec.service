@@ -7,7 +7,7 @@ Conflicts=shutdown.target
 Before=shutdown.target bela_startup.service
 
 [Service]
-ExecStart=/root/MEC/mec-app osckontrol.json 
+ExecStart=/root/MEC/mec-app osc_kontrol.json 
 Type=simple
 Restart=always
 WorkingDirectory=/root/MEC

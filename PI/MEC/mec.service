@@ -14,8 +14,8 @@ Environment=HOME=/home/pi
 KillMode=process
 Restart=always
 WorkingDirectory=/usr/local/MEC
-ExecStart=/usr/local/MEC/mec-app osckontrol.json 
-#ExecStart=/usr/local/MEC/mec-app pushkontrol.json 
+ExecStart=/usr/local/MEC/mec-app osc_kontrol.json 
+#ExecStart=/usr/local/MEC/mec-app push_kontrol.json 
 
 [Install]
 WantedBy=default.target
