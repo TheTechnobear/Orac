@@ -2,7 +2,6 @@
     "mec"  :  {
         "eigenharp" : {
             "voices" : 4,
-            "firmware dir" : "../resources/",
             "pico" : {
                 "mapping": {
                     "calculated": {
