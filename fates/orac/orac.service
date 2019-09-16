@@ -1,0 +1,23 @@
+[Unit]
+Description=Run Orac at boot
+DefaultDependencies=no
+Wants=network-online.target
+After=network-online.target
+Conflicts=shutdown.target
+Before=shutdown.target 
+
+[Service]
+Type=simple
+User=we
+Group=we
+Environment=HOME=/home/we
+EnvironmentFile=/etc/environment
+LimitRTPRIO=infinity
+LimitMEMLOCK=infinity
+KillMode=process
+Restart=always
+WorkingDirectory=/usr/local/orac
+ExecStart=/usr/bin/pd -rt -alsamidi -nogui -audiobuf 4 mother.pd main.pd 
+
+[Install]
+WantedBy=default.target

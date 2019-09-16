@@ -1,0 +1,20 @@
+[Unit]
+Description=Run MEC at boot
+DefaultDependencies=no
+Wants=network-online.target
+After=network-online.target
+Conflicts=shutdown.target
+Before=shutdown.target 
+
+[Service]
+Type=simple
+User=we
+Group=we
+Environment=HOME=/home/we
+KillMode=process
+Restart=always
+WorkingDirectory=/usr/local/MEC
+ExecStart=/usr/local/MEC/mec-app fates_kontrol.json 
+
+[Install]
+WantedBy=default.target

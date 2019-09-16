@@ -1,0 +1,22 @@
+{
+    "mec"  :  {
+        "fates"  :  {
+	},
+        "oscdisplay"  :  {
+            "listen port" : 6100,
+            "menu timeout" : 350
+        },
+
+        "kontrol"  :  {
+            "listen port" : 6000
+        }
+    },
+
+    "mec-app"  :  {
+        "outputs" : {
+            "_console" : {
+                "throttle" : 0
+            }
+        }
+    }
+}
