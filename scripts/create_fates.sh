@@ -8,6 +8,8 @@ cp -R ../../Core/* .
 cp -R ../../PI/* .
 cp -R ../../fates/* .
 
+cp ../../.pdsettings ./orac
+
 if [ "$NOPACK" ] ; 
 then
     echo dev mode - do not package

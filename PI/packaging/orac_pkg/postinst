@@ -3,13 +3,13 @@
 
 systemctl --system daemon-reload >/dev/null 
 
-
-systemctl enable orac
-systemctl start orac
-
 USERDIR=/home/pi
 su pi -c "mkdir -p $USERDIR/media/orac/usermodules"
 su pi -c "cp -nr /usr/local/orac/media $USERDIR"
 su pi -c "chmod -R a+rw $USERDIR/media"
 su pi -c "cp -r /usr/local/orac/data $USERDIR"
 su pi -c "chmod -R a+rw $USERDIR/data"
+
+systemctl enable orac
+systemctl start orac
+

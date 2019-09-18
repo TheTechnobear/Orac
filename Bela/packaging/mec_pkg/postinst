@@ -1,6 +1,7 @@
 #if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
 #fi
-systemctl enable mec
-systemctl start mec
 
 ln -s /usr/local/MEC /root/
+
+systemctl enable mec
+systemctl start mec

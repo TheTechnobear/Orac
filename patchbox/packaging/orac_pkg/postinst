@@ -5,8 +5,6 @@ systemctl --system daemon-reload >/dev/null
 udevadm control --reload-rules >/dev/null 
 
 
-systemctl enable orac
-systemctl start orac
 
 USERDIR=/home/patch
 su patch -c "mkdir -p $USERDIR/media/orac/usermodules"
@@ -14,3 +12,6 @@ su patch -c "cp -nr /usr/local/orac/media $USERDIR"
 su patch -c "chmod -R a+rw $USERDIR/media"
 su patch -c "cp -r /usr/local/orac/data $USERDIR"
 su patch -c "chmod -R a+rw $USERDIR/data"
+
+systemctl enable orac
+systemctl start orac
