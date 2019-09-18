@@ -8,7 +8,7 @@ cp -R ../../Core/* .
 cp -R ../../PI/* .
 cp -R ../../fates/* .
 
-cp ../../.pdsettings ./orac
+cp ../../fates/.pdsettings ./orac
 
 if [ "$NOPACK" ] ; 
 then
