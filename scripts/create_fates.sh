@@ -9,6 +9,7 @@ cp -R ../../PI/* .
 cp -R ../../fates/* .
 
 cp ../../fates/.pdsettings ./orac
+rm ./manual_install.sh
 
 if [ "$NOPACK" ] ; 
 then
