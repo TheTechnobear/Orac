@@ -1,14 +1,14 @@
 #/bin/sh
-mkdir -p pkg/fates
-rm -rf pkg/fates.old
-mv pkg/fates pkg/fates.old
-mkdir -p pkg/fates
-cd pkg/fates
+mkdir -p pkg/norns
+rm -rf pkg/norns.old
+mv pkg/norns pkg/norns.old
+mkdir -p pkg/norns
+cd pkg/norns
 cp -R ../../Core/* .
 cp -R ../../PI/* .
-cp -R ../../fates/* .
+cp -R ../../Norns/* .
 
-cp ../../fates/.pdsettings ./orac
+cp ../../Norns/.pdsettings ./orac
 rm ./manual_install.sh
 
 if [ "$NOPACK" ] ; 

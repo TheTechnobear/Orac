@@ -14,7 +14,7 @@ Environment=HOME=/home/we
 KillMode=process
 Restart=always
 WorkingDirectory=/usr/local/MEC
-ExecStart=/usr/local/MEC/mec-app fates_kontrol.json 
+ExecStart=/usr/local/MEC/mec-app nui_kontrol.json 
 
 [Install]
 WantedBy=default.target

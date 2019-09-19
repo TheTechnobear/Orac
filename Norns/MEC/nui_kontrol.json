@@ -1,6 +1,6 @@
 {
     "mec"  :  {
-        "fates"  :  {
+        "nui"  :  {
 	},
         "oscdisplay"  :  {
             "listen port" : 6100,

@@ -1,5 +1,5 @@
-Orac on Fates
-==================
+Orac on Norns
+=============
 
 BETA ONLY
 
@@ -7,7 +7,7 @@ BETA ONLY
 
 Orac is distributed as two standard debian packages , both need installing
 
-so copy these to your fates machines:
+so copy these to your norns machine:
 
 then:
 
