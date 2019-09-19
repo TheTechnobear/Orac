@@ -58,13 +58,17 @@ you start on the parameter display
 
 the top line tells you the module and the page of the module
 to change parameters on the page, use enc 1 to 4
+but 1 = param/menu
+but 2 = aux (not in this release)
+
+but 3 = function see below 
 to switch pages on the module , hold but 3, and turn encoder 3
-to switch module, hold but 2, and turn encoder 3
+to switch module, hold but 3, and turn encoder 3
 
 to enter the main menu display press but 1
 use enc 1 to scroll, and but 3 to select items
-(the menu automatically closes are a short time)
-
+use enc 1 to exit menu
+(note:the menu also automatically closes after about 15 seconds)
 
 
 # Other Notes 
