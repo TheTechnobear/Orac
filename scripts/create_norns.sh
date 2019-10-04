@@ -18,6 +18,7 @@ then
 fi
 
 
+
 #now create debian packages
 mkdir mec_deb 
 cd mec_deb 
@@ -48,4 +49,21 @@ cd ..
 fakeroot dpkg --build orac_deb
 mv orac_deb.deb orac.deb
 rm -rf orac_deb
+
+
+mkdir sidekick_deb 
+cd sidekick_deb 
+mkdir DEBIAN
+cp -R ../packaging/sidekick_deb/* DEBIAN
+mkdir -p etc/systemd/system
+cp ../sidekick/sidekick.service etc/systemd/system
+mkdir -p etc/udev/rules.d/
+cp ../packaging/*.rules etc/udev/rules.d/
+mkdir -p usr/local/
+cp -R ../sidekick usr/local/
+
+cd ..
+fakeroot dpkg --build sidekick_deb
+mv sidekick_deb.deb mec.deb
+rm -rf sidekick_deb
 

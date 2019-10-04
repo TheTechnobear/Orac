@@ -1,0 +1,27 @@
+#if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+#fi
+udevadm control --reload-rules >/dev/null || true
+
+
+
+USERDIR=/home/we
+SKDIR="$USERDIR/sidekick"
+su we -c "mkdir -p $SKDIR"
+su we -c "cp -r /usr/local/sidekick/patches $SKDIR"
+su we -c "cp -r /usr/local/sidekick/system $SKDIR"
+su we -c "cp -r /usr/local/sidekick/*.json $SKDIR"
+
+# stop norns 
+systemctl stop norns-matron.service
+systemctl stop norns-sclang.service
+systemctl stop norns-crone.service
+systemctl stop norns-jack.service
+
+# stop norns starting automatically, as sidekick will do this
+systemctl disable norns-matron.service
+systemctl disable norns-sclang.service
+systemctl disable norns-crone.service
+systemctl disable norns-jack.service
+
+systemctl enable sidekick
+systemctl start sidekick

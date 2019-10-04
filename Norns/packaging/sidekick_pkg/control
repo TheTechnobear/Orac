@@ -1,0 +1,9 @@
+Package: sidekick
+Version: 0.1.1-1
+Section: sound
+Priority: optional
+Architecture: armhf
+Depends: libc6 (>= 2.19), libgcc1 (>= 1:4.9.2-10), libusb-1.0-0 (>= 2:1.0.19-1), libcairo2 (>= 1.16.0-4)
+Maintainer: Mark Harris <...>
+Description: Sidekick application for rPI
+ See https://github.com/TheTechnobear/NuiLite/ for more information.
