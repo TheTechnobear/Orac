@@ -1,8 +1,7 @@
 [Unit]
 Description=Sidekick service for norns
 DefaultDependencies=no
-Wants=network-online.target
-After=network-online.target
+After=sound.target
 Conflicts=shutdown.target
 Before=shutdown.target 
 
@@ -17,4 +16,4 @@ WorkingDirectory=/home/we/sidekick
 ExecStart=/usr/local/sidekick/sidekick
 
 [Install]
-WantedBy=default.target
+WantedBy=sidekick.target

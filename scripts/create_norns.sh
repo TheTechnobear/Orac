@@ -54,16 +54,16 @@ rm -rf orac_deb
 mkdir sidekick_deb 
 cd sidekick_deb 
 mkdir DEBIAN
-cp -R ../packaging/sidekick_deb/* DEBIAN
+cp -R ../packaging/sidekick_pkg/* DEBIAN
 mkdir -p etc/systemd/system
 cp ../sidekick/sidekick.service etc/systemd/system
-mkdir -p etc/udev/rules.d/
-cp ../packaging/*.rules etc/udev/rules.d/
+cp ../sidekick/sidekick-init.service etc/systemd/system
+cp ../sidekick/sidekick.target etc/systemd/system
 mkdir -p usr/local/
 cp -R ../sidekick usr/local/
 
 cd ..
 fakeroot dpkg --build sidekick_deb
-mv sidekick_deb.deb mec.deb
+mv sidekick_deb.deb sidekick.deb
 rm -rf sidekick_deb
 
