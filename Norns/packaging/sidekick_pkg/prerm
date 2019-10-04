@@ -6,5 +6,5 @@ USERDIR=/home/we
 SKDIR="$USERDIR/sidekick"
 rm -rf $SKDIR
 
-system enable norns.target
-system start norns.target
+systemctl enable norns.target
+#systemctl start norns.target
