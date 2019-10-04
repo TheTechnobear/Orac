@@ -1,0 +1,10 @@
+systemctl stop sidekick.target
+systemctl disable sidekick.target
+
+
+USERDIR=/home/we
+SKDIR="$USERDIR/sidekick"
+rm -rf $SKDIR
+
+system enable norns.target
+system start norns.target
