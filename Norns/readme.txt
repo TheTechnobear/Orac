@@ -5,7 +5,7 @@ BETA ONLY
 
 #Installation
 
-Orac is distributed as two standard debian packages , both need installing
+Orac is distributed as 3 standard debian packages , these all need to be installed
 
 so copy these to your norns machine:
 
@@ -18,9 +18,9 @@ a) update APT directory - this is standard practice when installing deb packages
 sudo apt update  
 
 
-b) install - mec/orac
+b) install - mec/orac/sidekick
 
-sudo sudo apt-get install -y ./mec.deb ./orac.deb
+sudo sudo apt-get install -y ./*.deb
 
 
 on first install this will install puredata and a few other packages.
@@ -28,19 +28,15 @@ you can use the above also to update mec/orac with future releases, these then w
 as the dependent packages are already installed
 
 
+# running orac
+once the packages are installed, you can reboot and sidekick will be running in the background
 
-# Running MEC/Orac 
-c) Running mec/orac
+when norns is running, simply hold down all 3 buttons at once for 5 seconds, and the sidekick menu will appear
+this menu allows you to select the patch you wish to run.
+so you may now select Orac.
 
-ONLY REQUIRED DURING BETA TEST PHASE
-for release, Orac will be launched via the 'Launcher App',
-but this is not available yet, so we will run manualll 
+Note: next time you start up, the previous patch will be loaded (orac, norns or whatever)
 
-i) first STOP norns ;) 
-~/norns/stopall.sh
-
-ii) start mec and orac
-sudo systemctl start mec orac 
 
 screen may take a couple of seconds to populate... and you will hear a drum beat.
 (this is the default demo1 preset running, you can change this ;) ) 
@@ -72,18 +68,19 @@ use enc 1 to exit menu
 
 
 # Other Notes 
-##stopping mec/orac
-sudo systemctl stop mec orac 
+##stopping mec/orac/sidekick
+sudo systemctl stop sidekick.target
 
 
 ##debugging/logs for mec/orac
 
-mec and orac are exposed as systemctl services, you can find thier status (running or not) with
+mec/orac/sidekick are exposed as systemctl services, you can find thier status (running or not) with
 sudo systemctl status mec orac 
 
 or to look at the logs use journalctl
 journalctl -u orac
 journalctl -u mec
+journalctl -u sidekick
 
 you could redirect to a file, if you want to share
 
@@ -92,4 +89,14 @@ journalctl -u mec > mec.txt
 
 ## midi devices 
 it is recommend you use amidiauto to ensure that midi devices are connected to Pure Data automatically
+however sidekick also has the ability to run a script before (pre-patch.sh) and after (post-patch.sh) a patch is run, 
+so you could place aconnect commands in these to establish connections
 
+
+## manually reverting to always starting norns
+sudo systemctl disable sidekick.target
+sudo systemctl enable norns.target
+reboot
+
+## uninstalling sidekick
+if you uninstall sidekick, then when you reboot norns will start on booting as before
