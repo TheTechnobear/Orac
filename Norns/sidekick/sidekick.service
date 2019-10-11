@@ -12,6 +12,8 @@ Group=we
 Environment=HOME=/home/we
 KillMode=process
 Restart=always
+LimitRTPRIO=infinity
+LimitMEMLOCK=infinity
 WorkingDirectory=/home/we/sidekick
 ExecStart=/usr/local/sidekick/sidekick
 
