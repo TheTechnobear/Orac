@@ -10,6 +10,7 @@ su we -c "mkdir -p $SKDIR"
 su we -c "cp -r /usr/local/sidekick/patches $SKDIR"
 su we -c "cp -r /usr/local/sidekick/system $SKDIR"
 su we -c "cp -r /usr/local/sidekick/*.json $SKDIR"
+su we -c "cp -r /usr/local/sidekick/*.sh $SKDIR"
 
 # stop norns 
 systemctl stop norns.target
