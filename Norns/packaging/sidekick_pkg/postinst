@@ -6,7 +6,7 @@ udevadm control --reload-rules >/dev/null || true
 
 USERDIR=/home/we
 SKDIR="$USERDIR/sidekick"
-su we -c "mkdir -p $SKDIR"
+su we -c "mkdir -p $SKDIR $SKDIR/patches $SKDIR/system"
 su we -c "cp -r /usr/local/sidekick/patches $SKDIR"
 su we -c "cp -r /usr/local/sidekick/system $SKDIR"
 su we -c "cp -r /usr/local/sidekick/*.json $SKDIR"

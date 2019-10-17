@@ -1,9 +1,9 @@
 Package: orac
-Version: 0.2.1-5
+Version: 0.2.1-6
 Section: sound
 Priority: optional
 Architecture: armhf
-Depends: mec (>= 0.2.1-1), puredata (>=0.49.0-3)
+Depends: mec (>= 0.2.1-1), puredata (>=0.49.0)
 Maintainer: Mark Harris <...>
 Description: ORAC
  See https://github.com/TheTechnobear/Orac/ for more information.
