@@ -1,0 +1,545 @@
+#N canvas 48 85 691 526 10;
+#X obj 36 137 slicerec~ \$0-audio;
+#X obj 100 164 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X obj 46 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -260097
+-1;
+#X obj 141 164 tgl 15 0 empty empty empty 17 7 0 10 -262144 -260097
+-1 0 1;
+#X obj 15 20 adc~;
+#X obj 276 15 table \$0-cuepoints 16;
+#N canvas 704 383 299 314 cuepoints 0;
+#X obj 24 233 tabwrite \$0-cuepoints;
+#X obj 147 110 +;
+#X msg 147 85 1;
+#X obj 23 19 inlet;
+#X obj 147 133 & 7;
+#X obj 123 185 f;
+#X obj 123 207 + 1;
+#X obj 57 185 f;
+#X obj 23 68 t f b b b;
+#X obj 147 158 * 2;
+#X obj 90 19 inlet;
+#X text 22 258 write pairs of start- and stop points;
+#X floatatom 169 200 5 0 0 0 - - -;
+#X floatatom 169 224 5 0 0 0 - - -;
+#X obj 23 42 change;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 14 0;
+#X connect 4 0 1 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 1;
+#X connect 6 0 13 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 8 0 7 1;
+#X connect 8 1 5 0;
+#X connect 8 2 7 0;
+#X connect 8 3 2 0;
+#X connect 9 0 5 1;
+#X connect 9 0 0 1;
+#X connect 9 0 12 0;
+#X connect 10 0 14 0;
+#X connect 14 0 8 0;
+#X restore 36 231 pd cuepoints;
+#X floatatom 36 199 6 0 0 0 - - -;
+#X floatatom 88 199 6 0 0 0 - - -;
+#X text 0 181 attack point;
+#X text 92 181 silence point;
+#N canvas 196 69 289 420 sequencer 0;
+#X obj 31 88 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 31 113 metro 400;
+#X floatatom 96 114 5 0 0 0 - - -;
+#X obj 31 10 inlet;
+#X obj 82 10 inlet;
+#X text 132 113 milliseconds;
+#X obj 82 84 expr 15000/$f1;
+#X text 118 9 BPM value;
+#X text 6 30 play button;
+#X obj 31 190 +;
+#X obj 121 244 & 1;
+#X obj 78 244 & 3;
+#X obj 31 268 sel 7;
+#X obj 78 268 sel 3;
+#X obj 121 268 sel 1;
+#X obj 31 215 & 7;
+#X obj 31 165 + 8;
+#X floatatom 38 244 5 0 0 0 - - -;
+#X obj 163 296 s \$0-trigger4;
+#X obj 121 323 s \$0-trigger3;
+#X obj 78 349 s \$0-trigger2;
+#X obj 31 374 s \$0-trigger1;
+#X obj 163 270 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 126 375 outlet;
+#X text 169 374 beat bang;
+#X msg 31 141 -1;
+#X obj 40 309 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 1 0;
+#X connect 1 0 25 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 6 0 1 1;
+#X connect 6 0 2 0;
+#X connect 9 0 15 0;
+#X connect 10 0 14 0;
+#X connect 11 0 13 0;
+#X connect 12 0 21 0;
+#X connect 12 0 26 0;
+#X connect 13 0 20 0;
+#X connect 13 0 23 0;
+#X connect 14 0 19 0;
+#X connect 15 0 9 1;
+#X connect 15 0 11 0;
+#X connect 15 0 10 0;
+#X connect 15 0 12 0;
+#X connect 15 0 17 0;
+#X connect 15 0 22 0;
+#X connect 16 0 9 0;
+#X connect 22 0 18 0;
+#X connect 25 0 16 0;
+#X restore 554 166 pd sequencer;
+#X obj 554 144 tgl 15 1 empty empty empty 17 7 0 10 -262144 -260097
+-1 1 1;
+#X obj 623 145 nbx 3 14 10 300 0 1 empty empty BPM -20 8 0 10 -262144
+-1 -1 130 256;
+#X obj 554 189 bng 15 100 50 0 empty empty empty 17 7 0 10 -262144
+-260097 -1;
+#X obj 276 71 hradio 15 1 1 4 empty empty empty 0 -8 0 10 -262144 -260097
+-1 0;
+#X text 148 497 www.katjaas.nl;
+#X text 9 497 Katja Vetter jan 2010;
+#N canvas 254 163 795 485 slicerec~parameters 0;
+#X floatatom 140 380 3 0 0 0 - - -;
+#X floatatom 256 382 3 0 0 0 - - -;
+#X floatatom 370 382 5 0 0 0 - - -;
+#X obj 133 354 hsl 80 15 60 90 0 0 empty attackthresh deciBel 20 8
+0 10 -262144 -258113 -1 2633 0;
+#X obj 249 354 hsl 80 15 40 60 0 0 empty silencethresh deciBel 20 8
+0 10 -262144 -258113 -1 5925 0;
+#X obj 364 357 hsl 80 15 100 1000 0 0 empty timeconstant milliseconds
+4 8 0 10 -262144 -258113 -1 439 0;
+#X obj 24 354 hsl 80 15 1 10 0 0 empty attackstep deciBel 20 8 0 10
+-262144 -258113 -1 4389 0;
+#X floatatom 32 378 3 0 0 0 - - -;
+#X msg 21 407 attackstep \$1;
+#X msg 130 407 attackthresh \$1;
+#X msg 246 407 silencethresh \$1;
+#X msg 361 407 timeconstant \$1;
+#X obj 424 18 loadbang;
+#X text 537 72 object defaults;
+#X text 17 14 attackstep is the difference in deciBel between amplitude
+peak envelope and the current amplitude \, required for an attack detection.
+For example \, if attackstep is set at 6 deciBel \, an attack is detected
+when the amplitude suddenly doubles.;
+#X text 17 93 attackthresh is the amplitude threshold in deciBel which
+must be exceeded before an attack can be detected. Unity amplitude
+is mapped to 100 deciBel. This mapping is customary in Pure Data objects
+like [env~]. When the signal amplitude passes both the attackstep and
+attackthresh test \, recording is continued or resumed from pause \,
+and the current timeindex of the circular recording buffer is issued
+as a cuepoint from the left inlet.;
+#X text 18 294 timeconstant is the period in milliseconds from which
+the decay ratio of the amplitude peak envelope is calculated.;
+#X msg 425 288 draw;
+#X msg 476 288 reset;
+#X obj 130 454 outlet;
+#X text 423 132 draw will make slicerec~ stop recording and (re)draw
+a graphical array \, like tabwrite~ does at the end of an array.;
+#X text 423 228 draw and reset messages are intended for test and debug
+purposes \, but they are probably not useful in musical situations.
+;
+#X text 423 173 reset will force the time index of slicerec~ to zero
+and recording starts or continues at the beginning of the table or
+array.;
+#X text 521 288 without numerical arguments;
+#X text 17 211 silencethresh is an amplitude threshold in deciBels.
+When the peak envelope decreases below this level \, recording is paused
+\, and the current time index is issued as a cuepoint from the middle
+outlet. If this parameter is set too low \, a slice will never end
+unless a new attack is detected.;
+#X msg 424 43 \; attackstep 6 \; attackthresh 70 \; silencethresh 55
+\; timeconstant 150 \;;
+#X connect 3 0 0 0;
+#X connect 3 0 9 0;
+#X connect 4 0 1 0;
+#X connect 4 0 10 0;
+#X connect 5 0 2 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 8 0 19 0;
+#X connect 9 0 19 0;
+#X connect 10 0 19 0;
+#X connect 11 0 19 0;
+#X connect 12 0 25 0;
+#X restore 48 112 pd slicerec~parameters;
+#N canvas 0 22 777 372 slicerec&play_more_info 0;
+#X text 27 83 [slicerec~] is permanently analysing the incoming signal
+\, but it only records beats \, that is \, sounds with rapid attack.
+At the end of the table or array it automatically wraps around to the
+beginning \, so in that sense it is a looping recorder.;
+#X text 27 20 [slicerec~] and [sliceplay~] cooperate to beatslice a
+circular buffer. The objects are intended for live performance. [slicerec~]
+can work instantaneously on a stream of audio from the soundcard.;
+#X text 415 294 more info on the technique in these objects: www.katjaas.nl/beatdetection/beatdetection.html
+www.katjaas.nl/beatdetection/instantslice.html;
+#X text 28 163 [sliceplay~] can also wrap around the buffer end \,
+forward or backward \, at any speed allowed by the object.;
+#X text 412 86 A DC component in the input signal could obstruct proper
+analysis. If you do not trust your input signal to be DC-free \, use
+a [hip~] filter with low frequency setting.;
+#X text 412 147 The cuepoints are set with sample-accuracy at zero-crossings
+\, and only very modest smoothing is done additionally in [slicerec~].
+The playback is also sample-precise at all speeds.;
+#X text 411 18 The loop size should not exceed 2^23 samples (table
+length 2^23+3) \, since the precision of the 32 bits floating point
+format normally used for Pd messages is limited to 23 binary positions.
+;
+#X text 28 205 Analysis and recording is done blockwise \, and works
+best at the default Pd blocksize of 64 samples. Both objects work on
+a memory segment which is a power of two plus 3 samples. The extra
+samples are for interpolation \, and the power of two is for efficient
+operation. If the table or array has size 'power-of-two-plus-3' \,
+the table length is fully employed. If the table or array has different
+size \, part of it will remain unused. Notably \, when the table or
+array has size power of two \, almost half of it will remain unused.
+Which is a pity \, not a problem.;
+#X restore 11 447 pd slicerec&play_more_info;
+#X obj 276 135 loadbang;
+#X msg 276 160 \; pd dsp 1;
+#X msg 276 201 \; pd dsp 0;
+#X text 48 93 parameter info here:;
+#X text 10 427 general info here:;
+#X obj 471 419 cnv 15 200 90 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 474 466 sliceplay~ \$0-audio;
+#X obj 477 423 hsl 188 15 -4 4 0 1 empty \$0-speed4 playbackspeed-player4
+20 8 0 10 -262144 -260097 -1 11687 1;
+#X obj 484 446 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.999786 256;
+#N canvas 783 53 205 324 cuepoints4 0;
+#X obj 22 285 outlet;
+#X obj 49 165 tabread \$0-cuepoints;
+#X obj 22 208 tabread \$0-cuepoints;
+#X floatatom 63 187 8 0 0 0 - - -;
+#X floatatom 56 232 8 0 0 0 - - -;
+#X obj 22 253 pack;
+#X obj 49 115 * 2;
+#X obj 49 139 + 1;
+#X obj 22 139 f;
+#X obj 22 90 t b f;
+#X obj 22 41 random 8;
+#X floatatom 62 91 5 0 0 0 - - -;
+#X obj 22 17 r \$0-trigger4;
+#X text 47 63 randomly select a slice;
+#X connect 1 0 3 0;
+#X connect 1 0 5 1;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 1;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 9 0 8 0;
+#X connect 9 1 6 0;
+#X connect 10 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;
+#X restore 585 441 pd cuepoints4;
+#X obj 470 317 cnv 15 200 90 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 473 364 sliceplay~ \$0-audio;
+#X obj 476 320 hsl 188 15 -2 2 0 1 empty \$0-speed3 playbackspeed-player3
+20 8 0 10 -262144 -260097 -1 12856 1;
+#X obj 483 344 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.749947 256;
+#N canvas 0 22 205 324 cuepoints3 0;
+#X obj 22 285 outlet;
+#X obj 49 165 tabread \$0-cuepoints;
+#X obj 22 208 tabread \$0-cuepoints;
+#X floatatom 63 187 8 0 0 0 - - -;
+#X floatatom 56 232 8 0 0 0 - - -;
+#X obj 22 253 pack;
+#X obj 49 115 * 2;
+#X obj 49 139 + 1;
+#X obj 22 139 f;
+#X obj 22 90 t b f;
+#X obj 22 41 random 8;
+#X floatatom 62 91 5 0 0 0 - - -;
+#X obj 22 16 r \$0-trigger3;
+#X text 44 63 randomly select a slice;
+#X connect 1 0 3 0;
+#X connect 1 0 5 1;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 1;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 9 0 8 0;
+#X connect 9 1 6 0;
+#X connect 10 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;
+#X restore 584 341 pd cuepoints3;
+#X obj 429 14 cnv 15 240 110 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 469 214 cnv 15 200 90 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 473 259 sliceplay~ \$0-audio;
+#X obj 476 217 hsl 188 15 -2 2 0 1 empty \$0-speed2 playbackspeed-player2
+20 8 0 10 -262144 -260097 -1 11687 1;
+#X obj 483 241 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.499893 256;
+#N canvas 668 115 213 314 cuepoints2 0;
+#X obj 22 285 outlet;
+#X obj 49 165 tabread \$0-cuepoints;
+#X obj 22 208 tabread \$0-cuepoints;
+#X floatatom 63 187 8 0 0 0 - - -;
+#X floatatom 56 232 8 0 0 0 - - -;
+#X obj 22 253 pack;
+#X obj 49 115 * 2;
+#X obj 49 139 + 1;
+#X obj 22 139 f;
+#X obj 22 90 t b f;
+#X obj 22 41 random 8;
+#X floatatom 62 91 5 0 0 0 - - -;
+#X obj 22 16 r \$0-trigger2;
+#X text 55 60 randomly select a slice;
+#X connect 1 0 3 0;
+#X connect 1 0 5 1;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 1;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 9 0 8 0;
+#X connect 9 1 6 0;
+#X connect 10 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;
+#X restore 584 235 pd cuepoints2;
+#N canvas 783 53 205 324 cuepoints 0;
+#X obj 22 285 outlet;
+#X obj 49 165 tabread \$0-cuepoints;
+#X obj 22 208 tabread \$0-cuepoints;
+#X floatatom 63 187 8 0 0 0 - - -;
+#X floatatom 56 232 8 0 0 0 - - -;
+#X obj 22 253 pack;
+#X obj 49 115 * 2;
+#X obj 49 139 + 1;
+#X obj 22 139 f;
+#X obj 22 90 t b f;
+#X floatatom 62 91 5 0 0 0 - - -;
+#X obj 22 17 inlet;
+#X obj 22 52 f;
+#X connect 1 0 3 0;
+#X connect 1 0 5 1;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 1;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 9 0 8 0;
+#X connect 9 1 6 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X restore 545 59 pd cuepoints;
+#X obj 434 84 sliceplay~ \$0-audio;
+#X obj 545 39 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -260097
+-1 0;
+#X obj 437 19 hsl 188 15 -1 1 0 1 empty \$0-speed1 playbackspeed-player1
+20 8 0 10 -262144 -260097 -1 17600 1;
+#X obj 447 41 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.882353 256;
+#X obj 560 83 bng 15 100 50 0 empty empty empty 17 7 0 10 -262144 -260097
+-1;
+#X obj 279 494 dac~;
+#X text 547 38 play slices by hand;
+#N canvas 767 70 435 485 sliceplay~parameters 0;
+#X obj 31 459 outlet;
+#X msg 31 126 interrupt 0;
+#X msg 31 174 interrupt 1;
+#X msg 31 150 interrupt -1;
+#X text 112 150 only interrupt reversed playbacks;
+#X text 112 175 interrupt always allowed;
+#X text 107 126 never interrupt a playing slice (default);
+#X text 47 215 Because playback at lower speeds tends to weaken the
+sound \, amplitude compensation can be done as a function of playback
+speed. By default \, no such compensation is done but you vary compensation
+amount by sending messages to [sliceplay~]:;
+#X msg 50 315 compensation \$1;
+#X floatatom 50 292 5 0 0 0 - - -;
+#X text 89 293 fractional value between 0 and 1;
+#X msg 62 430 minspeed \$1;
+#X floatatom 62 408 5 0 1 0 - - -;
+#X text 31 4 By default \, [sliceplay~] will finish the current slice
+before accepting new cuepoints \, but you can use selector 'interrupt'
+with different options to change that behaviour. No windowing is done
+when complete slices are played \, but interrupted slices end with
+a short fade-out window.;
+#X obj 13 100 r \$0-interrupt;
+#X text 106 100 (from 'preset');
+#X text 79 459 to [sliceplay~];
+#X text 60 360 Speeds slower than 0.125 are clipped by default but
+you can set a different minimum speed if you want. Note that speed
+zero would make little sense.;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 8 0;
+#X connect 11 0 0 0;
+#X connect 12 0 11 0;
+#X connect 14 0 0 0;
+#X restore 391 166 pd sliceplay~parameters;
+#X text 389 148 parameter info here:;
+#N canvas 746 120 366 267 some-playback-presets 0;
+#X obj 19 13 inlet;
+#X obj 19 170 s \$0-speed2;
+#X obj 19 197 s \$0-speed3;
+#X obj 19 41 route 0 1 2 3;
+#X msg 19 77 0.5;
+#X msg 19 102 0.75;
+#X obj 19 223 s \$0-speed4;
+#X msg 154 79 0.5;
+#X msg 154 104 0.75;
+#X msg 200 129 interrupt 0;
+#X msg 237 106 interrupt -1;
+#X msg 256 82 interrupt 1;
+#X obj 256 164 s \$0-interrupt;
+#X msg 63 104 0.75;
+#X msg 63 128 2;
+#X msg 63 78 -0.5;
+#X msg 154 129 0.25;
+#X msg 19 127 1;
+#X obj 200 43 route 0 1 2 3;
+#X msg 108 129 3;
+#X msg 108 104 -1;
+#X msg 108 79 -0.5;
+#X connect 0 0 3 0;
+#X connect 0 0 18 0;
+#X connect 3 0 4 0;
+#X connect 3 1 15 0;
+#X connect 3 2 21 0;
+#X connect 3 3 7 0;
+#X connect 4 0 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 17 0;
+#X connect 5 0 2 0;
+#X connect 7 0 8 0;
+#X connect 7 0 1 0;
+#X connect 8 0 16 0;
+#X connect 8 0 2 0;
+#X connect 9 0 12 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 13 0 14 0;
+#X connect 13 0 2 0;
+#X connect 14 0 6 0;
+#X connect 15 0 13 0;
+#X connect 15 0 1 0;
+#X connect 16 0 6 0;
+#X connect 17 0 6 0;
+#X connect 18 0 9 0;
+#X connect 18 1 9 0;
+#X connect 18 2 10 0;
+#X connect 18 3 11 0;
+#X connect 19 0 6 0;
+#X connect 20 0 19 0;
+#X connect 20 0 2 0;
+#X connect 21 0 20 0;
+#X connect 21 0 1 0;
+#X restore 276 93 pd some-playback-presets;
+#X text 10 259 [slicerec~] will loop-record an input signal into a
+named table or array \, while the sound level is above a user-definable
+threshold. Below that level \, recording will be paused till the next
+attack. [slicerec~] checks the actual signal amplitude against an amplitude
+peak envelope \, to find attacks.;
+#X text 158 162 record status;
+#X obj 545 104 tgl 15 0 empty empty empty 17 7 0 10 -262144 -260097
+-1 0 22339;
+#X text 579 82 trigger;
+#X text 564 103 play status;
+#X floatatom 584 285 8 0 0 0 - - -;
+#X floatatom 584 387 8 0 0 0 - - -;
+#X floatatom 585 488 8 0 0 0 - - -;
+#X obj 36 74 hip~ 40;
+#X obj 36 47 *~ 0;
+#X obj 60 20 hsl 128 15 0 1 0 1 empty empty input-gain 20 8 0 10 -262144
+-260097 -1 12700 0;
+#X floatatom 68 48 5 0 0 0 - - -;
+#X obj 473 285 throw~ \$0-out;
+#X obj 279 418 catch~ \$0-out;
+#X obj 473 387 throw~ \$0-out;
+#X obj 474 489 throw~ \$0-out;
+#X obj 279 468 *~ 0;
+#X obj 303 444 hsl 128 15 0 0.5 0 1 empty empty output-gain 20 8 0
+10 -262144 -260097 -1 3800 0;
+#X text 11 349 [sliceplay~] will play a slice of audio from a named
+table or array when it receives a start/end cuepoint pair at it's right
+inlet. The playback speed is set with a float at the left inlet. Positive
+speeds play forward \, negative speeds play backward.;
+#X floatatom 312 468 5 0 0 0 - - -;
+#X obj 276 43 table \$0-audio 262147;
+#X obj 434 104 throw~ \$0-out;
+#X connect 0 0 7 0;
+#X connect 0 0 2 0;
+#X connect 0 1 8 0;
+#X connect 0 1 1 0;
+#X connect 0 2 3 0;
+#X connect 4 0 61 0;
+#X connect 4 1 61 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
+#X connect 11 0 14 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 1;
+#X connect 15 0 51 0;
+#X connect 18 0 0 0;
+#X connect 20 0 21 0;
+#X connect 26 0 67 0;
+#X connect 26 1 59 0;
+#X connect 27 0 26 0;
+#X connect 27 0 28 0;
+#X connect 29 0 26 1;
+#X connect 31 0 66 0;
+#X connect 31 1 58 0;
+#X connect 32 0 31 0;
+#X connect 32 0 33 0;
+#X connect 34 0 31 1;
+#X connect 37 0 64 0;
+#X connect 37 1 57 0;
+#X connect 38 0 37 0;
+#X connect 38 0 39 0;
+#X connect 40 0 37 1;
+#X connect 41 0 46 0;
+#X connect 41 0 42 1;
+#X connect 42 0 73 0;
+#X connect 42 1 54 0;
+#X connect 43 0 41 0;
+#X connect 44 0 45 0;
+#X connect 44 0 42 0;
+#X connect 49 0 26 0;
+#X connect 49 0 31 0;
+#X connect 49 0 37 0;
+#X connect 60 0 0 0;
+#X connect 61 0 60 0;
+#X connect 62 0 63 0;
+#X connect 62 0 61 1;
+#X connect 65 0 68 0;
+#X connect 68 0 47 0;
+#X connect 68 0 47 1;
+#X connect 69 0 68 1;
+#X connect 69 0 71 0;

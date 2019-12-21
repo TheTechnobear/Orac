@@ -1,0 +1,41 @@
+{
+    "display" : "Slicer",
+    "parameters" :  [ 
+        ["int","interrupt","Interrupt",-1,1,0],
+        ["pct","compensate","Compensate",0,100,0],
+        ["pct","minspeed","Min Speed",0,100,0],
+
+	["int","attackstep", "Attack Step", 0, 127,6],
+	["int","attackthresh", "Attack Thresh", 0, 127,70],
+	["int","silencethresh", "Silence Thresh", 0, 127,55],
+	["time","timeconstant", "timeconstant", 0, 300,150],
+
+        ["bool","enabled-1","Enable",1],
+        ["pct","rate-1","Rate",-100,100,100],
+        ["int","div-1","Trig Div",0,24,6],
+        ["int","slice-1","Slice",0,8,0],
+
+        ["bool","enabled-2","Enable",0],
+        ["pct","rate-2","Rate",-100,100,100],
+        ["int","div-2","Trig Div",0,24,6],
+        ["int","slice-2","Slice",0,8,0],
+
+        ["bool","enabled-3","Enable",0],
+        ["pct","rate-3","Rate",-100,100,100],
+        ["int","div-3","Trig Div",0,24,6],
+        ["int","slice-3","Slice",0,8,0],
+
+        ["bool","enabled-4","Enable",0],
+        ["pct","rate-4","Rate",-100,100,100],
+        ["int","div-4","Trig Div",0,24,6],
+        ["int","slice-4","Slice",0,8,0]
+     ],
+    "pages" : [ 
+        ["pg_p1", "Player 1", ["enabled-1","rate-1","div-1","slice-1"]],
+        ["pg_p2", "Player 2", ["enabled-2","rate-2","div-2","slice-2"]],
+        ["pg_p3", "Player 3", ["enabled-3","rate-3","div-3","slice-3"]],
+        ["pg_p4", "Player 4", ["enabled-4","rate-4","div-4","slice-4"]],
+        ["pg_play","Player",["interrupt","compensate","minspeed"]]
+    ]
+}
+
