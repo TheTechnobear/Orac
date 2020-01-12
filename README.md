@@ -63,16 +63,15 @@ thank you also to all Orac users who have provide valuable feedback and suggesti
 
 
 ### Project Structure
-Core - files which do not differ from platform to platform
-Organelle - Organelle specific files, including build libs/externals
-Bela - Bela specific files, including build libs/externals
-PI - PI specific files, including build libs/externals
-Nebulae
-Salt
-patchbox
-OscClients - various clients for use with MEC oscdisplay
-
-scripts/create_* - script which creates a package in the pkg directory, from combining above folders
+* Core - files which do not differ from platform to platform
+* Organelle - Organelle specific files, including build libs/externals
+* Bela - Bela specific files, including build libs/externals
+* PI - PI specific files, including build libs/externals
+* Nebulae
+* Salt
+* patchbox - patchbox audio linux distribution support stuff
+* OscClients - various clients for use with MEC oscdisplay
+* scripts/create_* - script which creates a package in the pkg directory, from combining above folders
 
 
 Happy Patching 
