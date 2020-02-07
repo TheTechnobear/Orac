@@ -1,0 +1,106 @@
+#N canvas 296 272 1577 711 10;
+#X declare -path externals;
+#X obj 118 366 s adc0;
+#X obj 179 366 s adc1;
+#X obj 241 366 s adc2;
+#X obj 305 366 s adc3;
+#X obj 365 366 s adc4;
+#X obj 429 366 s adc5;
+#X obj 14 8 loadbang;
+#X obj 14 34 delay 300;
+#X obj 494 366 s adc6;
+#X obj 554 366 s adc7;
+#X msg 137 201 open;
+#X obj 259 150 r initbang;
+#X obj 13 64 s initbang;
+#X msg 370 215 open adc;
+#X obj 259 219 metro 10;
+#X obj 259 262 terminal_tedium_adc;
+#X msg 16 247 smooth 4;
+#X msg 15 202 deadband 2;
+#X text 475 129 the "open" message opens the device. - don't supply
+any parameter for use with the wm8731 version (= 6 ADC channels) -
+use "open adc" for use with pcm5102a version (= 8 ADC channels). the
+metro object determines the update rate (in ms).;
+#X text 476 208 the "smooth" message adds (optional) averaging (not
+connected in this example): 1 \, 2 \, 4 \, 8 \, and 16 are the options
+(defaults to 1 \, ie no averaging) the "deadband" message can be used
+to add some hysteresis (ditto: not connected here): 0 \, 1 \, 2 \,
+3 \, 4 \, and 5 are legal values (default is 0).;
+#X obj 1280 93 tedium_input 4;
+#X obj 935 94 tedium_input 23;
+#X text 958 47 tact switches #0-2:;
+#X obj 1388 93 tedium_input 17;
+#X obj 915 390 tedium_output 16;
+#X obj 1280 139 tedium_input 14;
+#X obj 1388 139 tedium_input 27;
+#X obj 1045 390 tedium_output 12;
+#X obj 1166 390 tedium_output 26;
+#X text 1280 59 gate inputs #0-3:;
+#X obj 1038 94 tedium_input 25;
+#X obj 1140 94 tedium_input 24;
+#X obj 935 117 s switch0;
+#X obj 1140 117 s switch2;
+#X obj 1038 117 s switch1;
+#X obj 1045 340 r gateOut1;
+#X obj 915 340 r gateOut0;
+#X obj 1166 340 r led0;
+#X obj 1280 116 s gateIn0;
+#X obj 1280 162 s gateIn2;
+#X obj 1388 116 s gateIn1;
+#X obj 1388 162 s gateIn3;
+#X obj 981 212 r switch0;
+#X obj 981 285 s gateOut0;
+#X obj 981 242 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 1053 241 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1053 211 r switch1;
+#X obj 1053 284 s gateOut1;
+#X obj 981 262 spigot 0;
+#X obj 1053 260 spigot 0;
+#X obj 1132 240 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1132 259 spigot 0;
+#X obj 1132 283 s led0;
+#X obj 1132 210 r switch2;
+#X obj 1238 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 633 37 declare -path externals;
+#X connect 6 0 7 0;
+#X connect 7 0 12 0;
+#X connect 10 0 15 0;
+#X connect 11 0 10 0;
+#X connect 11 0 13 0;
+#X connect 11 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 0 0;
+#X connect 15 1 1 0;
+#X connect 15 2 2 0;
+#X connect 15 3 3 0;
+#X connect 15 4 4 0;
+#X connect 15 5 5 0;
+#X connect 16 0 15 0;
+#X connect 17 0 15 0;
+#X connect 20 0 38 0;
+#X connect 21 0 32 0;
+#X connect 23 0 40 0;
+#X connect 25 0 39 0;
+#X connect 26 0 41 0;
+#X connect 30 0 34 0;
+#X connect 31 0 33 0;
+#X connect 35 0 27 0;
+#X connect 36 0 24 0;
+#X connect 37 0 28 0;
+#X connect 42 0 44 0;
+#X connect 44 0 48 0;
+#X connect 45 0 49 0;
+#X connect 46 0 45 0;
+#X connect 48 0 43 0;
+#X connect 49 0 47 0;
+#X connect 50 0 51 0;
+#X connect 51 0 52 0;
+#X connect 53 0 50 0;
+#X connect 54 0 51 1;
+#X connect 54 0 49 1;
+#X connect 54 0 48 1;

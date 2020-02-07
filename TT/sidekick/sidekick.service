@@ -1,0 +1,21 @@
+[Unit]
+Description=Sidekick service for tt
+DefaultDependencies=no
+After=sound.target
+Conflicts=shutdown.target
+Before=shutdown.target 
+
+[Service]
+Type=simple
+User=we
+Group=we
+Environment=HOME=/home/we
+KillMode=process
+Restart=always
+LimitRTPRIO=infinity
+LimitMEMLOCK=infinity
+WorkingDirectory=/home/we/sidekick
+ExecStart=/usr/local/sidekick/sidekick
+
+[Install]
+WantedBy=sidekick.target

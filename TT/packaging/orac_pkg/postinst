@@ -1,0 +1,18 @@
+#if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+#fi
+
+systemctl --system daemon-reload >/dev/null 
+udevadm control --reload-rules >/dev/null 
+
+
+USERDIR=/home/we
+su we -c "mkdir -p $USERDIR/media/orac/usermodules"
+su we -c "cp -nr /usr/local/orac/media $USERDIR"
+su we -c "chmod -R a+rw $USERDIR/media"
+su we -c "cp -r /usr/local/orac/data $USERDIR"
+su we -c "chmod -R a+rw $USERDIR/data"
+
+su we -c "cp -nr /usr/local/orac/.pdsettings $USERDIR"
+
+#systemctl enable orac
+#systemctl start orac

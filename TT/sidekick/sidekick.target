@@ -1,0 +1,12 @@
+[Unit]
+Description=sidekick
+
+Requires=sockets.target
+Requires=sound.target
+Requires=sidekick-init.service
+Requires=sidekick.service
+
+AllowIsolate=yes
+
+[Install]
+WantedBy=multi-user.target

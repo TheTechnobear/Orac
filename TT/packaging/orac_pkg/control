@@ -1,0 +1,11 @@
+Package: orac
+Version: 0.2.1-6
+Section: sound
+Priority: optional
+Architecture: armhf
+Depends: mec (>= 0.2.1-1), puredata (>=0.49.0), i2c-tools (>= 4.1), libi2c-dev (>= 4.1)
+Maintainer: Mark Harris <...>
+Description: ORAC
+ See https://github.com/TheTechnobear/Orac/ for more information.
+
+

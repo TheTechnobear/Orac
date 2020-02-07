@@ -1,0 +1,12 @@
+{
+  "_description_": "sidekick - this config file shows the keys available and their default value, so none are needed!",
+  "systemDir": "./system",
+  "patchDir": "./patches",
+  "pollTime": 1,
+  "activeTime": 5000,
+  "loadOnStartup": true,
+  "menuOnStartup": false,
+  "stateFile": "./sidekick-state.json",
+  "pdOpts" : "-nogui -rt -audiobuf 4 -alsamidi",
+  "_endofconfig_": "that's all folks"
+}
