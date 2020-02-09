@@ -1,0 +1,15 @@
+{
+    "display" : "cv Clock",
+    "parameters" :  [ 
+        ["int","c_bpm","BPM",10,480,120],
+        ["int","c_cvin","Dig In",0,4,0],
+        ["int","c_cvout","Dig Out",0,2,0],
+        ["bool","c_midiin","Midi In",0],
+        ["bool","c_midiout","Midi Out",0]
+    ],
+    "pages" : [ 
+        ["pg_main","Main",["c_bpm","c_cvin","c_cvout"]],
+        ["pg_midi","Midi",["c_midiin","c_midiin"]]
+    ]
+}
+

@@ -1,7 +1,7 @@
-#N canvas 680 302 1071 479 10;
+#N canvas 744 196 1071 479 10;
 #X declare -path externals;
 #X declare -path subpatches;
-#N canvas 578 218 1338 833 rack 1;
+#N canvas 578 146 1338 833 rack 0;
 #X msg 234 184 knob1Raw \$1;
 #X msg 490 184 knob4Raw \$1;
 #X msg 406 184 knob3Raw \$1;
@@ -91,7 +91,7 @@
 #X text 50 38 module slots;
 #X text 395 39 dummy targets;
 #X obj 748 65 declare -path externals;
-#N canvas 778 597 763 454 startup 1;
+#N canvas 778 597 763 454 startup 0;
 #X obj 175 39 r activeModule;
 #X obj 63 39 loadbang;
 #X obj 63 202 symbol m0;
@@ -128,16 +128,17 @@ being set \, as they are not loaded yet \, so here we repeat it after
 #X restore 114 9 pd startup;
 #X obj 748 88 declare -path subpatches;
 #X text 194 8 ORAC module v2;
-#N canvas 676 605 946 579 a1 0;
+#N canvas 55 563 946 579 a1 0;
 #X obj 10 10 r~ inL-a1;
 #X obj 110 10 r~ inR-a1;
-#X obj 10 60 modules/synth/brdsmono/module a1;
+#X obj 10 60 modules/cvtools/cvin_note/module a1;
 #X obj 10 110 s~ outL-a1;
 #X obj 110 110 s~ outR-a1;
 #X obj 400 1 r rackloaded;
 #X obj 400 30 t b b;
-#X msg 400 60 loaddefinitions modules/synth/brdsmono/module.json;
-#X obj 400 110 KontrolModule a1 synth/brdsmono;
+#X msg 400 60 loaddefinitions modules/cvtools/cvin_note/module.json
+;
+#X obj 400 110 KontrolModule a1 cvtools/cvin_note;
 #X obj 600 110 send loadbang-a1;
 #X connect 0 0 2 0;
 #X connect 1 0 2 1;
