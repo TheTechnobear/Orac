@@ -3,6 +3,7 @@ Description=orac
 
 Requires=sockets.target
 Requires=sound.target
+Requires=network-online.target
 Requires=orac-init.service
 Requires=orac.service
 

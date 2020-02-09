@@ -1,6 +1,7 @@
 [Unit]
 Description=orac for TT
 DefaultDependencies=no
+After=network-online.target
 After=sound.target
 Conflicts=shutdown.target
 Before=shutdown.target 
