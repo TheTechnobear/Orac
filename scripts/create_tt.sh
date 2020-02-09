@@ -43,6 +43,8 @@ mkdir DEBIAN
 cp -R ../packaging/orac_pkg/* DEBIAN
 mkdir -p etc/systemd/system
 cp ../orac/orac.service etc/systemd/system
+cp ../orac/orac-init.service etc/systemd/system
+cp ../orac/orac.target etc/systemd/system
 mkdir -p usr/local/
 cp -R ../orac usr/local/
 cd ..

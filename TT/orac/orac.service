@@ -1,8 +1,7 @@
 [Unit]
-Description=Run Orac at boot
+Description=orac for TT
 DefaultDependencies=no
-Wants=network-online.target
-After=network-online.target
+After=sound.target
 Conflicts=shutdown.target
 Before=shutdown.target 
 
@@ -20,4 +19,4 @@ WorkingDirectory=/usr/local/orac
 ExecStart=/usr/bin/pd -rt -alsamidi -nogui -audiobuf 16 mother.pd main.pd 
 
 [Install]
-WantedBy=default.target
+WantedBy=orac.target

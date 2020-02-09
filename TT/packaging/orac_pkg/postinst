@@ -14,5 +14,5 @@ su we -c "chmod -R a+rw $USERDIR/data"
 
 su we -c "cp -nr /usr/local/orac/.pdsettings $USERDIR"
 
-systemctl enable orac
-systemctl start orac
+systemctl enable orac.target
+systemctl start orac.target
