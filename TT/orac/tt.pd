@@ -78,7 +78,7 @@ to add some hysteresis (ditto: not connected here): 0 \, 1 \, 2 \,
 #X obj 212 550 change -1;
 #X obj 293 550 change -1;
 #X obj 371 550 change -1;
-#X obj 259 219 metro 1;
+#X obj 259 219 metro 10;
 #X obj 935 94 tedium_switch 23;
 #X obj 1038 94 tedium_switch 25;
 #X obj 1140 94 tedium_switch 24;
