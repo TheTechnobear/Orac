@@ -2,7 +2,7 @@
     "display" : "NoteCV IN",
     "parameters" :  [ 
         ["float","m_amt_note","Note Amount",0,127,60],
-        ["float","m_offset_note","Note Offset",0,127,60]
+        ["float","m_offset_note","Note Offset",0,127,0]
     ],
     "pages" : [ 
         ["pg_main","Main",["m_amt_note","m_offset_note"]]
