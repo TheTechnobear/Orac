@@ -3,12 +3,14 @@
   "systemDir": "./system",
   "patchDir": "./patches",
   "pollTime": 1,
-  "activeTime": 4000,
+  "activeTime": 3000,
   "loadOnStartup": true,
   "menuOnStartup": false,
   "stateFile": "./sidekick-state.json",
   "pdOpts" : "-nogui -rt -audiobuf 4 -alsamidi",
-  "listenPort" : 4000,
-  "sendPort" : 4001,
+  "scOpts" : "",
+  "scHome" : "/home/we/sidekick",
+  "listenPort" : 3001,
+  "sendPort" : 3000,
   "_endofconfig_": "that's all folks"
 }
