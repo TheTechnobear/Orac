@@ -30,5 +30,5 @@ then
     cp ../TTuiLite/ttuilite/TTuiDevice.h ${sidekick_DIR}/ttuisdk
     cp -rf ../TTuiLite/demos/ ${sidekick_DIR}/patches
     cp ../TTuiLite/build/release/lib/* ${sidekick_DIR}/pdexternals
-if
+fi
 
