@@ -1,5 +1,5 @@
 [Unit]
-Description=Sidekick service for tt
+Description=Sidekick service for norns
 DefaultDependencies=no
 After=sound.target
 Conflicts=shutdown.target

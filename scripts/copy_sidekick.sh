@@ -17,4 +17,18 @@ then
     cp ../NuiLite/build/release/lib/* ${sidekick_DIR}/pdexternals
 fi
 
+if [ "$ARG" == "TT" ] 
+then
+    mkdir -p ${sidekick_DIR}
+    mkdir -p ${sidekick_DIR}/patches
+    mkdir -p ${sidekick_DIR}/pdexternals
+    mkdir -p ${sidekick_DIR}/ttuisdk
+    cp -rf ../TTuiLite/resources/sidekick/* ${sidekick_DIR}
+    cp ../TTuiLite/build/release/bin/sidekick ${sidekick_DIR}
+    cp ../TTuiLite/build/release/lib/*so ${sidekick_DIR}
+    cp ../TTuiLite/build/release/lib/* ${sidekick_DIR}/ttuisdk
+    cp ../TTuiLite/ttuilite/TTuiDevice.h ${sidekick_DIR}/ttuisdk
+    cp -rf ../TTuiLite/demos/ ${sidekick_DIR}/patches
+    cp ../TTuiLite/build/release/lib/* ${sidekick_DIR}/pdexternals
+if
 
