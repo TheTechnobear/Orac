@@ -5,7 +5,7 @@ systemctl --system daemon-reload >/dev/null
 udevadm control --reload-rules >/dev/null 
 
 # Norns Shield incorrectly has jack in multi-user target
-rm  /etc/systemd/system/multi-user.target.wants/norns-jack.service 
+rm -f /etc/systemd/system/multi-user.target.wants/norns-jack.service 
 
 USERDIR=/home/we
 su we -c "mkdir -p $USERDIR/media/orac/usermodules"
