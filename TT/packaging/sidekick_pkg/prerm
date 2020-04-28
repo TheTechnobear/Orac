@@ -2,7 +2,11 @@ systemctl stop sidekick.target
 systemctl disable sidekick.target
 
 
-USERDIR=/home/we
-SKDIR="$USERDIR/sidekick"
-rm -rf $SKDIR
+if [ $1 = "remove" ]; then
+    USERDIR=/home/we
+    SKDIR="$USERDIR/sidekick"
+    rm -rf $SKDIR
+    #systemctl enable norns.target
+    #systemctl start norns.target
+fi
 

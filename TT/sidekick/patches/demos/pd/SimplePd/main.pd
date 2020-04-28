@@ -1,11 +1,11 @@
 #N canvas 856 525 1324 497 10;
-#X obj 180 227 r nui_num_encoders;
+#X obj 180 227 r ttui_num_encoders;
 #X obj 180 250 print num encoders;
-#X obj 179 177 r nui_num_buttons;
+#X obj 179 177 r ttui_num_buttons;
 #X obj 179 200 print num buttons;
-#X obj 838 22 r nui_encoder;
-#X obj 697 22 r nui_button;
-#X obj 8 236 NuiPd;
+#X obj 838 22 r ttui_encoder;
+#X obj 697 22 r ttui_button;
+#X obj 8 236 TTuiPd;
 #X msg 176 12 clear;
 #X msg 177 75 paint;
 #X obj 8 56 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1

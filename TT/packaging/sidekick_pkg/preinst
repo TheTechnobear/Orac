@@ -1,0 +1,6 @@
+if [ -d /home/we/sidekick ] ;  then 
+    echo copy old sidekick files
+    su we -c "cp -r /home/we/sidekick /home/we/sidekick.`date +%Y%m%d%H%M`"
+fi
+
+

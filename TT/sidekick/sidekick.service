@@ -7,8 +7,8 @@ Before=shutdown.target
 
 [Service]
 Type=simple
-User=we
-Group=we
+User=root
+Group=root
 Environment=HOME=/home/we
 KillMode=process
 Restart=always

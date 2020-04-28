@@ -84,7 +84,7 @@ loud. Also sends values to the Organelle's OLED VU meter.;
 #X msg 306 267 6;
 #X msg 343 267 7;
 #X msg 74 339 displayText 15 5 64 [\$1];
-#X obj 74 368 s nuiOut;
+#X obj 74 368 s ttuiOut;
 #X connect 0 0 4 0;
 #X connect 1 0 0 0;
 #X connect 2 0 4 0;
@@ -128,11 +128,11 @@ loud. Also sends values to the Organelle's OLED VU meter.;
 #X obj 530 44 r screenLine3;
 #X obj 722 41 r screenLine4;
 #X obj 939 41 r screenLine5;
-#X obj 107 280 s nuiOut;
-#X obj 294 276 s nuiOut;
-#X obj 502 280 s nuiOut;
-#X obj 694 277 s nuiOut;
-#X obj 911 277 s nuiOut;
+#X obj 107 280 s ttuiOut;
+#X obj 294 276 s ttuiOut;
+#X obj 502 280 s ttuiOut;
+#X obj 694 277 s ttuiOut;
+#X obj 911 277 s ttuiOut;
 #X msg 32 195 displayText 15 0 0;
 #X msg 219 190 displayText 15 1 0;
 #X msg 427 195 displayText 15 2 0;
@@ -220,7 +220,7 @@ from somewhere else (knobs.txt preset file or MIDI CC);
 #X obj 338 344 override2 20 2;
 #X obj 538 338 override2 20 3;
 #X obj 707 352 override2 20 4;
-#X obj 187 -6 r nui_encoder;
+#X obj 187 -6 r ttui_encoder;
 #X obj 187 17 route 0 1 2 3;
 #X obj 83 121 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
@@ -398,15 +398,15 @@ from somewhere else (knobs.txt preset file or MIDI CC);
 #X text 293 8 Receives and sends signals to the Organelle hardware.
 A program running in the background interacts with the hardware and
 exchanges messages with this patch using OSC over UDP.;
-#X obj 8 236 NuiPd;
+#X obj 8 236 TTuiPd;
 #X obj 8 56 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X msg 8 168 process 1;
 #X obj 8 7 loadbang;
 #X obj 8 32 delay 1;
 #X obj 8 80 metro 1 10 msec;
-#X obj 47 205 r nuiOut;
-#X obj 900 35 r nui_button;
+#X obj 47 205 r ttuiOut;
+#X obj 900 35 r ttui_button;
 #X obj 900 58 route 0 1 2;
 #X obj 900 200 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;

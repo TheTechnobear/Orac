@@ -37,9 +37,9 @@ send : /live/connect(host,port) - connect to Norns, and proxy Norns messages to 
 s.waitForBoot{
 	"Live Coding patch".postln;
 	s.sync;
-	~sidekick.sendMsg("/nui/displayClear");
-	~sidekick.sendMsg("/nui/textLine",15,0,0,"Live coding enabled");
-	~sidekick.sendMsg("/nui/displayPaint");
+	~sidekick.sendMsg("/ttui/displayClear",0);
+	~sidekick.sendMsg("/ttui/textLine",0,15,0,0,"Live coding enabled");
+	~sidekick.sendMsg("/ttui/displayPaint");
 };
 
 
@@ -53,10 +53,10 @@ OSCdef( \liveConnect, {
 	arg msg, time, addr, recvPort;
 	'connect->'.post;msg[1].post; ' '.post;msg[2].postln;
 	~remote = NetAddr(msg[1].asString, msg[2]); // remote server
-	~sidekick.sendMsg("/nui/displayClear");
-	~sidekick.sendMsg("/nui/textLine",15,0,0, "client connected");
-	~sidekick.sendMsg("/nui/textLine",5,1,0, msg[1].asString ++ ":" ++ msg[2].asString);
-	~sidekick.sendMsg("/nui/displayPaint");
+	~sidekick.sendMsg("/ttui/displayClear,0");
+	~sidekick.sendMsg("/ttui/textLine",0,15,0,0, "client connected");
+	~sidekick.sendMsg("/ttui/textLine",0,5,1,0, msg[1].asString ++ ":" ++ msg[2].asString);
+	~sidekick.sendMsg("/ttui/displayPaint");
 }
 ,
 '/live/connect',
@@ -80,15 +80,17 @@ recvPort:~rPort
 
 
 //norns messages to forward to remote client
-OSCdef( \osc_encoder, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1],msg[2]) }} ,
-'/nui/encoder',recvPort:~rPort);
+OSCdef( \osc_pot, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1],msg[2]) }} ,
+'/ttui/pot',recvPort:~rPort);
 OSCdef( \osc_button, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1],msg[2]) }} ,
-'/nui/button',recvPort:~rPort);
+'/ttui/button',recvPort:~rPort);
+OSCdef( \osc_trig, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1],msg[2]) }} ,
+'/ttui/trig',recvPort:~rPort);
 
 OSCdef( \osc_numencoders, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1]) }} ,
-'/nui/numencoders',recvPort:~rPort);
+'/ttui/numencoders',recvPort:~rPort);
 OSCdef( \osc_numbuttons, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1]) }} ,
-'/nui/numbuttons',recvPort:~rPort);
+'/ttui/numbuttons',recvPort:~rPort);
 
 )
 
@@ -139,27 +141,27 @@ m.sendMsg("/live/files","/live/audiofile", "/home/we/dust/audio/common/waves/*.w
 OSCdef( \osc_encoder, {
 	arg msg, time, addr, recvPort;
     'remote->'.post;msg[0].post;msg[1].postln;
-	~sidekick.sendMsg("/nui/textLine",15,2,0,"test");
-	~sidekick.sendMsg("/nui/displayPaint");
+	~sidekick.sendMsg("/ttui/textLine",0,15,2,0,"test");
+	~sidekick.sendMsg("/ttui/displayPaint");
 },
-'/nui/encoder',recvPort:~rPort);
+'/ttui/encoder',recvPort:~rPort);
 
 OSCdef( \osc_button, {
 	arg msg, time, addr, recvPort;
     'remote->'.post;msg[0].post;msg[1].postln;
 	if(msg[1]==0 && msg[2]==1) {
-		~sidekick.sendMsg("/nui/displayClear");
-		~sidekick.sendMsg("/nui/displayPaint");
+		~sidekick.sendMsg("/ttui/displayClear,0");
+		~sidekick.sendMsg("/ttui/displayPaint");
 	}
 },
-'/nui/button',recvPort:~rPort);
+'/ttui/button',recvPort:~rPort);
 
 
 OSCdef( \osc_numencoders, {
 	arg msg, time, addr, recvPort;
     'remote->'.post;msg.postln;
 },
-'/nui/numencoders',
+'/ttui/numencoders',
 recvPort:~rPort
 );
 
@@ -167,7 +169,7 @@ OSCdef( \osc_numbuttons, {
 	arg msg, time, addr, recvPort;
     'remote->'.post;msg.postln;
 },
-'/nui/numbuttons',
+'/ttui/numbuttons',
 recvPort:~rPort
 );
 

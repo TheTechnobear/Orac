@@ -1,4 +1,6 @@
 #/bin/bash
-sudo systemctl stop norns-jack.service
+
+sudo killall jackd
+#sudo systemctl stop norns-jack.service
 sleep 1
 

@@ -10,9 +10,9 @@
 
 s.waitForBoot{
 	"Simple Synth".postln;
-	~sidekick.sendMsg("/nui/displayClear");
-	~sidekick.sendMsg("/nui/textLine",15,0,0,"Simple Patch");
-	~sidekick.sendMsg("/nui/displayPaint");
+	~sidekick.sendMsg("/ttui/displayClear",0);
+	~sidekick.sendMsg("/ttui/textLine",0,15,0,0,"Simple Patch");
+	~sidekick.sendMsg("/ttui/displayPaint");
 
 
 
@@ -31,22 +31,22 @@ s.waitForBoot{
 };
 
 (
-OSCdef( \osc_encoder, {
+OSCdef( \osc_pot, {
     arg msg, time, addr, recvPort;
 	switch(msg[1],
 		0,{
-			~pitch = ~pitch + (msg[2] * 100);
+			~pitch = ~pitch + ((msg[2].asFloat / 4096) * 100);
 			~synth.set(\freq, ~pitch);
-			~sidekick.sendMsg("/nui/clearLine",0,1);
-			~sidekick.sendMsg("/nui/textLine",15,1,0,"Freq " ++ ~pitch.asString);
-			~sidekick.sendMsg("/nui/displayPaint");
+			~sidekick.sendMsg("/ttui/clearLine",0,0,1);
+			~sidekick.sendMsg("/ttui/textLine",0,15,1,0,"Freq " ++ ~pitch.asString);
+			~sidekick.sendMsg("/ttui/displayPaint");
 		},
 		1,{
-			~amp = ~amp + (msg[2] * 0.1);
+			~amp = ~amp + ((msg[2].asFloat/4096)  * 0.5);
 			~synth.set(\amp, ~amp);
-			~sidekick.sendMsg("/nui/clearLine",0,2);
-			~sidekick.sendMsg("/nui/textLine",15,2,0,"Amp " ++ ~amp.asString);
-			~sidekick.sendMsg("/nui/displayPaint");
+			~sidekick.sendMsg("/ttui/clearLine",0,0,2);
+			~sidekick.sendMsg("/ttui/textLine",0,15,2,0,"Amp " ++ ~amp.asString);
+			~sidekick.sendMsg("/ttui/displayPaint");
 		},
 		2,{
 		},
@@ -55,7 +55,7 @@ OSCdef( \osc_encoder, {
 	)
 
 },
-"/nui/encoder",
+"/ttui/pot",
 recvPort:3000
 );
 
@@ -71,7 +71,7 @@ OSCdef( \osc_button, {
 	)
 
 },
-"/nui/button",
+"/ttui/button",
 recvPort:3000
 );
 )

@@ -8,9 +8,21 @@ USERDIR=/home/we
 SKDIR="$USERDIR/sidekick"
 su we -c "mkdir -p $SKDIR $SKDIR/patches $SKDIR/system"
 su we -c "cp -r /usr/local/sidekick/patches $SKDIR"
-su we -c "cp -r /usr/local/sidekick/system $SKDIR"
+su we -c "cp -r /usr/local/sidekick/pdexternals $SKDIR"
 su we -c "cp -r /usr/local/sidekick/*.json $SKDIR"
 su we -c "cp -r /usr/local/sidekick/*.sh $SKDIR"
 
+su we -c "mkdir -p $SKDIR/.config/SuperCollider/"
+su we -c "cp /usr/local/sidekick/startup.scd  $SKDIR/.config/SuperCollider/"
+
+# stop orac 
+systemctl stop orac.target
+systemctl disable orac.target
+
+# stop norns 
+systemctl stop norns.target
+systemctl disable norns.target
+
 systemctl enable sidekick.target
-systemctl start sidekick.target
+systemctl restart sidekick.target
+systemctl restart sidekick

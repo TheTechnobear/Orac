@@ -12,9 +12,10 @@ usage:
 
 
 /* incoming messages
-NUI OSC messages received /nui prex
-encoder num value
+NUI OSC messages received /ttui prex
 button  num value
+pot num value
+trig  num value
 
 (from sk/deviceInfo)
 numencoders value
@@ -33,7 +34,10 @@ activateItem
 
 /* outgoing messages
 
-nui messages , prefix /nui : NuiDevice.h is ultimate guide ;)
+ttui messages , prefix /ttui : TTuiDevice.h is ultimate guide ;)
+
+gateOut 
+ledOut
 
 displayPaint (must be sent for display to be rendered
 displayClear
@@ -65,9 +69,9 @@ deviceInfo
 
 s.waitForBoot{
 	"Default patch".postln;
-	~sidekick.sendMsg("/nui/displayClear");
-	~sidekick.sendMsg("/nui/textLine",15,0,0,"Default Patch");
-	~sidekick.sendMsg("/nui/displayPaint");
+	~sidekick.sendMsg("/ttui/displayClear",0);
+	~sidekick.sendMsg("/ttui/textLine",0,15,0,0,"Default Patch");
+	~sidekick.sendMsg("/ttui/displayPaint");
 };
 
 // ~sidekick.sendMsg("/sk/deviceInfo");
@@ -86,29 +90,29 @@ s.waitForBoot{
 ~rPort=3000;
 
 // messages coming from the norns
-OSCdef( \osc_encoder, {
+OSCdef( \osc_pot, {
 	arg msg, time, addr, recvPort;
 	msg.postln;
 },
-'/nui/encoder',recvPort:~rPort);
+'/ttui/pot',recvPort:~rPort);
 
 OSCdef( \osc_button, {
 	arg msg, time, addr, recvPort;
 	msg.postln;
 },
-'/nui/button',recvPort:~rPort);
+'/ttui/button',recvPort:~rPort);
 
 OSCdef( \osc_numencoders, {
 	arg msg, time, addr, recvPort;
 	msg.postln;
 },
-'/nui/numencoders',recvPort:~rPort);
+'/ttui/numencoders',recvPort:~rPort);
 
 OSCdef( \osc_numbuttons, {
 	arg msg, time, addr, recvPort;
 	msg.postln;
 },
-'/nui/numbuttons',recvPort:~rPort);
+'/ttui/numbuttons',recvPort:~rPort);
 
 )
 

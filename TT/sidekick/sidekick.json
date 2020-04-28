@@ -12,5 +12,6 @@
   "scHome" : "/home/we/sidekick",
   "listenPort" : 3001,
   "sendPort" : 3000,
+  "gpioPollTime" : 10000,
   "_endofconfig_": "that's all folks"
 }

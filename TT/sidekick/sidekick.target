@@ -3,6 +3,7 @@ Description=sidekick
 
 Requires=sockets.target
 Requires=sound.target
+Requires=network-online.target
 Requires=sidekick-init.service
 Requires=sidekick.service
 
