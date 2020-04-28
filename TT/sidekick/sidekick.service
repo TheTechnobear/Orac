@@ -15,6 +15,7 @@ Restart=always
 LimitRTPRIO=infinity
 LimitMEMLOCK=infinity
 WorkingDirectory=/home/we/sidekick
+ExecStartPre=sleep 5
 ExecStart=/usr/local/sidekick/sidekick
 
 [Install]
