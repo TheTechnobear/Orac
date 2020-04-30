@@ -53,7 +53,7 @@ OSCdef( \liveConnect, {
 	arg msg, time, addr, recvPort;
 	'connect->'.post;msg[1].post; ' '.post;msg[2].postln;
 	~remote = NetAddr(msg[1].asString, msg[2]); // remote server
-	~sidekick.sendMsg("/ttui/displayClear,0");
+	~sidekick.sendMsg("/ttui/displayClear",0);
 	~sidekick.sendMsg("/ttui/textLine",0,15,0,0, "client connected");
 	~sidekick.sendMsg("/ttui/textLine",0,5,1,0, msg[1].asString ++ ":" ++ msg[2].asString);
 	~sidekick.sendMsg("/ttui/displayPaint");
@@ -87,33 +87,39 @@ OSCdef( \osc_button, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.s
 OSCdef( \osc_trig, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1],msg[2]) }} ,
 '/ttui/trig',recvPort:~rPort);
 
-OSCdef( \osc_numencoders, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1]) }} ,
-'/ttui/numencoders',recvPort:~rPort);
+OSCdef( \osc_numpots, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1]) }} ,
+'/ttui/numpots',recvPort:~rPort);
 OSCdef( \osc_numbuttons, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1]) }} ,
 '/ttui/numbuttons',recvPort:~rPort);
+OSCdef( \numgateout, { |msg, time, addr, recvPort|if(~remote != nil) { ~remote.sendMsg(msg[0],msg[1]) }} ,
+'/ttui/numgateout',recvPort:~rPort);
 
 )
 
 //================================== EXAMPLE REMOTE CLIENT ==============================================
+//================================== EXAMPLE REMOTE CLIENT ==============================================
+
+// EXAMPLE PATCH USED ON REMOTE CLIENT
+// you'll need/want something like this live-coding is running on remote
 
 /*
-// EXAMPLE PATCH USED ON REMOTE CLIENT
-// you'll need/want something like this live-coding is running on Norns
 
-// connect to Norns
-~nornsip= 'norns.local';
+
+
+// connect to remote
+~remoteip= 'tt.local';
 s.options.maxLogins = 4;
-Server.default = s = Server.remote("Norns", NetAddr(~nornsip.asString,57110),s.options,1);
+Server.default = s = Server.remote("Remote", NetAddr(~remoteip.asString,57110),s.options,1);
 s.initTree;
 s.startAliveThread;
 
 ~localip = '192.168.1.18';
 ~rPort=3000;
 
-~sidekick = NetAddr(~nornsip.asString, 3001); // sidekick
+~sidekick = NetAddr(~remoteip.asString, 3001); // sidekick
 
 
-// on connection we will get a list of audio files on the Norns
+// on connection we will get a list of audio files on the remote
 ~audio_files = List.new;
 OSCdef(\liveaudiofile,
 	{
@@ -126,42 +132,57 @@ OSCdef(\liveaudiofile,
 );
 
 //connect to live patch, and ask for redirection
-m = NetAddr(~nornsip.asString, ~rPort);
+m = NetAddr(~remoteip.asString, ~rPort);
 m.sendMsg("/live/connect",~localip,~rPort);
 m.sendMsg("/live/files","/live/audiofile", "/home/we/dust/audio/common/waves/*.wav");
 ~audio_files.postln;
 
 ~sidekick.sendMsg("/sk/deviceInfo");
 
-// note from here on, the patch would be the same as run on the Norns
+// note from here on, the patch would be the same as run on the remote
+
+// we only want to update display periodically
+// constant updates are expensive
+{
+	loop{
+		~sidekick.sendMsg("/ttui/displayPaint");
+        0.1.wait;
+	}
+}.fork;
 
 // lets see register some messages to test
 // (you can pickup all the inbound messages from 0-default template)
 
-OSCdef( \osc_encoder, {
+OSCdef( \osc_pot, {
 	arg msg, time, addr, recvPort;
-    'remote->'.post;msg[0].post;msg[1].postln;
+    if ( ~lastV[msg[1]] != msg[2] ,
+	'remote->'.post;msg[0].post;msg[1].post;':'.post;msg[2].postln;
 	~sidekick.sendMsg("/ttui/textLine",0,15,2,0,"test");
-	~sidekick.sendMsg("/ttui/displayPaint");
+    );
+    ~lastV[msg[1]] = msg[2];
 },
-'/ttui/encoder',recvPort:~rPort);
+'/ttui/pot',recvPort:~rPort);
 
 OSCdef( \osc_button, {
 	arg msg, time, addr, recvPort;
     'remote->'.post;msg[0].post;msg[1].postln;
 	if(msg[1]==0 && msg[2]==1) {
-		~sidekick.sendMsg("/ttui/displayClear,0");
-		~sidekick.sendMsg("/ttui/displayPaint");
+		~sidekick.sendMsg("/ttui/displayClear",0);
 	}
 },
 '/ttui/button',recvPort:~rPort);
 
+OSCdef( \osc_trig, {
+	arg msg, time, addr, recvPort;
+	msg.postln;
+},
+'/ttui/trig',recvPort:~rPort);
 
-OSCdef( \osc_numencoders, {
+OSCdef( \osc_numpots, {
 	arg msg, time, addr, recvPort;
     'remote->'.post;msg.postln;
 },
-'/ttui/numencoders',
+'/ttui/numpots',
 recvPort:~rPort
 );
 
@@ -173,12 +194,22 @@ OSCdef( \osc_numbuttons, {
 recvPort:~rPort
 );
 
+OSCdef( \osc_numgateout, {
+	arg msg, time, addr, recvPort;
+    'remote->'.post;msg.postln;
+},
+'/ttui/numgateout',
+recvPort:~rPort
+);
+
+
 // what audio files are there?
-~audio_files.do { |f| f.postln;};
+// ~audio_files.do { |f| f.postln;};
 
 // note:
 // SoundFile.collect won't work, see this is run client side...
 // Buffer.read, expects a server file ... so something like Buffer.read(~audio_files[0]);
+
 
 */
 

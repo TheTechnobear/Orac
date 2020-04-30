@@ -71,41 +71,49 @@ s.waitForBoot{
 
 
 (
+
+{
+	loop{
+		~sidekick.sendMsg("/ttui/displayPaint");
+        0.1.wait;
+	}
+}.fork;
+
+
+~lastV=[0,0,0,0,0,0];
 OSCdef( \osc_pot, {
     arg msg, time, addr, recvPort;
+    if ( ~lastV[msg[1]] != msg[2] ,
 	switch(msg[1],
 		0,{
 			~density = ~density + (msg[2].asFloat/4096 * 10);
 			~synth.set(\density, ~density);
 			~sidekick.sendMsg("/ttui/clearLine",0,0,1);
-			~sidekick.sendMsg("/ttui/textLine",15,1,0,"Density " ++ ~density.asString);
-			~sidekick.sendMsg("/ttui/displayPaint");
+			~sidekick.sendMsg("/ttui/textLine",0,15,1,0,"Density " ++ ~density.asString);
 		},
 		1,{
 			~gain = ~gain + (msg[2].asFloat/4096 * 0.1);
 			~synth.set(\gain, ~gain);
 			~sidekick.sendMsg("/ttui/clearLine",0,0,2);
 			~sidekick.sendMsg("/ttui/textLine",0,15,2,0,"Gain " ++ ~gain.asString);
-			~sidekick.sendMsg("/ttui/displayPaint");
 		},
 		2,{
 			~pos = ~pos + (msg[2].asFloat/4096 * 0.1);
 			~synth.set(\pos, ~pos);
 			~sidekick.sendMsg("/ttui/clearLine",0,0,3);
 			~sidekick.sendMsg("/ttui/textLine",0,15,3,0,"Position " ++ ~pos.asString);
-			~sidekick.sendMsg("/ttui/displayPaint");
 		},
 		3,{
 			~rate = ~rate + (msg[2].asFloat/4096 * 0.1);
 			~synth.set(\rate, ~rate);
 			~sidekick.sendMsg("/ttui/clearLine",0,0,4);
 			~sidekick.sendMsg("/ttui/textLine",0,15,4,0,"Rate " ++ ~rate.asString);
-			~sidekick.sendMsg("/ttui/displayPaint");
 		}
-	)
-
+	);// switch
+	);// if
+    ~lastV[msg[1]] = msg[2];
 },
-"/ttui/encoder",
+"/ttui/pot",
 recvPort:3000
 );
 
@@ -124,4 +132,15 @@ OSCdef( \osc_button, {
 "/ttui/button",
 recvPort:3000
 );
+
+OSCdef( \osc_trig, {
+	arg msg, time, addr, recvPort;
+},
+'/ttui/trig',recvPort:~rPort);
+
+
+
 )
+
+
+

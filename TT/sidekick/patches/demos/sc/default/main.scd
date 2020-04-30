@@ -18,8 +18,9 @@ pot num value
 trig  num value
 
 (from sk/deviceInfo)
-numencoders value
+numpors value
 numbuttons value
+numgateout value
 
 SK OSC messages received /sk prefix
 stop
@@ -36,10 +37,12 @@ activateItem
 
 ttui messages , prefix /ttui : TTuiDevice.h is ultimate guide ;)
 
-gateOut 
+gateOut
 ledOut
 
 displayPaint (must be sent for display to be rendered
+
+all excption paint take display id (0,1) as first arg
 displayClear
 
 gClear -  clr
@@ -87,12 +90,28 @@ s.waitForBoot{
 //OSCdef to receive knobs/buttons from norns
 
 (
+
+// generally better to paint periodically rather than every change
+{
+	loop{
+		~sidekick.sendMsg("/ttui/displayPaint");
+        0.1.wait;
+	}
+}.fork;
+
+
+
 ~rPort=3000;
 
-// messages coming from the norns
+// messages coming from the tt
+// store last cv, so only action when necessary
+~lastV=[0,0,0,0,0,0];
 OSCdef( \osc_pot, {
 	arg msg, time, addr, recvPort;
-	msg.postln;
+    if ( ~lastV[msg[1]] != msg[2] ,
+		msg.postln;
+	);
+    ~lastV[msg[1]] = msg[2];
 },
 '/ttui/pot',recvPort:~rPort);
 
@@ -102,17 +121,33 @@ OSCdef( \osc_button, {
 },
 '/ttui/button',recvPort:~rPort);
 
-OSCdef( \osc_numencoders, {
+OSCdef( \osc_trig, {
 	arg msg, time, addr, recvPort;
 	msg.postln;
 },
-'/ttui/numencoders',recvPort:~rPort);
+'/ttui/trig',recvPort:~rPort);
+
+
+
+OSCdef( \osc_numpots, {
+	arg msg, time, addr, recvPort;
+	msg.postln;
+},
+'/ttui/numpots',recvPort:~rPort);
 
 OSCdef( \osc_numbuttons, {
 	arg msg, time, addr, recvPort;
 	msg.postln;
 },
 '/ttui/numbuttons',recvPort:~rPort);
+
+
+OSCdef( \osc_numgateout, {
+	arg msg, time, addr, recvPort;
+	msg.postln;
+},
+'/ttui/numgateout',recvPort:~rPort);
+
 
 )
 
