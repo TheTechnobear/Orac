@@ -31,28 +31,31 @@ s.waitForBoot{
 };
 
 (
+~lastV=[0,0,0,0,0,0];
+
 OSCdef( \osc_pot, {
     arg msg, time, addr, recvPort;
-	switch(msg[1],
+    if ( ~lastV[msg[1]] != msg[2] , 
+	switch(
+        msg[1],
 		0,{
-			~pitch = ~pitch + ((msg[2].asFloat / 4096) * 100);
+			~pitch = ((msg[2].asFloat / 4096) * 2200);
 			~synth.set(\freq, ~pitch);
 			~sidekick.sendMsg("/ttui/clearLine",0,0,1);
 			~sidekick.sendMsg("/ttui/textLine",0,15,1,0,"Freq " ++ ~pitch.asString);
-			~sidekick.sendMsg("/ttui/displayPaint");
 		},
 		1,{
-			~amp = ~amp + ((msg[2].asFloat/4096)  * 0.5);
+			~amp = ((msg[2].asFloat/4096)  * 0.5);
 			~synth.set(\amp, ~amp);
 			~sidekick.sendMsg("/ttui/clearLine",0,0,2);
 			~sidekick.sendMsg("/ttui/textLine",0,15,2,0,"Amp " ++ ~amp.asString);
-			~sidekick.sendMsg("/ttui/displayPaint");
 		},
 		2,{
 		},
 		3,{
 		}
-	)
+	) // switch
+    ) //if
 
 },
 "/ttui/pot",
@@ -74,5 +77,17 @@ OSCdef( \osc_button, {
 "/ttui/button",
 recvPort:3000
 );
+
+{
+    loop {
+		~sidekick.sendMsg("/ttui/displayPaint");
+        0.1.wait;
+    }
+}.fork;
+
+
 )
+
+
+
 

@@ -36,7 +36,8 @@ public:
     unsigned numTrigs();
     unsigned numGateOut();
 
-
+    void gpioSmoothing(unsigned);
+    void gpioDeadband(unsigned);
     void gpioPollTime(unsigned); // uSec, defaults 1000
 
     void gateOut(unsigned,bool);
