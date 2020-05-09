@@ -1,0 +1,322 @@
+#N canvas 342 55 895 509 12;
+#X declare -path externals;
+#N canvas 226 139 450 300 GUI 0;
+#X obj 32 22 ctrl P1;
+#X obj 31 55 ctrl P5;
+#X obj 94 23 ctrl P2;
+#X obj 157 23 ctrl P3;
+#X obj 217 23 ctrl P4;
+#X obj 92 57 ctrl P6;
+#X obj 154 57 ctrl P7;
+#X obj 218 56 ctrl P8;
+#N canvas 301 34 677 632 moduletitle 0;
+#X obj 35 294 r oscIn;
+#X obj 34 402 symbol;
+#X obj 167 443 s oscOut;
+#X obj 291 455 s oscOut;
+#X obj 35 452 s moduletitle;
+#X msg 167 412 send /ModulePrev 1;
+#X msg 291 412 send /ModuleNext 1;
+#X obj 291 377 r ModNext;
+#X obj 166 375 r ModPrev;
+#X msg 35 428 label \$1;
+#X obj 35 348 route /module;
+#X connect 0 0 10 0;
+#X connect 1 0 9 0;
+#X connect 5 0 2 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
+#X connect 8 0 5 0;
+#X connect 9 0 4 0;
+#X connect 10 0 1 0;
+#X coords 0 632 1 631 425 40 0;
+#X restore 314 20 pd moduletitle;
+#N canvas -8 -8 1366 685 connect 0;
+#X obj 48 445 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 50 171 r oscOut;
+#X obj 517 440 s oscIn;
+#X text 161 440 stuff going out (from patch)...;
+#X text 73 427 connected to mother background program;
+#X obj 54 314 list prepend send;
+#X obj 48 362 list trim;
+#X obj 48 403 netsend -u -b;
+#X obj 518 335 netreceive -u -b;
+#X obj 195 4 inlet host;
+#X obj 386 13 inlet localport;
+#X msg 521 289 listen \$1;
+#X msg 367 291 send /Connect \$1;
+#X obj 192 218 symbol;
+#X obj 252 368 print SEND:;
+#X obj 652 341 print LISTEN:;
+#X obj 462 219 int;
+#X obj 392 222 int;
+#X msg 225 292 disconnect;
+#X obj 198 31 t b b b b b s;
+#X msg 607 290 listen 0;
+#X msg 199 267 connect \$1 6100;
+#N canvas 568 32 598 437 oscformat-xd 0;
+#X obj 65 70 list split 1;
+#X obj 153 174 list;
+#X obj 64 111 list prepend set;
+#X obj 63 177 list trim;
+#X obj 64 146 t b l;
+#X obj 69 369 outlet;
+#X obj 64 314 list trim;
+#X obj 62 32 list split 1;
+#X text 88 338 extract the address \, set it on oscformat \, then send
+values;
+#X obj 228 66 list split 1;
+#X obj 316 170 list;
+#X obj 227 107 list prepend set;
+#X obj 226 173 list trim;
+#X obj 227 142 t b l;
+#X obj 227 310 list trim;
+#X obj 225 28 list split 1;
+#X obj 226 -6 inlet integer;
+#X obj 225 265 oscformat -f i;
+#X obj 63 -2 inlet auto;
+#X obj 62 269 oscformat -f f;
+#X connect 0 0 2 0;
+#X connect 0 1 1 1;
+#X connect 1 0 19 0;
+#X connect 2 0 4 0;
+#X connect 3 0 19 0;
+#X connect 4 0 1 0;
+#X connect 4 1 3 0;
+#X connect 6 0 5 0;
+#X connect 7 1 0 0;
+#X connect 9 0 11 0;
+#X connect 9 1 10 1;
+#X connect 10 0 17 0;
+#X connect 11 0 13 0;
+#X connect 12 0 17 0;
+#X connect 13 0 10 0;
+#X connect 13 1 12 0;
+#X connect 14 0 5 0;
+#X connect 15 1 9 0;
+#X connect 16 0 15 0;
+#X connect 17 0 14 0;
+#X connect 18 0 7 0;
+#X connect 19 0 6 0;
+#X restore 50 212 pd oscformat-xd;
+#N canvas 414 62 762 585 oscparse-xd 0;
+#X obj 91 -2 oscparse;
+#X obj 72 26 list tosymbol;
+#X obj 108 70 list split 1;
+#X obj 192 69 list;
+#X obj 166 185 int;
+#X obj 166 209 + 1;
+#X obj 158 162 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 158 249 5 0 0 0 - - -;
+#X msg 192 161 0;
+#X obj 92 269 list split 2;
+#X obj 68 308 list append;
+#X obj 108 95 sel 0;
+#X obj 132 116 t b f;
+#X obj 158 139 sel 47;
+#X text 223 -89 1) look at bytes \, count number of 47 (/) befoer zero
+= N 2) split off first N items (the address components) from oscparse
+output \, keep the rest 3) use tosymbol to get unparse address \, prepend
+it to values.;
+#X obj 69 -66 t l l l b, f 12;
+#X text 150 96 stop iterating on zero;
+#X text 194 249 how many elements the address was split into;
+#X text 163 27 gets address (symbol up until the null delimiter character)
+;
+#X obj 68 -123 inlet;
+#X obj 69 409 outlet;
+#X obj 67 357 list trim;
+#X connect 0 0 9 0;
+#X connect 1 0 10 0;
+#X connect 2 0 11 0;
+#X connect 2 1 3 1;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 4 1;
+#X connect 5 0 7 0;
+#X connect 6 0 4 0;
+#X connect 7 0 9 1;
+#X connect 8 0 4 1;
+#X connect 9 1 10 1;
+#X connect 10 0 21 0;
+#X connect 11 1 12 0;
+#X connect 12 0 3 0;
+#X connect 12 1 13 0;
+#X connect 13 0 6 0;
+#X connect 15 0 1 0;
+#X connect 15 1 0 0;
+#X connect 15 2 2 0;
+#X connect 15 3 8 0;
+#X connect 19 0 15 0;
+#X connect 21 0 20 0;
+#X restore 518 389 pd oscparse-xd;
+#X connect 1 0 22 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
+#X connect 8 0 23 0;
+#X connect 9 0 19 0;
+#X connect 10 0 16 1;
+#X connect 10 0 17 1;
+#X connect 11 0 8 0;
+#X connect 11 0 15 0;
+#X connect 12 0 22 1;
+#X connect 13 0 21 0;
+#X connect 16 0 11 0;
+#X connect 17 0 12 0;
+#X connect 18 0 7 0;
+#X connect 19 0 17 0;
+#X connect 19 1 13 0;
+#X connect 19 2 18 0;
+#X connect 19 3 16 0;
+#X connect 19 4 20 0;
+#X connect 19 5 13 1;
+#X connect 20 0 8 0;
+#X connect 21 0 7 0;
+#X connect 21 0 14 0;
+#X connect 22 0 5 0;
+#X connect 23 0 2 0;
+#X restore 33 236 pd connect;
+#X obj 31 121 loadbang;
+#X obj 34 151 t b b;
+#X obj 90 215 int 6101;
+#X obj 28 171 cnv 15 250 40 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X text 34 184 edit hostname here->;
+#X obj 33 215 symbol;
+#X msg 162 183 192.168.0.129;
+#N canvas 213 67 677 632 pagetitle 0;
+#X obj 32 343 r oscIn;
+#X obj 34 402 symbol;
+#X obj 167 443 s oscOut;
+#X obj 291 455 s oscOut;
+#X obj 291 377 r PageNext;
+#X obj 166 375 r PagePrev;
+#X msg 167 412 send /PagePrev 1;
+#X msg 291 412 send /PageNext 1;
+#X obj 35 452 s pagetitle;
+#X msg 35 428 label \$1;
+#X obj 33 374 route /page;
+#X connect 0 0 10 0;
+#X connect 1 0 9 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 9 0 8 0;
+#X connect 10 0 1 0;
+#X coords 0 632 1 631 425 40 0;
+#X restore 313 153 pd pagetitle;
+#X obj 313 90 menudisp;
+#X obj 127 240 declare -path externals;
+#N canvas 180 133 576 469 nav 0;
+#X obj 23 275 s oscOut;
+#X obj 124 275 s oscOut;
+#X obj 226 276 s oscOut;
+#X obj 226 152 r NavActivate;
+#X msg 226 233 send /NavActivate 1;
+#X obj 23 151 r NavPrev;
+#X obj 124 151 r NavNext;
+#X msg 23 232 send /NavPrev 1;
+#X msg 124 232 send /NavNext 1;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 0 0;
+#X connect 8 0 1 0;
+#X coords 0 469 1 468 85 135 0;
+#X restore 382 90 pd nav;
+#X obj 112 122 r Connect;
+#X connect 10 0 11 0;
+#X connect 11 0 16 0;
+#X connect 11 1 12 0;
+#X connect 12 0 9 1;
+#X connect 15 0 9 0;
+#X connect 16 0 15 0;
+#X connect 21 0 11 0;
+#X restore 679 456 pd GUI;
+#X obj 13 9 cnv 25 100 25 empty P1Desc empty 2 12 0 12 -233017 -66577
+0;
+#X obj 13 195 cnv 15 100 25 empty P1Value empty 2 12 0 12 -233017 -66577
+0;
+#X obj 120 8 cnv 25 100 25 empty P2Desc empty 2 12 0 12 -233017 -66577
+0;
+#X obj 119 195 cnv 15 100 25 empty P2Value empty 2 12 0 12 -233017
+-66577 0;
+#X obj 227 8 cnv 15 100 25 empty P3Desc empty 2 12 0 12 -233017 -66577
+0;
+#X obj 225 195 cnv 15 100 25 empty P3Value empty 2 12 0 12 -233017
+-66577 0;
+#X obj 333 7 cnv 25 100 25 empty P4Desc empty 2 12 0 12 -233017 -66577
+0;
+#X obj 331 195 cnv 15 100 25 empty P4Value empty 2 12 0 12 -233017
+-66577 0;
+#X obj 13 237 cnv 25 100 25 empty P5Desc empty 2 12 0 12 -233017 -66577
+0;
+#X obj 13 422 cnv 25 100 25 empty P5Value empty 2 12 0 12 -233017 -66577
+0;
+#X obj 119 237 cnv 25 100 25 empty P6Desc empty 2 12 0 12 -233017 -66577
+0;
+#X obj 119 422 cnv 25 100 25 empty P6Value empty 2 12 0 12 -233017
+-66577 0;
+#X obj 225 237 cnv 25 100 25 empty P7Desc empty 2 12 0 12 -233017 -66577
+0;
+#X obj 224 422 cnv 25 100 25 empty P7Value empty 2 12 0 12 -233017
+-66577 0;
+#X obj 332 237 cnv 25 100 25 empty P8Desc empty 2 12 0 12 -233017 -66577
+0;
+#X obj 329 422 cnv 25 100 25 empty P8Value empty 2 12 0 12 -233017
+-66577 0;
+#X obj 500 63 cnv 15 280 25 empty moduletitle empty 2 12 0 14 -233017
+-66577 0;
+#X obj 447 41 bng 50 250 50 0 ModPrev empty PREV 10 25 0 10 -262144
+-1 -1;
+#X obj 784 39 bng 50 250 50 0 ModNext empty NEXT 10 25 0 10 -262144
+-1 -1;
+#X obj 502 389 cnv 15 280 25 empty pagetitle empty 2 12 0 14 -233017
+-66577 0;
+#X obj 448 366 bng 50 250 50 0 PagePrev empty PREV 12 25 0 10 -262144
+-1 -1;
+#X obj 786 365 bng 50 250 50 0 PageNext empty NEXT 12 25 0 10 -262144
+-1 -1;
+#X obj 459 168 cnv 15 250 25 empty text1 line1 2 12 0 14 -195568 -262144
+0;
+#X obj 459 271 cnv 25 250 25 empty text5 line5 2 12 0 14 -195568 -262144
+0;
+#X obj 459 194 cnv 15 250 25 empty text2 line2 2 12 0 14 -195568 -262144
+0;
+#X obj 459 219 cnv 15 250 25 empty text3 line3 2 12 0 14 -355 -262144
+0;
+#X obj 459 245 cnv 15 250 25 empty text4 line4 2 12 0 14 -195568 -262144
+0;
+#X obj 718 128 bng 60 250 50 0 NavPrev empty UP 23 30 0 10 -262144
+-1 -1;
+#X obj 719 279 bng 60 250 50 0 NavNext empty DOWN 14 30 0 10 -262144
+-1 -1;
+#X obj 781 202 bng 60 250 50 0 NavActivate empty OK 22 30 0 10 -204786
+-4034 -4034;
+#X obj 636 448 bng 35 250 50 0 Connect empty reconnect -5 40 0 10 -262144
+-1 -1;
+#X obj 43 39 vsl 40 150 0 1 0 0 P1Ctrl P1Ctrl empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 150 38 vsl 40 150 0 1 0 0 P2Ctrl P2Ctrl empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 256 38 vsl 40 150 0 1 0 0 P3Ctrl P3Ctrl empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 362 38 vsl 40 150 0 1 0 0 P4Ctrl P4Ctrl empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 43 267 vsl 40 150 0 1 0 0 P5Ctrl P5Ctrl empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 148 267 vsl 40 150 0 1 0 0 P6Ctrl P6Ctrl empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 255 267 vsl 40 150 0 1 0 0 P7Ctrl P7Ctrl empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 361 267 vsl 40 150 0 1 0 0 P8Ctrl P8Ctrl empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 500 41 cnv 15 280 20 empty empty MODULE: 2 10 0 12 -233017 -66577
+0;
+#X obj 502 367 cnv 15 280 20 empty empty CONTROLS: 2 12 0 12 -233017
+-66577 0;

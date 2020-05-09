@@ -5,6 +5,14 @@ the PD client will need routeOSC install,
 this is part of 'mrpeach', which can be installed via deken (see find externals in PD menu)
 
 
+PD Android Client
+-----------------
+edit main.pd to set correct host (pd GUI)
+install PdDroidParty (or MobMuPlat) on your phone
+copy files into right dir according to app rquirements
+http://droidparty.net/
+
+
 Lemur Client
 ------------
 install as normal for lemur patches
