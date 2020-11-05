@@ -1,0 +1,7 @@
+{
+  "_description_": "sidekick statefile - dont edit, its automatically created/written to",
+  "lastPatchSys" : false,
+  "lastPatchDir" : "./patches",
+  "lastPatch": "",
+  "_endofconfig_": "that's all folks"
+}
