@@ -1,0 +1,33 @@
+{
+    "mec"  :  {
+        "electraone"  :  {
+            "_midi device" : "Electra Controller Electra CTRL",
+            "_midi device" : "20:2",
+            "midi device" : "Electra Controller:Electra Controller MIDI 3 24:2",
+            "_midi device p1" : "20:0",
+            "_midi device p1" : "Electra Controller Electra Port 1",
+            "poll sleep" : 1000,
+            "poll freq" : 1
+        },
+
+        "kontrol"  :  {
+            "listen port" : 6000
+        }
+    },
+
+    "mec-app"  :  {
+        "outputs" : {
+            "midi" : {
+                "virtual" : 0,
+                "voices" : 15,
+                "mpe":false,
+                "device" : "Pure Data:Pure Data Midi-In 1 129:0",
+                "_device" : "Pure Data:Pure Data Midi-In 1 128:0",
+                "pitchbend range" : 48.0
+            },
+            "_console" : {
+                "throttle" : 0
+            }
+        }
+    }
+}

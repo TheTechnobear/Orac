@@ -16,6 +16,7 @@ Restart=always
 WorkingDirectory=/usr/local/MEC
 ExecStart=/usr/local/MEC/mec-app osc_kontrol.json 
 #ExecStart=/usr/local/MEC/mec-app push_kontrol.json 
+#ExecStart=/usr/local/MEC/mec-app e1kontrol.json 
 
 [Install]
 WantedBy=default.target
