@@ -3,7 +3,7 @@
         "electraone"  :  {
             "_midi device" : "Electra Controller Electra CTRL",
             "_midi device" : "20:2",
-            "midi device" : "Electra Controller:Electra Controller MIDI 3 24:2",
+            "midi device" : "24:2",
             "_midi device p1" : "20:0",
             "_midi device p1" : "Electra Controller Electra Port 1",
             "poll sleep" : 1000,
