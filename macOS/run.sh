@@ -1,4 +1,4 @@
-export PD=${PD:="/Applications/Pd-0.48-1.app/Contents/Resources/bin/pd"}
+export PD=${PD:="/Applications/Pd-*.app/Contents/Resources/bin/pd"}
 cd `dirname $0`
 DIR=`pwd -P`
 export PD_OPTS=${PD_OPTS:="-nogui"}
