@@ -1,13 +1,13 @@
 {
     "mec"  :  {
         "electraone"  :  {
-            "_midi device" : "Electra Controller Electra CTRL",
             "midi device" : "20:2",
-            "_midi device" : "24:2",
-            "_midi device p1" : "20:0",
-            "_midi device p1" : "Electra Controller Electra Port 1",
-            "poll sleep" : 1000,
-            "poll freq" : 1
+            "in queue size" :  512,
+            "out queue size" :  1536,
+            "poll sleep" : 2000,
+            "poll freq" : 1,
+            "poll retry" : 5000,
+	    "out msgs" : 5
         },
 
         "kontrol"  :  {
