@@ -6,7 +6,8 @@
             "out queue size" :  1536,
             "poll sleep" : 2000,
             "poll freq" : 1,
-            "poll retry" : 5000
+            "poll retry" : 5000,
+	    "out msgs" : 5
         },
 
         "kontrol"  :  {
