@@ -112,7 +112,9 @@
         ["int",  "r-midi-save-preset-cc","Save Preset",0,120,102],
  
         ["bool", "r-midi-notegate","A. Note",0],
-        ["bool", "r-midi-ctrlgate","A. Ctrl",0]
+        ["bool", "r-midi-ctrlgate","A. Ctrl",0],
+
+        ["bool", "r-instant-param", "Instant Params",0]
 
     ],
     "pages" : [ 
@@ -149,7 +151,9 @@
         ["pg_ctrl1", "Active",    ["r-main-dest", "r-midi-ch", "r-midi-module-cc"]], 
         ["pg_ctrl2", "A. Ctrl 1", ["r-midi-auxcc", "r-midi-fscc", "r-midi-expcc"]],
         ["pg_ctrl3", "A. Ctrl 2", ["r-midi-notegate", "r-midi-ctrlgate"]],
-        ["pg_ctrl4", "A. Presets",["r-midi-pgmgate", "r-midi-ppreset-cc", "r-midi-npreset-cc", "r-midi-save-preset-cc"]]
+        ["pg_ctrl4", "A. Presets",["r-midi-pgmgate", "r-midi-ppreset-cc", "r-midi-npreset-cc", "r-midi-save-preset-cc"]],
+
+        ["pg_other", "Other", ["r-instant-param"]]
     ]
 }
 
