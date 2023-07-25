@@ -1,0 +1,155 @@
+{
+    "display" : "Parallel",
+    "parameters" :  [ 
+        ["pct", "r-thru-gain-a1","Thru Gain",0,200,100],
+        ["pct", "r-gain-a1","Gain",0,200,100],
+        ["bool","r-notethru-a1","Note Thru",0],
+        ["bool","r-bypass-a1","Bypass",0],
+
+        ["pct", "r-thru-gain-a2","Thru Gain",0,200,100],
+        ["pct", "r-gain-a2","Gain",0,200,100],
+        ["bool","r-notethru-a2","Note Thru",0],
+        ["bool","r-bypass-a2","Bypass",0],
+
+        ["pct", "r-thru-gain-a3","Thru Gain",0,200,100],
+        ["pct", "r-gain-a3","Gain",0,200,100],
+        ["bool","r-notethru-a3","Note Thru",0],
+        ["bool","r-bypass-a3","Bypass",0],
+
+        ["pct", "r-thru-gain-b1","Thru Gain",0,200,100],
+        ["pct", "r-gain-b1","Gain",0,200,100],
+        ["bool","r-notethru-b1","Note Thru",0],
+        ["bool","r-bypass-b1","Bypass",0],
+
+        ["pct", "r-thru-gain-b2","Thru Gain",0,200,100],
+        ["pct", "r-gain-b2","Gain",0,200,100],
+        ["bool","r-notethru-b2","Note Thru",0],
+        ["bool","r-bypass-b2","Bypass",0],
+
+        ["pct", "r-thru-gain-b3","Thru Gain",0,200,100],
+        ["pct", "r-gain-b3","Gain",0,200,100],
+        ["bool","r-notethru-b3","Note Thru",0],
+        ["bool","r-bypass-b3","Bypass",0],
+
+        ["pct", "r-thru-gain-b4","Thru Gain",0,200,100],
+        ["pct", "r-gain-b4","Gain",0,200,100],
+        ["bool","r-notethru-b4","Note Thru",0],
+        ["bool","r-bypass-b4","Bypass",0],
+
+        ["pct", "r-thru-gain-c1","Thru Gain",0,200,100],
+        ["pct", "r-gain-c1","Gain",0,200,100],
+        ["bool","r-notethru-c1","Note Thru",0],
+        ["bool","r-bypass-c1","Bypass",0],
+
+        ["pct", "r-thru-gain-c2","Thru Gain",0,200,100],
+        ["pct", "r-gain-c2","Gain",0,200,100],
+        ["bool","r-notethru-c2","Note Thru",0],
+        ["bool","r-bypass-c2","Bypass",0],
+
+        ["pct", "r-thru-gain-c3","Thru Gain",0,200,100],
+        ["pct", "r-gain-c3","Gain",0,200,100],
+        ["bool","r-notethru-c3","Note Thru",0],
+        ["bool","r-bypass-c3","Bypass",0],
+
+        ["pct", "r-thru-gain-p1","Thru Gain",0,200,100],
+        ["pct", "r-gain-p1","Gain",0,200,100],
+        ["bool","r-bypass-p1","Bypass",0],
+
+        ["pct", "r-thru-gain-p2","Thru Gain",0,200,100],
+        ["pct", "r-gain-p2","Gain",0,200,100],
+        ["bool","r-bypass-p2","Bypass",0],
+
+        ["bool", "r-chin-midigate-1","In Midi",1],
+        ["int", "r-chin-midich-1","In Midi Ch.",0,16,1],
+        ["int", "r-chout-midich-1","Out Midi Ch.",0,16,0],
+
+        ["pct", "r-chin-l-gain-1","In L Gain",0,200,0],
+        ["pct", "r-chin-r-gain-1","In R Gain",0,200,0],
+        ["pct", "r-chout-gain-1","Out Gain",0,200,100],
+
+        ["pan", "r-chin-l-pan-1","In L Pan",0,1,0],
+        ["pan", "r-chin-r-pan-1","In R Pan",0,1,1],
+        ["pan", "r-chout-l-pan-1","Out L Pan",0,1,0],
+        ["pan", "r-chout-r-pan-1","Out R Pan",0,1,1],
+
+        ["bool", "r-chin-midigate-2","In Midi",1],
+        ["int", "r-chin-midich-2","In Midi Ch.",0,16,2],
+        ["int", "r-chout-midich-2","Out Midi Ch.",0,16,0],
+
+        ["pct", "r-chin-l-gain-2","In L Gain",0,200,0],
+        ["pct", "r-chin-r-gain-2","In R Gain",0,200,0],
+        ["pct", "r-chout-gain-2","Out Gain",0,200,100],
+
+        ["pan", "r-chin-l-pan-2","In L Pan",0,1,0],
+        ["pan", "r-chin-r-pan-2","In R Pan",0,1,1],
+        ["pan", "r-chout-l-pan-2","Out L Pan",0,1,0],
+        ["pan", "r-chout-r-pan-2","Out R Pan",0,1,1],
+
+        ["bool", "r-chin-midigate-3","In Midi",1],
+        ["int", "r-chin-midich-3","In Midi Ch.",0,16,3],
+        ["int", "r-chout-midich-3","Out Midi Ch.",0,16,0],
+
+        ["pct", "r-chin-l-gain-3","In L Gain",0,200,0],
+        ["pct", "r-chin-r-gain-3","In R Gain",0,200,0],
+        ["pct", "r-chout-gain-3","Out Gain",0,200,100],
+
+        ["pan", "r-chin-l-pan-3","In L Pan",0,1,0],
+        ["pan", "r-chin-r-pan-3","In R Pan",0,1,1],
+        ["pan", "r-chout-l-pan-3","Out L Pan",0,1,0],
+        ["pan", "r-chout-r-pan-3","Out R Pan",0,1,1],
+
+        ["int",  "r-main-dest", "A. Dest",0,10,0],
+        ["int",  "r-midi-ch",   "A. Midi Ch",0,16,16],
+        ["int",  "r-midi-module-cc", "A. Mod CC",0,120,0],
+
+        ["int", "r-midi-auxcc","Aux CC",0,120,69],
+        ["int", "r-midi-fscc","FS Ped CC",0,120,64],
+        ["int", "r-midi-expcc","Exp Ped CC",0,120,4],
+
+        ["bool", "r-midi-pgmgate","Prog",1],
+        ["int",  "r-midi-ppreset-cc","Preset-",0,120,100],
+        ["int",  "r-midi-npreset-cc","Preset+",0,120,101],
+        ["int",  "r-midi-save-preset-cc","Save Preset",0,120,102],
+ 
+        ["bool", "r-midi-notegate","A. Note",0],
+        ["bool", "r-midi-ctrlgate","A. Ctrl",0]
+
+    ],
+    "pages" : [ 
+        ["pg_a1","Module A1", ["r-bypass-a1", "r-gain-a1", "r-thru-gain-a1", "r-notethru-a1"]],
+        ["pg_s1","Module S1", []],
+        ["pg_a2","Module A2", ["r-bypass-a2", "r-gain-a2", "r-thru-gain-a2", "r-notethru-a2"]],
+        ["pg_s2","Module S2", []],
+        ["pg_a3","Module A3", ["r-bypass-a3", "r-gain-a3", "r-thru-gain-a3", "r-notethru-a3"]],
+        ["pg_b1","Module B1", ["r-bypass-b1", "r-gain-b1", "r-thru-gain-b1", "r-notethru-b1"]],
+        ["pg_m1","Module M1", []],
+        ["pg_b2","Module B2", ["r-bypass-b2", "r-gain-b2", "r-thru-gain-b2", "r-notethru-b2"]],
+        ["pg_m2","Module M2", []],
+        ["pg_b3","Module B3", ["r-bypass-b3", "r-gain-b3", "r-thru-gain-b3", "r-notethru-b3"]],
+        ["pg_m3","Module M3", []],
+        ["pg_b4","Module B4", ["r-bypass-b4", "r-gain-b4", "r-thru-gain-b4", "r-notethru-b4"]],
+        ["pg_c1","Module C1", ["r-bypass-c1", "r-gain-c1", "r-thru-gain-c1", "r-notethru-c1"]],
+        ["pg_p1","Module P1", ["r-bypass-p1", "r-gain-p1", "r-thru-gain-p1"]],
+        ["pg_c2","Module C2", ["r-bypass-c2", "r-gain-c2", "r-thru-gain-c2", "r-notethru-c2"]],
+        ["pg_p2","Module P2", ["r-bypass-p2", "r-gain-p2", "r-thru-gain-p2"]],
+        ["pg_c3","Module C3", ["r-bypass-c3", "r-gain-c3", "r-thru-gain-c3", "r-notethru-c3"]],
+
+        ["pg_ch1midi", "Chain 1 Midi",["r-chin-midigate-1", "r-chin-midich-1", "r-chout-midich-1"]],
+        ["pg_ch1gain", "Chain 1 Gain",["r-chin-l-gain-1", "r-chin-r-gain-1", "r-chout-gain-1"]],
+        ["pg_ch1pan" , "Chain 1 Pan" ,["r-chin-l-pan-1", "r-chin-r-pan-1", "r-chout-l-pan-1", "r-chout-r-pan-1"]],
+ 
+        ["pg_ch2midi", "Chain 2 Midi",["r-chin-midigate-2","r-chin-midich-2", "r-chout-midich-2"]],
+        ["pg_ch2gain", "Chain 2 Gain",["r-chin-l-gain-2", "r-chin-r-gain-2", "r-chout-gain-2"]],
+        ["pg_ch2pan" , "Chain 2 Pan" ,["r-chin-l-pan-2", "r-chin-r-pan-2", "r-chout-l-pan-2", "r-chout-r-pan-2"]],
+
+        ["pg_ch3midi", "Chain 3 Midi",["r-chin-midigate-3","r-chin-midich-3", "r-chout-midich-3"]],
+        ["pg_ch3gain", "Chain 3 Gain",["r-chin-l-gain-3", "r-chin-r-gain-3", "r-chout-gain-3"]],
+        ["pg_ch3pan" , "Chain 3 Pan" ,["r-chin-l-pan-3", "r-chin-r-pan-3", "r-chout-l-pan-3", "r-chout-r-pan-3"]],
+        
+        ["pg_ctrl1", "Active",    ["r-main-dest", "r-midi-ch", "r-midi-module-cc"]], 
+        ["pg_ctrl2", "A. Ctrl 1", ["r-midi-auxcc", "r-midi-fscc", "r-midi-expcc"]],
+        ["pg_ctrl3", "A. Ctrl 2", ["r-midi-notegate", "r-midi-ctrlgate"]],
+        ["pg_ctrl4", "A. Presets",["r-midi-pgmgate", "r-midi-ppreset-cc", "r-midi-npreset-cc", "r-midi-save-preset-cc"]]
+    ]
+}
+
